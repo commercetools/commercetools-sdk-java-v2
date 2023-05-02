@@ -123,116 +123,128 @@
 <span class="source-line-no">110</span><span id="line.110"></span>
 <span class="source-line-no">111</span><span id="line.111">    /**</span>
 <span class="source-line-no">112</span><span id="line.112">     *  &lt;p&gt;New value to set. Must not be empty.&lt;/p&gt;</span>
-<span class="source-line-no">113</span><span id="line.113">     * @param name value to be set</span>
+<span class="source-line-no">113</span><span id="line.113">     * @param builder function to build the name value</span>
 <span class="source-line-no">114</span><span id="line.114">     * @return Builder</span>
 <span class="source-line-no">115</span><span id="line.115">     */</span>
 <span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    public ProductChangeAssetNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {</span>
-<span class="source-line-no">118</span><span id="line.118">        this.name = name;</span>
-<span class="source-line-no">119</span><span id="line.119">        return this;</span>
-<span class="source-line-no">120</span><span id="line.120">    }</span>
-<span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">    /**</span>
-<span class="source-line-no">123</span><span id="line.123">     *  &lt;p&gt;The &lt;code&gt;id&lt;/code&gt; of the ProductVariant to update.&lt;/p&gt;</span>
-<span class="source-line-no">124</span><span id="line.124">     * @return variantId</span>
-<span class="source-line-no">125</span><span id="line.125">     */</span>
-<span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">    @Nullable</span>
-<span class="source-line-no">128</span><span id="line.128">    public Long getVariantId() {</span>
-<span class="source-line-no">129</span><span id="line.129">        return this.variantId;</span>
-<span class="source-line-no">130</span><span id="line.130">    }</span>
-<span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">    /**</span>
-<span class="source-line-no">133</span><span id="line.133">     *  &lt;p&gt;The &lt;code&gt;sku&lt;/code&gt; of the ProductVariant to update.&lt;/p&gt;</span>
-<span class="source-line-no">134</span><span id="line.134">     * @return sku</span>
-<span class="source-line-no">135</span><span id="line.135">     */</span>
-<span class="source-line-no">136</span><span id="line.136"></span>
-<span class="source-line-no">137</span><span id="line.137">    @Nullable</span>
-<span class="source-line-no">138</span><span id="line.138">    public String getSku() {</span>
-<span class="source-line-no">139</span><span id="line.139">        return this.sku;</span>
-<span class="source-line-no">140</span><span id="line.140">    }</span>
-<span class="source-line-no">141</span><span id="line.141"></span>
-<span class="source-line-no">142</span><span id="line.142">    /**</span>
-<span class="source-line-no">143</span><span id="line.143">     *  &lt;p&gt;If &lt;code&gt;true&lt;/code&gt;, only the staged Asset is updated. If &lt;code&gt;false&lt;/code&gt;, both the current and staged Asset is updated.&lt;/p&gt;</span>
-<span class="source-line-no">144</span><span id="line.144">     * @return staged</span>
-<span class="source-line-no">145</span><span id="line.145">     */</span>
-<span class="source-line-no">146</span><span id="line.146"></span>
-<span class="source-line-no">147</span><span id="line.147">    @Nullable</span>
-<span class="source-line-no">148</span><span id="line.148">    public Boolean getStaged() {</span>
-<span class="source-line-no">149</span><span id="line.149">        return this.staged;</span>
-<span class="source-line-no">150</span><span id="line.150">    }</span>
-<span class="source-line-no">151</span><span id="line.151"></span>
-<span class="source-line-no">152</span><span id="line.152">    /**</span>
-<span class="source-line-no">153</span><span id="line.153">     *  &lt;p&gt;The &lt;code&gt;id&lt;/code&gt; of the Asset to update.&lt;/p&gt;</span>
-<span class="source-line-no">154</span><span id="line.154">     * @return assetId</span>
-<span class="source-line-no">155</span><span id="line.155">     */</span>
-<span class="source-line-no">156</span><span id="line.156"></span>
-<span class="source-line-no">157</span><span id="line.157">    @Nullable</span>
-<span class="source-line-no">158</span><span id="line.158">    public String getAssetId() {</span>
-<span class="source-line-no">159</span><span id="line.159">        return this.assetId;</span>
-<span class="source-line-no">160</span><span id="line.160">    }</span>
-<span class="source-line-no">161</span><span id="line.161"></span>
-<span class="source-line-no">162</span><span id="line.162">    /**</span>
-<span class="source-line-no">163</span><span id="line.163">     *  &lt;p&gt;The &lt;code&gt;key&lt;/code&gt; of the Asset to update.&lt;/p&gt;</span>
-<span class="source-line-no">164</span><span id="line.164">     * @return assetKey</span>
-<span class="source-line-no">165</span><span id="line.165">     */</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    @Nullable</span>
-<span class="source-line-no">168</span><span id="line.168">    public String getAssetKey() {</span>
-<span class="source-line-no">169</span><span id="line.169">        return this.assetKey;</span>
-<span class="source-line-no">170</span><span id="line.170">    }</span>
-<span class="source-line-no">171</span><span id="line.171"></span>
-<span class="source-line-no">172</span><span id="line.172">    /**</span>
-<span class="source-line-no">173</span><span id="line.173">     *  &lt;p&gt;New value to set. Must not be empty.&lt;/p&gt;</span>
-<span class="source-line-no">174</span><span id="line.174">     * @return name</span>
-<span class="source-line-no">175</span><span id="line.175">     */</span>
-<span class="source-line-no">176</span><span id="line.176"></span>
-<span class="source-line-no">177</span><span id="line.177">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
-<span class="source-line-no">178</span><span id="line.178">        return this.name;</span>
-<span class="source-line-no">179</span><span id="line.179">    }</span>
-<span class="source-line-no">180</span><span id="line.180"></span>
-<span class="source-line-no">181</span><span id="line.181">    /**</span>
-<span class="source-line-no">182</span><span id="line.182">     * builds ProductChangeAssetNameAction with checking for non-null required values</span>
-<span class="source-line-no">183</span><span id="line.183">     * @return ProductChangeAssetNameAction</span>
-<span class="source-line-no">184</span><span id="line.184">     */</span>
-<span class="source-line-no">185</span><span id="line.185">    public ProductChangeAssetNameAction build() {</span>
-<span class="source-line-no">186</span><span id="line.186">        Objects.requireNonNull(name, ProductChangeAssetNameAction.class + ": name is missing");</span>
-<span class="source-line-no">187</span><span id="line.187">        return new ProductChangeAssetNameActionImpl(variantId, sku, staged, assetId, assetKey, name);</span>
-<span class="source-line-no">188</span><span id="line.188">    }</span>
-<span class="source-line-no">189</span><span id="line.189"></span>
-<span class="source-line-no">190</span><span id="line.190">    /**</span>
-<span class="source-line-no">191</span><span id="line.191">     * builds ProductChangeAssetNameAction without checking for non-null required values</span>
-<span class="source-line-no">192</span><span id="line.192">     * @return ProductChangeAssetNameAction</span>
-<span class="source-line-no">193</span><span id="line.193">     */</span>
-<span class="source-line-no">194</span><span id="line.194">    public ProductChangeAssetNameAction buildUnchecked() {</span>
-<span class="source-line-no">195</span><span id="line.195">        return new ProductChangeAssetNameActionImpl(variantId, sku, staged, assetId, assetKey, name);</span>
-<span class="source-line-no">196</span><span id="line.196">    }</span>
-<span class="source-line-no">197</span><span id="line.197"></span>
-<span class="source-line-no">198</span><span id="line.198">    /**</span>
-<span class="source-line-no">199</span><span id="line.199">     * factory method for an instance of ProductChangeAssetNameActionBuilder</span>
-<span class="source-line-no">200</span><span id="line.200">     * @return builder</span>
-<span class="source-line-no">201</span><span id="line.201">     */</span>
-<span class="source-line-no">202</span><span id="line.202">    public static ProductChangeAssetNameActionBuilder of() {</span>
-<span class="source-line-no">203</span><span id="line.203">        return new ProductChangeAssetNameActionBuilder();</span>
-<span class="source-line-no">204</span><span id="line.204">    }</span>
-<span class="source-line-no">205</span><span id="line.205"></span>
-<span class="source-line-no">206</span><span id="line.206">    /**</span>
-<span class="source-line-no">207</span><span id="line.207">     * create builder for ProductChangeAssetNameAction instance</span>
-<span class="source-line-no">208</span><span id="line.208">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">209</span><span id="line.209">     * @return builder</span>
-<span class="source-line-no">210</span><span id="line.210">     */</span>
-<span class="source-line-no">211</span><span id="line.211">    public static ProductChangeAssetNameActionBuilder of(final ProductChangeAssetNameAction template) {</span>
-<span class="source-line-no">212</span><span id="line.212">        ProductChangeAssetNameActionBuilder builder = new ProductChangeAssetNameActionBuilder();</span>
-<span class="source-line-no">213</span><span id="line.213">        builder.variantId = template.getVariantId();</span>
-<span class="source-line-no">214</span><span id="line.214">        builder.sku = template.getSku();</span>
-<span class="source-line-no">215</span><span id="line.215">        builder.staged = template.getStaged();</span>
-<span class="source-line-no">216</span><span id="line.216">        builder.assetId = template.getAssetId();</span>
-<span class="source-line-no">217</span><span id="line.217">        builder.assetKey = template.getAssetKey();</span>
-<span class="source-line-no">218</span><span id="line.218">        builder.name = template.getName();</span>
-<span class="source-line-no">219</span><span id="line.219">        return builder;</span>
-<span class="source-line-no">220</span><span id="line.220">    }</span>
-<span class="source-line-no">221</span><span id="line.221"></span>
-<span class="source-line-no">222</span><span id="line.222">}</span>
+<span class="source-line-no">117</span><span id="line.117">    public ProductChangeAssetNameActionBuilder withName(</span>
+<span class="source-line-no">118</span><span id="line.118">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString&gt; builder) {</span>
+<span class="source-line-no">119</span><span id="line.119">        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());</span>
+<span class="source-line-no">120</span><span id="line.120">        return this;</span>
+<span class="source-line-no">121</span><span id="line.121">    }</span>
+<span class="source-line-no">122</span><span id="line.122"></span>
+<span class="source-line-no">123</span><span id="line.123">    /**</span>
+<span class="source-line-no">124</span><span id="line.124">     *  &lt;p&gt;New value to set. Must not be empty.&lt;/p&gt;</span>
+<span class="source-line-no">125</span><span id="line.125">     * @param name value to be set</span>
+<span class="source-line-no">126</span><span id="line.126">     * @return Builder</span>
+<span class="source-line-no">127</span><span id="line.127">     */</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">    public ProductChangeAssetNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {</span>
+<span class="source-line-no">130</span><span id="line.130">        this.name = name;</span>
+<span class="source-line-no">131</span><span id="line.131">        return this;</span>
+<span class="source-line-no">132</span><span id="line.132">    }</span>
+<span class="source-line-no">133</span><span id="line.133"></span>
+<span class="source-line-no">134</span><span id="line.134">    /**</span>
+<span class="source-line-no">135</span><span id="line.135">     *  &lt;p&gt;The &lt;code&gt;id&lt;/code&gt; of the ProductVariant to update.&lt;/p&gt;</span>
+<span class="source-line-no">136</span><span id="line.136">     * @return variantId</span>
+<span class="source-line-no">137</span><span id="line.137">     */</span>
+<span class="source-line-no">138</span><span id="line.138"></span>
+<span class="source-line-no">139</span><span id="line.139">    @Nullable</span>
+<span class="source-line-no">140</span><span id="line.140">    public Long getVariantId() {</span>
+<span class="source-line-no">141</span><span id="line.141">        return this.variantId;</span>
+<span class="source-line-no">142</span><span id="line.142">    }</span>
+<span class="source-line-no">143</span><span id="line.143"></span>
+<span class="source-line-no">144</span><span id="line.144">    /**</span>
+<span class="source-line-no">145</span><span id="line.145">     *  &lt;p&gt;The &lt;code&gt;sku&lt;/code&gt; of the ProductVariant to update.&lt;/p&gt;</span>
+<span class="source-line-no">146</span><span id="line.146">     * @return sku</span>
+<span class="source-line-no">147</span><span id="line.147">     */</span>
+<span class="source-line-no">148</span><span id="line.148"></span>
+<span class="source-line-no">149</span><span id="line.149">    @Nullable</span>
+<span class="source-line-no">150</span><span id="line.150">    public String getSku() {</span>
+<span class="source-line-no">151</span><span id="line.151">        return this.sku;</span>
+<span class="source-line-no">152</span><span id="line.152">    }</span>
+<span class="source-line-no">153</span><span id="line.153"></span>
+<span class="source-line-no">154</span><span id="line.154">    /**</span>
+<span class="source-line-no">155</span><span id="line.155">     *  &lt;p&gt;If &lt;code&gt;true&lt;/code&gt;, only the staged Asset is updated. If &lt;code&gt;false&lt;/code&gt;, both the current and staged Asset is updated.&lt;/p&gt;</span>
+<span class="source-line-no">156</span><span id="line.156">     * @return staged</span>
+<span class="source-line-no">157</span><span id="line.157">     */</span>
+<span class="source-line-no">158</span><span id="line.158"></span>
+<span class="source-line-no">159</span><span id="line.159">    @Nullable</span>
+<span class="source-line-no">160</span><span id="line.160">    public Boolean getStaged() {</span>
+<span class="source-line-no">161</span><span id="line.161">        return this.staged;</span>
+<span class="source-line-no">162</span><span id="line.162">    }</span>
+<span class="source-line-no">163</span><span id="line.163"></span>
+<span class="source-line-no">164</span><span id="line.164">    /**</span>
+<span class="source-line-no">165</span><span id="line.165">     *  &lt;p&gt;The &lt;code&gt;id&lt;/code&gt; of the Asset to update.&lt;/p&gt;</span>
+<span class="source-line-no">166</span><span id="line.166">     * @return assetId</span>
+<span class="source-line-no">167</span><span id="line.167">     */</span>
+<span class="source-line-no">168</span><span id="line.168"></span>
+<span class="source-line-no">169</span><span id="line.169">    @Nullable</span>
+<span class="source-line-no">170</span><span id="line.170">    public String getAssetId() {</span>
+<span class="source-line-no">171</span><span id="line.171">        return this.assetId;</span>
+<span class="source-line-no">172</span><span id="line.172">    }</span>
+<span class="source-line-no">173</span><span id="line.173"></span>
+<span class="source-line-no">174</span><span id="line.174">    /**</span>
+<span class="source-line-no">175</span><span id="line.175">     *  &lt;p&gt;The &lt;code&gt;key&lt;/code&gt; of the Asset to update.&lt;/p&gt;</span>
+<span class="source-line-no">176</span><span id="line.176">     * @return assetKey</span>
+<span class="source-line-no">177</span><span id="line.177">     */</span>
+<span class="source-line-no">178</span><span id="line.178"></span>
+<span class="source-line-no">179</span><span id="line.179">    @Nullable</span>
+<span class="source-line-no">180</span><span id="line.180">    public String getAssetKey() {</span>
+<span class="source-line-no">181</span><span id="line.181">        return this.assetKey;</span>
+<span class="source-line-no">182</span><span id="line.182">    }</span>
+<span class="source-line-no">183</span><span id="line.183"></span>
+<span class="source-line-no">184</span><span id="line.184">    /**</span>
+<span class="source-line-no">185</span><span id="line.185">     *  &lt;p&gt;New value to set. Must not be empty.&lt;/p&gt;</span>
+<span class="source-line-no">186</span><span id="line.186">     * @return name</span>
+<span class="source-line-no">187</span><span id="line.187">     */</span>
+<span class="source-line-no">188</span><span id="line.188"></span>
+<span class="source-line-no">189</span><span id="line.189">    public com.commercetools.api.models.common.LocalizedString getName() {</span>
+<span class="source-line-no">190</span><span id="line.190">        return this.name;</span>
+<span class="source-line-no">191</span><span id="line.191">    }</span>
+<span class="source-line-no">192</span><span id="line.192"></span>
+<span class="source-line-no">193</span><span id="line.193">    /**</span>
+<span class="source-line-no">194</span><span id="line.194">     * builds ProductChangeAssetNameAction with checking for non-null required values</span>
+<span class="source-line-no">195</span><span id="line.195">     * @return ProductChangeAssetNameAction</span>
+<span class="source-line-no">196</span><span id="line.196">     */</span>
+<span class="source-line-no">197</span><span id="line.197">    public ProductChangeAssetNameAction build() {</span>
+<span class="source-line-no">198</span><span id="line.198">        Objects.requireNonNull(name, ProductChangeAssetNameAction.class + ": name is missing");</span>
+<span class="source-line-no">199</span><span id="line.199">        return new ProductChangeAssetNameActionImpl(variantId, sku, staged, assetId, assetKey, name);</span>
+<span class="source-line-no">200</span><span id="line.200">    }</span>
+<span class="source-line-no">201</span><span id="line.201"></span>
+<span class="source-line-no">202</span><span id="line.202">    /**</span>
+<span class="source-line-no">203</span><span id="line.203">     * builds ProductChangeAssetNameAction without checking for non-null required values</span>
+<span class="source-line-no">204</span><span id="line.204">     * @return ProductChangeAssetNameAction</span>
+<span class="source-line-no">205</span><span id="line.205">     */</span>
+<span class="source-line-no">206</span><span id="line.206">    public ProductChangeAssetNameAction buildUnchecked() {</span>
+<span class="source-line-no">207</span><span id="line.207">        return new ProductChangeAssetNameActionImpl(variantId, sku, staged, assetId, assetKey, name);</span>
+<span class="source-line-no">208</span><span id="line.208">    }</span>
+<span class="source-line-no">209</span><span id="line.209"></span>
+<span class="source-line-no">210</span><span id="line.210">    /**</span>
+<span class="source-line-no">211</span><span id="line.211">     * factory method for an instance of ProductChangeAssetNameActionBuilder</span>
+<span class="source-line-no">212</span><span id="line.212">     * @return builder</span>
+<span class="source-line-no">213</span><span id="line.213">     */</span>
+<span class="source-line-no">214</span><span id="line.214">    public static ProductChangeAssetNameActionBuilder of() {</span>
+<span class="source-line-no">215</span><span id="line.215">        return new ProductChangeAssetNameActionBuilder();</span>
+<span class="source-line-no">216</span><span id="line.216">    }</span>
+<span class="source-line-no">217</span><span id="line.217"></span>
+<span class="source-line-no">218</span><span id="line.218">    /**</span>
+<span class="source-line-no">219</span><span id="line.219">     * create builder for ProductChangeAssetNameAction instance</span>
+<span class="source-line-no">220</span><span id="line.220">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">221</span><span id="line.221">     * @return builder</span>
+<span class="source-line-no">222</span><span id="line.222">     */</span>
+<span class="source-line-no">223</span><span id="line.223">    public static ProductChangeAssetNameActionBuilder of(final ProductChangeAssetNameAction template) {</span>
+<span class="source-line-no">224</span><span id="line.224">        ProductChangeAssetNameActionBuilder builder = new ProductChangeAssetNameActionBuilder();</span>
+<span class="source-line-no">225</span><span id="line.225">        builder.variantId = template.getVariantId();</span>
+<span class="source-line-no">226</span><span id="line.226">        builder.sku = template.getSku();</span>
+<span class="source-line-no">227</span><span id="line.227">        builder.staged = template.getStaged();</span>
+<span class="source-line-no">228</span><span id="line.228">        builder.assetId = template.getAssetId();</span>
+<span class="source-line-no">229</span><span id="line.229">        builder.assetKey = template.getAssetKey();</span>
+<span class="source-line-no">230</span><span id="line.230">        builder.name = template.getName();</span>
+<span class="source-line-no">231</span><span id="line.231">        return builder;</span>
+<span class="source-line-no">232</span><span id="line.232">    }</span>
+<span class="source-line-no">233</span><span id="line.233"></span>
+<span class="source-line-no">234</span><span id="line.234">}</span>
 
 
 

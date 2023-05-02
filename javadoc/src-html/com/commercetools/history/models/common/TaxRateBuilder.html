@@ -186,117 +186,139 @@
 <span class="source-line-no">173</span><span id="line.173">    }</span>
 <span class="source-line-no">174</span><span id="line.174"></span>
 <span class="source-line-no">175</span><span id="line.175">    /**</span>
-<span class="source-line-no">176</span><span id="line.176">     *  &lt;p&gt;The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an &lt;code&gt;id&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">177</span><span id="line.177">     * @return id</span>
-<span class="source-line-no">178</span><span id="line.178">     */</span>
-<span class="source-line-no">179</span><span id="line.179"></span>
-<span class="source-line-no">180</span><span id="line.180">    public String getId() {</span>
-<span class="source-line-no">181</span><span id="line.181">        return this.id;</span>
-<span class="source-line-no">182</span><span id="line.182">    }</span>
-<span class="source-line-no">183</span><span id="line.183"></span>
-<span class="source-line-no">184</span><span id="line.184">    /**</span>
-<span class="source-line-no">185</span><span id="line.185">     * value of name}</span>
-<span class="source-line-no">186</span><span id="line.186">     * @return name</span>
-<span class="source-line-no">187</span><span id="line.187">     */</span>
-<span class="source-line-no">188</span><span id="line.188"></span>
-<span class="source-line-no">189</span><span id="line.189">    public String getName() {</span>
-<span class="source-line-no">190</span><span id="line.190">        return this.name;</span>
-<span class="source-line-no">191</span><span id="line.191">    }</span>
-<span class="source-line-no">192</span><span id="line.192"></span>
-<span class="source-line-no">193</span><span id="line.193">    /**</span>
-<span class="source-line-no">194</span><span id="line.194">     *  &lt;p&gt;Percentage in the range of [0..1]. The sum of the amounts of all &lt;code&gt;subRates&lt;/code&gt;, if there are any.&lt;/p&gt;</span>
-<span class="source-line-no">195</span><span id="line.195">     * @return amount</span>
-<span class="source-line-no">196</span><span id="line.196">     */</span>
-<span class="source-line-no">197</span><span id="line.197"></span>
-<span class="source-line-no">198</span><span id="line.198">    public Integer getAmount() {</span>
-<span class="source-line-no">199</span><span id="line.199">        return this.amount;</span>
-<span class="source-line-no">200</span><span id="line.200">    }</span>
+<span class="source-line-no">176</span><span id="line.176">     * add the value to the subRates using the builder function</span>
+<span class="source-line-no">177</span><span id="line.177">     * @param builder function to build the subRates value</span>
+<span class="source-line-no">178</span><span id="line.178">     * @return Builder</span>
+<span class="source-line-no">179</span><span id="line.179">     */</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    public TaxRateBuilder addSubRates(</span>
+<span class="source-line-no">182</span><span id="line.182">            Function&lt;com.commercetools.history.models.common.SubRateBuilder, com.commercetools.history.models.common.SubRate&gt; builder) {</span>
+<span class="source-line-no">183</span><span id="line.183">        return plusSubRates(builder.apply(com.commercetools.history.models.common.SubRateBuilder.of()));</span>
+<span class="source-line-no">184</span><span id="line.184">    }</span>
+<span class="source-line-no">185</span><span id="line.185"></span>
+<span class="source-line-no">186</span><span id="line.186">    /**</span>
+<span class="source-line-no">187</span><span id="line.187">     * set the value to the subRates using the builder function</span>
+<span class="source-line-no">188</span><span id="line.188">     * @param builder function to build the subRates value</span>
+<span class="source-line-no">189</span><span id="line.189">     * @return Builder</span>
+<span class="source-line-no">190</span><span id="line.190">     */</span>
+<span class="source-line-no">191</span><span id="line.191"></span>
+<span class="source-line-no">192</span><span id="line.192">    public TaxRateBuilder setSubRates(</span>
+<span class="source-line-no">193</span><span id="line.193">            Function&lt;com.commercetools.history.models.common.SubRateBuilder, com.commercetools.history.models.common.SubRate&gt; builder) {</span>
+<span class="source-line-no">194</span><span id="line.194">        return subRates(builder.apply(com.commercetools.history.models.common.SubRateBuilder.of()));</span>
+<span class="source-line-no">195</span><span id="line.195">    }</span>
+<span class="source-line-no">196</span><span id="line.196"></span>
+<span class="source-line-no">197</span><span id="line.197">    /**</span>
+<span class="source-line-no">198</span><span id="line.198">     *  &lt;p&gt;The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an &lt;code&gt;id&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">199</span><span id="line.199">     * @return id</span>
+<span class="source-line-no">200</span><span id="line.200">     */</span>
 <span class="source-line-no">201</span><span id="line.201"></span>
-<span class="source-line-no">202</span><span id="line.202">    /**</span>
-<span class="source-line-no">203</span><span id="line.203">     * value of includedInPrice}</span>
-<span class="source-line-no">204</span><span id="line.204">     * @return includedInPrice</span>
-<span class="source-line-no">205</span><span id="line.205">     */</span>
-<span class="source-line-no">206</span><span id="line.206"></span>
-<span class="source-line-no">207</span><span id="line.207">    public Boolean getIncludedInPrice() {</span>
-<span class="source-line-no">208</span><span id="line.208">        return this.includedInPrice;</span>
-<span class="source-line-no">209</span><span id="line.209">    }</span>
+<span class="source-line-no">202</span><span id="line.202">    public String getId() {</span>
+<span class="source-line-no">203</span><span id="line.203">        return this.id;</span>
+<span class="source-line-no">204</span><span id="line.204">    }</span>
+<span class="source-line-no">205</span><span id="line.205"></span>
+<span class="source-line-no">206</span><span id="line.206">    /**</span>
+<span class="source-line-no">207</span><span id="line.207">     * value of name}</span>
+<span class="source-line-no">208</span><span id="line.208">     * @return name</span>
+<span class="source-line-no">209</span><span id="line.209">     */</span>
 <span class="source-line-no">210</span><span id="line.210"></span>
-<span class="source-line-no">211</span><span id="line.211">    /**</span>
-<span class="source-line-no">212</span><span id="line.212">     *  &lt;p&gt;Two-digit country code as per ISO 3166-1 alpha-2.&lt;/p&gt;</span>
-<span class="source-line-no">213</span><span id="line.213">     * @return country</span>
-<span class="source-line-no">214</span><span id="line.214">     */</span>
-<span class="source-line-no">215</span><span id="line.215"></span>
-<span class="source-line-no">216</span><span id="line.216">    public String getCountry() {</span>
-<span class="source-line-no">217</span><span id="line.217">        return this.country;</span>
-<span class="source-line-no">218</span><span id="line.218">    }</span>
+<span class="source-line-no">211</span><span id="line.211">    public String getName() {</span>
+<span class="source-line-no">212</span><span id="line.212">        return this.name;</span>
+<span class="source-line-no">213</span><span id="line.213">    }</span>
+<span class="source-line-no">214</span><span id="line.214"></span>
+<span class="source-line-no">215</span><span id="line.215">    /**</span>
+<span class="source-line-no">216</span><span id="line.216">     *  &lt;p&gt;Percentage in the range of [0..1]. The sum of the amounts of all &lt;code&gt;subRates&lt;/code&gt;, if there are any.&lt;/p&gt;</span>
+<span class="source-line-no">217</span><span id="line.217">     * @return amount</span>
+<span class="source-line-no">218</span><span id="line.218">     */</span>
 <span class="source-line-no">219</span><span id="line.219"></span>
-<span class="source-line-no">220</span><span id="line.220">    /**</span>
-<span class="source-line-no">221</span><span id="line.221">     *  &lt;p&gt;The state in the country&lt;/p&gt;</span>
-<span class="source-line-no">222</span><span id="line.222">     * @return state</span>
-<span class="source-line-no">223</span><span id="line.223">     */</span>
-<span class="source-line-no">224</span><span id="line.224"></span>
-<span class="source-line-no">225</span><span id="line.225">    public String getState() {</span>
-<span class="source-line-no">226</span><span id="line.226">        return this.state;</span>
-<span class="source-line-no">227</span><span id="line.227">    }</span>
+<span class="source-line-no">220</span><span id="line.220">    public Integer getAmount() {</span>
+<span class="source-line-no">221</span><span id="line.221">        return this.amount;</span>
+<span class="source-line-no">222</span><span id="line.222">    }</span>
+<span class="source-line-no">223</span><span id="line.223"></span>
+<span class="source-line-no">224</span><span id="line.224">    /**</span>
+<span class="source-line-no">225</span><span id="line.225">     * value of includedInPrice}</span>
+<span class="source-line-no">226</span><span id="line.226">     * @return includedInPrice</span>
+<span class="source-line-no">227</span><span id="line.227">     */</span>
 <span class="source-line-no">228</span><span id="line.228"></span>
-<span class="source-line-no">229</span><span id="line.229">    /**</span>
-<span class="source-line-no">230</span><span id="line.230">     * value of subRates}</span>
-<span class="source-line-no">231</span><span id="line.231">     * @return subRates</span>
-<span class="source-line-no">232</span><span id="line.232">     */</span>
-<span class="source-line-no">233</span><span id="line.233"></span>
-<span class="source-line-no">234</span><span id="line.234">    public java.util.List&lt;com.commercetools.history.models.common.SubRate&gt; getSubRates() {</span>
-<span class="source-line-no">235</span><span id="line.235">        return this.subRates;</span>
-<span class="source-line-no">236</span><span id="line.236">    }</span>
+<span class="source-line-no">229</span><span id="line.229">    public Boolean getIncludedInPrice() {</span>
+<span class="source-line-no">230</span><span id="line.230">        return this.includedInPrice;</span>
+<span class="source-line-no">231</span><span id="line.231">    }</span>
+<span class="source-line-no">232</span><span id="line.232"></span>
+<span class="source-line-no">233</span><span id="line.233">    /**</span>
+<span class="source-line-no">234</span><span id="line.234">     *  &lt;p&gt;Two-digit country code as per ISO 3166-1 alpha-2.&lt;/p&gt;</span>
+<span class="source-line-no">235</span><span id="line.235">     * @return country</span>
+<span class="source-line-no">236</span><span id="line.236">     */</span>
 <span class="source-line-no">237</span><span id="line.237"></span>
-<span class="source-line-no">238</span><span id="line.238">    /**</span>
-<span class="source-line-no">239</span><span id="line.239">     * builds TaxRate with checking for non-null required values</span>
-<span class="source-line-no">240</span><span id="line.240">     * @return TaxRate</span>
-<span class="source-line-no">241</span><span id="line.241">     */</span>
-<span class="source-line-no">242</span><span id="line.242">    public TaxRate build() {</span>
-<span class="source-line-no">243</span><span id="line.243">        Objects.requireNonNull(id, TaxRate.class + ": id is missing");</span>
-<span class="source-line-no">244</span><span id="line.244">        Objects.requireNonNull(name, TaxRate.class + ": name is missing");</span>
-<span class="source-line-no">245</span><span id="line.245">        Objects.requireNonNull(amount, TaxRate.class + ": amount is missing");</span>
-<span class="source-line-no">246</span><span id="line.246">        Objects.requireNonNull(includedInPrice, TaxRate.class + ": includedInPrice is missing");</span>
-<span class="source-line-no">247</span><span id="line.247">        Objects.requireNonNull(country, TaxRate.class + ": country is missing");</span>
-<span class="source-line-no">248</span><span id="line.248">        Objects.requireNonNull(state, TaxRate.class + ": state is missing");</span>
-<span class="source-line-no">249</span><span id="line.249">        Objects.requireNonNull(subRates, TaxRate.class + ": subRates is missing");</span>
-<span class="source-line-no">250</span><span id="line.250">        return new TaxRateImpl(id, name, amount, includedInPrice, country, state, subRates);</span>
-<span class="source-line-no">251</span><span id="line.251">    }</span>
-<span class="source-line-no">252</span><span id="line.252"></span>
-<span class="source-line-no">253</span><span id="line.253">    /**</span>
-<span class="source-line-no">254</span><span id="line.254">     * builds TaxRate without checking for non-null required values</span>
-<span class="source-line-no">255</span><span id="line.255">     * @return TaxRate</span>
-<span class="source-line-no">256</span><span id="line.256">     */</span>
-<span class="source-line-no">257</span><span id="line.257">    public TaxRate buildUnchecked() {</span>
-<span class="source-line-no">258</span><span id="line.258">        return new TaxRateImpl(id, name, amount, includedInPrice, country, state, subRates);</span>
-<span class="source-line-no">259</span><span id="line.259">    }</span>
-<span class="source-line-no">260</span><span id="line.260"></span>
-<span class="source-line-no">261</span><span id="line.261">    /**</span>
-<span class="source-line-no">262</span><span id="line.262">     * factory method for an instance of TaxRateBuilder</span>
-<span class="source-line-no">263</span><span id="line.263">     * @return builder</span>
-<span class="source-line-no">264</span><span id="line.264">     */</span>
-<span class="source-line-no">265</span><span id="line.265">    public static TaxRateBuilder of() {</span>
-<span class="source-line-no">266</span><span id="line.266">        return new TaxRateBuilder();</span>
-<span class="source-line-no">267</span><span id="line.267">    }</span>
-<span class="source-line-no">268</span><span id="line.268"></span>
-<span class="source-line-no">269</span><span id="line.269">    /**</span>
-<span class="source-line-no">270</span><span id="line.270">     * create builder for TaxRate instance</span>
-<span class="source-line-no">271</span><span id="line.271">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">272</span><span id="line.272">     * @return builder</span>
-<span class="source-line-no">273</span><span id="line.273">     */</span>
-<span class="source-line-no">274</span><span id="line.274">    public static TaxRateBuilder of(final TaxRate template) {</span>
-<span class="source-line-no">275</span><span id="line.275">        TaxRateBuilder builder = new TaxRateBuilder();</span>
-<span class="source-line-no">276</span><span id="line.276">        builder.id = template.getId();</span>
-<span class="source-line-no">277</span><span id="line.277">        builder.name = template.getName();</span>
-<span class="source-line-no">278</span><span id="line.278">        builder.amount = template.getAmount();</span>
-<span class="source-line-no">279</span><span id="line.279">        builder.includedInPrice = template.getIncludedInPrice();</span>
-<span class="source-line-no">280</span><span id="line.280">        builder.country = template.getCountry();</span>
-<span class="source-line-no">281</span><span id="line.281">        builder.state = template.getState();</span>
-<span class="source-line-no">282</span><span id="line.282">        builder.subRates = template.getSubRates();</span>
-<span class="source-line-no">283</span><span id="line.283">        return builder;</span>
-<span class="source-line-no">284</span><span id="line.284">    }</span>
-<span class="source-line-no">285</span><span id="line.285"></span>
-<span class="source-line-no">286</span><span id="line.286">}</span>
+<span class="source-line-no">238</span><span id="line.238">    public String getCountry() {</span>
+<span class="source-line-no">239</span><span id="line.239">        return this.country;</span>
+<span class="source-line-no">240</span><span id="line.240">    }</span>
+<span class="source-line-no">241</span><span id="line.241"></span>
+<span class="source-line-no">242</span><span id="line.242">    /**</span>
+<span class="source-line-no">243</span><span id="line.243">     *  &lt;p&gt;The state in the country&lt;/p&gt;</span>
+<span class="source-line-no">244</span><span id="line.244">     * @return state</span>
+<span class="source-line-no">245</span><span id="line.245">     */</span>
+<span class="source-line-no">246</span><span id="line.246"></span>
+<span class="source-line-no">247</span><span id="line.247">    public String getState() {</span>
+<span class="source-line-no">248</span><span id="line.248">        return this.state;</span>
+<span class="source-line-no">249</span><span id="line.249">    }</span>
+<span class="source-line-no">250</span><span id="line.250"></span>
+<span class="source-line-no">251</span><span id="line.251">    /**</span>
+<span class="source-line-no">252</span><span id="line.252">     * value of subRates}</span>
+<span class="source-line-no">253</span><span id="line.253">     * @return subRates</span>
+<span class="source-line-no">254</span><span id="line.254">     */</span>
+<span class="source-line-no">255</span><span id="line.255"></span>
+<span class="source-line-no">256</span><span id="line.256">    public java.util.List&lt;com.commercetools.history.models.common.SubRate&gt; getSubRates() {</span>
+<span class="source-line-no">257</span><span id="line.257">        return this.subRates;</span>
+<span class="source-line-no">258</span><span id="line.258">    }</span>
+<span class="source-line-no">259</span><span id="line.259"></span>
+<span class="source-line-no">260</span><span id="line.260">    /**</span>
+<span class="source-line-no">261</span><span id="line.261">     * builds TaxRate with checking for non-null required values</span>
+<span class="source-line-no">262</span><span id="line.262">     * @return TaxRate</span>
+<span class="source-line-no">263</span><span id="line.263">     */</span>
+<span class="source-line-no">264</span><span id="line.264">    public TaxRate build() {</span>
+<span class="source-line-no">265</span><span id="line.265">        Objects.requireNonNull(id, TaxRate.class + ": id is missing");</span>
+<span class="source-line-no">266</span><span id="line.266">        Objects.requireNonNull(name, TaxRate.class + ": name is missing");</span>
+<span class="source-line-no">267</span><span id="line.267">        Objects.requireNonNull(amount, TaxRate.class + ": amount is missing");</span>
+<span class="source-line-no">268</span><span id="line.268">        Objects.requireNonNull(includedInPrice, TaxRate.class + ": includedInPrice is missing");</span>
+<span class="source-line-no">269</span><span id="line.269">        Objects.requireNonNull(country, TaxRate.class + ": country is missing");</span>
+<span class="source-line-no">270</span><span id="line.270">        Objects.requireNonNull(state, TaxRate.class + ": state is missing");</span>
+<span class="source-line-no">271</span><span id="line.271">        Objects.requireNonNull(subRates, TaxRate.class + ": subRates is missing");</span>
+<span class="source-line-no">272</span><span id="line.272">        return new TaxRateImpl(id, name, amount, includedInPrice, country, state, subRates);</span>
+<span class="source-line-no">273</span><span id="line.273">    }</span>
+<span class="source-line-no">274</span><span id="line.274"></span>
+<span class="source-line-no">275</span><span id="line.275">    /**</span>
+<span class="source-line-no">276</span><span id="line.276">     * builds TaxRate without checking for non-null required values</span>
+<span class="source-line-no">277</span><span id="line.277">     * @return TaxRate</span>
+<span class="source-line-no">278</span><span id="line.278">     */</span>
+<span class="source-line-no">279</span><span id="line.279">    public TaxRate buildUnchecked() {</span>
+<span class="source-line-no">280</span><span id="line.280">        return new TaxRateImpl(id, name, amount, includedInPrice, country, state, subRates);</span>
+<span class="source-line-no">281</span><span id="line.281">    }</span>
+<span class="source-line-no">282</span><span id="line.282"></span>
+<span class="source-line-no">283</span><span id="line.283">    /**</span>
+<span class="source-line-no">284</span><span id="line.284">     * factory method for an instance of TaxRateBuilder</span>
+<span class="source-line-no">285</span><span id="line.285">     * @return builder</span>
+<span class="source-line-no">286</span><span id="line.286">     */</span>
+<span class="source-line-no">287</span><span id="line.287">    public static TaxRateBuilder of() {</span>
+<span class="source-line-no">288</span><span id="line.288">        return new TaxRateBuilder();</span>
+<span class="source-line-no">289</span><span id="line.289">    }</span>
+<span class="source-line-no">290</span><span id="line.290"></span>
+<span class="source-line-no">291</span><span id="line.291">    /**</span>
+<span class="source-line-no">292</span><span id="line.292">     * create builder for TaxRate instance</span>
+<span class="source-line-no">293</span><span id="line.293">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">294</span><span id="line.294">     * @return builder</span>
+<span class="source-line-no">295</span><span id="line.295">     */</span>
+<span class="source-line-no">296</span><span id="line.296">    public static TaxRateBuilder of(final TaxRate template) {</span>
+<span class="source-line-no">297</span><span id="line.297">        TaxRateBuilder builder = new TaxRateBuilder();</span>
+<span class="source-line-no">298</span><span id="line.298">        builder.id = template.getId();</span>
+<span class="source-line-no">299</span><span id="line.299">        builder.name = template.getName();</span>
+<span class="source-line-no">300</span><span id="line.300">        builder.amount = template.getAmount();</span>
+<span class="source-line-no">301</span><span id="line.301">        builder.includedInPrice = template.getIncludedInPrice();</span>
+<span class="source-line-no">302</span><span id="line.302">        builder.country = template.getCountry();</span>
+<span class="source-line-no">303</span><span id="line.303">        builder.state = template.getState();</span>
+<span class="source-line-no">304</span><span id="line.304">        builder.subRates = template.getSubRates();</span>
+<span class="source-line-no">305</span><span id="line.305">        return builder;</span>
+<span class="source-line-no">306</span><span id="line.306">    }</span>
+<span class="source-line-no">307</span><span id="line.307"></span>
+<span class="source-line-no">308</span><span id="line.308">}</span>
 
 
 

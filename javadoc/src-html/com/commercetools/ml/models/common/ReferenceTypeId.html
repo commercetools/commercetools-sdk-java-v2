@@ -230,44 +230,46 @@
 <span class="source-line-no">217</span><span id="line.217">    /**</span>
 <span class="source-line-no">218</span><span id="line.218">     * factory method for a enum value of ReferenceTypeId</span>
 <span class="source-line-no">219</span><span id="line.219">     * if no enum has been found an anonymous instance will be created</span>
-<span class="source-line-no">220</span><span id="line.220">     * @return enum instance</span>
-<span class="source-line-no">221</span><span id="line.221">     */</span>
-<span class="source-line-no">222</span><span id="line.222">    @JsonCreator</span>
-<span class="source-line-no">223</span><span id="line.223">    public static ReferenceTypeId findEnum(String value) {</span>
-<span class="source-line-no">224</span><span id="line.224">        return findEnumViaJsonName(value).orElse(new ReferenceTypeId() {</span>
-<span class="source-line-no">225</span><span id="line.225">            @Override</span>
-<span class="source-line-no">226</span><span id="line.226">            public String getJsonName() {</span>
-<span class="source-line-no">227</span><span id="line.227">                return value;</span>
-<span class="source-line-no">228</span><span id="line.228">            }</span>
-<span class="source-line-no">229</span><span id="line.229"></span>
-<span class="source-line-no">230</span><span id="line.230">            @Override</span>
-<span class="source-line-no">231</span><span id="line.231">            public String name() {</span>
-<span class="source-line-no">232</span><span id="line.232">                return value.toUpperCase();</span>
-<span class="source-line-no">233</span><span id="line.233">            }</span>
-<span class="source-line-no">234</span><span id="line.234"></span>
-<span class="source-line-no">235</span><span id="line.235">            public String toString() {</span>
-<span class="source-line-no">236</span><span id="line.236">                return value;</span>
-<span class="source-line-no">237</span><span id="line.237">            }</span>
-<span class="source-line-no">238</span><span id="line.238">        });</span>
-<span class="source-line-no">239</span><span id="line.239">    }</span>
-<span class="source-line-no">240</span><span id="line.240"></span>
-<span class="source-line-no">241</span><span id="line.241">    /**</span>
-<span class="source-line-no">242</span><span id="line.242">     * method to find enum using the JSON value</span>
-<span class="source-line-no">243</span><span id="line.243">     * @return optional of enum instance</span>
-<span class="source-line-no">244</span><span id="line.244">     */</span>
-<span class="source-line-no">245</span><span id="line.245">    public static Optional&lt;ReferenceTypeId&gt; findEnumViaJsonName(String jsonName) {</span>
-<span class="source-line-no">246</span><span id="line.246">        return Arrays.stream(values()).filter(t -&gt; t.getJsonName().equals(jsonName)).findFirst();</span>
-<span class="source-line-no">247</span><span id="line.247">    }</span>
-<span class="source-line-no">248</span><span id="line.248"></span>
-<span class="source-line-no">249</span><span id="line.249">    /**</span>
-<span class="source-line-no">250</span><span id="line.250">     * possible enum values</span>
-<span class="source-line-no">251</span><span id="line.251">     * @return array of possible enum values</span>
-<span class="source-line-no">252</span><span id="line.252">     */</span>
-<span class="source-line-no">253</span><span id="line.253">    public static ReferenceTypeId[] values() {</span>
-<span class="source-line-no">254</span><span id="line.254">        return ReferenceTypeIdEnum.values();</span>
-<span class="source-line-no">255</span><span id="line.255">    }</span>
-<span class="source-line-no">256</span><span id="line.256"></span>
-<span class="source-line-no">257</span><span id="line.257">}</span>
+<span class="source-line-no">220</span><span id="line.220">     * @param value the enum value to be wrapped</span>
+<span class="source-line-no">221</span><span id="line.221">     * @return enum instance</span>
+<span class="source-line-no">222</span><span id="line.222">     */</span>
+<span class="source-line-no">223</span><span id="line.223">    @JsonCreator</span>
+<span class="source-line-no">224</span><span id="line.224">    public static ReferenceTypeId findEnum(String value) {</span>
+<span class="source-line-no">225</span><span id="line.225">        return findEnumViaJsonName(value).orElse(new ReferenceTypeId() {</span>
+<span class="source-line-no">226</span><span id="line.226">            @Override</span>
+<span class="source-line-no">227</span><span id="line.227">            public String getJsonName() {</span>
+<span class="source-line-no">228</span><span id="line.228">                return value;</span>
+<span class="source-line-no">229</span><span id="line.229">            }</span>
+<span class="source-line-no">230</span><span id="line.230"></span>
+<span class="source-line-no">231</span><span id="line.231">            @Override</span>
+<span class="source-line-no">232</span><span id="line.232">            public String name() {</span>
+<span class="source-line-no">233</span><span id="line.233">                return value.toUpperCase();</span>
+<span class="source-line-no">234</span><span id="line.234">            }</span>
+<span class="source-line-no">235</span><span id="line.235"></span>
+<span class="source-line-no">236</span><span id="line.236">            public String toString() {</span>
+<span class="source-line-no">237</span><span id="line.237">                return value;</span>
+<span class="source-line-no">238</span><span id="line.238">            }</span>
+<span class="source-line-no">239</span><span id="line.239">        });</span>
+<span class="source-line-no">240</span><span id="line.240">    }</span>
+<span class="source-line-no">241</span><span id="line.241"></span>
+<span class="source-line-no">242</span><span id="line.242">    /**</span>
+<span class="source-line-no">243</span><span id="line.243">     * method to find enum using the JSON value</span>
+<span class="source-line-no">244</span><span id="line.244">     * @param jsonName the json value to be wrapped</span>
+<span class="source-line-no">245</span><span id="line.245">     * @return optional of enum instance</span>
+<span class="source-line-no">246</span><span id="line.246">     */</span>
+<span class="source-line-no">247</span><span id="line.247">    public static Optional&lt;ReferenceTypeId&gt; findEnumViaJsonName(String jsonName) {</span>
+<span class="source-line-no">248</span><span id="line.248">        return Arrays.stream(values()).filter(t -&gt; t.getJsonName().equals(jsonName)).findFirst();</span>
+<span class="source-line-no">249</span><span id="line.249">    }</span>
+<span class="source-line-no">250</span><span id="line.250"></span>
+<span class="source-line-no">251</span><span id="line.251">    /**</span>
+<span class="source-line-no">252</span><span id="line.252">     * possible enum values</span>
+<span class="source-line-no">253</span><span id="line.253">     * @return array of possible enum values</span>
+<span class="source-line-no">254</span><span id="line.254">     */</span>
+<span class="source-line-no">255</span><span id="line.255">    public static ReferenceTypeId[] values() {</span>
+<span class="source-line-no">256</span><span id="line.256">        return ReferenceTypeIdEnum.values();</span>
+<span class="source-line-no">257</span><span id="line.257">    }</span>
+<span class="source-line-no">258</span><span id="line.258"></span>
+<span class="source-line-no">259</span><span id="line.259">}</span>
 
 
 

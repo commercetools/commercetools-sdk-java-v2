@@ -67,72 +67,84 @@
 <span class="source-line-no">054</span><span id="line.54"></span>
 <span class="source-line-no">055</span><span id="line.55">    /**</span>
 <span class="source-line-no">056</span><span id="line.56">     *  &lt;p&gt;Tax Rate for the Shipping Method.&lt;/p&gt;</span>
-<span class="source-line-no">057</span><span id="line.57">     * @param taxRate value to be set</span>
+<span class="source-line-no">057</span><span id="line.57">     * @param builder function to build the taxRate value</span>
 <span class="source-line-no">058</span><span id="line.58">     * @return Builder</span>
 <span class="source-line-no">059</span><span id="line.59">     */</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public MethodTaxRateBuilder taxRate(@Nullable final com.commercetools.api.models.tax_category.TaxRate taxRate) {</span>
-<span class="source-line-no">062</span><span id="line.62">        this.taxRate = taxRate;</span>
-<span class="source-line-no">063</span><span id="line.63">        return this;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    /**</span>
-<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;User-defined unique identifier of the Shipping Method in a Cart with &lt;code&gt;Multiple&lt;/code&gt; ShippingMode.&lt;/p&gt;</span>
-<span class="source-line-no">068</span><span id="line.68">     * @return shippingMethodKey</span>
-<span class="source-line-no">069</span><span id="line.69">     */</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public String getShippingMethodKey() {</span>
-<span class="source-line-no">072</span><span id="line.72">        return this.shippingMethodKey;</span>
-<span class="source-line-no">073</span><span id="line.73">    }</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    /**</span>
-<span class="source-line-no">076</span><span id="line.76">     *  &lt;p&gt;Tax Rate for the Shipping Method.&lt;/p&gt;</span>
-<span class="source-line-no">077</span><span id="line.77">     * @return taxRate</span>
-<span class="source-line-no">078</span><span id="line.78">     */</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    @Nullable</span>
-<span class="source-line-no">081</span><span id="line.81">    public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {</span>
-<span class="source-line-no">082</span><span id="line.82">        return this.taxRate;</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    /**</span>
-<span class="source-line-no">086</span><span id="line.86">     * builds MethodTaxRate with checking for non-null required values</span>
-<span class="source-line-no">087</span><span id="line.87">     * @return MethodTaxRate</span>
-<span class="source-line-no">088</span><span id="line.88">     */</span>
-<span class="source-line-no">089</span><span id="line.89">    public MethodTaxRate build() {</span>
-<span class="source-line-no">090</span><span id="line.90">        Objects.requireNonNull(shippingMethodKey, MethodTaxRate.class + ": shippingMethodKey is missing");</span>
-<span class="source-line-no">091</span><span id="line.91">        return new MethodTaxRateImpl(shippingMethodKey, taxRate);</span>
-<span class="source-line-no">092</span><span id="line.92">    }</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    /**</span>
-<span class="source-line-no">095</span><span id="line.95">     * builds MethodTaxRate without checking for non-null required values</span>
-<span class="source-line-no">096</span><span id="line.96">     * @return MethodTaxRate</span>
-<span class="source-line-no">097</span><span id="line.97">     */</span>
-<span class="source-line-no">098</span><span id="line.98">    public MethodTaxRate buildUnchecked() {</span>
-<span class="source-line-no">099</span><span id="line.99">        return new MethodTaxRateImpl(shippingMethodKey, taxRate);</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    /**</span>
-<span class="source-line-no">103</span><span id="line.103">     * factory method for an instance of MethodTaxRateBuilder</span>
-<span class="source-line-no">104</span><span id="line.104">     * @return builder</span>
-<span class="source-line-no">105</span><span id="line.105">     */</span>
-<span class="source-line-no">106</span><span id="line.106">    public static MethodTaxRateBuilder of() {</span>
-<span class="source-line-no">107</span><span id="line.107">        return new MethodTaxRateBuilder();</span>
-<span class="source-line-no">108</span><span id="line.108">    }</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">    /**</span>
-<span class="source-line-no">111</span><span id="line.111">     * create builder for MethodTaxRate instance</span>
-<span class="source-line-no">112</span><span id="line.112">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">113</span><span id="line.113">     * @return builder</span>
-<span class="source-line-no">114</span><span id="line.114">     */</span>
-<span class="source-line-no">115</span><span id="line.115">    public static MethodTaxRateBuilder of(final MethodTaxRate template) {</span>
-<span class="source-line-no">116</span><span id="line.116">        MethodTaxRateBuilder builder = new MethodTaxRateBuilder();</span>
-<span class="source-line-no">117</span><span id="line.117">        builder.shippingMethodKey = template.getShippingMethodKey();</span>
-<span class="source-line-no">118</span><span id="line.118">        builder.taxRate = template.getTaxRate();</span>
-<span class="source-line-no">119</span><span id="line.119">        return builder;</span>
+<span class="source-line-no">061</span><span id="line.61">    public MethodTaxRateBuilder withTaxRate(</span>
+<span class="source-line-no">062</span><span id="line.62">            Function&lt;com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRate&gt; builder) {</span>
+<span class="source-line-no">063</span><span id="line.63">        this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of());</span>
+<span class="source-line-no">064</span><span id="line.64">        return this;</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    /**</span>
+<span class="source-line-no">068</span><span id="line.68">     *  &lt;p&gt;Tax Rate for the Shipping Method.&lt;/p&gt;</span>
+<span class="source-line-no">069</span><span id="line.69">     * @param taxRate value to be set</span>
+<span class="source-line-no">070</span><span id="line.70">     * @return Builder</span>
+<span class="source-line-no">071</span><span id="line.71">     */</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public MethodTaxRateBuilder taxRate(@Nullable final com.commercetools.api.models.tax_category.TaxRate taxRate) {</span>
+<span class="source-line-no">074</span><span id="line.74">        this.taxRate = taxRate;</span>
+<span class="source-line-no">075</span><span id="line.75">        return this;</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    /**</span>
+<span class="source-line-no">079</span><span id="line.79">     *  &lt;p&gt;User-defined unique identifier of the Shipping Method in a Cart with &lt;code&gt;Multiple&lt;/code&gt; ShippingMode.&lt;/p&gt;</span>
+<span class="source-line-no">080</span><span id="line.80">     * @return shippingMethodKey</span>
+<span class="source-line-no">081</span><span id="line.81">     */</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    public String getShippingMethodKey() {</span>
+<span class="source-line-no">084</span><span id="line.84">        return this.shippingMethodKey;</span>
+<span class="source-line-no">085</span><span id="line.85">    }</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    /**</span>
+<span class="source-line-no">088</span><span id="line.88">     *  &lt;p&gt;Tax Rate for the Shipping Method.&lt;/p&gt;</span>
+<span class="source-line-no">089</span><span id="line.89">     * @return taxRate</span>
+<span class="source-line-no">090</span><span id="line.90">     */</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    @Nullable</span>
+<span class="source-line-no">093</span><span id="line.93">    public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {</span>
+<span class="source-line-no">094</span><span id="line.94">        return this.taxRate;</span>
+<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    /**</span>
+<span class="source-line-no">098</span><span id="line.98">     * builds MethodTaxRate with checking for non-null required values</span>
+<span class="source-line-no">099</span><span id="line.99">     * @return MethodTaxRate</span>
+<span class="source-line-no">100</span><span id="line.100">     */</span>
+<span class="source-line-no">101</span><span id="line.101">    public MethodTaxRate build() {</span>
+<span class="source-line-no">102</span><span id="line.102">        Objects.requireNonNull(shippingMethodKey, MethodTaxRate.class + ": shippingMethodKey is missing");</span>
+<span class="source-line-no">103</span><span id="line.103">        return new MethodTaxRateImpl(shippingMethodKey, taxRate);</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    /**</span>
+<span class="source-line-no">107</span><span id="line.107">     * builds MethodTaxRate without checking for non-null required values</span>
+<span class="source-line-no">108</span><span id="line.108">     * @return MethodTaxRate</span>
+<span class="source-line-no">109</span><span id="line.109">     */</span>
+<span class="source-line-no">110</span><span id="line.110">    public MethodTaxRate buildUnchecked() {</span>
+<span class="source-line-no">111</span><span id="line.111">        return new MethodTaxRateImpl(shippingMethodKey, taxRate);</span>
+<span class="source-line-no">112</span><span id="line.112">    }</span>
+<span class="source-line-no">113</span><span id="line.113"></span>
+<span class="source-line-no">114</span><span id="line.114">    /**</span>
+<span class="source-line-no">115</span><span id="line.115">     * factory method for an instance of MethodTaxRateBuilder</span>
+<span class="source-line-no">116</span><span id="line.116">     * @return builder</span>
+<span class="source-line-no">117</span><span id="line.117">     */</span>
+<span class="source-line-no">118</span><span id="line.118">    public static MethodTaxRateBuilder of() {</span>
+<span class="source-line-no">119</span><span id="line.119">        return new MethodTaxRateBuilder();</span>
 <span class="source-line-no">120</span><span id="line.120">    }</span>
 <span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">}</span>
+<span class="source-line-no">122</span><span id="line.122">    /**</span>
+<span class="source-line-no">123</span><span id="line.123">     * create builder for MethodTaxRate instance</span>
+<span class="source-line-no">124</span><span id="line.124">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">125</span><span id="line.125">     * @return builder</span>
+<span class="source-line-no">126</span><span id="line.126">     */</span>
+<span class="source-line-no">127</span><span id="line.127">    public static MethodTaxRateBuilder of(final MethodTaxRate template) {</span>
+<span class="source-line-no">128</span><span id="line.128">        MethodTaxRateBuilder builder = new MethodTaxRateBuilder();</span>
+<span class="source-line-no">129</span><span id="line.129">        builder.shippingMethodKey = template.getShippingMethodKey();</span>
+<span class="source-line-no">130</span><span id="line.130">        builder.taxRate = template.getTaxRate();</span>
+<span class="source-line-no">131</span><span id="line.131">        return builder;</span>
+<span class="source-line-no">132</span><span id="line.132">    }</span>
+<span class="source-line-no">133</span><span id="line.133"></span>
+<span class="source-line-no">134</span><span id="line.134">}</span>
 
 
 

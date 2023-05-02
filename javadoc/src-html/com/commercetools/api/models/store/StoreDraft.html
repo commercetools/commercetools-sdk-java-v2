@@ -102,9 +102,9 @@
 <span class="source-line-no">089</span><span id="line.89">     *  &lt;p&gt;Controls availability of Products for this Store via active/inactive Product Selections:&lt;/p&gt;</span>
 <span class="source-line-no">090</span><span id="line.90">     *  &lt;ul&gt;</span>
 <span class="source-line-no">091</span><span id="line.91">     *   &lt;li&gt;Leave empty if all Products in the Project should be available in this Store.&lt;/li&gt;</span>
-<span class="source-line-no">092</span><span id="line.92">     *   &lt;li&gt;If only &lt;code&gt;inactive&lt;/code&gt; Product Selections of type Individual Exclusion are provided, all the Products are availlable in this Store.&lt;/li&gt;</span>
-<span class="source-line-no">093</span><span id="line.93">     *   &lt;li&gt;If all the Product Selections provided are &lt;code&gt;inactive&lt;/code&gt; and there's at least a Product Selection of type &lt;code&gt;individual&lt;/code&gt;, no Product is availlable in this Store.&lt;/li&gt;</span>
-<span class="source-line-no">094</span><span id="line.94">     *   &lt;li&gt;If at least an &lt;code&gt;active&lt;/code&gt; Product Selection is provided, only &lt;code&gt;active&lt;/code&gt; Product Selections are considered to compute the availlability in this Store.&lt;/li&gt;</span>
+<span class="source-line-no">092</span><span id="line.92">     *   &lt;li&gt;If only &lt;code&gt;inactive&lt;/code&gt; Product Selections with &lt;code&gt;IndividualExclusion&lt;/code&gt; ProductSelectionMode are provided, all the Products are available in this Store.&lt;/li&gt;</span>
+<span class="source-line-no">093</span><span id="line.93">     *   &lt;li&gt;If all the Product Selections provided are &lt;code&gt;inactive&lt;/code&gt; and there's at least a Product Selection of mode &lt;code&gt;Individual&lt;/code&gt;, no Product is available in this Store.&lt;/li&gt;</span>
+<span class="source-line-no">094</span><span id="line.94">     *   &lt;li&gt;If at least an &lt;code&gt;active&lt;/code&gt; Product Selection is provided, only &lt;code&gt;active&lt;/code&gt; Product Selections are considered to compute the availability in this Store.&lt;/li&gt;</span>
 <span class="source-line-no">095</span><span id="line.95">     *  &lt;/ul&gt;</span>
 <span class="source-line-no">096</span><span id="line.96">     * @return productSelections</span>
 <span class="source-line-no">097</span><span id="line.97">     */</span>
@@ -198,9 +198,9 @@
 <span class="source-line-no">185</span><span id="line.185">     *  &lt;p&gt;Controls availability of Products for this Store via active/inactive Product Selections:&lt;/p&gt;</span>
 <span class="source-line-no">186</span><span id="line.186">     *  &lt;ul&gt;</span>
 <span class="source-line-no">187</span><span id="line.187">     *   &lt;li&gt;Leave empty if all Products in the Project should be available in this Store.&lt;/li&gt;</span>
-<span class="source-line-no">188</span><span id="line.188">     *   &lt;li&gt;If only &lt;code&gt;inactive&lt;/code&gt; Product Selections of type Individual Exclusion are provided, all the Products are availlable in this Store.&lt;/li&gt;</span>
-<span class="source-line-no">189</span><span id="line.189">     *   &lt;li&gt;If all the Product Selections provided are &lt;code&gt;inactive&lt;/code&gt; and there's at least a Product Selection of type &lt;code&gt;individual&lt;/code&gt;, no Product is availlable in this Store.&lt;/li&gt;</span>
-<span class="source-line-no">190</span><span id="line.190">     *   &lt;li&gt;If at least an &lt;code&gt;active&lt;/code&gt; Product Selection is provided, only &lt;code&gt;active&lt;/code&gt; Product Selections are considered to compute the availlability in this Store.&lt;/li&gt;</span>
+<span class="source-line-no">188</span><span id="line.188">     *   &lt;li&gt;If only &lt;code&gt;inactive&lt;/code&gt; Product Selections with &lt;code&gt;IndividualExclusion&lt;/code&gt; ProductSelectionMode are provided, all the Products are available in this Store.&lt;/li&gt;</span>
+<span class="source-line-no">189</span><span id="line.189">     *   &lt;li&gt;If all the Product Selections provided are &lt;code&gt;inactive&lt;/code&gt; and there's at least a Product Selection of mode &lt;code&gt;Individual&lt;/code&gt;, no Product is available in this Store.&lt;/li&gt;</span>
+<span class="source-line-no">190</span><span id="line.190">     *   &lt;li&gt;If at least an &lt;code&gt;active&lt;/code&gt; Product Selection is provided, only &lt;code&gt;active&lt;/code&gt; Product Selections are considered to compute the availability in this Store.&lt;/li&gt;</span>
 <span class="source-line-no">191</span><span id="line.191">     *  &lt;/ul&gt;</span>
 <span class="source-line-no">192</span><span id="line.192">     * @param productSelections values to be set</span>
 <span class="source-line-no">193</span><span id="line.193">     */</span>
@@ -212,9 +212,9 @@
 <span class="source-line-no">199</span><span id="line.199">     *  &lt;p&gt;Controls availability of Products for this Store via active/inactive Product Selections:&lt;/p&gt;</span>
 <span class="source-line-no">200</span><span id="line.200">     *  &lt;ul&gt;</span>
 <span class="source-line-no">201</span><span id="line.201">     *   &lt;li&gt;Leave empty if all Products in the Project should be available in this Store.&lt;/li&gt;</span>
-<span class="source-line-no">202</span><span id="line.202">     *   &lt;li&gt;If only &lt;code&gt;inactive&lt;/code&gt; Product Selections of type Individual Exclusion are provided, all the Products are availlable in this Store.&lt;/li&gt;</span>
-<span class="source-line-no">203</span><span id="line.203">     *   &lt;li&gt;If all the Product Selections provided are &lt;code&gt;inactive&lt;/code&gt; and there's at least a Product Selection of type &lt;code&gt;individual&lt;/code&gt;, no Product is availlable in this Store.&lt;/li&gt;</span>
-<span class="source-line-no">204</span><span id="line.204">     *   &lt;li&gt;If at least an &lt;code&gt;active&lt;/code&gt; Product Selection is provided, only &lt;code&gt;active&lt;/code&gt; Product Selections are considered to compute the availlability in this Store.&lt;/li&gt;</span>
+<span class="source-line-no">202</span><span id="line.202">     *   &lt;li&gt;If only &lt;code&gt;inactive&lt;/code&gt; Product Selections with &lt;code&gt;IndividualExclusion&lt;/code&gt; ProductSelectionMode are provided, all the Products are available in this Store.&lt;/li&gt;</span>
+<span class="source-line-no">203</span><span id="line.203">     *   &lt;li&gt;If all the Product Selections provided are &lt;code&gt;inactive&lt;/code&gt; and there's at least a Product Selection of mode &lt;code&gt;Individual&lt;/code&gt;, no Product is available in this Store.&lt;/li&gt;</span>
+<span class="source-line-no">204</span><span id="line.204">     *   &lt;li&gt;If at least an &lt;code&gt;active&lt;/code&gt; Product Selection is provided, only &lt;code&gt;active&lt;/code&gt; Product Selections are considered to compute the availability in this Store.&lt;/li&gt;</span>
 <span class="source-line-no">205</span><span id="line.205">     *  &lt;/ul&gt;</span>
 <span class="source-line-no">206</span><span id="line.206">     * @param productSelections values to be set</span>
 <span class="source-line-no">207</span><span id="line.207">     */</span>

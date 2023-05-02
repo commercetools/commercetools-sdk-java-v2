@@ -76,77 +76,93 @@
 <span class="source-line-no">063</span><span id="line.63">     *   &lt;li&gt;If present, a Reference to the Channel is set for the LineItem specified by &lt;code&gt;lineItemId&lt;/code&gt;.&lt;/li&gt;</span>
 <span class="source-line-no">064</span><span id="line.64">     *   &lt;li&gt;If not present, the current Reference to a distribution channel is removed from the LineItem specified by &lt;code&gt;lineItemId&lt;/code&gt;. The Channel must have the &lt;code&gt;ProductDistribution&lt;/code&gt; ChannelRoleEnum.&lt;/li&gt;</span>
 <span class="source-line-no">065</span><span id="line.65">     *  &lt;/ul&gt;</span>
-<span class="source-line-no">066</span><span id="line.66">     * @param distributionChannel value to be set</span>
+<span class="source-line-no">066</span><span id="line.66">     * @param builder function to build the distributionChannel value</span>
 <span class="source-line-no">067</span><span id="line.67">     * @return Builder</span>
 <span class="source-line-no">068</span><span id="line.68">     */</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public CartSetLineItemDistributionChannelActionBuilder distributionChannel(</span>
-<span class="source-line-no">071</span><span id="line.71">            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {</span>
-<span class="source-line-no">072</span><span id="line.72">        this.distributionChannel = distributionChannel;</span>
-<span class="source-line-no">073</span><span id="line.73">        return this;</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    /**</span>
-<span class="source-line-no">077</span><span id="line.77">     *  &lt;p&gt;&lt;code&gt;id&lt;/code&gt; of the LineItem to update.&lt;/p&gt;</span>
-<span class="source-line-no">078</span><span id="line.78">     * @return lineItemId</span>
-<span class="source-line-no">079</span><span id="line.79">     */</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public String getLineItemId() {</span>
-<span class="source-line-no">082</span><span id="line.82">        return this.lineItemId;</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    /**</span>
-<span class="source-line-no">086</span><span id="line.86">     *  &lt;ul&gt;</span>
-<span class="source-line-no">087</span><span id="line.87">     *   &lt;li&gt;If present, a Reference to the Channel is set for the LineItem specified by &lt;code&gt;lineItemId&lt;/code&gt;.&lt;/li&gt;</span>
-<span class="source-line-no">088</span><span id="line.88">     *   &lt;li&gt;If not present, the current Reference to a distribution channel is removed from the LineItem specified by &lt;code&gt;lineItemId&lt;/code&gt;. The Channel must have the &lt;code&gt;ProductDistribution&lt;/code&gt; ChannelRoleEnum.&lt;/li&gt;</span>
-<span class="source-line-no">089</span><span id="line.89">     *  &lt;/ul&gt;</span>
-<span class="source-line-no">090</span><span id="line.90">     * @return distributionChannel</span>
-<span class="source-line-no">091</span><span id="line.91">     */</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    @Nullable</span>
-<span class="source-line-no">094</span><span id="line.94">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {</span>
-<span class="source-line-no">095</span><span id="line.95">        return this.distributionChannel;</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    /**</span>
-<span class="source-line-no">099</span><span id="line.99">     * builds CartSetLineItemDistributionChannelAction with checking for non-null required values</span>
-<span class="source-line-no">100</span><span id="line.100">     * @return CartSetLineItemDistributionChannelAction</span>
-<span class="source-line-no">101</span><span id="line.101">     */</span>
-<span class="source-line-no">102</span><span id="line.102">    public CartSetLineItemDistributionChannelAction build() {</span>
-<span class="source-line-no">103</span><span id="line.103">        Objects.requireNonNull(lineItemId, CartSetLineItemDistributionChannelAction.class + ": lineItemId is missing");</span>
-<span class="source-line-no">104</span><span id="line.104">        return new CartSetLineItemDistributionChannelActionImpl(lineItemId, distributionChannel);</span>
-<span class="source-line-no">105</span><span id="line.105">    }</span>
-<span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    /**</span>
-<span class="source-line-no">108</span><span id="line.108">     * builds CartSetLineItemDistributionChannelAction without checking for non-null required values</span>
-<span class="source-line-no">109</span><span id="line.109">     * @return CartSetLineItemDistributionChannelAction</span>
-<span class="source-line-no">110</span><span id="line.110">     */</span>
-<span class="source-line-no">111</span><span id="line.111">    public CartSetLineItemDistributionChannelAction buildUnchecked() {</span>
-<span class="source-line-no">112</span><span id="line.112">        return new CartSetLineItemDistributionChannelActionImpl(lineItemId, distributionChannel);</span>
-<span class="source-line-no">113</span><span id="line.113">    }</span>
-<span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    /**</span>
-<span class="source-line-no">116</span><span id="line.116">     * factory method for an instance of CartSetLineItemDistributionChannelActionBuilder</span>
-<span class="source-line-no">117</span><span id="line.117">     * @return builder</span>
-<span class="source-line-no">118</span><span id="line.118">     */</span>
-<span class="source-line-no">119</span><span id="line.119">    public static CartSetLineItemDistributionChannelActionBuilder of() {</span>
-<span class="source-line-no">120</span><span id="line.120">        return new CartSetLineItemDistributionChannelActionBuilder();</span>
+<span class="source-line-no">070</span><span id="line.70">    public CartSetLineItemDistributionChannelActionBuilder withDistributionChannel(</span>
+<span class="source-line-no">071</span><span id="line.71">            Function&lt;com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier&gt; builder) {</span>
+<span class="source-line-no">072</span><span id="line.72">        this.distributionChannel = builder</span>
+<span class="source-line-no">073</span><span id="line.73">                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());</span>
+<span class="source-line-no">074</span><span id="line.74">        return this;</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    /**</span>
+<span class="source-line-no">078</span><span id="line.78">     *  &lt;ul&gt;</span>
+<span class="source-line-no">079</span><span id="line.79">     *   &lt;li&gt;If present, a Reference to the Channel is set for the LineItem specified by &lt;code&gt;lineItemId&lt;/code&gt;.&lt;/li&gt;</span>
+<span class="source-line-no">080</span><span id="line.80">     *   &lt;li&gt;If not present, the current Reference to a distribution channel is removed from the LineItem specified by &lt;code&gt;lineItemId&lt;/code&gt;. The Channel must have the &lt;code&gt;ProductDistribution&lt;/code&gt; ChannelRoleEnum.&lt;/li&gt;</span>
+<span class="source-line-no">081</span><span id="line.81">     *  &lt;/ul&gt;</span>
+<span class="source-line-no">082</span><span id="line.82">     * @param distributionChannel value to be set</span>
+<span class="source-line-no">083</span><span id="line.83">     * @return Builder</span>
+<span class="source-line-no">084</span><span id="line.84">     */</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public CartSetLineItemDistributionChannelActionBuilder distributionChannel(</span>
+<span class="source-line-no">087</span><span id="line.87">            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {</span>
+<span class="source-line-no">088</span><span id="line.88">        this.distributionChannel = distributionChannel;</span>
+<span class="source-line-no">089</span><span id="line.89">        return this;</span>
+<span class="source-line-no">090</span><span id="line.90">    }</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    /**</span>
+<span class="source-line-no">093</span><span id="line.93">     *  &lt;p&gt;&lt;code&gt;id&lt;/code&gt; of the LineItem to update.&lt;/p&gt;</span>
+<span class="source-line-no">094</span><span id="line.94">     * @return lineItemId</span>
+<span class="source-line-no">095</span><span id="line.95">     */</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    public String getLineItemId() {</span>
+<span class="source-line-no">098</span><span id="line.98">        return this.lineItemId;</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    /**</span>
+<span class="source-line-no">102</span><span id="line.102">     *  &lt;ul&gt;</span>
+<span class="source-line-no">103</span><span id="line.103">     *   &lt;li&gt;If present, a Reference to the Channel is set for the LineItem specified by &lt;code&gt;lineItemId&lt;/code&gt;.&lt;/li&gt;</span>
+<span class="source-line-no">104</span><span id="line.104">     *   &lt;li&gt;If not present, the current Reference to a distribution channel is removed from the LineItem specified by &lt;code&gt;lineItemId&lt;/code&gt;. The Channel must have the &lt;code&gt;ProductDistribution&lt;/code&gt; ChannelRoleEnum.&lt;/li&gt;</span>
+<span class="source-line-no">105</span><span id="line.105">     *  &lt;/ul&gt;</span>
+<span class="source-line-no">106</span><span id="line.106">     * @return distributionChannel</span>
+<span class="source-line-no">107</span><span id="line.107">     */</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    @Nullable</span>
+<span class="source-line-no">110</span><span id="line.110">    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {</span>
+<span class="source-line-no">111</span><span id="line.111">        return this.distributionChannel;</span>
+<span class="source-line-no">112</span><span id="line.112">    }</span>
+<span class="source-line-no">113</span><span id="line.113"></span>
+<span class="source-line-no">114</span><span id="line.114">    /**</span>
+<span class="source-line-no">115</span><span id="line.115">     * builds CartSetLineItemDistributionChannelAction with checking for non-null required values</span>
+<span class="source-line-no">116</span><span id="line.116">     * @return CartSetLineItemDistributionChannelAction</span>
+<span class="source-line-no">117</span><span id="line.117">     */</span>
+<span class="source-line-no">118</span><span id="line.118">    public CartSetLineItemDistributionChannelAction build() {</span>
+<span class="source-line-no">119</span><span id="line.119">        Objects.requireNonNull(lineItemId, CartSetLineItemDistributionChannelAction.class + ": lineItemId is missing");</span>
+<span class="source-line-no">120</span><span id="line.120">        return new CartSetLineItemDistributionChannelActionImpl(lineItemId, distributionChannel);</span>
 <span class="source-line-no">121</span><span id="line.121">    }</span>
 <span class="source-line-no">122</span><span id="line.122"></span>
 <span class="source-line-no">123</span><span id="line.123">    /**</span>
-<span class="source-line-no">124</span><span id="line.124">     * create builder for CartSetLineItemDistributionChannelAction instance</span>
-<span class="source-line-no">125</span><span id="line.125">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">126</span><span id="line.126">     * @return builder</span>
-<span class="source-line-no">127</span><span id="line.127">     */</span>
-<span class="source-line-no">128</span><span id="line.128">    public static CartSetLineItemDistributionChannelActionBuilder of(</span>
-<span class="source-line-no">129</span><span id="line.129">            final CartSetLineItemDistributionChannelAction template) {</span>
-<span class="source-line-no">130</span><span id="line.130">        CartSetLineItemDistributionChannelActionBuilder builder = new CartSetLineItemDistributionChannelActionBuilder();</span>
-<span class="source-line-no">131</span><span id="line.131">        builder.lineItemId = template.getLineItemId();</span>
-<span class="source-line-no">132</span><span id="line.132">        builder.distributionChannel = template.getDistributionChannel();</span>
-<span class="source-line-no">133</span><span id="line.133">        return builder;</span>
-<span class="source-line-no">134</span><span id="line.134">    }</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">}</span>
+<span class="source-line-no">124</span><span id="line.124">     * builds CartSetLineItemDistributionChannelAction without checking for non-null required values</span>
+<span class="source-line-no">125</span><span id="line.125">     * @return CartSetLineItemDistributionChannelAction</span>
+<span class="source-line-no">126</span><span id="line.126">     */</span>
+<span class="source-line-no">127</span><span id="line.127">    public CartSetLineItemDistributionChannelAction buildUnchecked() {</span>
+<span class="source-line-no">128</span><span id="line.128">        return new CartSetLineItemDistributionChannelActionImpl(lineItemId, distributionChannel);</span>
+<span class="source-line-no">129</span><span id="line.129">    }</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">    /**</span>
+<span class="source-line-no">132</span><span id="line.132">     * factory method for an instance of CartSetLineItemDistributionChannelActionBuilder</span>
+<span class="source-line-no">133</span><span id="line.133">     * @return builder</span>
+<span class="source-line-no">134</span><span id="line.134">     */</span>
+<span class="source-line-no">135</span><span id="line.135">    public static CartSetLineItemDistributionChannelActionBuilder of() {</span>
+<span class="source-line-no">136</span><span id="line.136">        return new CartSetLineItemDistributionChannelActionBuilder();</span>
+<span class="source-line-no">137</span><span id="line.137">    }</span>
+<span class="source-line-no">138</span><span id="line.138"></span>
+<span class="source-line-no">139</span><span id="line.139">    /**</span>
+<span class="source-line-no">140</span><span id="line.140">     * create builder for CartSetLineItemDistributionChannelAction instance</span>
+<span class="source-line-no">141</span><span id="line.141">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">142</span><span id="line.142">     * @return builder</span>
+<span class="source-line-no">143</span><span id="line.143">     */</span>
+<span class="source-line-no">144</span><span id="line.144">    public static CartSetLineItemDistributionChannelActionBuilder of(</span>
+<span class="source-line-no">145</span><span id="line.145">            final CartSetLineItemDistributionChannelAction template) {</span>
+<span class="source-line-no">146</span><span id="line.146">        CartSetLineItemDistributionChannelActionBuilder builder = new CartSetLineItemDistributionChannelActionBuilder();</span>
+<span class="source-line-no">147</span><span id="line.147">        builder.lineItemId = template.getLineItemId();</span>
+<span class="source-line-no">148</span><span id="line.148">        builder.distributionChannel = template.getDistributionChannel();</span>
+<span class="source-line-no">149</span><span id="line.149">        return builder;</span>
+<span class="source-line-no">150</span><span id="line.150">    }</span>
+<span class="source-line-no">151</span><span id="line.151"></span>
+<span class="source-line-no">152</span><span id="line.152">}</span>
 
 
 

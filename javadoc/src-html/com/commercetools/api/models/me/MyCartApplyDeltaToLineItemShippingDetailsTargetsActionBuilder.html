@@ -120,65 +120,87 @@
 <span class="source-line-no">107</span><span id="line.107">    }</span>
 <span class="source-line-no">108</span><span id="line.108"></span>
 <span class="source-line-no">109</span><span id="line.109">    /**</span>
-<span class="source-line-no">110</span><span id="line.110">     *  &lt;p&gt;&lt;code&gt;id&lt;/code&gt; of the LineItem to update.&lt;/p&gt;</span>
-<span class="source-line-no">111</span><span id="line.111">     * @return lineItemId</span>
-<span class="source-line-no">112</span><span id="line.112">     */</span>
-<span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    public String getLineItemId() {</span>
-<span class="source-line-no">115</span><span id="line.115">        return this.lineItemId;</span>
-<span class="source-line-no">116</span><span id="line.116">    }</span>
-<span class="source-line-no">117</span><span id="line.117"></span>
-<span class="source-line-no">118</span><span id="line.118">    /**</span>
-<span class="source-line-no">119</span><span id="line.119">     *  &lt;p&gt;Using positive or negative quantities increases or decreases the number of items shipped to an address.&lt;/p&gt;</span>
-<span class="source-line-no">120</span><span id="line.120">     * @return targetsDelta</span>
-<span class="source-line-no">121</span><span id="line.121">     */</span>
-<span class="source-line-no">122</span><span id="line.122"></span>
-<span class="source-line-no">123</span><span id="line.123">    public java.util.List&lt;com.commercetools.api.models.cart.ItemShippingTarget&gt; getTargetsDelta() {</span>
-<span class="source-line-no">124</span><span id="line.124">        return this.targetsDelta;</span>
-<span class="source-line-no">125</span><span id="line.125">    }</span>
-<span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">    /**</span>
-<span class="source-line-no">128</span><span id="line.128">     * builds MyCartApplyDeltaToLineItemShippingDetailsTargetsAction with checking for non-null required values</span>
-<span class="source-line-no">129</span><span id="line.129">     * @return MyCartApplyDeltaToLineItemShippingDetailsTargetsAction</span>
-<span class="source-line-no">130</span><span id="line.130">     */</span>
-<span class="source-line-no">131</span><span id="line.131">    public MyCartApplyDeltaToLineItemShippingDetailsTargetsAction build() {</span>
-<span class="source-line-no">132</span><span id="line.132">        Objects.requireNonNull(lineItemId,</span>
-<span class="source-line-no">133</span><span id="line.133">            MyCartApplyDeltaToLineItemShippingDetailsTargetsAction.class + ": lineItemId is missing");</span>
-<span class="source-line-no">134</span><span id="line.134">        Objects.requireNonNull(targetsDelta,</span>
-<span class="source-line-no">135</span><span id="line.135">            MyCartApplyDeltaToLineItemShippingDetailsTargetsAction.class + ": targetsDelta is missing");</span>
-<span class="source-line-no">136</span><span id="line.136">        return new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(lineItemId, targetsDelta);</span>
-<span class="source-line-no">137</span><span id="line.137">    }</span>
-<span class="source-line-no">138</span><span id="line.138"></span>
-<span class="source-line-no">139</span><span id="line.139">    /**</span>
-<span class="source-line-no">140</span><span id="line.140">     * builds MyCartApplyDeltaToLineItemShippingDetailsTargetsAction without checking for non-null required values</span>
-<span class="source-line-no">141</span><span id="line.141">     * @return MyCartApplyDeltaToLineItemShippingDetailsTargetsAction</span>
-<span class="source-line-no">142</span><span id="line.142">     */</span>
-<span class="source-line-no">143</span><span id="line.143">    public MyCartApplyDeltaToLineItemShippingDetailsTargetsAction buildUnchecked() {</span>
-<span class="source-line-no">144</span><span id="line.144">        return new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(lineItemId, targetsDelta);</span>
-<span class="source-line-no">145</span><span id="line.145">    }</span>
-<span class="source-line-no">146</span><span id="line.146"></span>
-<span class="source-line-no">147</span><span id="line.147">    /**</span>
-<span class="source-line-no">148</span><span id="line.148">     * factory method for an instance of MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder</span>
-<span class="source-line-no">149</span><span id="line.149">     * @return builder</span>
-<span class="source-line-no">150</span><span id="line.150">     */</span>
-<span class="source-line-no">151</span><span id="line.151">    public static MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder of() {</span>
-<span class="source-line-no">152</span><span id="line.152">        return new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder();</span>
-<span class="source-line-no">153</span><span id="line.153">    }</span>
-<span class="source-line-no">154</span><span id="line.154"></span>
-<span class="source-line-no">155</span><span id="line.155">    /**</span>
-<span class="source-line-no">156</span><span id="line.156">     * create builder for MyCartApplyDeltaToLineItemShippingDetailsTargetsAction instance</span>
-<span class="source-line-no">157</span><span id="line.157">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">158</span><span id="line.158">     * @return builder</span>
-<span class="source-line-no">159</span><span id="line.159">     */</span>
-<span class="source-line-no">160</span><span id="line.160">    public static MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder of(</span>
-<span class="source-line-no">161</span><span id="line.161">            final MyCartApplyDeltaToLineItemShippingDetailsTargetsAction template) {</span>
-<span class="source-line-no">162</span><span id="line.162">        MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder builder = new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder();</span>
-<span class="source-line-no">163</span><span id="line.163">        builder.lineItemId = template.getLineItemId();</span>
-<span class="source-line-no">164</span><span id="line.164">        builder.targetsDelta = template.getTargetsDelta();</span>
-<span class="source-line-no">165</span><span id="line.165">        return builder;</span>
-<span class="source-line-no">166</span><span id="line.166">    }</span>
-<span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">}</span>
+<span class="source-line-no">110</span><span id="line.110">     *  &lt;p&gt;Using positive or negative quantities increases or decreases the number of items shipped to an address.&lt;/p&gt;</span>
+<span class="source-line-no">111</span><span id="line.111">     * @param builder function to build the targetsDelta value</span>
+<span class="source-line-no">112</span><span id="line.112">     * @return Builder</span>
+<span class="source-line-no">113</span><span id="line.113">     */</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder addTargetsDelta(</span>
+<span class="source-line-no">116</span><span id="line.116">            Function&lt;com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTarget&gt; builder) {</span>
+<span class="source-line-no">117</span><span id="line.117">        return plusTargetsDelta(builder.apply(com.commercetools.api.models.cart.ItemShippingTargetBuilder.of()));</span>
+<span class="source-line-no">118</span><span id="line.118">    }</span>
+<span class="source-line-no">119</span><span id="line.119"></span>
+<span class="source-line-no">120</span><span id="line.120">    /**</span>
+<span class="source-line-no">121</span><span id="line.121">     *  &lt;p&gt;Using positive or negative quantities increases or decreases the number of items shipped to an address.&lt;/p&gt;</span>
+<span class="source-line-no">122</span><span id="line.122">     * @param builder function to build the targetsDelta value</span>
+<span class="source-line-no">123</span><span id="line.123">     * @return Builder</span>
+<span class="source-line-no">124</span><span id="line.124">     */</span>
+<span class="source-line-no">125</span><span id="line.125"></span>
+<span class="source-line-no">126</span><span id="line.126">    public MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder setTargetsDelta(</span>
+<span class="source-line-no">127</span><span id="line.127">            Function&lt;com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTarget&gt; builder) {</span>
+<span class="source-line-no">128</span><span id="line.128">        return targetsDelta(builder.apply(com.commercetools.api.models.cart.ItemShippingTargetBuilder.of()));</span>
+<span class="source-line-no">129</span><span id="line.129">    }</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">    /**</span>
+<span class="source-line-no">132</span><span id="line.132">     *  &lt;p&gt;&lt;code&gt;id&lt;/code&gt; of the LineItem to update.&lt;/p&gt;</span>
+<span class="source-line-no">133</span><span id="line.133">     * @return lineItemId</span>
+<span class="source-line-no">134</span><span id="line.134">     */</span>
+<span class="source-line-no">135</span><span id="line.135"></span>
+<span class="source-line-no">136</span><span id="line.136">    public String getLineItemId() {</span>
+<span class="source-line-no">137</span><span id="line.137">        return this.lineItemId;</span>
+<span class="source-line-no">138</span><span id="line.138">    }</span>
+<span class="source-line-no">139</span><span id="line.139"></span>
+<span class="source-line-no">140</span><span id="line.140">    /**</span>
+<span class="source-line-no">141</span><span id="line.141">     *  &lt;p&gt;Using positive or negative quantities increases or decreases the number of items shipped to an address.&lt;/p&gt;</span>
+<span class="source-line-no">142</span><span id="line.142">     * @return targetsDelta</span>
+<span class="source-line-no">143</span><span id="line.143">     */</span>
+<span class="source-line-no">144</span><span id="line.144"></span>
+<span class="source-line-no">145</span><span id="line.145">    public java.util.List&lt;com.commercetools.api.models.cart.ItemShippingTarget&gt; getTargetsDelta() {</span>
+<span class="source-line-no">146</span><span id="line.146">        return this.targetsDelta;</span>
+<span class="source-line-no">147</span><span id="line.147">    }</span>
+<span class="source-line-no">148</span><span id="line.148"></span>
+<span class="source-line-no">149</span><span id="line.149">    /**</span>
+<span class="source-line-no">150</span><span id="line.150">     * builds MyCartApplyDeltaToLineItemShippingDetailsTargetsAction with checking for non-null required values</span>
+<span class="source-line-no">151</span><span id="line.151">     * @return MyCartApplyDeltaToLineItemShippingDetailsTargetsAction</span>
+<span class="source-line-no">152</span><span id="line.152">     */</span>
+<span class="source-line-no">153</span><span id="line.153">    public MyCartApplyDeltaToLineItemShippingDetailsTargetsAction build() {</span>
+<span class="source-line-no">154</span><span id="line.154">        Objects.requireNonNull(lineItemId,</span>
+<span class="source-line-no">155</span><span id="line.155">            MyCartApplyDeltaToLineItemShippingDetailsTargetsAction.class + ": lineItemId is missing");</span>
+<span class="source-line-no">156</span><span id="line.156">        Objects.requireNonNull(targetsDelta,</span>
+<span class="source-line-no">157</span><span id="line.157">            MyCartApplyDeltaToLineItemShippingDetailsTargetsAction.class + ": targetsDelta is missing");</span>
+<span class="source-line-no">158</span><span id="line.158">        return new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(lineItemId, targetsDelta);</span>
+<span class="source-line-no">159</span><span id="line.159">    }</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    /**</span>
+<span class="source-line-no">162</span><span id="line.162">     * builds MyCartApplyDeltaToLineItemShippingDetailsTargetsAction without checking for non-null required values</span>
+<span class="source-line-no">163</span><span id="line.163">     * @return MyCartApplyDeltaToLineItemShippingDetailsTargetsAction</span>
+<span class="source-line-no">164</span><span id="line.164">     */</span>
+<span class="source-line-no">165</span><span id="line.165">    public MyCartApplyDeltaToLineItemShippingDetailsTargetsAction buildUnchecked() {</span>
+<span class="source-line-no">166</span><span id="line.166">        return new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(lineItemId, targetsDelta);</span>
+<span class="source-line-no">167</span><span id="line.167">    }</span>
+<span class="source-line-no">168</span><span id="line.168"></span>
+<span class="source-line-no">169</span><span id="line.169">    /**</span>
+<span class="source-line-no">170</span><span id="line.170">     * factory method for an instance of MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder</span>
+<span class="source-line-no">171</span><span id="line.171">     * @return builder</span>
+<span class="source-line-no">172</span><span id="line.172">     */</span>
+<span class="source-line-no">173</span><span id="line.173">    public static MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder of() {</span>
+<span class="source-line-no">174</span><span id="line.174">        return new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder();</span>
+<span class="source-line-no">175</span><span id="line.175">    }</span>
+<span class="source-line-no">176</span><span id="line.176"></span>
+<span class="source-line-no">177</span><span id="line.177">    /**</span>
+<span class="source-line-no">178</span><span id="line.178">     * create builder for MyCartApplyDeltaToLineItemShippingDetailsTargetsAction instance</span>
+<span class="source-line-no">179</span><span id="line.179">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">180</span><span id="line.180">     * @return builder</span>
+<span class="source-line-no">181</span><span id="line.181">     */</span>
+<span class="source-line-no">182</span><span id="line.182">    public static MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder of(</span>
+<span class="source-line-no">183</span><span id="line.183">            final MyCartApplyDeltaToLineItemShippingDetailsTargetsAction template) {</span>
+<span class="source-line-no">184</span><span id="line.184">        MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder builder = new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder();</span>
+<span class="source-line-no">185</span><span id="line.185">        builder.lineItemId = template.getLineItemId();</span>
+<span class="source-line-no">186</span><span id="line.186">        builder.targetsDelta = template.getTargetsDelta();</span>
+<span class="source-line-no">187</span><span id="line.187">        return builder;</span>
+<span class="source-line-no">188</span><span id="line.188">    }</span>
+<span class="source-line-no">189</span><span id="line.189"></span>
+<span class="source-line-no">190</span><span id="line.190">}</span>
 
 
 

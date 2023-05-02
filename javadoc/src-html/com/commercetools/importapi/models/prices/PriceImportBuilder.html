@@ -158,392 +158,488 @@
 <span class="source-line-no">145</span><span id="line.145"></span>
 <span class="source-line-no">146</span><span id="line.146">    /**</span>
 <span class="source-line-no">147</span><span id="line.147">     *  &lt;p&gt;The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary CustomerGroup is created.&lt;/p&gt;</span>
-<span class="source-line-no">148</span><span id="line.148">     * @param customerGroup value to be set</span>
+<span class="source-line-no">148</span><span id="line.148">     * @param builder function to build the customerGroup value</span>
 <span class="source-line-no">149</span><span id="line.149">     * @return Builder</span>
 <span class="source-line-no">150</span><span id="line.150">     */</span>
 <span class="source-line-no">151</span><span id="line.151"></span>
-<span class="source-line-no">152</span><span id="line.152">    public PriceImportBuilder customerGroup(</span>
-<span class="source-line-no">153</span><span id="line.153">            @Nullable final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup) {</span>
-<span class="source-line-no">154</span><span id="line.154">        this.customerGroup = customerGroup;</span>
-<span class="source-line-no">155</span><span id="line.155">        return this;</span>
-<span class="source-line-no">156</span><span id="line.156">    }</span>
-<span class="source-line-no">157</span><span id="line.157"></span>
-<span class="source-line-no">158</span><span id="line.158">    /**</span>
-<span class="source-line-no">159</span><span id="line.159">     *  &lt;p&gt;The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Channel is created.&lt;/p&gt;</span>
-<span class="source-line-no">160</span><span id="line.160">     * @param builder function to build the channel value</span>
-<span class="source-line-no">161</span><span id="line.161">     * @return Builder</span>
-<span class="source-line-no">162</span><span id="line.162">     */</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    public PriceImportBuilder channel(</span>
-<span class="source-line-no">165</span><span id="line.165">            Function&lt;com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">166</span><span id="line.166">        this.channel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of()).build();</span>
-<span class="source-line-no">167</span><span id="line.167">        return this;</span>
-<span class="source-line-no">168</span><span id="line.168">    }</span>
-<span class="source-line-no">169</span><span id="line.169"></span>
-<span class="source-line-no">170</span><span id="line.170">    /**</span>
-<span class="source-line-no">171</span><span id="line.171">     *  &lt;p&gt;The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Channel is created.&lt;/p&gt;</span>
-<span class="source-line-no">172</span><span id="line.172">     * @param channel value to be set</span>
-<span class="source-line-no">173</span><span id="line.173">     * @return Builder</span>
-<span class="source-line-no">174</span><span id="line.174">     */</span>
-<span class="source-line-no">175</span><span id="line.175"></span>
-<span class="source-line-no">176</span><span id="line.176">    public PriceImportBuilder channel(</span>
-<span class="source-line-no">177</span><span id="line.177">            @Nullable final com.commercetools.importapi.models.common.ChannelKeyReference channel) {</span>
-<span class="source-line-no">178</span><span id="line.178">        this.channel = channel;</span>
-<span class="source-line-no">179</span><span id="line.179">        return this;</span>
-<span class="source-line-no">180</span><span id="line.180">    }</span>
-<span class="source-line-no">181</span><span id="line.181"></span>
-<span class="source-line-no">182</span><span id="line.182">    /**</span>
-<span class="source-line-no">183</span><span id="line.183">     *  &lt;p&gt;Sets a discounted price from an external service.&lt;/p&gt;</span>
-<span class="source-line-no">184</span><span id="line.184">     * @param builder function to build the discounted value</span>
-<span class="source-line-no">185</span><span id="line.185">     * @return Builder</span>
-<span class="source-line-no">186</span><span id="line.186">     */</span>
-<span class="source-line-no">187</span><span id="line.187"></span>
-<span class="source-line-no">188</span><span id="line.188">    public PriceImportBuilder discounted(</span>
-<span class="source-line-no">189</span><span id="line.189">            Function&lt;com.commercetools.importapi.models.common.DiscountedPriceBuilder, com.commercetools.importapi.models.common.DiscountedPriceBuilder&gt; builder) {</span>
-<span class="source-line-no">190</span><span id="line.190">        this.discounted = builder.apply(com.commercetools.importapi.models.common.DiscountedPriceBuilder.of()).build();</span>
-<span class="source-line-no">191</span><span id="line.191">        return this;</span>
-<span class="source-line-no">192</span><span id="line.192">    }</span>
-<span class="source-line-no">193</span><span id="line.193"></span>
-<span class="source-line-no">194</span><span id="line.194">    /**</span>
-<span class="source-line-no">195</span><span id="line.195">     *  &lt;p&gt;Sets a discounted price from an external service.&lt;/p&gt;</span>
-<span class="source-line-no">196</span><span id="line.196">     * @param discounted value to be set</span>
-<span class="source-line-no">197</span><span id="line.197">     * @return Builder</span>
-<span class="source-line-no">198</span><span id="line.198">     */</span>
-<span class="source-line-no">199</span><span id="line.199"></span>
-<span class="source-line-no">200</span><span id="line.200">    public PriceImportBuilder discounted(</span>
-<span class="source-line-no">201</span><span id="line.201">            @Nullable final com.commercetools.importapi.models.common.DiscountedPrice discounted) {</span>
-<span class="source-line-no">202</span><span id="line.202">        this.discounted = discounted;</span>
-<span class="source-line-no">203</span><span id="line.203">        return this;</span>
-<span class="source-line-no">204</span><span id="line.204">    }</span>
-<span class="source-line-no">205</span><span id="line.205"></span>
-<span class="source-line-no">206</span><span id="line.206">    /**</span>
-<span class="source-line-no">207</span><span id="line.207">     *  &lt;p&gt;Only the Embedded Price updates will be published to &lt;code&gt;staged&lt;/code&gt; and &lt;code&gt;current&lt;/code&gt; projection.&lt;/p&gt;</span>
-<span class="source-line-no">208</span><span id="line.208">     * @param publish value to be set</span>
-<span class="source-line-no">209</span><span id="line.209">     * @return Builder</span>
-<span class="source-line-no">210</span><span id="line.210">     */</span>
-<span class="source-line-no">211</span><span id="line.211"></span>
-<span class="source-line-no">212</span><span id="line.212">    public PriceImportBuilder publish(@Nullable final Boolean publish) {</span>
-<span class="source-line-no">213</span><span id="line.213">        this.publish = publish;</span>
-<span class="source-line-no">214</span><span id="line.214">        return this;</span>
-<span class="source-line-no">215</span><span id="line.215">    }</span>
-<span class="source-line-no">216</span><span id="line.216"></span>
-<span class="source-line-no">217</span><span id="line.217">    /**</span>
-<span class="source-line-no">218</span><span id="line.218">     *  &lt;p&gt;The tiered prices for this price.&lt;/p&gt;</span>
-<span class="source-line-no">219</span><span id="line.219">     * @param tiers value to be set</span>
-<span class="source-line-no">220</span><span id="line.220">     * @return Builder</span>
-<span class="source-line-no">221</span><span id="line.221">     */</span>
-<span class="source-line-no">222</span><span id="line.222"></span>
-<span class="source-line-no">223</span><span id="line.223">    public PriceImportBuilder tiers(@Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {</span>
-<span class="source-line-no">224</span><span id="line.224">        this.tiers = new ArrayList&lt;&gt;(Arrays.asList(tiers));</span>
-<span class="source-line-no">225</span><span id="line.225">        return this;</span>
-<span class="source-line-no">226</span><span id="line.226">    }</span>
-<span class="source-line-no">227</span><span id="line.227"></span>
-<span class="source-line-no">228</span><span id="line.228">    /**</span>
-<span class="source-line-no">229</span><span id="line.229">     *  &lt;p&gt;The tiered prices for this price.&lt;/p&gt;</span>
-<span class="source-line-no">230</span><span id="line.230">     * @param tiers value to be set</span>
-<span class="source-line-no">231</span><span id="line.231">     * @return Builder</span>
-<span class="source-line-no">232</span><span id="line.232">     */</span>
-<span class="source-line-no">233</span><span id="line.233"></span>
-<span class="source-line-no">234</span><span id="line.234">    public PriceImportBuilder tiers(</span>
-<span class="source-line-no">235</span><span id="line.235">            @Nullable final java.util.List&lt;com.commercetools.importapi.models.common.PriceTier&gt; tiers) {</span>
-<span class="source-line-no">236</span><span id="line.236">        this.tiers = tiers;</span>
-<span class="source-line-no">237</span><span id="line.237">        return this;</span>
-<span class="source-line-no">238</span><span id="line.238">    }</span>
-<span class="source-line-no">239</span><span id="line.239"></span>
-<span class="source-line-no">240</span><span id="line.240">    /**</span>
-<span class="source-line-no">241</span><span id="line.241">     *  &lt;p&gt;The tiered prices for this price.&lt;/p&gt;</span>
-<span class="source-line-no">242</span><span id="line.242">     * @param tiers value to be set</span>
-<span class="source-line-no">243</span><span id="line.243">     * @return Builder</span>
-<span class="source-line-no">244</span><span id="line.244">     */</span>
-<span class="source-line-no">245</span><span id="line.245"></span>
-<span class="source-line-no">246</span><span id="line.246">    public PriceImportBuilder plusTiers(@Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {</span>
-<span class="source-line-no">247</span><span id="line.247">        if (this.tiers == null) {</span>
-<span class="source-line-no">248</span><span id="line.248">            this.tiers = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">249</span><span id="line.249">        }</span>
-<span class="source-line-no">250</span><span id="line.250">        this.tiers.addAll(Arrays.asList(tiers));</span>
+<span class="source-line-no">152</span><span id="line.152">    public PriceImportBuilder withCustomerGroup(</span>
+<span class="source-line-no">153</span><span id="line.153">            Function&lt;com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder, com.commercetools.importapi.models.common.CustomerGroupKeyReference&gt; builder) {</span>
+<span class="source-line-no">154</span><span id="line.154">        this.customerGroup = builder</span>
+<span class="source-line-no">155</span><span id="line.155">                .apply(com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder.of());</span>
+<span class="source-line-no">156</span><span id="line.156">        return this;</span>
+<span class="source-line-no">157</span><span id="line.157">    }</span>
+<span class="source-line-no">158</span><span id="line.158"></span>
+<span class="source-line-no">159</span><span id="line.159">    /**</span>
+<span class="source-line-no">160</span><span id="line.160">     *  &lt;p&gt;The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary CustomerGroup is created.&lt;/p&gt;</span>
+<span class="source-line-no">161</span><span id="line.161">     * @param customerGroup value to be set</span>
+<span class="source-line-no">162</span><span id="line.162">     * @return Builder</span>
+<span class="source-line-no">163</span><span id="line.163">     */</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    public PriceImportBuilder customerGroup(</span>
+<span class="source-line-no">166</span><span id="line.166">            @Nullable final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup) {</span>
+<span class="source-line-no">167</span><span id="line.167">        this.customerGroup = customerGroup;</span>
+<span class="source-line-no">168</span><span id="line.168">        return this;</span>
+<span class="source-line-no">169</span><span id="line.169">    }</span>
+<span class="source-line-no">170</span><span id="line.170"></span>
+<span class="source-line-no">171</span><span id="line.171">    /**</span>
+<span class="source-line-no">172</span><span id="line.172">     *  &lt;p&gt;The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Channel is created.&lt;/p&gt;</span>
+<span class="source-line-no">173</span><span id="line.173">     * @param builder function to build the channel value</span>
+<span class="source-line-no">174</span><span id="line.174">     * @return Builder</span>
+<span class="source-line-no">175</span><span id="line.175">     */</span>
+<span class="source-line-no">176</span><span id="line.176"></span>
+<span class="source-line-no">177</span><span id="line.177">    public PriceImportBuilder channel(</span>
+<span class="source-line-no">178</span><span id="line.178">            Function&lt;com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">179</span><span id="line.179">        this.channel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of()).build();</span>
+<span class="source-line-no">180</span><span id="line.180">        return this;</span>
+<span class="source-line-no">181</span><span id="line.181">    }</span>
+<span class="source-line-no">182</span><span id="line.182"></span>
+<span class="source-line-no">183</span><span id="line.183">    /**</span>
+<span class="source-line-no">184</span><span id="line.184">     *  &lt;p&gt;The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Channel is created.&lt;/p&gt;</span>
+<span class="source-line-no">185</span><span id="line.185">     * @param builder function to build the channel value</span>
+<span class="source-line-no">186</span><span id="line.186">     * @return Builder</span>
+<span class="source-line-no">187</span><span id="line.187">     */</span>
+<span class="source-line-no">188</span><span id="line.188"></span>
+<span class="source-line-no">189</span><span id="line.189">    public PriceImportBuilder withChannel(</span>
+<span class="source-line-no">190</span><span id="line.190">            Function&lt;com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReference&gt; builder) {</span>
+<span class="source-line-no">191</span><span id="line.191">        this.channel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of());</span>
+<span class="source-line-no">192</span><span id="line.192">        return this;</span>
+<span class="source-line-no">193</span><span id="line.193">    }</span>
+<span class="source-line-no">194</span><span id="line.194"></span>
+<span class="source-line-no">195</span><span id="line.195">    /**</span>
+<span class="source-line-no">196</span><span id="line.196">     *  &lt;p&gt;The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Channel is created.&lt;/p&gt;</span>
+<span class="source-line-no">197</span><span id="line.197">     * @param channel value to be set</span>
+<span class="source-line-no">198</span><span id="line.198">     * @return Builder</span>
+<span class="source-line-no">199</span><span id="line.199">     */</span>
+<span class="source-line-no">200</span><span id="line.200"></span>
+<span class="source-line-no">201</span><span id="line.201">    public PriceImportBuilder channel(</span>
+<span class="source-line-no">202</span><span id="line.202">            @Nullable final com.commercetools.importapi.models.common.ChannelKeyReference channel) {</span>
+<span class="source-line-no">203</span><span id="line.203">        this.channel = channel;</span>
+<span class="source-line-no">204</span><span id="line.204">        return this;</span>
+<span class="source-line-no">205</span><span id="line.205">    }</span>
+<span class="source-line-no">206</span><span id="line.206"></span>
+<span class="source-line-no">207</span><span id="line.207">    /**</span>
+<span class="source-line-no">208</span><span id="line.208">     *  &lt;p&gt;Sets a discounted price from an external service.&lt;/p&gt;</span>
+<span class="source-line-no">209</span><span id="line.209">     * @param builder function to build the discounted value</span>
+<span class="source-line-no">210</span><span id="line.210">     * @return Builder</span>
+<span class="source-line-no">211</span><span id="line.211">     */</span>
+<span class="source-line-no">212</span><span id="line.212"></span>
+<span class="source-line-no">213</span><span id="line.213">    public PriceImportBuilder discounted(</span>
+<span class="source-line-no">214</span><span id="line.214">            Function&lt;com.commercetools.importapi.models.common.DiscountedPriceBuilder, com.commercetools.importapi.models.common.DiscountedPriceBuilder&gt; builder) {</span>
+<span class="source-line-no">215</span><span id="line.215">        this.discounted = builder.apply(com.commercetools.importapi.models.common.DiscountedPriceBuilder.of()).build();</span>
+<span class="source-line-no">216</span><span id="line.216">        return this;</span>
+<span class="source-line-no">217</span><span id="line.217">    }</span>
+<span class="source-line-no">218</span><span id="line.218"></span>
+<span class="source-line-no">219</span><span id="line.219">    /**</span>
+<span class="source-line-no">220</span><span id="line.220">     *  &lt;p&gt;Sets a discounted price from an external service.&lt;/p&gt;</span>
+<span class="source-line-no">221</span><span id="line.221">     * @param builder function to build the discounted value</span>
+<span class="source-line-no">222</span><span id="line.222">     * @return Builder</span>
+<span class="source-line-no">223</span><span id="line.223">     */</span>
+<span class="source-line-no">224</span><span id="line.224"></span>
+<span class="source-line-no">225</span><span id="line.225">    public PriceImportBuilder withDiscounted(</span>
+<span class="source-line-no">226</span><span id="line.226">            Function&lt;com.commercetools.importapi.models.common.DiscountedPriceBuilder, com.commercetools.importapi.models.common.DiscountedPrice&gt; builder) {</span>
+<span class="source-line-no">227</span><span id="line.227">        this.discounted = builder.apply(com.commercetools.importapi.models.common.DiscountedPriceBuilder.of());</span>
+<span class="source-line-no">228</span><span id="line.228">        return this;</span>
+<span class="source-line-no">229</span><span id="line.229">    }</span>
+<span class="source-line-no">230</span><span id="line.230"></span>
+<span class="source-line-no">231</span><span id="line.231">    /**</span>
+<span class="source-line-no">232</span><span id="line.232">     *  &lt;p&gt;Sets a discounted price from an external service.&lt;/p&gt;</span>
+<span class="source-line-no">233</span><span id="line.233">     * @param discounted value to be set</span>
+<span class="source-line-no">234</span><span id="line.234">     * @return Builder</span>
+<span class="source-line-no">235</span><span id="line.235">     */</span>
+<span class="source-line-no">236</span><span id="line.236"></span>
+<span class="source-line-no">237</span><span id="line.237">    public PriceImportBuilder discounted(</span>
+<span class="source-line-no">238</span><span id="line.238">            @Nullable final com.commercetools.importapi.models.common.DiscountedPrice discounted) {</span>
+<span class="source-line-no">239</span><span id="line.239">        this.discounted = discounted;</span>
+<span class="source-line-no">240</span><span id="line.240">        return this;</span>
+<span class="source-line-no">241</span><span id="line.241">    }</span>
+<span class="source-line-no">242</span><span id="line.242"></span>
+<span class="source-line-no">243</span><span id="line.243">    /**</span>
+<span class="source-line-no">244</span><span id="line.244">     *  &lt;p&gt;Only the Embedded Price updates will be published to &lt;code&gt;staged&lt;/code&gt; and &lt;code&gt;current&lt;/code&gt; projection.&lt;/p&gt;</span>
+<span class="source-line-no">245</span><span id="line.245">     * @param publish value to be set</span>
+<span class="source-line-no">246</span><span id="line.246">     * @return Builder</span>
+<span class="source-line-no">247</span><span id="line.247">     */</span>
+<span class="source-line-no">248</span><span id="line.248"></span>
+<span class="source-line-no">249</span><span id="line.249">    public PriceImportBuilder publish(@Nullable final Boolean publish) {</span>
+<span class="source-line-no">250</span><span id="line.250">        this.publish = publish;</span>
 <span class="source-line-no">251</span><span id="line.251">        return this;</span>
 <span class="source-line-no">252</span><span id="line.252">    }</span>
 <span class="source-line-no">253</span><span id="line.253"></span>
 <span class="source-line-no">254</span><span id="line.254">    /**</span>
 <span class="source-line-no">255</span><span id="line.255">     *  &lt;p&gt;The tiered prices for this price.&lt;/p&gt;</span>
-<span class="source-line-no">256</span><span id="line.256">     * @param builder function to build the tiers value</span>
+<span class="source-line-no">256</span><span id="line.256">     * @param tiers value to be set</span>
 <span class="source-line-no">257</span><span id="line.257">     * @return Builder</span>
 <span class="source-line-no">258</span><span id="line.258">     */</span>
 <span class="source-line-no">259</span><span id="line.259"></span>
-<span class="source-line-no">260</span><span id="line.260">    public PriceImportBuilder plusTiers(</span>
-<span class="source-line-no">261</span><span id="line.261">            Function&lt;com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder&gt; builder) {</span>
-<span class="source-line-no">262</span><span id="line.262">        if (this.tiers == null) {</span>
-<span class="source-line-no">263</span><span id="line.263">            this.tiers = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">264</span><span id="line.264">        }</span>
-<span class="source-line-no">265</span><span id="line.265">        this.tiers.add(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()).build());</span>
-<span class="source-line-no">266</span><span id="line.266">        return this;</span>
-<span class="source-line-no">267</span><span id="line.267">    }</span>
-<span class="source-line-no">268</span><span id="line.268"></span>
-<span class="source-line-no">269</span><span id="line.269">    /**</span>
-<span class="source-line-no">270</span><span id="line.270">     *  &lt;p&gt;The tiered prices for this price.&lt;/p&gt;</span>
-<span class="source-line-no">271</span><span id="line.271">     * @param builder function to build the tiers value</span>
-<span class="source-line-no">272</span><span id="line.272">     * @return Builder</span>
-<span class="source-line-no">273</span><span id="line.273">     */</span>
-<span class="source-line-no">274</span><span id="line.274"></span>
-<span class="source-line-no">275</span><span id="line.275">    public PriceImportBuilder withTiers(</span>
-<span class="source-line-no">276</span><span id="line.276">            Function&lt;com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder&gt; builder) {</span>
-<span class="source-line-no">277</span><span id="line.277">        this.tiers = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">278</span><span id="line.278">        this.tiers.add(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()).build());</span>
-<span class="source-line-no">279</span><span id="line.279">        return this;</span>
-<span class="source-line-no">280</span><span id="line.280">    }</span>
-<span class="source-line-no">281</span><span id="line.281"></span>
-<span class="source-line-no">282</span><span id="line.282">    /**</span>
-<span class="source-line-no">283</span><span id="line.283">     *  &lt;p&gt;The custom fields for this price.&lt;/p&gt;</span>
-<span class="source-line-no">284</span><span id="line.284">     * @param builder function to build the custom value</span>
-<span class="source-line-no">285</span><span id="line.285">     * @return Builder</span>
-<span class="source-line-no">286</span><span id="line.286">     */</span>
-<span class="source-line-no">287</span><span id="line.287"></span>
-<span class="source-line-no">288</span><span id="line.288">    public PriceImportBuilder custom(</span>
-<span class="source-line-no">289</span><span id="line.289">            Function&lt;com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder&gt; builder) {</span>
-<span class="source-line-no">290</span><span id="line.290">        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();</span>
-<span class="source-line-no">291</span><span id="line.291">        return this;</span>
-<span class="source-line-no">292</span><span id="line.292">    }</span>
-<span class="source-line-no">293</span><span id="line.293"></span>
-<span class="source-line-no">294</span><span id="line.294">    /**</span>
-<span class="source-line-no">295</span><span id="line.295">     *  &lt;p&gt;The custom fields for this price.&lt;/p&gt;</span>
-<span class="source-line-no">296</span><span id="line.296">     * @param custom value to be set</span>
-<span class="source-line-no">297</span><span id="line.297">     * @return Builder</span>
-<span class="source-line-no">298</span><span id="line.298">     */</span>
-<span class="source-line-no">299</span><span id="line.299"></span>
-<span class="source-line-no">300</span><span id="line.300">    public PriceImportBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {</span>
-<span class="source-line-no">301</span><span id="line.301">        this.custom = custom;</span>
-<span class="source-line-no">302</span><span id="line.302">        return this;</span>
-<span class="source-line-no">303</span><span id="line.303">    }</span>
-<span class="source-line-no">304</span><span id="line.304"></span>
-<span class="source-line-no">305</span><span id="line.305">    /**</span>
-<span class="source-line-no">306</span><span id="line.306">     *  &lt;p&gt;The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary ProductVariant is created.&lt;/p&gt;</span>
-<span class="source-line-no">307</span><span id="line.307">     * @param builder function to build the productVariant value</span>
-<span class="source-line-no">308</span><span id="line.308">     * @return Builder</span>
-<span class="source-line-no">309</span><span id="line.309">     */</span>
-<span class="source-line-no">310</span><span id="line.310"></span>
-<span class="source-line-no">311</span><span id="line.311">    public PriceImportBuilder productVariant(</span>
-<span class="source-line-no">312</span><span id="line.312">            Function&lt;com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">313</span><span id="line.313">        this.productVariant = builder</span>
-<span class="source-line-no">314</span><span id="line.314">                .apply(com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder.of())</span>
-<span class="source-line-no">315</span><span id="line.315">                .build();</span>
+<span class="source-line-no">260</span><span id="line.260">    public PriceImportBuilder tiers(@Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {</span>
+<span class="source-line-no">261</span><span id="line.261">        this.tiers = new ArrayList&lt;&gt;(Arrays.asList(tiers));</span>
+<span class="source-line-no">262</span><span id="line.262">        return this;</span>
+<span class="source-line-no">263</span><span id="line.263">    }</span>
+<span class="source-line-no">264</span><span id="line.264"></span>
+<span class="source-line-no">265</span><span id="line.265">    /**</span>
+<span class="source-line-no">266</span><span id="line.266">     *  &lt;p&gt;The tiered prices for this price.&lt;/p&gt;</span>
+<span class="source-line-no">267</span><span id="line.267">     * @param tiers value to be set</span>
+<span class="source-line-no">268</span><span id="line.268">     * @return Builder</span>
+<span class="source-line-no">269</span><span id="line.269">     */</span>
+<span class="source-line-no">270</span><span id="line.270"></span>
+<span class="source-line-no">271</span><span id="line.271">    public PriceImportBuilder tiers(</span>
+<span class="source-line-no">272</span><span id="line.272">            @Nullable final java.util.List&lt;com.commercetools.importapi.models.common.PriceTier&gt; tiers) {</span>
+<span class="source-line-no">273</span><span id="line.273">        this.tiers = tiers;</span>
+<span class="source-line-no">274</span><span id="line.274">        return this;</span>
+<span class="source-line-no">275</span><span id="line.275">    }</span>
+<span class="source-line-no">276</span><span id="line.276"></span>
+<span class="source-line-no">277</span><span id="line.277">    /**</span>
+<span class="source-line-no">278</span><span id="line.278">     *  &lt;p&gt;The tiered prices for this price.&lt;/p&gt;</span>
+<span class="source-line-no">279</span><span id="line.279">     * @param tiers value to be set</span>
+<span class="source-line-no">280</span><span id="line.280">     * @return Builder</span>
+<span class="source-line-no">281</span><span id="line.281">     */</span>
+<span class="source-line-no">282</span><span id="line.282"></span>
+<span class="source-line-no">283</span><span id="line.283">    public PriceImportBuilder plusTiers(@Nullable final com.commercetools.importapi.models.common.PriceTier... tiers) {</span>
+<span class="source-line-no">284</span><span id="line.284">        if (this.tiers == null) {</span>
+<span class="source-line-no">285</span><span id="line.285">            this.tiers = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">286</span><span id="line.286">        }</span>
+<span class="source-line-no">287</span><span id="line.287">        this.tiers.addAll(Arrays.asList(tiers));</span>
+<span class="source-line-no">288</span><span id="line.288">        return this;</span>
+<span class="source-line-no">289</span><span id="line.289">    }</span>
+<span class="source-line-no">290</span><span id="line.290"></span>
+<span class="source-line-no">291</span><span id="line.291">    /**</span>
+<span class="source-line-no">292</span><span id="line.292">     *  &lt;p&gt;The tiered prices for this price.&lt;/p&gt;</span>
+<span class="source-line-no">293</span><span id="line.293">     * @param builder function to build the tiers value</span>
+<span class="source-line-no">294</span><span id="line.294">     * @return Builder</span>
+<span class="source-line-no">295</span><span id="line.295">     */</span>
+<span class="source-line-no">296</span><span id="line.296"></span>
+<span class="source-line-no">297</span><span id="line.297">    public PriceImportBuilder plusTiers(</span>
+<span class="source-line-no">298</span><span id="line.298">            Function&lt;com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder&gt; builder) {</span>
+<span class="source-line-no">299</span><span id="line.299">        if (this.tiers == null) {</span>
+<span class="source-line-no">300</span><span id="line.300">            this.tiers = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">301</span><span id="line.301">        }</span>
+<span class="source-line-no">302</span><span id="line.302">        this.tiers.add(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()).build());</span>
+<span class="source-line-no">303</span><span id="line.303">        return this;</span>
+<span class="source-line-no">304</span><span id="line.304">    }</span>
+<span class="source-line-no">305</span><span id="line.305"></span>
+<span class="source-line-no">306</span><span id="line.306">    /**</span>
+<span class="source-line-no">307</span><span id="line.307">     *  &lt;p&gt;The tiered prices for this price.&lt;/p&gt;</span>
+<span class="source-line-no">308</span><span id="line.308">     * @param builder function to build the tiers value</span>
+<span class="source-line-no">309</span><span id="line.309">     * @return Builder</span>
+<span class="source-line-no">310</span><span id="line.310">     */</span>
+<span class="source-line-no">311</span><span id="line.311"></span>
+<span class="source-line-no">312</span><span id="line.312">    public PriceImportBuilder withTiers(</span>
+<span class="source-line-no">313</span><span id="line.313">            Function&lt;com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTierBuilder&gt; builder) {</span>
+<span class="source-line-no">314</span><span id="line.314">        this.tiers = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">315</span><span id="line.315">        this.tiers.add(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()).build());</span>
 <span class="source-line-no">316</span><span id="line.316">        return this;</span>
 <span class="source-line-no">317</span><span id="line.317">    }</span>
 <span class="source-line-no">318</span><span id="line.318"></span>
 <span class="source-line-no">319</span><span id="line.319">    /**</span>
-<span class="source-line-no">320</span><span id="line.320">     *  &lt;p&gt;The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary ProductVariant is created.&lt;/p&gt;</span>
-<span class="source-line-no">321</span><span id="line.321">     * @param productVariant value to be set</span>
+<span class="source-line-no">320</span><span id="line.320">     *  &lt;p&gt;The tiered prices for this price.&lt;/p&gt;</span>
+<span class="source-line-no">321</span><span id="line.321">     * @param builder function to build the tiers value</span>
 <span class="source-line-no">322</span><span id="line.322">     * @return Builder</span>
 <span class="source-line-no">323</span><span id="line.323">     */</span>
 <span class="source-line-no">324</span><span id="line.324"></span>
-<span class="source-line-no">325</span><span id="line.325">    public PriceImportBuilder productVariant(</span>
-<span class="source-line-no">326</span><span id="line.326">            final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant) {</span>
-<span class="source-line-no">327</span><span id="line.327">        this.productVariant = productVariant;</span>
-<span class="source-line-no">328</span><span id="line.328">        return this;</span>
-<span class="source-line-no">329</span><span id="line.329">    }</span>
-<span class="source-line-no">330</span><span id="line.330"></span>
-<span class="source-line-no">331</span><span id="line.331">    /**</span>
-<span class="source-line-no">332</span><span id="line.332">     *  &lt;p&gt;The Product in which the Product Variant containing this Embedded Price is contained. Maps to &lt;code&gt;ProductVariant.product&lt;/code&gt;. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Product is created.&lt;/p&gt;</span>
-<span class="source-line-no">333</span><span id="line.333">     * @param builder function to build the product value</span>
-<span class="source-line-no">334</span><span id="line.334">     * @return Builder</span>
-<span class="source-line-no">335</span><span id="line.335">     */</span>
-<span class="source-line-no">336</span><span id="line.336"></span>
-<span class="source-line-no">337</span><span id="line.337">    public PriceImportBuilder product(</span>
-<span class="source-line-no">338</span><span id="line.338">            Function&lt;com.commercetools.importapi.models.common.ProductKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductKeyReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">339</span><span id="line.339">        this.product = builder.apply(com.commercetools.importapi.models.common.ProductKeyReferenceBuilder.of()).build();</span>
-<span class="source-line-no">340</span><span id="line.340">        return this;</span>
-<span class="source-line-no">341</span><span id="line.341">    }</span>
-<span class="source-line-no">342</span><span id="line.342"></span>
-<span class="source-line-no">343</span><span id="line.343">    /**</span>
-<span class="source-line-no">344</span><span id="line.344">     *  &lt;p&gt;The Product in which the Product Variant containing this Embedded Price is contained. Maps to &lt;code&gt;ProductVariant.product&lt;/code&gt;. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Product is created.&lt;/p&gt;</span>
-<span class="source-line-no">345</span><span id="line.345">     * @param product value to be set</span>
-<span class="source-line-no">346</span><span id="line.346">     * @return Builder</span>
-<span class="source-line-no">347</span><span id="line.347">     */</span>
-<span class="source-line-no">348</span><span id="line.348"></span>
-<span class="source-line-no">349</span><span id="line.349">    public PriceImportBuilder product(final com.commercetools.importapi.models.common.ProductKeyReference product) {</span>
-<span class="source-line-no">350</span><span id="line.350">        this.product = product;</span>
-<span class="source-line-no">351</span><span id="line.351">        return this;</span>
-<span class="source-line-no">352</span><span id="line.352">    }</span>
-<span class="source-line-no">353</span><span id="line.353"></span>
-<span class="source-line-no">354</span><span id="line.354">    /**</span>
-<span class="source-line-no">355</span><span id="line.355">     *  &lt;p&gt;User-defined unique identifier for the Embedded Price.&lt;/p&gt;</span>
-<span class="source-line-no">356</span><span id="line.356">     * @return key</span>
+<span class="source-line-no">325</span><span id="line.325">    public PriceImportBuilder addTiers(</span>
+<span class="source-line-no">326</span><span id="line.326">            Function&lt;com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTier&gt; builder) {</span>
+<span class="source-line-no">327</span><span id="line.327">        return plusTiers(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()));</span>
+<span class="source-line-no">328</span><span id="line.328">    }</span>
+<span class="source-line-no">329</span><span id="line.329"></span>
+<span class="source-line-no">330</span><span id="line.330">    /**</span>
+<span class="source-line-no">331</span><span id="line.331">     *  &lt;p&gt;The tiered prices for this price.&lt;/p&gt;</span>
+<span class="source-line-no">332</span><span id="line.332">     * @param builder function to build the tiers value</span>
+<span class="source-line-no">333</span><span id="line.333">     * @return Builder</span>
+<span class="source-line-no">334</span><span id="line.334">     */</span>
+<span class="source-line-no">335</span><span id="line.335"></span>
+<span class="source-line-no">336</span><span id="line.336">    public PriceImportBuilder setTiers(</span>
+<span class="source-line-no">337</span><span id="line.337">            Function&lt;com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTier&gt; builder) {</span>
+<span class="source-line-no">338</span><span id="line.338">        return tiers(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()));</span>
+<span class="source-line-no">339</span><span id="line.339">    }</span>
+<span class="source-line-no">340</span><span id="line.340"></span>
+<span class="source-line-no">341</span><span id="line.341">    /**</span>
+<span class="source-line-no">342</span><span id="line.342">     *  &lt;p&gt;The custom fields for this price.&lt;/p&gt;</span>
+<span class="source-line-no">343</span><span id="line.343">     * @param builder function to build the custom value</span>
+<span class="source-line-no">344</span><span id="line.344">     * @return Builder</span>
+<span class="source-line-no">345</span><span id="line.345">     */</span>
+<span class="source-line-no">346</span><span id="line.346"></span>
+<span class="source-line-no">347</span><span id="line.347">    public PriceImportBuilder custom(</span>
+<span class="source-line-no">348</span><span id="line.348">            Function&lt;com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder&gt; builder) {</span>
+<span class="source-line-no">349</span><span id="line.349">        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();</span>
+<span class="source-line-no">350</span><span id="line.350">        return this;</span>
+<span class="source-line-no">351</span><span id="line.351">    }</span>
+<span class="source-line-no">352</span><span id="line.352"></span>
+<span class="source-line-no">353</span><span id="line.353">    /**</span>
+<span class="source-line-no">354</span><span id="line.354">     *  &lt;p&gt;The custom fields for this price.&lt;/p&gt;</span>
+<span class="source-line-no">355</span><span id="line.355">     * @param builder function to build the custom value</span>
+<span class="source-line-no">356</span><span id="line.356">     * @return Builder</span>
 <span class="source-line-no">357</span><span id="line.357">     */</span>
 <span class="source-line-no">358</span><span id="line.358"></span>
-<span class="source-line-no">359</span><span id="line.359">    public String getKey() {</span>
-<span class="source-line-no">360</span><span id="line.360">        return this.key;</span>
-<span class="source-line-no">361</span><span id="line.361">    }</span>
-<span class="source-line-no">362</span><span id="line.362"></span>
-<span class="source-line-no">363</span><span id="line.363">    /**</span>
-<span class="source-line-no">364</span><span id="line.364">     *  &lt;p&gt;Maps to &lt;code&gt;Price.value&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">365</span><span id="line.365">     * @return value</span>
-<span class="source-line-no">366</span><span id="line.366">     */</span>
-<span class="source-line-no">367</span><span id="line.367"></span>
-<span class="source-line-no">368</span><span id="line.368">    public com.commercetools.importapi.models.common.TypedMoney getValue() {</span>
-<span class="source-line-no">369</span><span id="line.369">        return this.value;</span>
-<span class="source-line-no">370</span><span id="line.370">    }</span>
-<span class="source-line-no">371</span><span id="line.371"></span>
-<span class="source-line-no">372</span><span id="line.372">    /**</span>
-<span class="source-line-no">373</span><span id="line.373">     *  &lt;p&gt;Maps to &lt;code&gt;Price.county&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">374</span><span id="line.374">     * @return country</span>
-<span class="source-line-no">375</span><span id="line.375">     */</span>
-<span class="source-line-no">376</span><span id="line.376"></span>
-<span class="source-line-no">377</span><span id="line.377">    @Nullable</span>
-<span class="source-line-no">378</span><span id="line.378">    public String getCountry() {</span>
-<span class="source-line-no">379</span><span id="line.379">        return this.country;</span>
-<span class="source-line-no">380</span><span id="line.380">    }</span>
+<span class="source-line-no">359</span><span id="line.359">    public PriceImportBuilder withCustom(</span>
+<span class="source-line-no">360</span><span id="line.360">            Function&lt;com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.Custom&gt; builder) {</span>
+<span class="source-line-no">361</span><span id="line.361">        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of());</span>
+<span class="source-line-no">362</span><span id="line.362">        return this;</span>
+<span class="source-line-no">363</span><span id="line.363">    }</span>
+<span class="source-line-no">364</span><span id="line.364"></span>
+<span class="source-line-no">365</span><span id="line.365">    /**</span>
+<span class="source-line-no">366</span><span id="line.366">     *  &lt;p&gt;The custom fields for this price.&lt;/p&gt;</span>
+<span class="source-line-no">367</span><span id="line.367">     * @param custom value to be set</span>
+<span class="source-line-no">368</span><span id="line.368">     * @return Builder</span>
+<span class="source-line-no">369</span><span id="line.369">     */</span>
+<span class="source-line-no">370</span><span id="line.370"></span>
+<span class="source-line-no">371</span><span id="line.371">    public PriceImportBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {</span>
+<span class="source-line-no">372</span><span id="line.372">        this.custom = custom;</span>
+<span class="source-line-no">373</span><span id="line.373">        return this;</span>
+<span class="source-line-no">374</span><span id="line.374">    }</span>
+<span class="source-line-no">375</span><span id="line.375"></span>
+<span class="source-line-no">376</span><span id="line.376">    /**</span>
+<span class="source-line-no">377</span><span id="line.377">     *  &lt;p&gt;The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary ProductVariant is created.&lt;/p&gt;</span>
+<span class="source-line-no">378</span><span id="line.378">     * @param builder function to build the productVariant value</span>
+<span class="source-line-no">379</span><span id="line.379">     * @return Builder</span>
+<span class="source-line-no">380</span><span id="line.380">     */</span>
 <span class="source-line-no">381</span><span id="line.381"></span>
-<span class="source-line-no">382</span><span id="line.382">    /**</span>
-<span class="source-line-no">383</span><span id="line.383">     *  &lt;p&gt;Maps to &lt;code&gt;Price.validFrom&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">384</span><span id="line.384">     * @return validFrom</span>
-<span class="source-line-no">385</span><span id="line.385">     */</span>
-<span class="source-line-no">386</span><span id="line.386"></span>
-<span class="source-line-no">387</span><span id="line.387">    @Nullable</span>
-<span class="source-line-no">388</span><span id="line.388">    public java.time.ZonedDateTime getValidFrom() {</span>
-<span class="source-line-no">389</span><span id="line.389">        return this.validFrom;</span>
-<span class="source-line-no">390</span><span id="line.390">    }</span>
-<span class="source-line-no">391</span><span id="line.391"></span>
-<span class="source-line-no">392</span><span id="line.392">    /**</span>
-<span class="source-line-no">393</span><span id="line.393">     *  &lt;p&gt;Maps to &lt;code&gt;Price.validUntil&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">394</span><span id="line.394">     * @return validUntil</span>
-<span class="source-line-no">395</span><span id="line.395">     */</span>
-<span class="source-line-no">396</span><span id="line.396"></span>
-<span class="source-line-no">397</span><span id="line.397">    @Nullable</span>
-<span class="source-line-no">398</span><span id="line.398">    public java.time.ZonedDateTime getValidUntil() {</span>
-<span class="source-line-no">399</span><span id="line.399">        return this.validUntil;</span>
-<span class="source-line-no">400</span><span id="line.400">    }</span>
-<span class="source-line-no">401</span><span id="line.401"></span>
-<span class="source-line-no">402</span><span id="line.402">    /**</span>
-<span class="source-line-no">403</span><span id="line.403">     *  &lt;p&gt;The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary CustomerGroup is created.&lt;/p&gt;</span>
-<span class="source-line-no">404</span><span id="line.404">     * @return customerGroup</span>
-<span class="source-line-no">405</span><span id="line.405">     */</span>
-<span class="source-line-no">406</span><span id="line.406"></span>
-<span class="source-line-no">407</span><span id="line.407">    @Nullable</span>
-<span class="source-line-no">408</span><span id="line.408">    public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {</span>
-<span class="source-line-no">409</span><span id="line.409">        return this.customerGroup;</span>
-<span class="source-line-no">410</span><span id="line.410">    }</span>
-<span class="source-line-no">411</span><span id="line.411"></span>
-<span class="source-line-no">412</span><span id="line.412">    /**</span>
-<span class="source-line-no">413</span><span id="line.413">     *  &lt;p&gt;The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Channel is created.&lt;/p&gt;</span>
-<span class="source-line-no">414</span><span id="line.414">     * @return channel</span>
-<span class="source-line-no">415</span><span id="line.415">     */</span>
-<span class="source-line-no">416</span><span id="line.416"></span>
-<span class="source-line-no">417</span><span id="line.417">    @Nullable</span>
-<span class="source-line-no">418</span><span id="line.418">    public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {</span>
-<span class="source-line-no">419</span><span id="line.419">        return this.channel;</span>
-<span class="source-line-no">420</span><span id="line.420">    }</span>
-<span class="source-line-no">421</span><span id="line.421"></span>
-<span class="source-line-no">422</span><span id="line.422">    /**</span>
-<span class="source-line-no">423</span><span id="line.423">     *  &lt;p&gt;Sets a discounted price from an external service.&lt;/p&gt;</span>
-<span class="source-line-no">424</span><span id="line.424">     * @return discounted</span>
-<span class="source-line-no">425</span><span id="line.425">     */</span>
+<span class="source-line-no">382</span><span id="line.382">    public PriceImportBuilder productVariant(</span>
+<span class="source-line-no">383</span><span id="line.383">            Function&lt;com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">384</span><span id="line.384">        this.productVariant = builder</span>
+<span class="source-line-no">385</span><span id="line.385">                .apply(com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder.of())</span>
+<span class="source-line-no">386</span><span id="line.386">                .build();</span>
+<span class="source-line-no">387</span><span id="line.387">        return this;</span>
+<span class="source-line-no">388</span><span id="line.388">    }</span>
+<span class="source-line-no">389</span><span id="line.389"></span>
+<span class="source-line-no">390</span><span id="line.390">    /**</span>
+<span class="source-line-no">391</span><span id="line.391">     *  &lt;p&gt;The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary ProductVariant is created.&lt;/p&gt;</span>
+<span class="source-line-no">392</span><span id="line.392">     * @param builder function to build the productVariant value</span>
+<span class="source-line-no">393</span><span id="line.393">     * @return Builder</span>
+<span class="source-line-no">394</span><span id="line.394">     */</span>
+<span class="source-line-no">395</span><span id="line.395"></span>
+<span class="source-line-no">396</span><span id="line.396">    public PriceImportBuilder withProductVariant(</span>
+<span class="source-line-no">397</span><span id="line.397">            Function&lt;com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductVariantKeyReference&gt; builder) {</span>
+<span class="source-line-no">398</span><span id="line.398">        this.productVariant = builder</span>
+<span class="source-line-no">399</span><span id="line.399">                .apply(com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder.of());</span>
+<span class="source-line-no">400</span><span id="line.400">        return this;</span>
+<span class="source-line-no">401</span><span id="line.401">    }</span>
+<span class="source-line-no">402</span><span id="line.402"></span>
+<span class="source-line-no">403</span><span id="line.403">    /**</span>
+<span class="source-line-no">404</span><span id="line.404">     *  &lt;p&gt;The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary ProductVariant is created.&lt;/p&gt;</span>
+<span class="source-line-no">405</span><span id="line.405">     * @param productVariant value to be set</span>
+<span class="source-line-no">406</span><span id="line.406">     * @return Builder</span>
+<span class="source-line-no">407</span><span id="line.407">     */</span>
+<span class="source-line-no">408</span><span id="line.408"></span>
+<span class="source-line-no">409</span><span id="line.409">    public PriceImportBuilder productVariant(</span>
+<span class="source-line-no">410</span><span id="line.410">            final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant) {</span>
+<span class="source-line-no">411</span><span id="line.411">        this.productVariant = productVariant;</span>
+<span class="source-line-no">412</span><span id="line.412">        return this;</span>
+<span class="source-line-no">413</span><span id="line.413">    }</span>
+<span class="source-line-no">414</span><span id="line.414"></span>
+<span class="source-line-no">415</span><span id="line.415">    /**</span>
+<span class="source-line-no">416</span><span id="line.416">     *  &lt;p&gt;The Product in which the Product Variant containing this Embedded Price is contained. Maps to &lt;code&gt;ProductVariant.product&lt;/code&gt;. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Product is created.&lt;/p&gt;</span>
+<span class="source-line-no">417</span><span id="line.417">     * @param builder function to build the product value</span>
+<span class="source-line-no">418</span><span id="line.418">     * @return Builder</span>
+<span class="source-line-no">419</span><span id="line.419">     */</span>
+<span class="source-line-no">420</span><span id="line.420"></span>
+<span class="source-line-no">421</span><span id="line.421">    public PriceImportBuilder product(</span>
+<span class="source-line-no">422</span><span id="line.422">            Function&lt;com.commercetools.importapi.models.common.ProductKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductKeyReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">423</span><span id="line.423">        this.product = builder.apply(com.commercetools.importapi.models.common.ProductKeyReferenceBuilder.of()).build();</span>
+<span class="source-line-no">424</span><span id="line.424">        return this;</span>
+<span class="source-line-no">425</span><span id="line.425">    }</span>
 <span class="source-line-no">426</span><span id="line.426"></span>
-<span class="source-line-no">427</span><span id="line.427">    @Nullable</span>
-<span class="source-line-no">428</span><span id="line.428">    public com.commercetools.importapi.models.common.DiscountedPrice getDiscounted() {</span>
-<span class="source-line-no">429</span><span id="line.429">        return this.discounted;</span>
-<span class="source-line-no">430</span><span id="line.430">    }</span>
-<span class="source-line-no">431</span><span id="line.431"></span>
-<span class="source-line-no">432</span><span id="line.432">    /**</span>
-<span class="source-line-no">433</span><span id="line.433">     *  &lt;p&gt;Only the Embedded Price updates will be published to &lt;code&gt;staged&lt;/code&gt; and &lt;code&gt;current&lt;/code&gt; projection.&lt;/p&gt;</span>
-<span class="source-line-no">434</span><span id="line.434">     * @return publish</span>
-<span class="source-line-no">435</span><span id="line.435">     */</span>
-<span class="source-line-no">436</span><span id="line.436"></span>
-<span class="source-line-no">437</span><span id="line.437">    @Nullable</span>
-<span class="source-line-no">438</span><span id="line.438">    public Boolean getPublish() {</span>
-<span class="source-line-no">439</span><span id="line.439">        return this.publish;</span>
-<span class="source-line-no">440</span><span id="line.440">    }</span>
-<span class="source-line-no">441</span><span id="line.441"></span>
-<span class="source-line-no">442</span><span id="line.442">    /**</span>
-<span class="source-line-no">443</span><span id="line.443">     *  &lt;p&gt;The tiered prices for this price.&lt;/p&gt;</span>
-<span class="source-line-no">444</span><span id="line.444">     * @return tiers</span>
-<span class="source-line-no">445</span><span id="line.445">     */</span>
-<span class="source-line-no">446</span><span id="line.446"></span>
-<span class="source-line-no">447</span><span id="line.447">    @Nullable</span>
-<span class="source-line-no">448</span><span id="line.448">    public java.util.List&lt;com.commercetools.importapi.models.common.PriceTier&gt; getTiers() {</span>
-<span class="source-line-no">449</span><span id="line.449">        return this.tiers;</span>
-<span class="source-line-no">450</span><span id="line.450">    }</span>
-<span class="source-line-no">451</span><span id="line.451"></span>
-<span class="source-line-no">452</span><span id="line.452">    /**</span>
-<span class="source-line-no">453</span><span id="line.453">     *  &lt;p&gt;The custom fields for this price.&lt;/p&gt;</span>
-<span class="source-line-no">454</span><span id="line.454">     * @return custom</span>
-<span class="source-line-no">455</span><span id="line.455">     */</span>
-<span class="source-line-no">456</span><span id="line.456"></span>
-<span class="source-line-no">457</span><span id="line.457">    @Nullable</span>
-<span class="source-line-no">458</span><span id="line.458">    public com.commercetools.importapi.models.customfields.Custom getCustom() {</span>
-<span class="source-line-no">459</span><span id="line.459">        return this.custom;</span>
-<span class="source-line-no">460</span><span id="line.460">    }</span>
-<span class="source-line-no">461</span><span id="line.461"></span>
-<span class="source-line-no">462</span><span id="line.462">    /**</span>
-<span class="source-line-no">463</span><span id="line.463">     *  &lt;p&gt;The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary ProductVariant is created.&lt;/p&gt;</span>
-<span class="source-line-no">464</span><span id="line.464">     * @return productVariant</span>
-<span class="source-line-no">465</span><span id="line.465">     */</span>
-<span class="source-line-no">466</span><span id="line.466"></span>
-<span class="source-line-no">467</span><span id="line.467">    public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {</span>
-<span class="source-line-no">468</span><span id="line.468">        return this.productVariant;</span>
-<span class="source-line-no">469</span><span id="line.469">    }</span>
-<span class="source-line-no">470</span><span id="line.470"></span>
-<span class="source-line-no">471</span><span id="line.471">    /**</span>
-<span class="source-line-no">472</span><span id="line.472">     *  &lt;p&gt;The Product in which the Product Variant containing this Embedded Price is contained. Maps to &lt;code&gt;ProductVariant.product&lt;/code&gt;. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Product is created.&lt;/p&gt;</span>
-<span class="source-line-no">473</span><span id="line.473">     * @return product</span>
-<span class="source-line-no">474</span><span id="line.474">     */</span>
-<span class="source-line-no">475</span><span id="line.475"></span>
-<span class="source-line-no">476</span><span id="line.476">    public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {</span>
-<span class="source-line-no">477</span><span id="line.477">        return this.product;</span>
-<span class="source-line-no">478</span><span id="line.478">    }</span>
-<span class="source-line-no">479</span><span id="line.479"></span>
-<span class="source-line-no">480</span><span id="line.480">    /**</span>
-<span class="source-line-no">481</span><span id="line.481">     * builds PriceImport with checking for non-null required values</span>
-<span class="source-line-no">482</span><span id="line.482">     * @return PriceImport</span>
-<span class="source-line-no">483</span><span id="line.483">     */</span>
-<span class="source-line-no">484</span><span id="line.484">    public PriceImport build() {</span>
-<span class="source-line-no">485</span><span id="line.485">        Objects.requireNonNull(key, PriceImport.class + ": key is missing");</span>
-<span class="source-line-no">486</span><span id="line.486">        Objects.requireNonNull(value, PriceImport.class + ": value is missing");</span>
-<span class="source-line-no">487</span><span id="line.487">        Objects.requireNonNull(productVariant, PriceImport.class + ": productVariant is missing");</span>
-<span class="source-line-no">488</span><span id="line.488">        Objects.requireNonNull(product, PriceImport.class + ": product is missing");</span>
-<span class="source-line-no">489</span><span id="line.489">        return new PriceImportImpl(key, value, country, validFrom, validUntil, customerGroup, channel, discounted,</span>
-<span class="source-line-no">490</span><span id="line.490">            publish, tiers, custom, productVariant, product);</span>
-<span class="source-line-no">491</span><span id="line.491">    }</span>
+<span class="source-line-no">427</span><span id="line.427">    /**</span>
+<span class="source-line-no">428</span><span id="line.428">     *  &lt;p&gt;The Product in which the Product Variant containing this Embedded Price is contained. Maps to &lt;code&gt;ProductVariant.product&lt;/code&gt;. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Product is created.&lt;/p&gt;</span>
+<span class="source-line-no">429</span><span id="line.429">     * @param builder function to build the product value</span>
+<span class="source-line-no">430</span><span id="line.430">     * @return Builder</span>
+<span class="source-line-no">431</span><span id="line.431">     */</span>
+<span class="source-line-no">432</span><span id="line.432"></span>
+<span class="source-line-no">433</span><span id="line.433">    public PriceImportBuilder withProduct(</span>
+<span class="source-line-no">434</span><span id="line.434">            Function&lt;com.commercetools.importapi.models.common.ProductKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductKeyReference&gt; builder) {</span>
+<span class="source-line-no">435</span><span id="line.435">        this.product = builder.apply(com.commercetools.importapi.models.common.ProductKeyReferenceBuilder.of());</span>
+<span class="source-line-no">436</span><span id="line.436">        return this;</span>
+<span class="source-line-no">437</span><span id="line.437">    }</span>
+<span class="source-line-no">438</span><span id="line.438"></span>
+<span class="source-line-no">439</span><span id="line.439">    /**</span>
+<span class="source-line-no">440</span><span id="line.440">     *  &lt;p&gt;The Product in which the Product Variant containing this Embedded Price is contained. Maps to &lt;code&gt;ProductVariant.product&lt;/code&gt;. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Product is created.&lt;/p&gt;</span>
+<span class="source-line-no">441</span><span id="line.441">     * @param product value to be set</span>
+<span class="source-line-no">442</span><span id="line.442">     * @return Builder</span>
+<span class="source-line-no">443</span><span id="line.443">     */</span>
+<span class="source-line-no">444</span><span id="line.444"></span>
+<span class="source-line-no">445</span><span id="line.445">    public PriceImportBuilder product(final com.commercetools.importapi.models.common.ProductKeyReference product) {</span>
+<span class="source-line-no">446</span><span id="line.446">        this.product = product;</span>
+<span class="source-line-no">447</span><span id="line.447">        return this;</span>
+<span class="source-line-no">448</span><span id="line.448">    }</span>
+<span class="source-line-no">449</span><span id="line.449"></span>
+<span class="source-line-no">450</span><span id="line.450">    /**</span>
+<span class="source-line-no">451</span><span id="line.451">     *  &lt;p&gt;User-defined unique identifier for the Embedded Price.&lt;/p&gt;</span>
+<span class="source-line-no">452</span><span id="line.452">     * @return key</span>
+<span class="source-line-no">453</span><span id="line.453">     */</span>
+<span class="source-line-no">454</span><span id="line.454"></span>
+<span class="source-line-no">455</span><span id="line.455">    public String getKey() {</span>
+<span class="source-line-no">456</span><span id="line.456">        return this.key;</span>
+<span class="source-line-no">457</span><span id="line.457">    }</span>
+<span class="source-line-no">458</span><span id="line.458"></span>
+<span class="source-line-no">459</span><span id="line.459">    /**</span>
+<span class="source-line-no">460</span><span id="line.460">     *  &lt;p&gt;Maps to &lt;code&gt;Price.value&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">461</span><span id="line.461">     * @return value</span>
+<span class="source-line-no">462</span><span id="line.462">     */</span>
+<span class="source-line-no">463</span><span id="line.463"></span>
+<span class="source-line-no">464</span><span id="line.464">    public com.commercetools.importapi.models.common.TypedMoney getValue() {</span>
+<span class="source-line-no">465</span><span id="line.465">        return this.value;</span>
+<span class="source-line-no">466</span><span id="line.466">    }</span>
+<span class="source-line-no">467</span><span id="line.467"></span>
+<span class="source-line-no">468</span><span id="line.468">    /**</span>
+<span class="source-line-no">469</span><span id="line.469">     *  &lt;p&gt;Maps to &lt;code&gt;Price.county&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">470</span><span id="line.470">     * @return country</span>
+<span class="source-line-no">471</span><span id="line.471">     */</span>
+<span class="source-line-no">472</span><span id="line.472"></span>
+<span class="source-line-no">473</span><span id="line.473">    @Nullable</span>
+<span class="source-line-no">474</span><span id="line.474">    public String getCountry() {</span>
+<span class="source-line-no">475</span><span id="line.475">        return this.country;</span>
+<span class="source-line-no">476</span><span id="line.476">    }</span>
+<span class="source-line-no">477</span><span id="line.477"></span>
+<span class="source-line-no">478</span><span id="line.478">    /**</span>
+<span class="source-line-no">479</span><span id="line.479">     *  &lt;p&gt;Maps to &lt;code&gt;Price.validFrom&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">480</span><span id="line.480">     * @return validFrom</span>
+<span class="source-line-no">481</span><span id="line.481">     */</span>
+<span class="source-line-no">482</span><span id="line.482"></span>
+<span class="source-line-no">483</span><span id="line.483">    @Nullable</span>
+<span class="source-line-no">484</span><span id="line.484">    public java.time.ZonedDateTime getValidFrom() {</span>
+<span class="source-line-no">485</span><span id="line.485">        return this.validFrom;</span>
+<span class="source-line-no">486</span><span id="line.486">    }</span>
+<span class="source-line-no">487</span><span id="line.487"></span>
+<span class="source-line-no">488</span><span id="line.488">    /**</span>
+<span class="source-line-no">489</span><span id="line.489">     *  &lt;p&gt;Maps to &lt;code&gt;Price.validUntil&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">490</span><span id="line.490">     * @return validUntil</span>
+<span class="source-line-no">491</span><span id="line.491">     */</span>
 <span class="source-line-no">492</span><span id="line.492"></span>
-<span class="source-line-no">493</span><span id="line.493">    /**</span>
-<span class="source-line-no">494</span><span id="line.494">     * builds PriceImport without checking for non-null required values</span>
-<span class="source-line-no">495</span><span id="line.495">     * @return PriceImport</span>
-<span class="source-line-no">496</span><span id="line.496">     */</span>
-<span class="source-line-no">497</span><span id="line.497">    public PriceImport buildUnchecked() {</span>
-<span class="source-line-no">498</span><span id="line.498">        return new PriceImportImpl(key, value, country, validFrom, validUntil, customerGroup, channel, discounted,</span>
-<span class="source-line-no">499</span><span id="line.499">            publish, tiers, custom, productVariant, product);</span>
-<span class="source-line-no">500</span><span id="line.500">    }</span>
-<span class="source-line-no">501</span><span id="line.501"></span>
-<span class="source-line-no">502</span><span id="line.502">    /**</span>
-<span class="source-line-no">503</span><span id="line.503">     * factory method for an instance of PriceImportBuilder</span>
-<span class="source-line-no">504</span><span id="line.504">     * @return builder</span>
-<span class="source-line-no">505</span><span id="line.505">     */</span>
-<span class="source-line-no">506</span><span id="line.506">    public static PriceImportBuilder of() {</span>
-<span class="source-line-no">507</span><span id="line.507">        return new PriceImportBuilder();</span>
-<span class="source-line-no">508</span><span id="line.508">    }</span>
-<span class="source-line-no">509</span><span id="line.509"></span>
-<span class="source-line-no">510</span><span id="line.510">    /**</span>
-<span class="source-line-no">511</span><span id="line.511">     * create builder for PriceImport instance</span>
-<span class="source-line-no">512</span><span id="line.512">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">513</span><span id="line.513">     * @return builder</span>
-<span class="source-line-no">514</span><span id="line.514">     */</span>
-<span class="source-line-no">515</span><span id="line.515">    public static PriceImportBuilder of(final PriceImport template) {</span>
-<span class="source-line-no">516</span><span id="line.516">        PriceImportBuilder builder = new PriceImportBuilder();</span>
-<span class="source-line-no">517</span><span id="line.517">        builder.key = template.getKey();</span>
-<span class="source-line-no">518</span><span id="line.518">        builder.value = template.getValue();</span>
-<span class="source-line-no">519</span><span id="line.519">        builder.country = template.getCountry();</span>
-<span class="source-line-no">520</span><span id="line.520">        builder.validFrom = template.getValidFrom();</span>
-<span class="source-line-no">521</span><span id="line.521">        builder.validUntil = template.getValidUntil();</span>
-<span class="source-line-no">522</span><span id="line.522">        builder.customerGroup = template.getCustomerGroup();</span>
-<span class="source-line-no">523</span><span id="line.523">        builder.channel = template.getChannel();</span>
-<span class="source-line-no">524</span><span id="line.524">        builder.discounted = template.getDiscounted();</span>
-<span class="source-line-no">525</span><span id="line.525">        builder.publish = template.getPublish();</span>
-<span class="source-line-no">526</span><span id="line.526">        builder.tiers = template.getTiers();</span>
-<span class="source-line-no">527</span><span id="line.527">        builder.custom = template.getCustom();</span>
-<span class="source-line-no">528</span><span id="line.528">        builder.productVariant = template.getProductVariant();</span>
-<span class="source-line-no">529</span><span id="line.529">        builder.product = template.getProduct();</span>
-<span class="source-line-no">530</span><span id="line.530">        return builder;</span>
-<span class="source-line-no">531</span><span id="line.531">    }</span>
+<span class="source-line-no">493</span><span id="line.493">    @Nullable</span>
+<span class="source-line-no">494</span><span id="line.494">    public java.time.ZonedDateTime getValidUntil() {</span>
+<span class="source-line-no">495</span><span id="line.495">        return this.validUntil;</span>
+<span class="source-line-no">496</span><span id="line.496">    }</span>
+<span class="source-line-no">497</span><span id="line.497"></span>
+<span class="source-line-no">498</span><span id="line.498">    /**</span>
+<span class="source-line-no">499</span><span id="line.499">     *  &lt;p&gt;The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary CustomerGroup is created.&lt;/p&gt;</span>
+<span class="source-line-no">500</span><span id="line.500">     * @return customerGroup</span>
+<span class="source-line-no">501</span><span id="line.501">     */</span>
+<span class="source-line-no">502</span><span id="line.502"></span>
+<span class="source-line-no">503</span><span id="line.503">    @Nullable</span>
+<span class="source-line-no">504</span><span id="line.504">    public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {</span>
+<span class="source-line-no">505</span><span id="line.505">        return this.customerGroup;</span>
+<span class="source-line-no">506</span><span id="line.506">    }</span>
+<span class="source-line-no">507</span><span id="line.507"></span>
+<span class="source-line-no">508</span><span id="line.508">    /**</span>
+<span class="source-line-no">509</span><span id="line.509">     *  &lt;p&gt;The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Channel is created.&lt;/p&gt;</span>
+<span class="source-line-no">510</span><span id="line.510">     * @return channel</span>
+<span class="source-line-no">511</span><span id="line.511">     */</span>
+<span class="source-line-no">512</span><span id="line.512"></span>
+<span class="source-line-no">513</span><span id="line.513">    @Nullable</span>
+<span class="source-line-no">514</span><span id="line.514">    public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {</span>
+<span class="source-line-no">515</span><span id="line.515">        return this.channel;</span>
+<span class="source-line-no">516</span><span id="line.516">    }</span>
+<span class="source-line-no">517</span><span id="line.517"></span>
+<span class="source-line-no">518</span><span id="line.518">    /**</span>
+<span class="source-line-no">519</span><span id="line.519">     *  &lt;p&gt;Sets a discounted price from an external service.&lt;/p&gt;</span>
+<span class="source-line-no">520</span><span id="line.520">     * @return discounted</span>
+<span class="source-line-no">521</span><span id="line.521">     */</span>
+<span class="source-line-no">522</span><span id="line.522"></span>
+<span class="source-line-no">523</span><span id="line.523">    @Nullable</span>
+<span class="source-line-no">524</span><span id="line.524">    public com.commercetools.importapi.models.common.DiscountedPrice getDiscounted() {</span>
+<span class="source-line-no">525</span><span id="line.525">        return this.discounted;</span>
+<span class="source-line-no">526</span><span id="line.526">    }</span>
+<span class="source-line-no">527</span><span id="line.527"></span>
+<span class="source-line-no">528</span><span id="line.528">    /**</span>
+<span class="source-line-no">529</span><span id="line.529">     *  &lt;p&gt;Only the Embedded Price updates will be published to &lt;code&gt;staged&lt;/code&gt; and &lt;code&gt;current&lt;/code&gt; projection.&lt;/p&gt;</span>
+<span class="source-line-no">530</span><span id="line.530">     * @return publish</span>
+<span class="source-line-no">531</span><span id="line.531">     */</span>
 <span class="source-line-no">532</span><span id="line.532"></span>
-<span class="source-line-no">533</span><span id="line.533">}</span>
+<span class="source-line-no">533</span><span id="line.533">    @Nullable</span>
+<span class="source-line-no">534</span><span id="line.534">    public Boolean getPublish() {</span>
+<span class="source-line-no">535</span><span id="line.535">        return this.publish;</span>
+<span class="source-line-no">536</span><span id="line.536">    }</span>
+<span class="source-line-no">537</span><span id="line.537"></span>
+<span class="source-line-no">538</span><span id="line.538">    /**</span>
+<span class="source-line-no">539</span><span id="line.539">     *  &lt;p&gt;The tiered prices for this price.&lt;/p&gt;</span>
+<span class="source-line-no">540</span><span id="line.540">     * @return tiers</span>
+<span class="source-line-no">541</span><span id="line.541">     */</span>
+<span class="source-line-no">542</span><span id="line.542"></span>
+<span class="source-line-no">543</span><span id="line.543">    @Nullable</span>
+<span class="source-line-no">544</span><span id="line.544">    public java.util.List&lt;com.commercetools.importapi.models.common.PriceTier&gt; getTiers() {</span>
+<span class="source-line-no">545</span><span id="line.545">        return this.tiers;</span>
+<span class="source-line-no">546</span><span id="line.546">    }</span>
+<span class="source-line-no">547</span><span id="line.547"></span>
+<span class="source-line-no">548</span><span id="line.548">    /**</span>
+<span class="source-line-no">549</span><span id="line.549">     *  &lt;p&gt;The custom fields for this price.&lt;/p&gt;</span>
+<span class="source-line-no">550</span><span id="line.550">     * @return custom</span>
+<span class="source-line-no">551</span><span id="line.551">     */</span>
+<span class="source-line-no">552</span><span id="line.552"></span>
+<span class="source-line-no">553</span><span id="line.553">    @Nullable</span>
+<span class="source-line-no">554</span><span id="line.554">    public com.commercetools.importapi.models.customfields.Custom getCustom() {</span>
+<span class="source-line-no">555</span><span id="line.555">        return this.custom;</span>
+<span class="source-line-no">556</span><span id="line.556">    }</span>
+<span class="source-line-no">557</span><span id="line.557"></span>
+<span class="source-line-no">558</span><span id="line.558">    /**</span>
+<span class="source-line-no">559</span><span id="line.559">     *  &lt;p&gt;The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary ProductVariant is created.&lt;/p&gt;</span>
+<span class="source-line-no">560</span><span id="line.560">     * @return productVariant</span>
+<span class="source-line-no">561</span><span id="line.561">     */</span>
+<span class="source-line-no">562</span><span id="line.562"></span>
+<span class="source-line-no">563</span><span id="line.563">    public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {</span>
+<span class="source-line-no">564</span><span id="line.564">        return this.productVariant;</span>
+<span class="source-line-no">565</span><span id="line.565">    }</span>
+<span class="source-line-no">566</span><span id="line.566"></span>
+<span class="source-line-no">567</span><span id="line.567">    /**</span>
+<span class="source-line-no">568</span><span id="line.568">     *  &lt;p&gt;The Product in which the Product Variant containing this Embedded Price is contained. Maps to &lt;code&gt;ProductVariant.product&lt;/code&gt;. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the &lt;code&gt;state&lt;/code&gt; of the ImportOperation will be set to &lt;code&gt;unresolved&lt;/code&gt; until the necessary Product is created.&lt;/p&gt;</span>
+<span class="source-line-no">569</span><span id="line.569">     * @return product</span>
+<span class="source-line-no">570</span><span id="line.570">     */</span>
+<span class="source-line-no">571</span><span id="line.571"></span>
+<span class="source-line-no">572</span><span id="line.572">    public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {</span>
+<span class="source-line-no">573</span><span id="line.573">        return this.product;</span>
+<span class="source-line-no">574</span><span id="line.574">    }</span>
+<span class="source-line-no">575</span><span id="line.575"></span>
+<span class="source-line-no">576</span><span id="line.576">    /**</span>
+<span class="source-line-no">577</span><span id="line.577">     * builds PriceImport with checking for non-null required values</span>
+<span class="source-line-no">578</span><span id="line.578">     * @return PriceImport</span>
+<span class="source-line-no">579</span><span id="line.579">     */</span>
+<span class="source-line-no">580</span><span id="line.580">    public PriceImport build() {</span>
+<span class="source-line-no">581</span><span id="line.581">        Objects.requireNonNull(key, PriceImport.class + ": key is missing");</span>
+<span class="source-line-no">582</span><span id="line.582">        Objects.requireNonNull(value, PriceImport.class + ": value is missing");</span>
+<span class="source-line-no">583</span><span id="line.583">        Objects.requireNonNull(productVariant, PriceImport.class + ": productVariant is missing");</span>
+<span class="source-line-no">584</span><span id="line.584">        Objects.requireNonNull(product, PriceImport.class + ": product is missing");</span>
+<span class="source-line-no">585</span><span id="line.585">        return new PriceImportImpl(key, value, country, validFrom, validUntil, customerGroup, channel, discounted,</span>
+<span class="source-line-no">586</span><span id="line.586">            publish, tiers, custom, productVariant, product);</span>
+<span class="source-line-no">587</span><span id="line.587">    }</span>
+<span class="source-line-no">588</span><span id="line.588"></span>
+<span class="source-line-no">589</span><span id="line.589">    /**</span>
+<span class="source-line-no">590</span><span id="line.590">     * builds PriceImport without checking for non-null required values</span>
+<span class="source-line-no">591</span><span id="line.591">     * @return PriceImport</span>
+<span class="source-line-no">592</span><span id="line.592">     */</span>
+<span class="source-line-no">593</span><span id="line.593">    public PriceImport buildUnchecked() {</span>
+<span class="source-line-no">594</span><span id="line.594">        return new PriceImportImpl(key, value, country, validFrom, validUntil, customerGroup, channel, discounted,</span>
+<span class="source-line-no">595</span><span id="line.595">            publish, tiers, custom, productVariant, product);</span>
+<span class="source-line-no">596</span><span id="line.596">    }</span>
+<span class="source-line-no">597</span><span id="line.597"></span>
+<span class="source-line-no">598</span><span id="line.598">    /**</span>
+<span class="source-line-no">599</span><span id="line.599">     * factory method for an instance of PriceImportBuilder</span>
+<span class="source-line-no">600</span><span id="line.600">     * @return builder</span>
+<span class="source-line-no">601</span><span id="line.601">     */</span>
+<span class="source-line-no">602</span><span id="line.602">    public static PriceImportBuilder of() {</span>
+<span class="source-line-no">603</span><span id="line.603">        return new PriceImportBuilder();</span>
+<span class="source-line-no">604</span><span id="line.604">    }</span>
+<span class="source-line-no">605</span><span id="line.605"></span>
+<span class="source-line-no">606</span><span id="line.606">    /**</span>
+<span class="source-line-no">607</span><span id="line.607">     * create builder for PriceImport instance</span>
+<span class="source-line-no">608</span><span id="line.608">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">609</span><span id="line.609">     * @return builder</span>
+<span class="source-line-no">610</span><span id="line.610">     */</span>
+<span class="source-line-no">611</span><span id="line.611">    public static PriceImportBuilder of(final PriceImport template) {</span>
+<span class="source-line-no">612</span><span id="line.612">        PriceImportBuilder builder = new PriceImportBuilder();</span>
+<span class="source-line-no">613</span><span id="line.613">        builder.key = template.getKey();</span>
+<span class="source-line-no">614</span><span id="line.614">        builder.value = template.getValue();</span>
+<span class="source-line-no">615</span><span id="line.615">        builder.country = template.getCountry();</span>
+<span class="source-line-no">616</span><span id="line.616">        builder.validFrom = template.getValidFrom();</span>
+<span class="source-line-no">617</span><span id="line.617">        builder.validUntil = template.getValidUntil();</span>
+<span class="source-line-no">618</span><span id="line.618">        builder.customerGroup = template.getCustomerGroup();</span>
+<span class="source-line-no">619</span><span id="line.619">        builder.channel = template.getChannel();</span>
+<span class="source-line-no">620</span><span id="line.620">        builder.discounted = template.getDiscounted();</span>
+<span class="source-line-no">621</span><span id="line.621">        builder.publish = template.getPublish();</span>
+<span class="source-line-no">622</span><span id="line.622">        builder.tiers = template.getTiers();</span>
+<span class="source-line-no">623</span><span id="line.623">        builder.custom = template.getCustom();</span>
+<span class="source-line-no">624</span><span id="line.624">        builder.productVariant = template.getProductVariant();</span>
+<span class="source-line-no">625</span><span id="line.625">        builder.product = template.getProduct();</span>
+<span class="source-line-no">626</span><span id="line.626">        return builder;</span>
+<span class="source-line-no">627</span><span id="line.627">    }</span>
+<span class="source-line-no">628</span><span id="line.628"></span>
+<span class="source-line-no">629</span><span id="line.629">}</span>
 
 
 

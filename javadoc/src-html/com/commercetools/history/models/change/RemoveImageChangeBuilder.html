@@ -136,149 +136,193 @@
 <span class="source-line-no">123</span><span id="line.123">    }</span>
 <span class="source-line-no">124</span><span id="line.124"></span>
 <span class="source-line-no">125</span><span id="line.125">    /**</span>
-<span class="source-line-no">126</span><span id="line.126">     * set values to the nextValue</span>
-<span class="source-line-no">127</span><span id="line.127">     * @param nextValue value to be set</span>
+<span class="source-line-no">126</span><span id="line.126">     * add the value to the previousValue using the builder function</span>
+<span class="source-line-no">127</span><span id="line.127">     * @param builder function to build the previousValue value</span>
 <span class="source-line-no">128</span><span id="line.128">     * @return Builder</span>
 <span class="source-line-no">129</span><span id="line.129">     */</span>
 <span class="source-line-no">130</span><span id="line.130"></span>
-<span class="source-line-no">131</span><span id="line.131">    public RemoveImageChangeBuilder nextValue(final com.commercetools.history.models.common.Image... nextValue) {</span>
-<span class="source-line-no">132</span><span id="line.132">        this.nextValue = new ArrayList&lt;&gt;(Arrays.asList(nextValue));</span>
-<span class="source-line-no">133</span><span id="line.133">        return this;</span>
+<span class="source-line-no">131</span><span id="line.131">    public RemoveImageChangeBuilder addPreviousValue(</span>
+<span class="source-line-no">132</span><span id="line.132">            Function&lt;com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.Image&gt; builder) {</span>
+<span class="source-line-no">133</span><span id="line.133">        return plusPreviousValue(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()));</span>
 <span class="source-line-no">134</span><span id="line.134">    }</span>
 <span class="source-line-no">135</span><span id="line.135"></span>
 <span class="source-line-no">136</span><span id="line.136">    /**</span>
-<span class="source-line-no">137</span><span id="line.137">     * set value to the nextValue</span>
-<span class="source-line-no">138</span><span id="line.138">     * @param nextValue value to be set</span>
+<span class="source-line-no">137</span><span id="line.137">     * set the value to the previousValue using the builder function</span>
+<span class="source-line-no">138</span><span id="line.138">     * @param builder function to build the previousValue value</span>
 <span class="source-line-no">139</span><span id="line.139">     * @return Builder</span>
 <span class="source-line-no">140</span><span id="line.140">     */</span>
 <span class="source-line-no">141</span><span id="line.141"></span>
-<span class="source-line-no">142</span><span id="line.142">    public RemoveImageChangeBuilder nextValue(</span>
-<span class="source-line-no">143</span><span id="line.143">            final java.util.List&lt;com.commercetools.history.models.common.Image&gt; nextValue) {</span>
-<span class="source-line-no">144</span><span id="line.144">        this.nextValue = nextValue;</span>
-<span class="source-line-no">145</span><span id="line.145">        return this;</span>
-<span class="source-line-no">146</span><span id="line.146">    }</span>
-<span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    /**</span>
-<span class="source-line-no">149</span><span id="line.149">     * add values to the nextValue</span>
-<span class="source-line-no">150</span><span id="line.150">     * @param nextValue value to be set</span>
-<span class="source-line-no">151</span><span id="line.151">     * @return Builder</span>
-<span class="source-line-no">152</span><span id="line.152">     */</span>
-<span class="source-line-no">153</span><span id="line.153"></span>
-<span class="source-line-no">154</span><span id="line.154">    public RemoveImageChangeBuilder plusNextValue(final com.commercetools.history.models.common.Image... nextValue) {</span>
-<span class="source-line-no">155</span><span id="line.155">        if (this.nextValue == null) {</span>
-<span class="source-line-no">156</span><span id="line.156">            this.nextValue = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">157</span><span id="line.157">        }</span>
-<span class="source-line-no">158</span><span id="line.158">        this.nextValue.addAll(Arrays.asList(nextValue));</span>
-<span class="source-line-no">159</span><span id="line.159">        return this;</span>
-<span class="source-line-no">160</span><span id="line.160">    }</span>
-<span class="source-line-no">161</span><span id="line.161"></span>
-<span class="source-line-no">162</span><span id="line.162">    /**</span>
-<span class="source-line-no">163</span><span id="line.163">     * add the value to the nextValue using the builder function</span>
-<span class="source-line-no">164</span><span id="line.164">     * @param builder function to build the nextValue value</span>
-<span class="source-line-no">165</span><span id="line.165">     * @return Builder</span>
-<span class="source-line-no">166</span><span id="line.166">     */</span>
-<span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">    public RemoveImageChangeBuilder plusNextValue(</span>
-<span class="source-line-no">169</span><span id="line.169">            Function&lt;com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder&gt; builder) {</span>
-<span class="source-line-no">170</span><span id="line.170">        if (this.nextValue == null) {</span>
-<span class="source-line-no">171</span><span id="line.171">            this.nextValue = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">172</span><span id="line.172">        }</span>
-<span class="source-line-no">173</span><span id="line.173">        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());</span>
-<span class="source-line-no">174</span><span id="line.174">        return this;</span>
-<span class="source-line-no">175</span><span id="line.175">    }</span>
-<span class="source-line-no">176</span><span id="line.176"></span>
-<span class="source-line-no">177</span><span id="line.177">    /**</span>
-<span class="source-line-no">178</span><span id="line.178">     * set the value to the nextValue using the builder function</span>
-<span class="source-line-no">179</span><span id="line.179">     * @param builder function to build the nextValue value</span>
-<span class="source-line-no">180</span><span id="line.180">     * @return Builder</span>
-<span class="source-line-no">181</span><span id="line.181">     */</span>
-<span class="source-line-no">182</span><span id="line.182"></span>
-<span class="source-line-no">183</span><span id="line.183">    public RemoveImageChangeBuilder withNextValue(</span>
-<span class="source-line-no">184</span><span id="line.184">            Function&lt;com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder&gt; builder) {</span>
-<span class="source-line-no">185</span><span id="line.185">        this.nextValue = new ArrayList&lt;&gt;();</span>
-<span class="source-line-no">186</span><span id="line.186">        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());</span>
-<span class="source-line-no">187</span><span id="line.187">        return this;</span>
-<span class="source-line-no">188</span><span id="line.188">    }</span>
+<span class="source-line-no">142</span><span id="line.142">    public RemoveImageChangeBuilder setPreviousValue(</span>
+<span class="source-line-no">143</span><span id="line.143">            Function&lt;com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.Image&gt; builder) {</span>
+<span class="source-line-no">144</span><span id="line.144">        return previousValue(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()));</span>
+<span class="source-line-no">145</span><span id="line.145">    }</span>
+<span class="source-line-no">146</span><span id="line.146"></span>
+<span class="source-line-no">147</span><span id="line.147">    /**</span>
+<span class="source-line-no">148</span><span id="line.148">     * set values to the nextValue</span>
+<span class="source-line-no">149</span><span id="line.149">     * @param nextValue value to be set</span>
+<span class="source-line-no">150</span><span id="line.150">     * @return Builder</span>
+<span class="source-line-no">151</span><span id="line.151">     */</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    public RemoveImageChangeBuilder nextValue(final com.commercetools.history.models.common.Image... nextValue) {</span>
+<span class="source-line-no">154</span><span id="line.154">        this.nextValue = new ArrayList&lt;&gt;(Arrays.asList(nextValue));</span>
+<span class="source-line-no">155</span><span id="line.155">        return this;</span>
+<span class="source-line-no">156</span><span id="line.156">    }</span>
+<span class="source-line-no">157</span><span id="line.157"></span>
+<span class="source-line-no">158</span><span id="line.158">    /**</span>
+<span class="source-line-no">159</span><span id="line.159">     * set value to the nextValue</span>
+<span class="source-line-no">160</span><span id="line.160">     * @param nextValue value to be set</span>
+<span class="source-line-no">161</span><span id="line.161">     * @return Builder</span>
+<span class="source-line-no">162</span><span id="line.162">     */</span>
+<span class="source-line-no">163</span><span id="line.163"></span>
+<span class="source-line-no">164</span><span id="line.164">    public RemoveImageChangeBuilder nextValue(</span>
+<span class="source-line-no">165</span><span id="line.165">            final java.util.List&lt;com.commercetools.history.models.common.Image&gt; nextValue) {</span>
+<span class="source-line-no">166</span><span id="line.166">        this.nextValue = nextValue;</span>
+<span class="source-line-no">167</span><span id="line.167">        return this;</span>
+<span class="source-line-no">168</span><span id="line.168">    }</span>
+<span class="source-line-no">169</span><span id="line.169"></span>
+<span class="source-line-no">170</span><span id="line.170">    /**</span>
+<span class="source-line-no">171</span><span id="line.171">     * add values to the nextValue</span>
+<span class="source-line-no">172</span><span id="line.172">     * @param nextValue value to be set</span>
+<span class="source-line-no">173</span><span id="line.173">     * @return Builder</span>
+<span class="source-line-no">174</span><span id="line.174">     */</span>
+<span class="source-line-no">175</span><span id="line.175"></span>
+<span class="source-line-no">176</span><span id="line.176">    public RemoveImageChangeBuilder plusNextValue(final com.commercetools.history.models.common.Image... nextValue) {</span>
+<span class="source-line-no">177</span><span id="line.177">        if (this.nextValue == null) {</span>
+<span class="source-line-no">178</span><span id="line.178">            this.nextValue = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">179</span><span id="line.179">        }</span>
+<span class="source-line-no">180</span><span id="line.180">        this.nextValue.addAll(Arrays.asList(nextValue));</span>
+<span class="source-line-no">181</span><span id="line.181">        return this;</span>
+<span class="source-line-no">182</span><span id="line.182">    }</span>
+<span class="source-line-no">183</span><span id="line.183"></span>
+<span class="source-line-no">184</span><span id="line.184">    /**</span>
+<span class="source-line-no">185</span><span id="line.185">     * add the value to the nextValue using the builder function</span>
+<span class="source-line-no">186</span><span id="line.186">     * @param builder function to build the nextValue value</span>
+<span class="source-line-no">187</span><span id="line.187">     * @return Builder</span>
+<span class="source-line-no">188</span><span id="line.188">     */</span>
 <span class="source-line-no">189</span><span id="line.189"></span>
-<span class="source-line-no">190</span><span id="line.190">    /**</span>
-<span class="source-line-no">191</span><span id="line.191">     *  &lt;p&gt;Update actions for removing images&lt;/p&gt;</span>
-<span class="source-line-no">192</span><span id="line.192">     * @return change</span>
-<span class="source-line-no">193</span><span id="line.193">     */</span>
-<span class="source-line-no">194</span><span id="line.194"></span>
-<span class="source-line-no">195</span><span id="line.195">    public String getChange() {</span>
-<span class="source-line-no">196</span><span id="line.196">        return this.change;</span>
+<span class="source-line-no">190</span><span id="line.190">    public RemoveImageChangeBuilder plusNextValue(</span>
+<span class="source-line-no">191</span><span id="line.191">            Function&lt;com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder&gt; builder) {</span>
+<span class="source-line-no">192</span><span id="line.192">        if (this.nextValue == null) {</span>
+<span class="source-line-no">193</span><span id="line.193">            this.nextValue = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">194</span><span id="line.194">        }</span>
+<span class="source-line-no">195</span><span id="line.195">        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());</span>
+<span class="source-line-no">196</span><span id="line.196">        return this;</span>
 <span class="source-line-no">197</span><span id="line.197">    }</span>
 <span class="source-line-no">198</span><span id="line.198"></span>
 <span class="source-line-no">199</span><span id="line.199">    /**</span>
-<span class="source-line-no">200</span><span id="line.200">     * value of catalogData}</span>
-<span class="source-line-no">201</span><span id="line.201">     * @return catalogData</span>
-<span class="source-line-no">202</span><span id="line.202">     */</span>
-<span class="source-line-no">203</span><span id="line.203"></span>
-<span class="source-line-no">204</span><span id="line.204">    public String getCatalogData() {</span>
-<span class="source-line-no">205</span><span id="line.205">        return this.catalogData;</span>
-<span class="source-line-no">206</span><span id="line.206">    }</span>
-<span class="source-line-no">207</span><span id="line.207"></span>
-<span class="source-line-no">208</span><span id="line.208">    /**</span>
-<span class="source-line-no">209</span><span id="line.209">     * value of previousValue}</span>
-<span class="source-line-no">210</span><span id="line.210">     * @return previousValue</span>
-<span class="source-line-no">211</span><span id="line.211">     */</span>
-<span class="source-line-no">212</span><span id="line.212"></span>
-<span class="source-line-no">213</span><span id="line.213">    public java.util.List&lt;com.commercetools.history.models.common.Image&gt; getPreviousValue() {</span>
-<span class="source-line-no">214</span><span id="line.214">        return this.previousValue;</span>
-<span class="source-line-no">215</span><span id="line.215">    }</span>
-<span class="source-line-no">216</span><span id="line.216"></span>
-<span class="source-line-no">217</span><span id="line.217">    /**</span>
-<span class="source-line-no">218</span><span id="line.218">     * value of nextValue}</span>
-<span class="source-line-no">219</span><span id="line.219">     * @return nextValue</span>
-<span class="source-line-no">220</span><span id="line.220">     */</span>
-<span class="source-line-no">221</span><span id="line.221"></span>
-<span class="source-line-no">222</span><span id="line.222">    public java.util.List&lt;com.commercetools.history.models.common.Image&gt; getNextValue() {</span>
-<span class="source-line-no">223</span><span id="line.223">        return this.nextValue;</span>
-<span class="source-line-no">224</span><span id="line.224">    }</span>
-<span class="source-line-no">225</span><span id="line.225"></span>
-<span class="source-line-no">226</span><span id="line.226">    /**</span>
-<span class="source-line-no">227</span><span id="line.227">     * builds RemoveImageChange with checking for non-null required values</span>
-<span class="source-line-no">228</span><span id="line.228">     * @return RemoveImageChange</span>
-<span class="source-line-no">229</span><span id="line.229">     */</span>
-<span class="source-line-no">230</span><span id="line.230">    public RemoveImageChange build() {</span>
-<span class="source-line-no">231</span><span id="line.231">        Objects.requireNonNull(change, RemoveImageChange.class + ": change is missing");</span>
-<span class="source-line-no">232</span><span id="line.232">        Objects.requireNonNull(catalogData, RemoveImageChange.class + ": catalogData is missing");</span>
-<span class="source-line-no">233</span><span id="line.233">        Objects.requireNonNull(previousValue, RemoveImageChange.class + ": previousValue is missing");</span>
-<span class="source-line-no">234</span><span id="line.234">        Objects.requireNonNull(nextValue, RemoveImageChange.class + ": nextValue is missing");</span>
-<span class="source-line-no">235</span><span id="line.235">        return new RemoveImageChangeImpl(change, catalogData, previousValue, nextValue);</span>
-<span class="source-line-no">236</span><span id="line.236">    }</span>
-<span class="source-line-no">237</span><span id="line.237"></span>
-<span class="source-line-no">238</span><span id="line.238">    /**</span>
-<span class="source-line-no">239</span><span id="line.239">     * builds RemoveImageChange without checking for non-null required values</span>
-<span class="source-line-no">240</span><span id="line.240">     * @return RemoveImageChange</span>
-<span class="source-line-no">241</span><span id="line.241">     */</span>
-<span class="source-line-no">242</span><span id="line.242">    public RemoveImageChange buildUnchecked() {</span>
-<span class="source-line-no">243</span><span id="line.243">        return new RemoveImageChangeImpl(change, catalogData, previousValue, nextValue);</span>
-<span class="source-line-no">244</span><span id="line.244">    }</span>
-<span class="source-line-no">245</span><span id="line.245"></span>
-<span class="source-line-no">246</span><span id="line.246">    /**</span>
-<span class="source-line-no">247</span><span id="line.247">     * factory method for an instance of RemoveImageChangeBuilder</span>
-<span class="source-line-no">248</span><span id="line.248">     * @return builder</span>
-<span class="source-line-no">249</span><span id="line.249">     */</span>
-<span class="source-line-no">250</span><span id="line.250">    public static RemoveImageChangeBuilder of() {</span>
-<span class="source-line-no">251</span><span id="line.251">        return new RemoveImageChangeBuilder();</span>
-<span class="source-line-no">252</span><span id="line.252">    }</span>
-<span class="source-line-no">253</span><span id="line.253"></span>
-<span class="source-line-no">254</span><span id="line.254">    /**</span>
-<span class="source-line-no">255</span><span id="line.255">     * create builder for RemoveImageChange instance</span>
-<span class="source-line-no">256</span><span id="line.256">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">257</span><span id="line.257">     * @return builder</span>
-<span class="source-line-no">258</span><span id="line.258">     */</span>
-<span class="source-line-no">259</span><span id="line.259">    public static RemoveImageChangeBuilder of(final RemoveImageChange template) {</span>
-<span class="source-line-no">260</span><span id="line.260">        RemoveImageChangeBuilder builder = new RemoveImageChangeBuilder();</span>
-<span class="source-line-no">261</span><span id="line.261">        builder.change = template.getChange();</span>
-<span class="source-line-no">262</span><span id="line.262">        builder.catalogData = template.getCatalogData();</span>
-<span class="source-line-no">263</span><span id="line.263">        builder.previousValue = template.getPreviousValue();</span>
-<span class="source-line-no">264</span><span id="line.264">        builder.nextValue = template.getNextValue();</span>
-<span class="source-line-no">265</span><span id="line.265">        return builder;</span>
-<span class="source-line-no">266</span><span id="line.266">    }</span>
-<span class="source-line-no">267</span><span id="line.267"></span>
-<span class="source-line-no">268</span><span id="line.268">}</span>
+<span class="source-line-no">200</span><span id="line.200">     * set the value to the nextValue using the builder function</span>
+<span class="source-line-no">201</span><span id="line.201">     * @param builder function to build the nextValue value</span>
+<span class="source-line-no">202</span><span id="line.202">     * @return Builder</span>
+<span class="source-line-no">203</span><span id="line.203">     */</span>
+<span class="source-line-no">204</span><span id="line.204"></span>
+<span class="source-line-no">205</span><span id="line.205">    public RemoveImageChangeBuilder withNextValue(</span>
+<span class="source-line-no">206</span><span id="line.206">            Function&lt;com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder&gt; builder) {</span>
+<span class="source-line-no">207</span><span id="line.207">        this.nextValue = new ArrayList&lt;&gt;();</span>
+<span class="source-line-no">208</span><span id="line.208">        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());</span>
+<span class="source-line-no">209</span><span id="line.209">        return this;</span>
+<span class="source-line-no">210</span><span id="line.210">    }</span>
+<span class="source-line-no">211</span><span id="line.211"></span>
+<span class="source-line-no">212</span><span id="line.212">    /**</span>
+<span class="source-line-no">213</span><span id="line.213">     * add the value to the nextValue using the builder function</span>
+<span class="source-line-no">214</span><span id="line.214">     * @param builder function to build the nextValue value</span>
+<span class="source-line-no">215</span><span id="line.215">     * @return Builder</span>
+<span class="source-line-no">216</span><span id="line.216">     */</span>
+<span class="source-line-no">217</span><span id="line.217"></span>
+<span class="source-line-no">218</span><span id="line.218">    public RemoveImageChangeBuilder addNextValue(</span>
+<span class="source-line-no">219</span><span id="line.219">            Function&lt;com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.Image&gt; builder) {</span>
+<span class="source-line-no">220</span><span id="line.220">        return plusNextValue(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()));</span>
+<span class="source-line-no">221</span><span id="line.221">    }</span>
+<span class="source-line-no">222</span><span id="line.222"></span>
+<span class="source-line-no">223</span><span id="line.223">    /**</span>
+<span class="source-line-no">224</span><span id="line.224">     * set the value to the nextValue using the builder function</span>
+<span class="source-line-no">225</span><span id="line.225">     * @param builder function to build the nextValue value</span>
+<span class="source-line-no">226</span><span id="line.226">     * @return Builder</span>
+<span class="source-line-no">227</span><span id="line.227">     */</span>
+<span class="source-line-no">228</span><span id="line.228"></span>
+<span class="source-line-no">229</span><span id="line.229">    public RemoveImageChangeBuilder setNextValue(</span>
+<span class="source-line-no">230</span><span id="line.230">            Function&lt;com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.Image&gt; builder) {</span>
+<span class="source-line-no">231</span><span id="line.231">        return nextValue(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()));</span>
+<span class="source-line-no">232</span><span id="line.232">    }</span>
+<span class="source-line-no">233</span><span id="line.233"></span>
+<span class="source-line-no">234</span><span id="line.234">    /**</span>
+<span class="source-line-no">235</span><span id="line.235">     *  &lt;p&gt;Update actions for removing images&lt;/p&gt;</span>
+<span class="source-line-no">236</span><span id="line.236">     * @return change</span>
+<span class="source-line-no">237</span><span id="line.237">     */</span>
+<span class="source-line-no">238</span><span id="line.238"></span>
+<span class="source-line-no">239</span><span id="line.239">    public String getChange() {</span>
+<span class="source-line-no">240</span><span id="line.240">        return this.change;</span>
+<span class="source-line-no">241</span><span id="line.241">    }</span>
+<span class="source-line-no">242</span><span id="line.242"></span>
+<span class="source-line-no">243</span><span id="line.243">    /**</span>
+<span class="source-line-no">244</span><span id="line.244">     * value of catalogData}</span>
+<span class="source-line-no">245</span><span id="line.245">     * @return catalogData</span>
+<span class="source-line-no">246</span><span id="line.246">     */</span>
+<span class="source-line-no">247</span><span id="line.247"></span>
+<span class="source-line-no">248</span><span id="line.248">    public String getCatalogData() {</span>
+<span class="source-line-no">249</span><span id="line.249">        return this.catalogData;</span>
+<span class="source-line-no">250</span><span id="line.250">    }</span>
+<span class="source-line-no">251</span><span id="line.251"></span>
+<span class="source-line-no">252</span><span id="line.252">    /**</span>
+<span class="source-line-no">253</span><span id="line.253">     * value of previousValue}</span>
+<span class="source-line-no">254</span><span id="line.254">     * @return previousValue</span>
+<span class="source-line-no">255</span><span id="line.255">     */</span>
+<span class="source-line-no">256</span><span id="line.256"></span>
+<span class="source-line-no">257</span><span id="line.257">    public java.util.List&lt;com.commercetools.history.models.common.Image&gt; getPreviousValue() {</span>
+<span class="source-line-no">258</span><span id="line.258">        return this.previousValue;</span>
+<span class="source-line-no">259</span><span id="line.259">    }</span>
+<span class="source-line-no">260</span><span id="line.260"></span>
+<span class="source-line-no">261</span><span id="line.261">    /**</span>
+<span class="source-line-no">262</span><span id="line.262">     * value of nextValue}</span>
+<span class="source-line-no">263</span><span id="line.263">     * @return nextValue</span>
+<span class="source-line-no">264</span><span id="line.264">     */</span>
+<span class="source-line-no">265</span><span id="line.265"></span>
+<span class="source-line-no">266</span><span id="line.266">    public java.util.List&lt;com.commercetools.history.models.common.Image&gt; getNextValue() {</span>
+<span class="source-line-no">267</span><span id="line.267">        return this.nextValue;</span>
+<span class="source-line-no">268</span><span id="line.268">    }</span>
+<span class="source-line-no">269</span><span id="line.269"></span>
+<span class="source-line-no">270</span><span id="line.270">    /**</span>
+<span class="source-line-no">271</span><span id="line.271">     * builds RemoveImageChange with checking for non-null required values</span>
+<span class="source-line-no">272</span><span id="line.272">     * @return RemoveImageChange</span>
+<span class="source-line-no">273</span><span id="line.273">     */</span>
+<span class="source-line-no">274</span><span id="line.274">    public RemoveImageChange build() {</span>
+<span class="source-line-no">275</span><span id="line.275">        Objects.requireNonNull(change, RemoveImageChange.class + ": change is missing");</span>
+<span class="source-line-no">276</span><span id="line.276">        Objects.requireNonNull(catalogData, RemoveImageChange.class + ": catalogData is missing");</span>
+<span class="source-line-no">277</span><span id="line.277">        Objects.requireNonNull(previousValue, RemoveImageChange.class + ": previousValue is missing");</span>
+<span class="source-line-no">278</span><span id="line.278">        Objects.requireNonNull(nextValue, RemoveImageChange.class + ": nextValue is missing");</span>
+<span class="source-line-no">279</span><span id="line.279">        return new RemoveImageChangeImpl(change, catalogData, previousValue, nextValue);</span>
+<span class="source-line-no">280</span><span id="line.280">    }</span>
+<span class="source-line-no">281</span><span id="line.281"></span>
+<span class="source-line-no">282</span><span id="line.282">    /**</span>
+<span class="source-line-no">283</span><span id="line.283">     * builds RemoveImageChange without checking for non-null required values</span>
+<span class="source-line-no">284</span><span id="line.284">     * @return RemoveImageChange</span>
+<span class="source-line-no">285</span><span id="line.285">     */</span>
+<span class="source-line-no">286</span><span id="line.286">    public RemoveImageChange buildUnchecked() {</span>
+<span class="source-line-no">287</span><span id="line.287">        return new RemoveImageChangeImpl(change, catalogData, previousValue, nextValue);</span>
+<span class="source-line-no">288</span><span id="line.288">    }</span>
+<span class="source-line-no">289</span><span id="line.289"></span>
+<span class="source-line-no">290</span><span id="line.290">    /**</span>
+<span class="source-line-no">291</span><span id="line.291">     * factory method for an instance of RemoveImageChangeBuilder</span>
+<span class="source-line-no">292</span><span id="line.292">     * @return builder</span>
+<span class="source-line-no">293</span><span id="line.293">     */</span>
+<span class="source-line-no">294</span><span id="line.294">    public static RemoveImageChangeBuilder of() {</span>
+<span class="source-line-no">295</span><span id="line.295">        return new RemoveImageChangeBuilder();</span>
+<span class="source-line-no">296</span><span id="line.296">    }</span>
+<span class="source-line-no">297</span><span id="line.297"></span>
+<span class="source-line-no">298</span><span id="line.298">    /**</span>
+<span class="source-line-no">299</span><span id="line.299">     * create builder for RemoveImageChange instance</span>
+<span class="source-line-no">300</span><span id="line.300">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">301</span><span id="line.301">     * @return builder</span>
+<span class="source-line-no">302</span><span id="line.302">     */</span>
+<span class="source-line-no">303</span><span id="line.303">    public static RemoveImageChangeBuilder of(final RemoveImageChange template) {</span>
+<span class="source-line-no">304</span><span id="line.304">        RemoveImageChangeBuilder builder = new RemoveImageChangeBuilder();</span>
+<span class="source-line-no">305</span><span id="line.305">        builder.change = template.getChange();</span>
+<span class="source-line-no">306</span><span id="line.306">        builder.catalogData = template.getCatalogData();</span>
+<span class="source-line-no">307</span><span id="line.307">        builder.previousValue = template.getPreviousValue();</span>
+<span class="source-line-no">308</span><span id="line.308">        builder.nextValue = template.getNextValue();</span>
+<span class="source-line-no">309</span><span id="line.309">        return builder;</span>
+<span class="source-line-no">310</span><span id="line.310">    }</span>
+<span class="source-line-no">311</span><span id="line.311"></span>
+<span class="source-line-no">312</span><span id="line.312">}</span>
 
 
 

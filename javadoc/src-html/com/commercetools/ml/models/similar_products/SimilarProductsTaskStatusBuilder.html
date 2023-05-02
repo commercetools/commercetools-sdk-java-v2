@@ -83,84 +83,97 @@
 <span class="source-line-no">070</span><span id="line.70"></span>
 <span class="source-line-no">071</span><span id="line.71">    /**</span>
 <span class="source-line-no">072</span><span id="line.72">     *  &lt;p&gt;The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is &lt;code&gt;SUCCESS&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">073</span><span id="line.73">     * @param result value to be set</span>
+<span class="source-line-no">073</span><span id="line.73">     * @param builder function to build the result value</span>
 <span class="source-line-no">074</span><span id="line.74">     * @return Builder</span>
 <span class="source-line-no">075</span><span id="line.75">     */</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public SimilarProductsTaskStatusBuilder result(</span>
-<span class="source-line-no">078</span><span id="line.78">            final com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult result) {</span>
-<span class="source-line-no">079</span><span id="line.79">        this.result = result;</span>
-<span class="source-line-no">080</span><span id="line.80">        return this;</span>
-<span class="source-line-no">081</span><span id="line.81">    }</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    /**</span>
-<span class="source-line-no">084</span><span id="line.84">     * value of state}</span>
-<span class="source-line-no">085</span><span id="line.85">     * @return state</span>
-<span class="source-line-no">086</span><span id="line.86">     */</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    public com.commercetools.ml.models.common.TaskStatusEnum getState() {</span>
-<span class="source-line-no">089</span><span id="line.89">        return this.state;</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    /**</span>
-<span class="source-line-no">093</span><span id="line.93">     *  &lt;p&gt;The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.&lt;/p&gt;</span>
-<span class="source-line-no">094</span><span id="line.94">     * @return expires</span>
-<span class="source-line-no">095</span><span id="line.95">     */</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    @Nullable</span>
-<span class="source-line-no">098</span><span id="line.98">    public java.time.ZonedDateTime getExpires() {</span>
-<span class="source-line-no">099</span><span id="line.99">        return this.expires;</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    /**</span>
-<span class="source-line-no">103</span><span id="line.103">     *  &lt;p&gt;The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is &lt;code&gt;SUCCESS&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">104</span><span id="line.104">     * @return result</span>
-<span class="source-line-no">105</span><span id="line.105">     */</span>
-<span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    public com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult getResult() {</span>
-<span class="source-line-no">108</span><span id="line.108">        return this.result;</span>
-<span class="source-line-no">109</span><span id="line.109">    }</span>
-<span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    /**</span>
-<span class="source-line-no">112</span><span id="line.112">     * builds SimilarProductsTaskStatus with checking for non-null required values</span>
-<span class="source-line-no">113</span><span id="line.113">     * @return SimilarProductsTaskStatus</span>
-<span class="source-line-no">114</span><span id="line.114">     */</span>
-<span class="source-line-no">115</span><span id="line.115">    public SimilarProductsTaskStatus build() {</span>
-<span class="source-line-no">116</span><span id="line.116">        Objects.requireNonNull(state, SimilarProductsTaskStatus.class + ": state is missing");</span>
-<span class="source-line-no">117</span><span id="line.117">        Objects.requireNonNull(result, SimilarProductsTaskStatus.class + ": result is missing");</span>
-<span class="source-line-no">118</span><span id="line.118">        return new SimilarProductsTaskStatusImpl(state, expires, result);</span>
-<span class="source-line-no">119</span><span id="line.119">    }</span>
-<span class="source-line-no">120</span><span id="line.120"></span>
-<span class="source-line-no">121</span><span id="line.121">    /**</span>
-<span class="source-line-no">122</span><span id="line.122">     * builds SimilarProductsTaskStatus without checking for non-null required values</span>
-<span class="source-line-no">123</span><span id="line.123">     * @return SimilarProductsTaskStatus</span>
-<span class="source-line-no">124</span><span id="line.124">     */</span>
-<span class="source-line-no">125</span><span id="line.125">    public SimilarProductsTaskStatus buildUnchecked() {</span>
-<span class="source-line-no">126</span><span id="line.126">        return new SimilarProductsTaskStatusImpl(state, expires, result);</span>
-<span class="source-line-no">127</span><span id="line.127">    }</span>
-<span class="source-line-no">128</span><span id="line.128"></span>
-<span class="source-line-no">129</span><span id="line.129">    /**</span>
-<span class="source-line-no">130</span><span id="line.130">     * factory method for an instance of SimilarProductsTaskStatusBuilder</span>
-<span class="source-line-no">131</span><span id="line.131">     * @return builder</span>
-<span class="source-line-no">132</span><span id="line.132">     */</span>
-<span class="source-line-no">133</span><span id="line.133">    public static SimilarProductsTaskStatusBuilder of() {</span>
-<span class="source-line-no">134</span><span id="line.134">        return new SimilarProductsTaskStatusBuilder();</span>
-<span class="source-line-no">135</span><span id="line.135">    }</span>
-<span class="source-line-no">136</span><span id="line.136"></span>
-<span class="source-line-no">137</span><span id="line.137">    /**</span>
-<span class="source-line-no">138</span><span id="line.138">     * create builder for SimilarProductsTaskStatus instance</span>
-<span class="source-line-no">139</span><span id="line.139">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">140</span><span id="line.140">     * @return builder</span>
-<span class="source-line-no">141</span><span id="line.141">     */</span>
-<span class="source-line-no">142</span><span id="line.142">    public static SimilarProductsTaskStatusBuilder of(final SimilarProductsTaskStatus template) {</span>
-<span class="source-line-no">143</span><span id="line.143">        SimilarProductsTaskStatusBuilder builder = new SimilarProductsTaskStatusBuilder();</span>
-<span class="source-line-no">144</span><span id="line.144">        builder.state = template.getState();</span>
-<span class="source-line-no">145</span><span id="line.145">        builder.expires = template.getExpires();</span>
-<span class="source-line-no">146</span><span id="line.146">        builder.result = template.getResult();</span>
-<span class="source-line-no">147</span><span id="line.147">        return builder;</span>
+<span class="source-line-no">077</span><span id="line.77">    public SimilarProductsTaskStatusBuilder withResult(</span>
+<span class="source-line-no">078</span><span id="line.78">            Function&lt;com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder, com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult&gt; builder) {</span>
+<span class="source-line-no">079</span><span id="line.79">        this.result = builder</span>
+<span class="source-line-no">080</span><span id="line.80">                .apply(com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder.of());</span>
+<span class="source-line-no">081</span><span id="line.81">        return this;</span>
+<span class="source-line-no">082</span><span id="line.82">    }</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    /**</span>
+<span class="source-line-no">085</span><span id="line.85">     *  &lt;p&gt;The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is &lt;code&gt;SUCCESS&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">086</span><span id="line.86">     * @param result value to be set</span>
+<span class="source-line-no">087</span><span id="line.87">     * @return Builder</span>
+<span class="source-line-no">088</span><span id="line.88">     */</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public SimilarProductsTaskStatusBuilder result(</span>
+<span class="source-line-no">091</span><span id="line.91">            final com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult result) {</span>
+<span class="source-line-no">092</span><span id="line.92">        this.result = result;</span>
+<span class="source-line-no">093</span><span id="line.93">        return this;</span>
+<span class="source-line-no">094</span><span id="line.94">    }</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    /**</span>
+<span class="source-line-no">097</span><span id="line.97">     * value of state}</span>
+<span class="source-line-no">098</span><span id="line.98">     * @return state</span>
+<span class="source-line-no">099</span><span id="line.99">     */</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    public com.commercetools.ml.models.common.TaskStatusEnum getState() {</span>
+<span class="source-line-no">102</span><span id="line.102">        return this.state;</span>
+<span class="source-line-no">103</span><span id="line.103">    }</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    /**</span>
+<span class="source-line-no">106</span><span id="line.106">     *  &lt;p&gt;The expiry date of the result. You cannot access the result after the expiry date. Default: 1 day after the result first becomes available. This is only available when the TaskStatus state is SUCCESS.&lt;/p&gt;</span>
+<span class="source-line-no">107</span><span id="line.107">     * @return expires</span>
+<span class="source-line-no">108</span><span id="line.108">     */</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    @Nullable</span>
+<span class="source-line-no">111</span><span id="line.111">    public java.time.ZonedDateTime getExpires() {</span>
+<span class="source-line-no">112</span><span id="line.112">        return this.expires;</span>
+<span class="source-line-no">113</span><span id="line.113">    }</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    /**</span>
+<span class="source-line-no">116</span><span id="line.116">     *  &lt;p&gt;The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is &lt;code&gt;SUCCESS&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">117</span><span id="line.117">     * @return result</span>
+<span class="source-line-no">118</span><span id="line.118">     */</span>
+<span class="source-line-no">119</span><span id="line.119"></span>
+<span class="source-line-no">120</span><span id="line.120">    public com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult getResult() {</span>
+<span class="source-line-no">121</span><span id="line.121">        return this.result;</span>
+<span class="source-line-no">122</span><span id="line.122">    }</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    /**</span>
+<span class="source-line-no">125</span><span id="line.125">     * builds SimilarProductsTaskStatus with checking for non-null required values</span>
+<span class="source-line-no">126</span><span id="line.126">     * @return SimilarProductsTaskStatus</span>
+<span class="source-line-no">127</span><span id="line.127">     */</span>
+<span class="source-line-no">128</span><span id="line.128">    public SimilarProductsTaskStatus build() {</span>
+<span class="source-line-no">129</span><span id="line.129">        Objects.requireNonNull(state, SimilarProductsTaskStatus.class + ": state is missing");</span>
+<span class="source-line-no">130</span><span id="line.130">        Objects.requireNonNull(result, SimilarProductsTaskStatus.class + ": result is missing");</span>
+<span class="source-line-no">131</span><span id="line.131">        return new SimilarProductsTaskStatusImpl(state, expires, result);</span>
+<span class="source-line-no">132</span><span id="line.132">    }</span>
+<span class="source-line-no">133</span><span id="line.133"></span>
+<span class="source-line-no">134</span><span id="line.134">    /**</span>
+<span class="source-line-no">135</span><span id="line.135">     * builds SimilarProductsTaskStatus without checking for non-null required values</span>
+<span class="source-line-no">136</span><span id="line.136">     * @return SimilarProductsTaskStatus</span>
+<span class="source-line-no">137</span><span id="line.137">     */</span>
+<span class="source-line-no">138</span><span id="line.138">    public SimilarProductsTaskStatus buildUnchecked() {</span>
+<span class="source-line-no">139</span><span id="line.139">        return new SimilarProductsTaskStatusImpl(state, expires, result);</span>
+<span class="source-line-no">140</span><span id="line.140">    }</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    /**</span>
+<span class="source-line-no">143</span><span id="line.143">     * factory method for an instance of SimilarProductsTaskStatusBuilder</span>
+<span class="source-line-no">144</span><span id="line.144">     * @return builder</span>
+<span class="source-line-no">145</span><span id="line.145">     */</span>
+<span class="source-line-no">146</span><span id="line.146">    public static SimilarProductsTaskStatusBuilder of() {</span>
+<span class="source-line-no">147</span><span id="line.147">        return new SimilarProductsTaskStatusBuilder();</span>
 <span class="source-line-no">148</span><span id="line.148">    }</span>
 <span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">}</span>
+<span class="source-line-no">150</span><span id="line.150">    /**</span>
+<span class="source-line-no">151</span><span id="line.151">     * create builder for SimilarProductsTaskStatus instance</span>
+<span class="source-line-no">152</span><span id="line.152">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">153</span><span id="line.153">     * @return builder</span>
+<span class="source-line-no">154</span><span id="line.154">     */</span>
+<span class="source-line-no">155</span><span id="line.155">    public static SimilarProductsTaskStatusBuilder of(final SimilarProductsTaskStatus template) {</span>
+<span class="source-line-no">156</span><span id="line.156">        SimilarProductsTaskStatusBuilder builder = new SimilarProductsTaskStatusBuilder();</span>
+<span class="source-line-no">157</span><span id="line.157">        builder.state = template.getState();</span>
+<span class="source-line-no">158</span><span id="line.158">        builder.expires = template.getExpires();</span>
+<span class="source-line-no">159</span><span id="line.159">        builder.result = template.getResult();</span>
+<span class="source-line-no">160</span><span id="line.160">        return builder;</span>
+<span class="source-line-no">161</span><span id="line.161">    }</span>
+<span class="source-line-no">162</span><span id="line.162"></span>
+<span class="source-line-no">163</span><span id="line.163">}</span>
 
 
 

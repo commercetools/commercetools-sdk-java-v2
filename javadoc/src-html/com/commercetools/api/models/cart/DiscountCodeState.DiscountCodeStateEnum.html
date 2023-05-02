@@ -134,44 +134,46 @@
 <span class="source-line-no">121</span><span id="line.121">    /**</span>
 <span class="source-line-no">122</span><span id="line.122">     * factory method for a enum value of DiscountCodeState</span>
 <span class="source-line-no">123</span><span id="line.123">     * if no enum has been found an anonymous instance will be created</span>
-<span class="source-line-no">124</span><span id="line.124">     * @return enum instance</span>
-<span class="source-line-no">125</span><span id="line.125">     */</span>
-<span class="source-line-no">126</span><span id="line.126">    @JsonCreator</span>
-<span class="source-line-no">127</span><span id="line.127">    public static DiscountCodeState findEnum(String value) {</span>
-<span class="source-line-no">128</span><span id="line.128">        return findEnumViaJsonName(value).orElse(new DiscountCodeState() {</span>
-<span class="source-line-no">129</span><span id="line.129">            @Override</span>
-<span class="source-line-no">130</span><span id="line.130">            public String getJsonName() {</span>
-<span class="source-line-no">131</span><span id="line.131">                return value;</span>
-<span class="source-line-no">132</span><span id="line.132">            }</span>
-<span class="source-line-no">133</span><span id="line.133"></span>
-<span class="source-line-no">134</span><span id="line.134">            @Override</span>
-<span class="source-line-no">135</span><span id="line.135">            public String name() {</span>
-<span class="source-line-no">136</span><span id="line.136">                return value.toUpperCase();</span>
-<span class="source-line-no">137</span><span id="line.137">            }</span>
-<span class="source-line-no">138</span><span id="line.138"></span>
-<span class="source-line-no">139</span><span id="line.139">            public String toString() {</span>
-<span class="source-line-no">140</span><span id="line.140">                return value;</span>
-<span class="source-line-no">141</span><span id="line.141">            }</span>
-<span class="source-line-no">142</span><span id="line.142">        });</span>
-<span class="source-line-no">143</span><span id="line.143">    }</span>
-<span class="source-line-no">144</span><span id="line.144"></span>
-<span class="source-line-no">145</span><span id="line.145">    /**</span>
-<span class="source-line-no">146</span><span id="line.146">     * method to find enum using the JSON value</span>
-<span class="source-line-no">147</span><span id="line.147">     * @return optional of enum instance</span>
-<span class="source-line-no">148</span><span id="line.148">     */</span>
-<span class="source-line-no">149</span><span id="line.149">    public static Optional&lt;DiscountCodeState&gt; findEnumViaJsonName(String jsonName) {</span>
-<span class="source-line-no">150</span><span id="line.150">        return Arrays.stream(values()).filter(t -&gt; t.getJsonName().equals(jsonName)).findFirst();</span>
-<span class="source-line-no">151</span><span id="line.151">    }</span>
-<span class="source-line-no">152</span><span id="line.152"></span>
-<span class="source-line-no">153</span><span id="line.153">    /**</span>
-<span class="source-line-no">154</span><span id="line.154">     * possible enum values</span>
-<span class="source-line-no">155</span><span id="line.155">     * @return array of possible enum values</span>
-<span class="source-line-no">156</span><span id="line.156">     */</span>
-<span class="source-line-no">157</span><span id="line.157">    public static DiscountCodeState[] values() {</span>
-<span class="source-line-no">158</span><span id="line.158">        return DiscountCodeStateEnum.values();</span>
-<span class="source-line-no">159</span><span id="line.159">    }</span>
-<span class="source-line-no">160</span><span id="line.160"></span>
-<span class="source-line-no">161</span><span id="line.161">}</span>
+<span class="source-line-no">124</span><span id="line.124">     * @param value the enum value to be wrapped</span>
+<span class="source-line-no">125</span><span id="line.125">     * @return enum instance</span>
+<span class="source-line-no">126</span><span id="line.126">     */</span>
+<span class="source-line-no">127</span><span id="line.127">    @JsonCreator</span>
+<span class="source-line-no">128</span><span id="line.128">    public static DiscountCodeState findEnum(String value) {</span>
+<span class="source-line-no">129</span><span id="line.129">        return findEnumViaJsonName(value).orElse(new DiscountCodeState() {</span>
+<span class="source-line-no">130</span><span id="line.130">            @Override</span>
+<span class="source-line-no">131</span><span id="line.131">            public String getJsonName() {</span>
+<span class="source-line-no">132</span><span id="line.132">                return value;</span>
+<span class="source-line-no">133</span><span id="line.133">            }</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">            @Override</span>
+<span class="source-line-no">136</span><span id="line.136">            public String name() {</span>
+<span class="source-line-no">137</span><span id="line.137">                return value.toUpperCase();</span>
+<span class="source-line-no">138</span><span id="line.138">            }</span>
+<span class="source-line-no">139</span><span id="line.139"></span>
+<span class="source-line-no">140</span><span id="line.140">            public String toString() {</span>
+<span class="source-line-no">141</span><span id="line.141">                return value;</span>
+<span class="source-line-no">142</span><span id="line.142">            }</span>
+<span class="source-line-no">143</span><span id="line.143">        });</span>
+<span class="source-line-no">144</span><span id="line.144">    }</span>
+<span class="source-line-no">145</span><span id="line.145"></span>
+<span class="source-line-no">146</span><span id="line.146">    /**</span>
+<span class="source-line-no">147</span><span id="line.147">     * method to find enum using the JSON value</span>
+<span class="source-line-no">148</span><span id="line.148">     * @param jsonName the json value to be wrapped</span>
+<span class="source-line-no">149</span><span id="line.149">     * @return optional of enum instance</span>
+<span class="source-line-no">150</span><span id="line.150">     */</span>
+<span class="source-line-no">151</span><span id="line.151">    public static Optional&lt;DiscountCodeState&gt; findEnumViaJsonName(String jsonName) {</span>
+<span class="source-line-no">152</span><span id="line.152">        return Arrays.stream(values()).filter(t -&gt; t.getJsonName().equals(jsonName)).findFirst();</span>
+<span class="source-line-no">153</span><span id="line.153">    }</span>
+<span class="source-line-no">154</span><span id="line.154"></span>
+<span class="source-line-no">155</span><span id="line.155">    /**</span>
+<span class="source-line-no">156</span><span id="line.156">     * possible enum values</span>
+<span class="source-line-no">157</span><span id="line.157">     * @return array of possible enum values</span>
+<span class="source-line-no">158</span><span id="line.158">     */</span>
+<span class="source-line-no">159</span><span id="line.159">    public static DiscountCodeState[] values() {</span>
+<span class="source-line-no">160</span><span id="line.160">        return DiscountCodeStateEnum.values();</span>
+<span class="source-line-no">161</span><span id="line.161">    }</span>
+<span class="source-line-no">162</span><span id="line.162"></span>
+<span class="source-line-no">163</span><span id="line.163">}</span>
 
 
 

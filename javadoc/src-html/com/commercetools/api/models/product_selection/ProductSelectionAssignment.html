@@ -29,10 +29,10 @@
 <span class="source-line-no">016</span><span id="line.16">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">017</span><span id="line.17"></span>
 <span class="source-line-no">018</span><span id="line.18">/**</span>
-<span class="source-line-no">019</span><span id="line.19"> *  &lt;p&gt;Given the type of Product Selection this Assignment refers to, it may contain:&lt;/p&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> *  &lt;p&gt;Given the mode of Product Selection, this assignment refers to, it may contain:&lt;/p&gt;</span>
 <span class="source-line-no">020</span><span id="line.20"> *  &lt;ul&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> *   &lt;li&gt;&lt;code&gt;variantSelection&lt;/code&gt; field if the Product Selection is of type Individual.&lt;/li&gt;</span>
-<span class="source-line-no">022</span><span id="line.22"> *   &lt;li&gt;&lt;code&gt;variantExclusion&lt;/code&gt; field if the Product Selection is of type Individual Exclusion.&lt;/li&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> *   &lt;li&gt;&lt;code&gt;variantSelection&lt;/code&gt; field for a Product Selection with &lt;code&gt;Individual&lt;/code&gt; ProductSelectionMode.&lt;/li&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> *   &lt;li&gt;&lt;code&gt;variantExclusion&lt;/code&gt; field for a Product Selection with &lt;code&gt;IndividualExclusion&lt;/code&gt; ProductSelectionMode (BETA).&lt;/li&gt;</span>
 <span class="source-line-no">023</span><span id="line.23"> *  &lt;/ul&gt;</span>
 <span class="source-line-no">024</span><span id="line.24"> *</span>
 <span class="source-line-no">025</span><span id="line.25"> * &lt;hr&gt;</span>
@@ -69,8 +69,8 @@
 <span class="source-line-no">056</span><span id="line.56">    public ProductSelectionReference getProductSelection();</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
 <span class="source-line-no">058</span><span id="line.58">    /**</span>
-<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;Define which Variants of the added Product will be included from the Product Selection.&lt;/p&gt;</span>
-<span class="source-line-no">060</span><span id="line.60">     *  &lt;p&gt;This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.&lt;/p&gt;</span>
+<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;Define which Variants of the added Product will be included in the Product Selection.&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">     *  &lt;p&gt;This field is only available for assignments to a Product Selection with &lt;code&gt;Individual&lt;/code&gt; ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.&lt;/p&gt;</span>
 <span class="source-line-no">061</span><span id="line.61">     * @return variantSelection</span>
 <span class="source-line-no">062</span><span id="line.62">     */</span>
 <span class="source-line-no">063</span><span id="line.63">    @Valid</span>
@@ -79,7 +79,7 @@
 <span class="source-line-no">066</span><span id="line.66"></span>
 <span class="source-line-no">067</span><span id="line.67">    /**</span>
 <span class="source-line-no">068</span><span id="line.68">     *  &lt;p&gt;Defines which Variants of the Product will be excluded from the Product Selection.&lt;/p&gt;</span>
-<span class="source-line-no">069</span><span id="line.69">     *  &lt;p&gt;This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.&lt;/p&gt;</span>
+<span class="source-line-no">069</span><span id="line.69">     *  &lt;p&gt;This field is only available for assignments to a Product Selection with &lt;code&gt;IndividualExclusion&lt;/code&gt; ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.&lt;/p&gt;</span>
 <span class="source-line-no">070</span><span id="line.70">     * @return variantExclusion</span>
 <span class="source-line-no">071</span><span id="line.71">     */</span>
 <span class="source-line-no">072</span><span id="line.72">    @Valid</span>
@@ -101,8 +101,8 @@
 <span class="source-line-no">088</span><span id="line.88">    public void setProductSelection(final ProductSelectionReference productSelection);</span>
 <span class="source-line-no">089</span><span id="line.89"></span>
 <span class="source-line-no">090</span><span id="line.90">    /**</span>
-<span class="source-line-no">091</span><span id="line.91">     *  &lt;p&gt;Define which Variants of the added Product will be included from the Product Selection.&lt;/p&gt;</span>
-<span class="source-line-no">092</span><span id="line.92">     *  &lt;p&gt;This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.&lt;/p&gt;</span>
+<span class="source-line-no">091</span><span id="line.91">     *  &lt;p&gt;Define which Variants of the added Product will be included in the Product Selection.&lt;/p&gt;</span>
+<span class="source-line-no">092</span><span id="line.92">     *  &lt;p&gt;This field is only available for assignments to a Product Selection with &lt;code&gt;Individual&lt;/code&gt; ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.&lt;/p&gt;</span>
 <span class="source-line-no">093</span><span id="line.93">     * @param variantSelection value to be set</span>
 <span class="source-line-no">094</span><span id="line.94">     */</span>
 <span class="source-line-no">095</span><span id="line.95"></span>
@@ -110,7 +110,7 @@
 <span class="source-line-no">097</span><span id="line.97"></span>
 <span class="source-line-no">098</span><span id="line.98">    /**</span>
 <span class="source-line-no">099</span><span id="line.99">     *  &lt;p&gt;Defines which Variants of the Product will be excluded from the Product Selection.&lt;/p&gt;</span>
-<span class="source-line-no">100</span><span id="line.100">     *  &lt;p&gt;This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.&lt;/p&gt;</span>
+<span class="source-line-no">100</span><span id="line.100">     *  &lt;p&gt;This field is only available for assignments to a Product Selection with &lt;code&gt;IndividualExclusion&lt;/code&gt; ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.&lt;/p&gt;</span>
 <span class="source-line-no">101</span><span id="line.101">     * @param variantExclusion value to be set</span>
 <span class="source-line-no">102</span><span id="line.102">     */</span>
 <span class="source-line-no">103</span><span id="line.103"></span>

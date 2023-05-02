@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Updates the Product Variant Exclusion of an existing Product Selection Assignment. A ProductVariantExclusion can only be set if the Product has already been excluded from the Product Selection of type Individual Exclusion.&lt;/p&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Updates the Product Variant Exclusion of an existing Product Selection Assignment. A ProductVariantExclusion can only be set if the Product has already been excluded from the Product Selection with &lt;code&gt;IndividualExclusion&lt;/code&gt; ProductSelectionMode.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> *  &lt;p&gt;If the specified Product is not assigned to the Product Selection, a ProductAssignmentMissing error is returned.&lt;/p&gt;</span>
 <span class="source-line-no">020</span><span id="line.20"> */</span>
 <span class="source-line-no">021</span><span id="line.21">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
@@ -77,7 +77,7 @@
 <span class="source-line-no">064</span><span id="line.64">    }</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
 <span class="source-line-no">066</span><span id="line.66">    /**</span>
-<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;Determines which Variants of the previously excluded Product are to be included in the Product Selection of type Individual Exclusion. Leave it empty to unset an existing Variant Exclusion.&lt;/p&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;Determines which Variants of the previously excluded Product are to be included in the Product Selection with &lt;code&gt;IndividualExclusion&lt;/code&gt; ProductSelectionMode. Leave it empty to unset an existing Variant Exclusion.&lt;/p&gt;</span>
 <span class="source-line-no">068</span><span id="line.68">     */</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
 <span class="source-line-no">070</span><span id="line.70">    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {</span>

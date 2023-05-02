@@ -150,44 +150,46 @@
 <span class="source-line-no">137</span><span id="line.137">    /**</span>
 <span class="source-line-no">138</span><span id="line.138">     * factory method for a enum value of ExtensionResourceTypeId</span>
 <span class="source-line-no">139</span><span id="line.139">     * if no enum has been found an anonymous instance will be created</span>
-<span class="source-line-no">140</span><span id="line.140">     * @return enum instance</span>
-<span class="source-line-no">141</span><span id="line.141">     */</span>
-<span class="source-line-no">142</span><span id="line.142">    @JsonCreator</span>
-<span class="source-line-no">143</span><span id="line.143">    public static ExtensionResourceTypeId findEnum(String value) {</span>
-<span class="source-line-no">144</span><span id="line.144">        return findEnumViaJsonName(value).orElse(new ExtensionResourceTypeId() {</span>
-<span class="source-line-no">145</span><span id="line.145">            @Override</span>
-<span class="source-line-no">146</span><span id="line.146">            public String getJsonName() {</span>
-<span class="source-line-no">147</span><span id="line.147">                return value;</span>
-<span class="source-line-no">148</span><span id="line.148">            }</span>
-<span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">            @Override</span>
-<span class="source-line-no">151</span><span id="line.151">            public String name() {</span>
-<span class="source-line-no">152</span><span id="line.152">                return value.toUpperCase();</span>
-<span class="source-line-no">153</span><span id="line.153">            }</span>
-<span class="source-line-no">154</span><span id="line.154"></span>
-<span class="source-line-no">155</span><span id="line.155">            public String toString() {</span>
-<span class="source-line-no">156</span><span id="line.156">                return value;</span>
-<span class="source-line-no">157</span><span id="line.157">            }</span>
-<span class="source-line-no">158</span><span id="line.158">        });</span>
-<span class="source-line-no">159</span><span id="line.159">    }</span>
-<span class="source-line-no">160</span><span id="line.160"></span>
-<span class="source-line-no">161</span><span id="line.161">    /**</span>
-<span class="source-line-no">162</span><span id="line.162">     * method to find enum using the JSON value</span>
-<span class="source-line-no">163</span><span id="line.163">     * @return optional of enum instance</span>
-<span class="source-line-no">164</span><span id="line.164">     */</span>
-<span class="source-line-no">165</span><span id="line.165">    public static Optional&lt;ExtensionResourceTypeId&gt; findEnumViaJsonName(String jsonName) {</span>
-<span class="source-line-no">166</span><span id="line.166">        return Arrays.stream(values()).filter(t -&gt; t.getJsonName().equals(jsonName)).findFirst();</span>
-<span class="source-line-no">167</span><span id="line.167">    }</span>
-<span class="source-line-no">168</span><span id="line.168"></span>
-<span class="source-line-no">169</span><span id="line.169">    /**</span>
-<span class="source-line-no">170</span><span id="line.170">     * possible enum values</span>
-<span class="source-line-no">171</span><span id="line.171">     * @return array of possible enum values</span>
-<span class="source-line-no">172</span><span id="line.172">     */</span>
-<span class="source-line-no">173</span><span id="line.173">    public static ExtensionResourceTypeId[] values() {</span>
-<span class="source-line-no">174</span><span id="line.174">        return ExtensionResourceTypeIdEnum.values();</span>
-<span class="source-line-no">175</span><span id="line.175">    }</span>
-<span class="source-line-no">176</span><span id="line.176"></span>
-<span class="source-line-no">177</span><span id="line.177">}</span>
+<span class="source-line-no">140</span><span id="line.140">     * @param value the enum value to be wrapped</span>
+<span class="source-line-no">141</span><span id="line.141">     * @return enum instance</span>
+<span class="source-line-no">142</span><span id="line.142">     */</span>
+<span class="source-line-no">143</span><span id="line.143">    @JsonCreator</span>
+<span class="source-line-no">144</span><span id="line.144">    public static ExtensionResourceTypeId findEnum(String value) {</span>
+<span class="source-line-no">145</span><span id="line.145">        return findEnumViaJsonName(value).orElse(new ExtensionResourceTypeId() {</span>
+<span class="source-line-no">146</span><span id="line.146">            @Override</span>
+<span class="source-line-no">147</span><span id="line.147">            public String getJsonName() {</span>
+<span class="source-line-no">148</span><span id="line.148">                return value;</span>
+<span class="source-line-no">149</span><span id="line.149">            }</span>
+<span class="source-line-no">150</span><span id="line.150"></span>
+<span class="source-line-no">151</span><span id="line.151">            @Override</span>
+<span class="source-line-no">152</span><span id="line.152">            public String name() {</span>
+<span class="source-line-no">153</span><span id="line.153">                return value.toUpperCase();</span>
+<span class="source-line-no">154</span><span id="line.154">            }</span>
+<span class="source-line-no">155</span><span id="line.155"></span>
+<span class="source-line-no">156</span><span id="line.156">            public String toString() {</span>
+<span class="source-line-no">157</span><span id="line.157">                return value;</span>
+<span class="source-line-no">158</span><span id="line.158">            }</span>
+<span class="source-line-no">159</span><span id="line.159">        });</span>
+<span class="source-line-no">160</span><span id="line.160">    }</span>
+<span class="source-line-no">161</span><span id="line.161"></span>
+<span class="source-line-no">162</span><span id="line.162">    /**</span>
+<span class="source-line-no">163</span><span id="line.163">     * method to find enum using the JSON value</span>
+<span class="source-line-no">164</span><span id="line.164">     * @param jsonName the json value to be wrapped</span>
+<span class="source-line-no">165</span><span id="line.165">     * @return optional of enum instance</span>
+<span class="source-line-no">166</span><span id="line.166">     */</span>
+<span class="source-line-no">167</span><span id="line.167">    public static Optional&lt;ExtensionResourceTypeId&gt; findEnumViaJsonName(String jsonName) {</span>
+<span class="source-line-no">168</span><span id="line.168">        return Arrays.stream(values()).filter(t -&gt; t.getJsonName().equals(jsonName)).findFirst();</span>
+<span class="source-line-no">169</span><span id="line.169">    }</span>
+<span class="source-line-no">170</span><span id="line.170"></span>
+<span class="source-line-no">171</span><span id="line.171">    /**</span>
+<span class="source-line-no">172</span><span id="line.172">     * possible enum values</span>
+<span class="source-line-no">173</span><span id="line.173">     * @return array of possible enum values</span>
+<span class="source-line-no">174</span><span id="line.174">     */</span>
+<span class="source-line-no">175</span><span id="line.175">    public static ExtensionResourceTypeId[] values() {</span>
+<span class="source-line-no">176</span><span id="line.176">        return ExtensionResourceTypeIdEnum.values();</span>
+<span class="source-line-no">177</span><span id="line.177">    }</span>
+<span class="source-line-no">178</span><span id="line.178"></span>
+<span class="source-line-no">179</span><span id="line.179">}</span>
 
 
 

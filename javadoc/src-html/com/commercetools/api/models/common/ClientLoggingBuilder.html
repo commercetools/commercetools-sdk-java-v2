@@ -84,106 +84,118 @@
 <span class="source-line-no">071</span><span id="line.71"></span>
 <span class="source-line-no">072</span><span id="line.72">    /**</span>
 <span class="source-line-no">073</span><span id="line.73">     *  &lt;p&gt;Indicates the Customer who modified the resource using a token from the password flow.&lt;/p&gt;</span>
-<span class="source-line-no">074</span><span id="line.74">     * @param customer value to be set</span>
+<span class="source-line-no">074</span><span id="line.74">     * @param builder function to build the customer value</span>
 <span class="source-line-no">075</span><span id="line.75">     * @return Builder</span>
 <span class="source-line-no">076</span><span id="line.76">     */</span>
 <span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public ClientLoggingBuilder customer(</span>
-<span class="source-line-no">079</span><span id="line.79">            @Nullable final com.commercetools.api.models.customer.CustomerReference customer) {</span>
-<span class="source-line-no">080</span><span id="line.80">        this.customer = customer;</span>
+<span class="source-line-no">078</span><span id="line.78">    public ClientLoggingBuilder withCustomer(</span>
+<span class="source-line-no">079</span><span id="line.79">            Function&lt;com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReference&gt; builder) {</span>
+<span class="source-line-no">080</span><span id="line.80">        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of());</span>
 <span class="source-line-no">081</span><span id="line.81">        return this;</span>
 <span class="source-line-no">082</span><span id="line.82">    }</span>
 <span class="source-line-no">083</span><span id="line.83"></span>
 <span class="source-line-no">084</span><span id="line.84">    /**</span>
-<span class="source-line-no">085</span><span id="line.85">     *  &lt;p&gt;Indicates that the resource was modified during an anonymous session with the logged ID.&lt;/p&gt;</span>
-<span class="source-line-no">086</span><span id="line.86">     * @param anonymousId value to be set</span>
+<span class="source-line-no">085</span><span id="line.85">     *  &lt;p&gt;Indicates the Customer who modified the resource using a token from the password flow.&lt;/p&gt;</span>
+<span class="source-line-no">086</span><span id="line.86">     * @param customer value to be set</span>
 <span class="source-line-no">087</span><span id="line.87">     * @return Builder</span>
 <span class="source-line-no">088</span><span id="line.88">     */</span>
 <span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public ClientLoggingBuilder anonymousId(@Nullable final String anonymousId) {</span>
-<span class="source-line-no">091</span><span id="line.91">        this.anonymousId = anonymousId;</span>
-<span class="source-line-no">092</span><span id="line.92">        return this;</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    /**</span>
-<span class="source-line-no">096</span><span id="line.96">     *  &lt;p&gt;&lt;code&gt;id&lt;/code&gt; of the APIClient which created the resource.&lt;/p&gt;</span>
-<span class="source-line-no">097</span><span id="line.97">     * @return clientId</span>
-<span class="source-line-no">098</span><span id="line.98">     */</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    @Nullable</span>
-<span class="source-line-no">101</span><span id="line.101">    public String getClientId() {</span>
-<span class="source-line-no">102</span><span id="line.102">        return this.clientId;</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    /**</span>
-<span class="source-line-no">106</span><span id="line.106">     *  &lt;p&gt;External user ID provided by &lt;code&gt;X-External-User-ID&lt;/code&gt; HTTP Header.&lt;/p&gt;</span>
-<span class="source-line-no">107</span><span id="line.107">     * @return externalUserId</span>
-<span class="source-line-no">108</span><span id="line.108">     */</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">    @Nullable</span>
-<span class="source-line-no">111</span><span id="line.111">    public String getExternalUserId() {</span>
-<span class="source-line-no">112</span><span id="line.112">        return this.externalUserId;</span>
-<span class="source-line-no">113</span><span id="line.113">    }</span>
-<span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    /**</span>
-<span class="source-line-no">116</span><span id="line.116">     *  &lt;p&gt;Indicates the Customer who modified the resource using a token from the password flow.&lt;/p&gt;</span>
-<span class="source-line-no">117</span><span id="line.117">     * @return customer</span>
-<span class="source-line-no">118</span><span id="line.118">     */</span>
-<span class="source-line-no">119</span><span id="line.119"></span>
-<span class="source-line-no">120</span><span id="line.120">    @Nullable</span>
-<span class="source-line-no">121</span><span id="line.121">    public com.commercetools.api.models.customer.CustomerReference getCustomer() {</span>
-<span class="source-line-no">122</span><span id="line.122">        return this.customer;</span>
-<span class="source-line-no">123</span><span id="line.123">    }</span>
-<span class="source-line-no">124</span><span id="line.124"></span>
-<span class="source-line-no">125</span><span id="line.125">    /**</span>
-<span class="source-line-no">126</span><span id="line.126">     *  &lt;p&gt;Indicates that the resource was modified during an anonymous session with the logged ID.&lt;/p&gt;</span>
-<span class="source-line-no">127</span><span id="line.127">     * @return anonymousId</span>
-<span class="source-line-no">128</span><span id="line.128">     */</span>
-<span class="source-line-no">129</span><span id="line.129"></span>
-<span class="source-line-no">130</span><span id="line.130">    @Nullable</span>
-<span class="source-line-no">131</span><span id="line.131">    public String getAnonymousId() {</span>
-<span class="source-line-no">132</span><span id="line.132">        return this.anonymousId;</span>
-<span class="source-line-no">133</span><span id="line.133">    }</span>
-<span class="source-line-no">134</span><span id="line.134"></span>
-<span class="source-line-no">135</span><span id="line.135">    /**</span>
-<span class="source-line-no">136</span><span id="line.136">     * builds ClientLogging with checking for non-null required values</span>
-<span class="source-line-no">137</span><span id="line.137">     * @return ClientLogging</span>
-<span class="source-line-no">138</span><span id="line.138">     */</span>
-<span class="source-line-no">139</span><span id="line.139">    public ClientLogging build() {</span>
-<span class="source-line-no">140</span><span id="line.140">        return new ClientLoggingImpl(clientId, externalUserId, customer, anonymousId);</span>
-<span class="source-line-no">141</span><span id="line.141">    }</span>
-<span class="source-line-no">142</span><span id="line.142"></span>
-<span class="source-line-no">143</span><span id="line.143">    /**</span>
-<span class="source-line-no">144</span><span id="line.144">     * builds ClientLogging without checking for non-null required values</span>
-<span class="source-line-no">145</span><span id="line.145">     * @return ClientLogging</span>
-<span class="source-line-no">146</span><span id="line.146">     */</span>
-<span class="source-line-no">147</span><span id="line.147">    public ClientLogging buildUnchecked() {</span>
-<span class="source-line-no">148</span><span id="line.148">        return new ClientLoggingImpl(clientId, externalUserId, customer, anonymousId);</span>
-<span class="source-line-no">149</span><span id="line.149">    }</span>
-<span class="source-line-no">150</span><span id="line.150"></span>
-<span class="source-line-no">151</span><span id="line.151">    /**</span>
-<span class="source-line-no">152</span><span id="line.152">     * factory method for an instance of ClientLoggingBuilder</span>
-<span class="source-line-no">153</span><span id="line.153">     * @return builder</span>
-<span class="source-line-no">154</span><span id="line.154">     */</span>
-<span class="source-line-no">155</span><span id="line.155">    public static ClientLoggingBuilder of() {</span>
-<span class="source-line-no">156</span><span id="line.156">        return new ClientLoggingBuilder();</span>
-<span class="source-line-no">157</span><span id="line.157">    }</span>
-<span class="source-line-no">158</span><span id="line.158"></span>
-<span class="source-line-no">159</span><span id="line.159">    /**</span>
-<span class="source-line-no">160</span><span id="line.160">     * create builder for ClientLogging instance</span>
-<span class="source-line-no">161</span><span id="line.161">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">162</span><span id="line.162">     * @return builder</span>
-<span class="source-line-no">163</span><span id="line.163">     */</span>
-<span class="source-line-no">164</span><span id="line.164">    public static ClientLoggingBuilder of(final ClientLogging template) {</span>
-<span class="source-line-no">165</span><span id="line.165">        ClientLoggingBuilder builder = new ClientLoggingBuilder();</span>
-<span class="source-line-no">166</span><span id="line.166">        builder.clientId = template.getClientId();</span>
-<span class="source-line-no">167</span><span id="line.167">        builder.externalUserId = template.getExternalUserId();</span>
-<span class="source-line-no">168</span><span id="line.168">        builder.customer = template.getCustomer();</span>
-<span class="source-line-no">169</span><span id="line.169">        builder.anonymousId = template.getAnonymousId();</span>
-<span class="source-line-no">170</span><span id="line.170">        return builder;</span>
-<span class="source-line-no">171</span><span id="line.171">    }</span>
-<span class="source-line-no">172</span><span id="line.172"></span>
-<span class="source-line-no">173</span><span id="line.173">}</span>
+<span class="source-line-no">090</span><span id="line.90">    public ClientLoggingBuilder customer(</span>
+<span class="source-line-no">091</span><span id="line.91">            @Nullable final com.commercetools.api.models.customer.CustomerReference customer) {</span>
+<span class="source-line-no">092</span><span id="line.92">        this.customer = customer;</span>
+<span class="source-line-no">093</span><span id="line.93">        return this;</span>
+<span class="source-line-no">094</span><span id="line.94">    }</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    /**</span>
+<span class="source-line-no">097</span><span id="line.97">     *  &lt;p&gt;Indicates that the resource was modified during an anonymous session with the logged ID.&lt;/p&gt;</span>
+<span class="source-line-no">098</span><span id="line.98">     * @param anonymousId value to be set</span>
+<span class="source-line-no">099</span><span id="line.99">     * @return Builder</span>
+<span class="source-line-no">100</span><span id="line.100">     */</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    public ClientLoggingBuilder anonymousId(@Nullable final String anonymousId) {</span>
+<span class="source-line-no">103</span><span id="line.103">        this.anonymousId = anonymousId;</span>
+<span class="source-line-no">104</span><span id="line.104">        return this;</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    /**</span>
+<span class="source-line-no">108</span><span id="line.108">     *  &lt;p&gt;&lt;code&gt;id&lt;/code&gt; of the APIClient which created the resource.&lt;/p&gt;</span>
+<span class="source-line-no">109</span><span id="line.109">     * @return clientId</span>
+<span class="source-line-no">110</span><span id="line.110">     */</span>
+<span class="source-line-no">111</span><span id="line.111"></span>
+<span class="source-line-no">112</span><span id="line.112">    @Nullable</span>
+<span class="source-line-no">113</span><span id="line.113">    public String getClientId() {</span>
+<span class="source-line-no">114</span><span id="line.114">        return this.clientId;</span>
+<span class="source-line-no">115</span><span id="line.115">    }</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">    /**</span>
+<span class="source-line-no">118</span><span id="line.118">     *  &lt;p&gt;External user ID provided by &lt;code&gt;X-External-User-ID&lt;/code&gt; HTTP Header.&lt;/p&gt;</span>
+<span class="source-line-no">119</span><span id="line.119">     * @return externalUserId</span>
+<span class="source-line-no">120</span><span id="line.120">     */</span>
+<span class="source-line-no">121</span><span id="line.121"></span>
+<span class="source-line-no">122</span><span id="line.122">    @Nullable</span>
+<span class="source-line-no">123</span><span id="line.123">    public String getExternalUserId() {</span>
+<span class="source-line-no">124</span><span id="line.124">        return this.externalUserId;</span>
+<span class="source-line-no">125</span><span id="line.125">    }</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">    /**</span>
+<span class="source-line-no">128</span><span id="line.128">     *  &lt;p&gt;Indicates the Customer who modified the resource using a token from the password flow.&lt;/p&gt;</span>
+<span class="source-line-no">129</span><span id="line.129">     * @return customer</span>
+<span class="source-line-no">130</span><span id="line.130">     */</span>
+<span class="source-line-no">131</span><span id="line.131"></span>
+<span class="source-line-no">132</span><span id="line.132">    @Nullable</span>
+<span class="source-line-no">133</span><span id="line.133">    public com.commercetools.api.models.customer.CustomerReference getCustomer() {</span>
+<span class="source-line-no">134</span><span id="line.134">        return this.customer;</span>
+<span class="source-line-no">135</span><span id="line.135">    }</span>
+<span class="source-line-no">136</span><span id="line.136"></span>
+<span class="source-line-no">137</span><span id="line.137">    /**</span>
+<span class="source-line-no">138</span><span id="line.138">     *  &lt;p&gt;Indicates that the resource was modified during an anonymous session with the logged ID.&lt;/p&gt;</span>
+<span class="source-line-no">139</span><span id="line.139">     * @return anonymousId</span>
+<span class="source-line-no">140</span><span id="line.140">     */</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    @Nullable</span>
+<span class="source-line-no">143</span><span id="line.143">    public String getAnonymousId() {</span>
+<span class="source-line-no">144</span><span id="line.144">        return this.anonymousId;</span>
+<span class="source-line-no">145</span><span id="line.145">    }</span>
+<span class="source-line-no">146</span><span id="line.146"></span>
+<span class="source-line-no">147</span><span id="line.147">    /**</span>
+<span class="source-line-no">148</span><span id="line.148">     * builds ClientLogging with checking for non-null required values</span>
+<span class="source-line-no">149</span><span id="line.149">     * @return ClientLogging</span>
+<span class="source-line-no">150</span><span id="line.150">     */</span>
+<span class="source-line-no">151</span><span id="line.151">    public ClientLogging build() {</span>
+<span class="source-line-no">152</span><span id="line.152">        return new ClientLoggingImpl(clientId, externalUserId, customer, anonymousId);</span>
+<span class="source-line-no">153</span><span id="line.153">    }</span>
+<span class="source-line-no">154</span><span id="line.154"></span>
+<span class="source-line-no">155</span><span id="line.155">    /**</span>
+<span class="source-line-no">156</span><span id="line.156">     * builds ClientLogging without checking for non-null required values</span>
+<span class="source-line-no">157</span><span id="line.157">     * @return ClientLogging</span>
+<span class="source-line-no">158</span><span id="line.158">     */</span>
+<span class="source-line-no">159</span><span id="line.159">    public ClientLogging buildUnchecked() {</span>
+<span class="source-line-no">160</span><span id="line.160">        return new ClientLoggingImpl(clientId, externalUserId, customer, anonymousId);</span>
+<span class="source-line-no">161</span><span id="line.161">    }</span>
+<span class="source-line-no">162</span><span id="line.162"></span>
+<span class="source-line-no">163</span><span id="line.163">    /**</span>
+<span class="source-line-no">164</span><span id="line.164">     * factory method for an instance of ClientLoggingBuilder</span>
+<span class="source-line-no">165</span><span id="line.165">     * @return builder</span>
+<span class="source-line-no">166</span><span id="line.166">     */</span>
+<span class="source-line-no">167</span><span id="line.167">    public static ClientLoggingBuilder of() {</span>
+<span class="source-line-no">168</span><span id="line.168">        return new ClientLoggingBuilder();</span>
+<span class="source-line-no">169</span><span id="line.169">    }</span>
+<span class="source-line-no">170</span><span id="line.170"></span>
+<span class="source-line-no">171</span><span id="line.171">    /**</span>
+<span class="source-line-no">172</span><span id="line.172">     * create builder for ClientLogging instance</span>
+<span class="source-line-no">173</span><span id="line.173">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">174</span><span id="line.174">     * @return builder</span>
+<span class="source-line-no">175</span><span id="line.175">     */</span>
+<span class="source-line-no">176</span><span id="line.176">    public static ClientLoggingBuilder of(final ClientLogging template) {</span>
+<span class="source-line-no">177</span><span id="line.177">        ClientLoggingBuilder builder = new ClientLoggingBuilder();</span>
+<span class="source-line-no">178</span><span id="line.178">        builder.clientId = template.getClientId();</span>
+<span class="source-line-no">179</span><span id="line.179">        builder.externalUserId = template.getExternalUserId();</span>
+<span class="source-line-no">180</span><span id="line.180">        builder.customer = template.getCustomer();</span>
+<span class="source-line-no">181</span><span id="line.181">        builder.anonymousId = template.getAnonymousId();</span>
+<span class="source-line-no">182</span><span id="line.182">        return builder;</span>
+<span class="source-line-no">183</span><span id="line.183">    }</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">}</span>
 
 
 

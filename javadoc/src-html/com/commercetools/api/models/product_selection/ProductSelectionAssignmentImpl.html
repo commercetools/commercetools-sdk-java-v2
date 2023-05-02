@@ -28,10 +28,10 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Given the type of Product Selection this Assignment refers to, it may contain:&lt;/p&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Given the mode of Product Selection, this assignment refers to, it may contain:&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> *  &lt;ul&gt;</span>
-<span class="source-line-no">020</span><span id="line.20"> *   &lt;li&gt;&lt;code&gt;variantSelection&lt;/code&gt; field if the Product Selection is of type Individual.&lt;/li&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> *   &lt;li&gt;&lt;code&gt;variantExclusion&lt;/code&gt; field if the Product Selection is of type Individual Exclusion.&lt;/li&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> *   &lt;li&gt;&lt;code&gt;variantSelection&lt;/code&gt; field for a Product Selection with &lt;code&gt;Individual&lt;/code&gt; ProductSelectionMode.&lt;/li&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> *   &lt;li&gt;&lt;code&gt;variantExclusion&lt;/code&gt; field for a Product Selection with &lt;code&gt;IndividualExclusion&lt;/code&gt; ProductSelectionMode (BETA).&lt;/li&gt;</span>
 <span class="source-line-no">022</span><span id="line.22"> *  &lt;/ul&gt;</span>
 <span class="source-line-no">023</span><span id="line.23"> */</span>
 <span class="source-line-no">024</span><span id="line.24">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
@@ -83,8 +83,8 @@
 <span class="source-line-no">070</span><span id="line.70">    }</span>
 <span class="source-line-no">071</span><span id="line.71"></span>
 <span class="source-line-no">072</span><span id="line.72">    /**</span>
-<span class="source-line-no">073</span><span id="line.73">     *  &lt;p&gt;Define which Variants of the added Product will be included from the Product Selection.&lt;/p&gt;</span>
-<span class="source-line-no">074</span><span id="line.74">     *  &lt;p&gt;This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.&lt;/p&gt;</span>
+<span class="source-line-no">073</span><span id="line.73">     *  &lt;p&gt;Define which Variants of the added Product will be included in the Product Selection.&lt;/p&gt;</span>
+<span class="source-line-no">074</span><span id="line.74">     *  &lt;p&gt;This field is only available for assignments to a Product Selection with &lt;code&gt;Individual&lt;/code&gt; ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.&lt;/p&gt;</span>
 <span class="source-line-no">075</span><span id="line.75">     */</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
 <span class="source-line-no">077</span><span id="line.77">    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {</span>
@@ -93,7 +93,7 @@
 <span class="source-line-no">080</span><span id="line.80"></span>
 <span class="source-line-no">081</span><span id="line.81">    /**</span>
 <span class="source-line-no">082</span><span id="line.82">     *  &lt;p&gt;Defines which Variants of the Product will be excluded from the Product Selection.&lt;/p&gt;</span>
-<span class="source-line-no">083</span><span id="line.83">     *  &lt;p&gt;This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.&lt;/p&gt;</span>
+<span class="source-line-no">083</span><span id="line.83">     *  &lt;p&gt;This field is only available for assignments to a Product Selection with &lt;code&gt;IndividualExclusion&lt;/code&gt; ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.&lt;/p&gt;</span>
 <span class="source-line-no">084</span><span id="line.84">     */</span>
 <span class="source-line-no">085</span><span id="line.85"></span>
 <span class="source-line-no">086</span><span id="line.86">    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {</span>

@@ -104,44 +104,46 @@
 <span class="source-line-no">091</span><span id="line.91">    /**</span>
 <span class="source-line-no">092</span><span id="line.92">     * factory method for a enum value of TransactionType</span>
 <span class="source-line-no">093</span><span id="line.93">     * if no enum has been found an anonymous instance will be created</span>
-<span class="source-line-no">094</span><span id="line.94">     * @return enum instance</span>
-<span class="source-line-no">095</span><span id="line.95">     */</span>
-<span class="source-line-no">096</span><span id="line.96">    @JsonCreator</span>
-<span class="source-line-no">097</span><span id="line.97">    public static TransactionType findEnum(String value) {</span>
-<span class="source-line-no">098</span><span id="line.98">        return findEnumViaJsonName(value).orElse(new TransactionType() {</span>
-<span class="source-line-no">099</span><span id="line.99">            @Override</span>
-<span class="source-line-no">100</span><span id="line.100">            public String getJsonName() {</span>
-<span class="source-line-no">101</span><span id="line.101">                return value;</span>
-<span class="source-line-no">102</span><span id="line.102">            }</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">            @Override</span>
-<span class="source-line-no">105</span><span id="line.105">            public String name() {</span>
-<span class="source-line-no">106</span><span id="line.106">                return value.toUpperCase();</span>
-<span class="source-line-no">107</span><span id="line.107">            }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">            public String toString() {</span>
-<span class="source-line-no">110</span><span id="line.110">                return value;</span>
-<span class="source-line-no">111</span><span id="line.111">            }</span>
-<span class="source-line-no">112</span><span id="line.112">        });</span>
-<span class="source-line-no">113</span><span id="line.113">    }</span>
-<span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    /**</span>
-<span class="source-line-no">116</span><span id="line.116">     * method to find enum using the JSON value</span>
-<span class="source-line-no">117</span><span id="line.117">     * @return optional of enum instance</span>
-<span class="source-line-no">118</span><span id="line.118">     */</span>
-<span class="source-line-no">119</span><span id="line.119">    public static Optional&lt;TransactionType&gt; findEnumViaJsonName(String jsonName) {</span>
-<span class="source-line-no">120</span><span id="line.120">        return Arrays.stream(values()).filter(t -&gt; t.getJsonName().equals(jsonName)).findFirst();</span>
-<span class="source-line-no">121</span><span id="line.121">    }</span>
-<span class="source-line-no">122</span><span id="line.122"></span>
-<span class="source-line-no">123</span><span id="line.123">    /**</span>
-<span class="source-line-no">124</span><span id="line.124">     * possible enum values</span>
-<span class="source-line-no">125</span><span id="line.125">     * @return array of possible enum values</span>
-<span class="source-line-no">126</span><span id="line.126">     */</span>
-<span class="source-line-no">127</span><span id="line.127">    public static TransactionType[] values() {</span>
-<span class="source-line-no">128</span><span id="line.128">        return TransactionTypeEnum.values();</span>
-<span class="source-line-no">129</span><span id="line.129">    }</span>
-<span class="source-line-no">130</span><span id="line.130"></span>
-<span class="source-line-no">131</span><span id="line.131">}</span>
+<span class="source-line-no">094</span><span id="line.94">     * @param value the enum value to be wrapped</span>
+<span class="source-line-no">095</span><span id="line.95">     * @return enum instance</span>
+<span class="source-line-no">096</span><span id="line.96">     */</span>
+<span class="source-line-no">097</span><span id="line.97">    @JsonCreator</span>
+<span class="source-line-no">098</span><span id="line.98">    public static TransactionType findEnum(String value) {</span>
+<span class="source-line-no">099</span><span id="line.99">        return findEnumViaJsonName(value).orElse(new TransactionType() {</span>
+<span class="source-line-no">100</span><span id="line.100">            @Override</span>
+<span class="source-line-no">101</span><span id="line.101">            public String getJsonName() {</span>
+<span class="source-line-no">102</span><span id="line.102">                return value;</span>
+<span class="source-line-no">103</span><span id="line.103">            }</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">            @Override</span>
+<span class="source-line-no">106</span><span id="line.106">            public String name() {</span>
+<span class="source-line-no">107</span><span id="line.107">                return value.toUpperCase();</span>
+<span class="source-line-no">108</span><span id="line.108">            }</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">            public String toString() {</span>
+<span class="source-line-no">111</span><span id="line.111">                return value;</span>
+<span class="source-line-no">112</span><span id="line.112">            }</span>
+<span class="source-line-no">113</span><span id="line.113">        });</span>
+<span class="source-line-no">114</span><span id="line.114">    }</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">    /**</span>
+<span class="source-line-no">117</span><span id="line.117">     * method to find enum using the JSON value</span>
+<span class="source-line-no">118</span><span id="line.118">     * @param jsonName the json value to be wrapped</span>
+<span class="source-line-no">119</span><span id="line.119">     * @return optional of enum instance</span>
+<span class="source-line-no">120</span><span id="line.120">     */</span>
+<span class="source-line-no">121</span><span id="line.121">    public static Optional&lt;TransactionType&gt; findEnumViaJsonName(String jsonName) {</span>
+<span class="source-line-no">122</span><span id="line.122">        return Arrays.stream(values()).filter(t -&gt; t.getJsonName().equals(jsonName)).findFirst();</span>
+<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">    /**</span>
+<span class="source-line-no">126</span><span id="line.126">     * possible enum values</span>
+<span class="source-line-no">127</span><span id="line.127">     * @return array of possible enum values</span>
+<span class="source-line-no">128</span><span id="line.128">     */</span>
+<span class="source-line-no">129</span><span id="line.129">    public static TransactionType[] values() {</span>
+<span class="source-line-no">130</span><span id="line.130">        return TransactionTypeEnum.values();</span>
+<span class="source-line-no">131</span><span id="line.131">    }</span>
+<span class="source-line-no">132</span><span id="line.132"></span>
+<span class="source-line-no">133</span><span id="line.133">}</span>
 
 
 

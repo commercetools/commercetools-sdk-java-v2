@@ -190,44 +190,46 @@
 <span class="source-line-no">177</span><span id="line.177">    /**</span>
 <span class="source-line-no">178</span><span id="line.178">     * factory method for a enum value of CustomFieldReferenceValue</span>
 <span class="source-line-no">179</span><span id="line.179">     * if no enum has been found an anonymous instance will be created</span>
-<span class="source-line-no">180</span><span id="line.180">     * @return enum instance</span>
-<span class="source-line-no">181</span><span id="line.181">     */</span>
-<span class="source-line-no">182</span><span id="line.182">    @JsonCreator</span>
-<span class="source-line-no">183</span><span id="line.183">    public static CustomFieldReferenceValue findEnum(String value) {</span>
-<span class="source-line-no">184</span><span id="line.184">        return findEnumViaJsonName(value).orElse(new CustomFieldReferenceValue() {</span>
-<span class="source-line-no">185</span><span id="line.185">            @Override</span>
-<span class="source-line-no">186</span><span id="line.186">            public String getJsonName() {</span>
-<span class="source-line-no">187</span><span id="line.187">                return value;</span>
-<span class="source-line-no">188</span><span id="line.188">            }</span>
-<span class="source-line-no">189</span><span id="line.189"></span>
-<span class="source-line-no">190</span><span id="line.190">            @Override</span>
-<span class="source-line-no">191</span><span id="line.191">            public String name() {</span>
-<span class="source-line-no">192</span><span id="line.192">                return value.toUpperCase();</span>
-<span class="source-line-no">193</span><span id="line.193">            }</span>
-<span class="source-line-no">194</span><span id="line.194"></span>
-<span class="source-line-no">195</span><span id="line.195">            public String toString() {</span>
-<span class="source-line-no">196</span><span id="line.196">                return value;</span>
-<span class="source-line-no">197</span><span id="line.197">            }</span>
-<span class="source-line-no">198</span><span id="line.198">        });</span>
-<span class="source-line-no">199</span><span id="line.199">    }</span>
-<span class="source-line-no">200</span><span id="line.200"></span>
-<span class="source-line-no">201</span><span id="line.201">    /**</span>
-<span class="source-line-no">202</span><span id="line.202">     * method to find enum using the JSON value</span>
-<span class="source-line-no">203</span><span id="line.203">     * @return optional of enum instance</span>
-<span class="source-line-no">204</span><span id="line.204">     */</span>
-<span class="source-line-no">205</span><span id="line.205">    public static Optional&lt;CustomFieldReferenceValue&gt; findEnumViaJsonName(String jsonName) {</span>
-<span class="source-line-no">206</span><span id="line.206">        return Arrays.stream(values()).filter(t -&gt; t.getJsonName().equals(jsonName)).findFirst();</span>
-<span class="source-line-no">207</span><span id="line.207">    }</span>
-<span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">    /**</span>
-<span class="source-line-no">210</span><span id="line.210">     * possible enum values</span>
-<span class="source-line-no">211</span><span id="line.211">     * @return array of possible enum values</span>
-<span class="source-line-no">212</span><span id="line.212">     */</span>
-<span class="source-line-no">213</span><span id="line.213">    public static CustomFieldReferenceValue[] values() {</span>
-<span class="source-line-no">214</span><span id="line.214">        return CustomFieldReferenceValueEnum.values();</span>
-<span class="source-line-no">215</span><span id="line.215">    }</span>
-<span class="source-line-no">216</span><span id="line.216"></span>
-<span class="source-line-no">217</span><span id="line.217">}</span>
+<span class="source-line-no">180</span><span id="line.180">     * @param value the enum value to be wrapped</span>
+<span class="source-line-no">181</span><span id="line.181">     * @return enum instance</span>
+<span class="source-line-no">182</span><span id="line.182">     */</span>
+<span class="source-line-no">183</span><span id="line.183">    @JsonCreator</span>
+<span class="source-line-no">184</span><span id="line.184">    public static CustomFieldReferenceValue findEnum(String value) {</span>
+<span class="source-line-no">185</span><span id="line.185">        return findEnumViaJsonName(value).orElse(new CustomFieldReferenceValue() {</span>
+<span class="source-line-no">186</span><span id="line.186">            @Override</span>
+<span class="source-line-no">187</span><span id="line.187">            public String getJsonName() {</span>
+<span class="source-line-no">188</span><span id="line.188">                return value;</span>
+<span class="source-line-no">189</span><span id="line.189">            }</span>
+<span class="source-line-no">190</span><span id="line.190"></span>
+<span class="source-line-no">191</span><span id="line.191">            @Override</span>
+<span class="source-line-no">192</span><span id="line.192">            public String name() {</span>
+<span class="source-line-no">193</span><span id="line.193">                return value.toUpperCase();</span>
+<span class="source-line-no">194</span><span id="line.194">            }</span>
+<span class="source-line-no">195</span><span id="line.195"></span>
+<span class="source-line-no">196</span><span id="line.196">            public String toString() {</span>
+<span class="source-line-no">197</span><span id="line.197">                return value;</span>
+<span class="source-line-no">198</span><span id="line.198">            }</span>
+<span class="source-line-no">199</span><span id="line.199">        });</span>
+<span class="source-line-no">200</span><span id="line.200">    }</span>
+<span class="source-line-no">201</span><span id="line.201"></span>
+<span class="source-line-no">202</span><span id="line.202">    /**</span>
+<span class="source-line-no">203</span><span id="line.203">     * method to find enum using the JSON value</span>
+<span class="source-line-no">204</span><span id="line.204">     * @param jsonName the json value to be wrapped</span>
+<span class="source-line-no">205</span><span id="line.205">     * @return optional of enum instance</span>
+<span class="source-line-no">206</span><span id="line.206">     */</span>
+<span class="source-line-no">207</span><span id="line.207">    public static Optional&lt;CustomFieldReferenceValue&gt; findEnumViaJsonName(String jsonName) {</span>
+<span class="source-line-no">208</span><span id="line.208">        return Arrays.stream(values()).filter(t -&gt; t.getJsonName().equals(jsonName)).findFirst();</span>
+<span class="source-line-no">209</span><span id="line.209">    }</span>
+<span class="source-line-no">210</span><span id="line.210"></span>
+<span class="source-line-no">211</span><span id="line.211">    /**</span>
+<span class="source-line-no">212</span><span id="line.212">     * possible enum values</span>
+<span class="source-line-no">213</span><span id="line.213">     * @return array of possible enum values</span>
+<span class="source-line-no">214</span><span id="line.214">     */</span>
+<span class="source-line-no">215</span><span id="line.215">    public static CustomFieldReferenceValue[] values() {</span>
+<span class="source-line-no">216</span><span id="line.216">        return CustomFieldReferenceValueEnum.values();</span>
+<span class="source-line-no">217</span><span id="line.217">    }</span>
+<span class="source-line-no">218</span><span id="line.218"></span>
+<span class="source-line-no">219</span><span id="line.219">}</span>
 
 
 

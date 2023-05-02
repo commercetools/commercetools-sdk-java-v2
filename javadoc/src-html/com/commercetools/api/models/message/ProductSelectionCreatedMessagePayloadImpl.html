@@ -35,14 +35,14 @@
 <span class="source-line-no">022</span><span id="line.22"></span>
 <span class="source-line-no">023</span><span id="line.23">    private String type;</span>
 <span class="source-line-no">024</span><span id="line.24"></span>
-<span class="source-line-no">025</span><span id="line.25">    private com.commercetools.api.models.product_selection.ProductSelectionType productSelection;</span>
+<span class="source-line-no">025</span><span id="line.25">    private com.commercetools.api.models.product_selection.ProductSelection productSelection;</span>
 <span class="source-line-no">026</span><span id="line.26"></span>
 <span class="source-line-no">027</span><span id="line.27">    /**</span>
 <span class="source-line-no">028</span><span id="line.28">     * create instance with all properties</span>
 <span class="source-line-no">029</span><span id="line.29">     */</span>
 <span class="source-line-no">030</span><span id="line.30">    @JsonCreator</span>
 <span class="source-line-no">031</span><span id="line.31">    ProductSelectionCreatedMessagePayloadImpl(</span>
-<span class="source-line-no">032</span><span id="line.32">            @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionType productSelection) {</span>
+<span class="source-line-no">032</span><span id="line.32">            @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelection productSelection) {</span>
 <span class="source-line-no">033</span><span id="line.33">        this.productSelection = productSelection;</span>
 <span class="source-line-no">034</span><span id="line.34">        this.type = PRODUCT_SELECTION_CREATED;</span>
 <span class="source-line-no">035</span><span id="line.35">    }</span>
@@ -63,15 +63,15 @@
 <span class="source-line-no">050</span><span id="line.50">    }</span>
 <span class="source-line-no">051</span><span id="line.51"></span>
 <span class="source-line-no">052</span><span id="line.52">    /**</span>
-<span class="source-line-no">053</span><span id="line.53">     *  &lt;p&gt;The &lt;code&gt;type&lt;/code&gt; and &lt;code&gt;name&lt;/code&gt; of the individual Product Selection.&lt;/p&gt;</span>
+<span class="source-line-no">053</span><span id="line.53">     *  &lt;p&gt;Product Selection that was created.&lt;/p&gt;</span>
 <span class="source-line-no">054</span><span id="line.54">     */</span>
 <span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">    public com.commercetools.api.models.product_selection.ProductSelectionType getProductSelection() {</span>
+<span class="source-line-no">056</span><span id="line.56">    public com.commercetools.api.models.product_selection.ProductSelection getProductSelection() {</span>
 <span class="source-line-no">057</span><span id="line.57">        return this.productSelection;</span>
 <span class="source-line-no">058</span><span id="line.58">    }</span>
 <span class="source-line-no">059</span><span id="line.59"></span>
 <span class="source-line-no">060</span><span id="line.60">    public void setProductSelection(</span>
-<span class="source-line-no">061</span><span id="line.61">            final com.commercetools.api.models.product_selection.ProductSelectionType productSelection) {</span>
+<span class="source-line-no">061</span><span id="line.61">            final com.commercetools.api.models.product_selection.ProductSelection productSelection) {</span>
 <span class="source-line-no">062</span><span id="line.62">        this.productSelection = productSelection;</span>
 <span class="source-line-no">063</span><span id="line.63">    }</span>
 <span class="source-line-no">064</span><span id="line.64"></span>

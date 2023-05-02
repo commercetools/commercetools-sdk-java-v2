@@ -68,7 +68,7 @@
 <span class="source-line-no">055</span><span id="line.55"></span>
 <span class="source-line-no">056</span><span id="line.56">    /**</span>
 <span class="source-line-no">057</span><span id="line.57">     *  &lt;p&gt;The Variants of the Product that are included from the Product Selection.&lt;/p&gt;</span>
-<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;This field may exist only for the IndividualProductSelectionType. In absence of this field, all Variants are deemed to be included.&lt;/p&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;This field may exist only in Product Selections with &lt;code&gt;Individual&lt;/code&gt; ProductSelectionMode. In absence of this field, all Variants are deemed to be included.&lt;/p&gt;</span>
 <span class="source-line-no">059</span><span id="line.59">     */</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
 <span class="source-line-no">061</span><span id="line.61">    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {</span>
@@ -77,7 +77,7 @@
 <span class="source-line-no">064</span><span id="line.64"></span>
 <span class="source-line-no">065</span><span id="line.65">    /**</span>
 <span class="source-line-no">066</span><span id="line.66">     *  &lt;p&gt;The Variants of the Product that are excluded from the Product Selection.&lt;/p&gt;</span>
-<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;This field may exist only for the IndividualExclusionProductSelectionType. In absence of this field, all Variants are deemed to be excluded.&lt;/p&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;This field may exist only in Product Selections with &lt;code&gt;IndividualExclusion&lt;/code&gt; ProductSelectionMode. In absence of this field, all Variants are deemed to be excluded.&lt;/p&gt;</span>
 <span class="source-line-no">068</span><span id="line.68">     */</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
 <span class="source-line-no">070</span><span id="line.70">    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {</span>

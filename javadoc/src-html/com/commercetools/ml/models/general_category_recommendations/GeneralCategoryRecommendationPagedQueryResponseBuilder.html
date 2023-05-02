@@ -154,85 +154,109 @@
 <span class="source-line-no">141</span><span id="line.141">    }</span>
 <span class="source-line-no">142</span><span id="line.142"></span>
 <span class="source-line-no">143</span><span id="line.143">    /**</span>
-<span class="source-line-no">144</span><span id="line.144">     * value of count}</span>
-<span class="source-line-no">145</span><span id="line.145">     * @return count</span>
-<span class="source-line-no">146</span><span id="line.146">     */</span>
-<span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    public Long getCount() {</span>
-<span class="source-line-no">149</span><span id="line.149">        return this.count;</span>
-<span class="source-line-no">150</span><span id="line.150">    }</span>
-<span class="source-line-no">151</span><span id="line.151"></span>
-<span class="source-line-no">152</span><span id="line.152">    /**</span>
-<span class="source-line-no">153</span><span id="line.153">     * value of total}</span>
-<span class="source-line-no">154</span><span id="line.154">     * @return total</span>
-<span class="source-line-no">155</span><span id="line.155">     */</span>
-<span class="source-line-no">156</span><span id="line.156"></span>
-<span class="source-line-no">157</span><span id="line.157">    public Long getTotal() {</span>
-<span class="source-line-no">158</span><span id="line.158">        return this.total;</span>
-<span class="source-line-no">159</span><span id="line.159">    }</span>
+<span class="source-line-no">144</span><span id="line.144">     * add the value to the results using the builder function</span>
+<span class="source-line-no">145</span><span id="line.145">     * @param builder function to build the results value</span>
+<span class="source-line-no">146</span><span id="line.146">     * @return Builder</span>
+<span class="source-line-no">147</span><span id="line.147">     */</span>
+<span class="source-line-no">148</span><span id="line.148"></span>
+<span class="source-line-no">149</span><span id="line.149">    public GeneralCategoryRecommendationPagedQueryResponseBuilder addResults(</span>
+<span class="source-line-no">150</span><span id="line.150">            Function&lt;com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation&gt; builder) {</span>
+<span class="source-line-no">151</span><span id="line.151">        return plusResults(builder.apply(</span>
+<span class="source-line-no">152</span><span id="line.152">            com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder.of()));</span>
+<span class="source-line-no">153</span><span id="line.153">    }</span>
+<span class="source-line-no">154</span><span id="line.154"></span>
+<span class="source-line-no">155</span><span id="line.155">    /**</span>
+<span class="source-line-no">156</span><span id="line.156">     * set the value to the results using the builder function</span>
+<span class="source-line-no">157</span><span id="line.157">     * @param builder function to build the results value</span>
+<span class="source-line-no">158</span><span id="line.158">     * @return Builder</span>
+<span class="source-line-no">159</span><span id="line.159">     */</span>
 <span class="source-line-no">160</span><span id="line.160"></span>
-<span class="source-line-no">161</span><span id="line.161">    /**</span>
-<span class="source-line-no">162</span><span id="line.162">     *  &lt;p&gt;Number of elements skipped.&lt;/p&gt;</span>
-<span class="source-line-no">163</span><span id="line.163">     * @return offset</span>
-<span class="source-line-no">164</span><span id="line.164">     */</span>
-<span class="source-line-no">165</span><span id="line.165"></span>
-<span class="source-line-no">166</span><span id="line.166">    public Long getOffset() {</span>
-<span class="source-line-no">167</span><span id="line.167">        return this.offset;</span>
-<span class="source-line-no">168</span><span id="line.168">    }</span>
-<span class="source-line-no">169</span><span id="line.169"></span>
-<span class="source-line-no">170</span><span id="line.170">    /**</span>
-<span class="source-line-no">171</span><span id="line.171">     * value of results}</span>
-<span class="source-line-no">172</span><span id="line.172">     * @return results</span>
-<span class="source-line-no">173</span><span id="line.173">     */</span>
-<span class="source-line-no">174</span><span id="line.174"></span>
-<span class="source-line-no">175</span><span id="line.175">    public java.util.List&lt;com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation&gt; getResults() {</span>
-<span class="source-line-no">176</span><span id="line.176">        return this.results;</span>
-<span class="source-line-no">177</span><span id="line.177">    }</span>
-<span class="source-line-no">178</span><span id="line.178"></span>
-<span class="source-line-no">179</span><span id="line.179">    /**</span>
-<span class="source-line-no">180</span><span id="line.180">     * builds GeneralCategoryRecommendationPagedQueryResponse with checking for non-null required values</span>
-<span class="source-line-no">181</span><span id="line.181">     * @return GeneralCategoryRecommendationPagedQueryResponse</span>
-<span class="source-line-no">182</span><span id="line.182">     */</span>
-<span class="source-line-no">183</span><span id="line.183">    public GeneralCategoryRecommendationPagedQueryResponse build() {</span>
-<span class="source-line-no">184</span><span id="line.184">        Objects.requireNonNull(count, GeneralCategoryRecommendationPagedQueryResponse.class + ": count is missing");</span>
-<span class="source-line-no">185</span><span id="line.185">        Objects.requireNonNull(total, GeneralCategoryRecommendationPagedQueryResponse.class + ": total is missing");</span>
-<span class="source-line-no">186</span><span id="line.186">        Objects.requireNonNull(offset, GeneralCategoryRecommendationPagedQueryResponse.class + ": offset is missing");</span>
-<span class="source-line-no">187</span><span id="line.187">        Objects.requireNonNull(results, GeneralCategoryRecommendationPagedQueryResponse.class + ": results is missing");</span>
-<span class="source-line-no">188</span><span id="line.188">        return new GeneralCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results);</span>
-<span class="source-line-no">189</span><span id="line.189">    }</span>
-<span class="source-line-no">190</span><span id="line.190"></span>
-<span class="source-line-no">191</span><span id="line.191">    /**</span>
-<span class="source-line-no">192</span><span id="line.192">     * builds GeneralCategoryRecommendationPagedQueryResponse without checking for non-null required values</span>
-<span class="source-line-no">193</span><span id="line.193">     * @return GeneralCategoryRecommendationPagedQueryResponse</span>
-<span class="source-line-no">194</span><span id="line.194">     */</span>
-<span class="source-line-no">195</span><span id="line.195">    public GeneralCategoryRecommendationPagedQueryResponse buildUnchecked() {</span>
-<span class="source-line-no">196</span><span id="line.196">        return new GeneralCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results);</span>
-<span class="source-line-no">197</span><span id="line.197">    }</span>
+<span class="source-line-no">161</span><span id="line.161">    public GeneralCategoryRecommendationPagedQueryResponseBuilder setResults(</span>
+<span class="source-line-no">162</span><span id="line.162">            Function&lt;com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation&gt; builder) {</span>
+<span class="source-line-no">163</span><span id="line.163">        return results(builder.apply(</span>
+<span class="source-line-no">164</span><span id="line.164">            com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder.of()));</span>
+<span class="source-line-no">165</span><span id="line.165">    }</span>
+<span class="source-line-no">166</span><span id="line.166"></span>
+<span class="source-line-no">167</span><span id="line.167">    /**</span>
+<span class="source-line-no">168</span><span id="line.168">     * value of count}</span>
+<span class="source-line-no">169</span><span id="line.169">     * @return count</span>
+<span class="source-line-no">170</span><span id="line.170">     */</span>
+<span class="source-line-no">171</span><span id="line.171"></span>
+<span class="source-line-no">172</span><span id="line.172">    public Long getCount() {</span>
+<span class="source-line-no">173</span><span id="line.173">        return this.count;</span>
+<span class="source-line-no">174</span><span id="line.174">    }</span>
+<span class="source-line-no">175</span><span id="line.175"></span>
+<span class="source-line-no">176</span><span id="line.176">    /**</span>
+<span class="source-line-no">177</span><span id="line.177">     * value of total}</span>
+<span class="source-line-no">178</span><span id="line.178">     * @return total</span>
+<span class="source-line-no">179</span><span id="line.179">     */</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    public Long getTotal() {</span>
+<span class="source-line-no">182</span><span id="line.182">        return this.total;</span>
+<span class="source-line-no">183</span><span id="line.183">    }</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">    /**</span>
+<span class="source-line-no">186</span><span id="line.186">     *  &lt;p&gt;Number of elements skipped.&lt;/p&gt;</span>
+<span class="source-line-no">187</span><span id="line.187">     * @return offset</span>
+<span class="source-line-no">188</span><span id="line.188">     */</span>
+<span class="source-line-no">189</span><span id="line.189"></span>
+<span class="source-line-no">190</span><span id="line.190">    public Long getOffset() {</span>
+<span class="source-line-no">191</span><span id="line.191">        return this.offset;</span>
+<span class="source-line-no">192</span><span id="line.192">    }</span>
+<span class="source-line-no">193</span><span id="line.193"></span>
+<span class="source-line-no">194</span><span id="line.194">    /**</span>
+<span class="source-line-no">195</span><span id="line.195">     * value of results}</span>
+<span class="source-line-no">196</span><span id="line.196">     * @return results</span>
+<span class="source-line-no">197</span><span id="line.197">     */</span>
 <span class="source-line-no">198</span><span id="line.198"></span>
-<span class="source-line-no">199</span><span id="line.199">    /**</span>
-<span class="source-line-no">200</span><span id="line.200">     * factory method for an instance of GeneralCategoryRecommendationPagedQueryResponseBuilder</span>
-<span class="source-line-no">201</span><span id="line.201">     * @return builder</span>
-<span class="source-line-no">202</span><span id="line.202">     */</span>
-<span class="source-line-no">203</span><span id="line.203">    public static GeneralCategoryRecommendationPagedQueryResponseBuilder of() {</span>
-<span class="source-line-no">204</span><span id="line.204">        return new GeneralCategoryRecommendationPagedQueryResponseBuilder();</span>
-<span class="source-line-no">205</span><span id="line.205">    }</span>
-<span class="source-line-no">206</span><span id="line.206"></span>
-<span class="source-line-no">207</span><span id="line.207">    /**</span>
-<span class="source-line-no">208</span><span id="line.208">     * create builder for GeneralCategoryRecommendationPagedQueryResponse instance</span>
-<span class="source-line-no">209</span><span id="line.209">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">210</span><span id="line.210">     * @return builder</span>
-<span class="source-line-no">211</span><span id="line.211">     */</span>
-<span class="source-line-no">212</span><span id="line.212">    public static GeneralCategoryRecommendationPagedQueryResponseBuilder of(</span>
-<span class="source-line-no">213</span><span id="line.213">            final GeneralCategoryRecommendationPagedQueryResponse template) {</span>
-<span class="source-line-no">214</span><span id="line.214">        GeneralCategoryRecommendationPagedQueryResponseBuilder builder = new GeneralCategoryRecommendationPagedQueryResponseBuilder();</span>
-<span class="source-line-no">215</span><span id="line.215">        builder.count = template.getCount();</span>
-<span class="source-line-no">216</span><span id="line.216">        builder.total = template.getTotal();</span>
-<span class="source-line-no">217</span><span id="line.217">        builder.offset = template.getOffset();</span>
-<span class="source-line-no">218</span><span id="line.218">        builder.results = template.getResults();</span>
-<span class="source-line-no">219</span><span id="line.219">        return builder;</span>
-<span class="source-line-no">220</span><span id="line.220">    }</span>
-<span class="source-line-no">221</span><span id="line.221"></span>
-<span class="source-line-no">222</span><span id="line.222">}</span>
+<span class="source-line-no">199</span><span id="line.199">    public java.util.List&lt;com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation&gt; getResults() {</span>
+<span class="source-line-no">200</span><span id="line.200">        return this.results;</span>
+<span class="source-line-no">201</span><span id="line.201">    }</span>
+<span class="source-line-no">202</span><span id="line.202"></span>
+<span class="source-line-no">203</span><span id="line.203">    /**</span>
+<span class="source-line-no">204</span><span id="line.204">     * builds GeneralCategoryRecommendationPagedQueryResponse with checking for non-null required values</span>
+<span class="source-line-no">205</span><span id="line.205">     * @return GeneralCategoryRecommendationPagedQueryResponse</span>
+<span class="source-line-no">206</span><span id="line.206">     */</span>
+<span class="source-line-no">207</span><span id="line.207">    public GeneralCategoryRecommendationPagedQueryResponse build() {</span>
+<span class="source-line-no">208</span><span id="line.208">        Objects.requireNonNull(count, GeneralCategoryRecommendationPagedQueryResponse.class + ": count is missing");</span>
+<span class="source-line-no">209</span><span id="line.209">        Objects.requireNonNull(total, GeneralCategoryRecommendationPagedQueryResponse.class + ": total is missing");</span>
+<span class="source-line-no">210</span><span id="line.210">        Objects.requireNonNull(offset, GeneralCategoryRecommendationPagedQueryResponse.class + ": offset is missing");</span>
+<span class="source-line-no">211</span><span id="line.211">        Objects.requireNonNull(results, GeneralCategoryRecommendationPagedQueryResponse.class + ": results is missing");</span>
+<span class="source-line-no">212</span><span id="line.212">        return new GeneralCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results);</span>
+<span class="source-line-no">213</span><span id="line.213">    }</span>
+<span class="source-line-no">214</span><span id="line.214"></span>
+<span class="source-line-no">215</span><span id="line.215">    /**</span>
+<span class="source-line-no">216</span><span id="line.216">     * builds GeneralCategoryRecommendationPagedQueryResponse without checking for non-null required values</span>
+<span class="source-line-no">217</span><span id="line.217">     * @return GeneralCategoryRecommendationPagedQueryResponse</span>
+<span class="source-line-no">218</span><span id="line.218">     */</span>
+<span class="source-line-no">219</span><span id="line.219">    public GeneralCategoryRecommendationPagedQueryResponse buildUnchecked() {</span>
+<span class="source-line-no">220</span><span id="line.220">        return new GeneralCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results);</span>
+<span class="source-line-no">221</span><span id="line.221">    }</span>
+<span class="source-line-no">222</span><span id="line.222"></span>
+<span class="source-line-no">223</span><span id="line.223">    /**</span>
+<span class="source-line-no">224</span><span id="line.224">     * factory method for an instance of GeneralCategoryRecommendationPagedQueryResponseBuilder</span>
+<span class="source-line-no">225</span><span id="line.225">     * @return builder</span>
+<span class="source-line-no">226</span><span id="line.226">     */</span>
+<span class="source-line-no">227</span><span id="line.227">    public static GeneralCategoryRecommendationPagedQueryResponseBuilder of() {</span>
+<span class="source-line-no">228</span><span id="line.228">        return new GeneralCategoryRecommendationPagedQueryResponseBuilder();</span>
+<span class="source-line-no">229</span><span id="line.229">    }</span>
+<span class="source-line-no">230</span><span id="line.230"></span>
+<span class="source-line-no">231</span><span id="line.231">    /**</span>
+<span class="source-line-no">232</span><span id="line.232">     * create builder for GeneralCategoryRecommendationPagedQueryResponse instance</span>
+<span class="source-line-no">233</span><span id="line.233">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">234</span><span id="line.234">     * @return builder</span>
+<span class="source-line-no">235</span><span id="line.235">     */</span>
+<span class="source-line-no">236</span><span id="line.236">    public static GeneralCategoryRecommendationPagedQueryResponseBuilder of(</span>
+<span class="source-line-no">237</span><span id="line.237">            final GeneralCategoryRecommendationPagedQueryResponse template) {</span>
+<span class="source-line-no">238</span><span id="line.238">        GeneralCategoryRecommendationPagedQueryResponseBuilder builder = new GeneralCategoryRecommendationPagedQueryResponseBuilder();</span>
+<span class="source-line-no">239</span><span id="line.239">        builder.count = template.getCount();</span>
+<span class="source-line-no">240</span><span id="line.240">        builder.total = template.getTotal();</span>
+<span class="source-line-no">241</span><span id="line.241">        builder.offset = template.getOffset();</span>
+<span class="source-line-no">242</span><span id="line.242">        builder.results = template.getResults();</span>
+<span class="source-line-no">243</span><span id="line.243">        return builder;</span>
+<span class="source-line-no">244</span><span id="line.244">    }</span>
+<span class="source-line-no">245</span><span id="line.245"></span>
+<span class="source-line-no">246</span><span id="line.246">}</span>
 
 
 

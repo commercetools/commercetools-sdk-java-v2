@@ -124,84 +124,106 @@
 <span class="source-line-no">111</span><span id="line.111">    }</span>
 <span class="source-line-no">112</span><span id="line.112"></span>
 <span class="source-line-no">113</span><span id="line.113">    /**</span>
-<span class="source-line-no">114</span><span id="line.114">     * set the value to the returnDate</span>
-<span class="source-line-no">115</span><span id="line.115">     * @param returnDate value to be set</span>
+<span class="source-line-no">114</span><span id="line.114">     * add the value to the items using the builder function</span>
+<span class="source-line-no">115</span><span id="line.115">     * @param builder function to build the items value</span>
 <span class="source-line-no">116</span><span id="line.116">     * @return Builder</span>
 <span class="source-line-no">117</span><span id="line.117">     */</span>
 <span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    public StagedOrderAddReturnInfoActionBuilder returnDate(@Nullable final java.time.ZonedDateTime returnDate) {</span>
-<span class="source-line-no">120</span><span id="line.120">        this.returnDate = returnDate;</span>
-<span class="source-line-no">121</span><span id="line.121">        return this;</span>
+<span class="source-line-no">119</span><span id="line.119">    public StagedOrderAddReturnInfoActionBuilder addItems(</span>
+<span class="source-line-no">120</span><span id="line.120">            Function&lt;com.commercetools.api.models.order.ReturnItemDraftBuilder, com.commercetools.api.models.order.ReturnItemDraft&gt; builder) {</span>
+<span class="source-line-no">121</span><span id="line.121">        return plusItems(builder.apply(com.commercetools.api.models.order.ReturnItemDraftBuilder.of()));</span>
 <span class="source-line-no">122</span><span id="line.122">    }</span>
 <span class="source-line-no">123</span><span id="line.123"></span>
 <span class="source-line-no">124</span><span id="line.124">    /**</span>
-<span class="source-line-no">125</span><span id="line.125">     * value of returnTrackingId}</span>
-<span class="source-line-no">126</span><span id="line.126">     * @return returnTrackingId</span>
-<span class="source-line-no">127</span><span id="line.127">     */</span>
-<span class="source-line-no">128</span><span id="line.128"></span>
-<span class="source-line-no">129</span><span id="line.129">    @Nullable</span>
-<span class="source-line-no">130</span><span id="line.130">    public String getReturnTrackingId() {</span>
-<span class="source-line-no">131</span><span id="line.131">        return this.returnTrackingId;</span>
-<span class="source-line-no">132</span><span id="line.132">    }</span>
-<span class="source-line-no">133</span><span id="line.133"></span>
-<span class="source-line-no">134</span><span id="line.134">    /**</span>
-<span class="source-line-no">135</span><span id="line.135">     * value of items}</span>
-<span class="source-line-no">136</span><span id="line.136">     * @return items</span>
-<span class="source-line-no">137</span><span id="line.137">     */</span>
-<span class="source-line-no">138</span><span id="line.138"></span>
-<span class="source-line-no">139</span><span id="line.139">    public java.util.List&lt;com.commercetools.api.models.order.ReturnItemDraft&gt; getItems() {</span>
-<span class="source-line-no">140</span><span id="line.140">        return this.items;</span>
-<span class="source-line-no">141</span><span id="line.141">    }</span>
-<span class="source-line-no">142</span><span id="line.142"></span>
-<span class="source-line-no">143</span><span id="line.143">    /**</span>
-<span class="source-line-no">144</span><span id="line.144">     * value of returnDate}</span>
-<span class="source-line-no">145</span><span id="line.145">     * @return returnDate</span>
-<span class="source-line-no">146</span><span id="line.146">     */</span>
-<span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    @Nullable</span>
-<span class="source-line-no">149</span><span id="line.149">    public java.time.ZonedDateTime getReturnDate() {</span>
-<span class="source-line-no">150</span><span id="line.150">        return this.returnDate;</span>
-<span class="source-line-no">151</span><span id="line.151">    }</span>
-<span class="source-line-no">152</span><span id="line.152"></span>
-<span class="source-line-no">153</span><span id="line.153">    /**</span>
-<span class="source-line-no">154</span><span id="line.154">     * builds StagedOrderAddReturnInfoAction with checking for non-null required values</span>
-<span class="source-line-no">155</span><span id="line.155">     * @return StagedOrderAddReturnInfoAction</span>
-<span class="source-line-no">156</span><span id="line.156">     */</span>
-<span class="source-line-no">157</span><span id="line.157">    public StagedOrderAddReturnInfoAction build() {</span>
-<span class="source-line-no">158</span><span id="line.158">        Objects.requireNonNull(items, StagedOrderAddReturnInfoAction.class + ": items is missing");</span>
-<span class="source-line-no">159</span><span id="line.159">        return new StagedOrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);</span>
-<span class="source-line-no">160</span><span id="line.160">    }</span>
-<span class="source-line-no">161</span><span id="line.161"></span>
-<span class="source-line-no">162</span><span id="line.162">    /**</span>
-<span class="source-line-no">163</span><span id="line.163">     * builds StagedOrderAddReturnInfoAction without checking for non-null required values</span>
-<span class="source-line-no">164</span><span id="line.164">     * @return StagedOrderAddReturnInfoAction</span>
-<span class="source-line-no">165</span><span id="line.165">     */</span>
-<span class="source-line-no">166</span><span id="line.166">    public StagedOrderAddReturnInfoAction buildUnchecked() {</span>
-<span class="source-line-no">167</span><span id="line.167">        return new StagedOrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);</span>
-<span class="source-line-no">168</span><span id="line.168">    }</span>
+<span class="source-line-no">125</span><span id="line.125">     * set the value to the items using the builder function</span>
+<span class="source-line-no">126</span><span id="line.126">     * @param builder function to build the items value</span>
+<span class="source-line-no">127</span><span id="line.127">     * @return Builder</span>
+<span class="source-line-no">128</span><span id="line.128">     */</span>
+<span class="source-line-no">129</span><span id="line.129"></span>
+<span class="source-line-no">130</span><span id="line.130">    public StagedOrderAddReturnInfoActionBuilder setItems(</span>
+<span class="source-line-no">131</span><span id="line.131">            Function&lt;com.commercetools.api.models.order.ReturnItemDraftBuilder, com.commercetools.api.models.order.ReturnItemDraft&gt; builder) {</span>
+<span class="source-line-no">132</span><span id="line.132">        return items(builder.apply(com.commercetools.api.models.order.ReturnItemDraftBuilder.of()));</span>
+<span class="source-line-no">133</span><span id="line.133">    }</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">    /**</span>
+<span class="source-line-no">136</span><span id="line.136">     * set the value to the returnDate</span>
+<span class="source-line-no">137</span><span id="line.137">     * @param returnDate value to be set</span>
+<span class="source-line-no">138</span><span id="line.138">     * @return Builder</span>
+<span class="source-line-no">139</span><span id="line.139">     */</span>
+<span class="source-line-no">140</span><span id="line.140"></span>
+<span class="source-line-no">141</span><span id="line.141">    public StagedOrderAddReturnInfoActionBuilder returnDate(@Nullable final java.time.ZonedDateTime returnDate) {</span>
+<span class="source-line-no">142</span><span id="line.142">        this.returnDate = returnDate;</span>
+<span class="source-line-no">143</span><span id="line.143">        return this;</span>
+<span class="source-line-no">144</span><span id="line.144">    }</span>
+<span class="source-line-no">145</span><span id="line.145"></span>
+<span class="source-line-no">146</span><span id="line.146">    /**</span>
+<span class="source-line-no">147</span><span id="line.147">     * value of returnTrackingId}</span>
+<span class="source-line-no">148</span><span id="line.148">     * @return returnTrackingId</span>
+<span class="source-line-no">149</span><span id="line.149">     */</span>
+<span class="source-line-no">150</span><span id="line.150"></span>
+<span class="source-line-no">151</span><span id="line.151">    @Nullable</span>
+<span class="source-line-no">152</span><span id="line.152">    public String getReturnTrackingId() {</span>
+<span class="source-line-no">153</span><span id="line.153">        return this.returnTrackingId;</span>
+<span class="source-line-no">154</span><span id="line.154">    }</span>
+<span class="source-line-no">155</span><span id="line.155"></span>
+<span class="source-line-no">156</span><span id="line.156">    /**</span>
+<span class="source-line-no">157</span><span id="line.157">     * value of items}</span>
+<span class="source-line-no">158</span><span id="line.158">     * @return items</span>
+<span class="source-line-no">159</span><span id="line.159">     */</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    public java.util.List&lt;com.commercetools.api.models.order.ReturnItemDraft&gt; getItems() {</span>
+<span class="source-line-no">162</span><span id="line.162">        return this.items;</span>
+<span class="source-line-no">163</span><span id="line.163">    }</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    /**</span>
+<span class="source-line-no">166</span><span id="line.166">     * value of returnDate}</span>
+<span class="source-line-no">167</span><span id="line.167">     * @return returnDate</span>
+<span class="source-line-no">168</span><span id="line.168">     */</span>
 <span class="source-line-no">169</span><span id="line.169"></span>
-<span class="source-line-no">170</span><span id="line.170">    /**</span>
-<span class="source-line-no">171</span><span id="line.171">     * factory method for an instance of StagedOrderAddReturnInfoActionBuilder</span>
-<span class="source-line-no">172</span><span id="line.172">     * @return builder</span>
-<span class="source-line-no">173</span><span id="line.173">     */</span>
-<span class="source-line-no">174</span><span id="line.174">    public static StagedOrderAddReturnInfoActionBuilder of() {</span>
-<span class="source-line-no">175</span><span id="line.175">        return new StagedOrderAddReturnInfoActionBuilder();</span>
-<span class="source-line-no">176</span><span id="line.176">    }</span>
-<span class="source-line-no">177</span><span id="line.177"></span>
-<span class="source-line-no">178</span><span id="line.178">    /**</span>
-<span class="source-line-no">179</span><span id="line.179">     * create builder for StagedOrderAddReturnInfoAction instance</span>
-<span class="source-line-no">180</span><span id="line.180">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">181</span><span id="line.181">     * @return builder</span>
-<span class="source-line-no">182</span><span id="line.182">     */</span>
-<span class="source-line-no">183</span><span id="line.183">    public static StagedOrderAddReturnInfoActionBuilder of(final StagedOrderAddReturnInfoAction template) {</span>
-<span class="source-line-no">184</span><span id="line.184">        StagedOrderAddReturnInfoActionBuilder builder = new StagedOrderAddReturnInfoActionBuilder();</span>
-<span class="source-line-no">185</span><span id="line.185">        builder.returnTrackingId = template.getReturnTrackingId();</span>
-<span class="source-line-no">186</span><span id="line.186">        builder.items = template.getItems();</span>
-<span class="source-line-no">187</span><span id="line.187">        builder.returnDate = template.getReturnDate();</span>
-<span class="source-line-no">188</span><span id="line.188">        return builder;</span>
-<span class="source-line-no">189</span><span id="line.189">    }</span>
-<span class="source-line-no">190</span><span id="line.190"></span>
-<span class="source-line-no">191</span><span id="line.191">}</span>
+<span class="source-line-no">170</span><span id="line.170">    @Nullable</span>
+<span class="source-line-no">171</span><span id="line.171">    public java.time.ZonedDateTime getReturnDate() {</span>
+<span class="source-line-no">172</span><span id="line.172">        return this.returnDate;</span>
+<span class="source-line-no">173</span><span id="line.173">    }</span>
+<span class="source-line-no">174</span><span id="line.174"></span>
+<span class="source-line-no">175</span><span id="line.175">    /**</span>
+<span class="source-line-no">176</span><span id="line.176">     * builds StagedOrderAddReturnInfoAction with checking for non-null required values</span>
+<span class="source-line-no">177</span><span id="line.177">     * @return StagedOrderAddReturnInfoAction</span>
+<span class="source-line-no">178</span><span id="line.178">     */</span>
+<span class="source-line-no">179</span><span id="line.179">    public StagedOrderAddReturnInfoAction build() {</span>
+<span class="source-line-no">180</span><span id="line.180">        Objects.requireNonNull(items, StagedOrderAddReturnInfoAction.class + ": items is missing");</span>
+<span class="source-line-no">181</span><span id="line.181">        return new StagedOrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);</span>
+<span class="source-line-no">182</span><span id="line.182">    }</span>
+<span class="source-line-no">183</span><span id="line.183"></span>
+<span class="source-line-no">184</span><span id="line.184">    /**</span>
+<span class="source-line-no">185</span><span id="line.185">     * builds StagedOrderAddReturnInfoAction without checking for non-null required values</span>
+<span class="source-line-no">186</span><span id="line.186">     * @return StagedOrderAddReturnInfoAction</span>
+<span class="source-line-no">187</span><span id="line.187">     */</span>
+<span class="source-line-no">188</span><span id="line.188">    public StagedOrderAddReturnInfoAction buildUnchecked() {</span>
+<span class="source-line-no">189</span><span id="line.189">        return new StagedOrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);</span>
+<span class="source-line-no">190</span><span id="line.190">    }</span>
+<span class="source-line-no">191</span><span id="line.191"></span>
+<span class="source-line-no">192</span><span id="line.192">    /**</span>
+<span class="source-line-no">193</span><span id="line.193">     * factory method for an instance of StagedOrderAddReturnInfoActionBuilder</span>
+<span class="source-line-no">194</span><span id="line.194">     * @return builder</span>
+<span class="source-line-no">195</span><span id="line.195">     */</span>
+<span class="source-line-no">196</span><span id="line.196">    public static StagedOrderAddReturnInfoActionBuilder of() {</span>
+<span class="source-line-no">197</span><span id="line.197">        return new StagedOrderAddReturnInfoActionBuilder();</span>
+<span class="source-line-no">198</span><span id="line.198">    }</span>
+<span class="source-line-no">199</span><span id="line.199"></span>
+<span class="source-line-no">200</span><span id="line.200">    /**</span>
+<span class="source-line-no">201</span><span id="line.201">     * create builder for StagedOrderAddReturnInfoAction instance</span>
+<span class="source-line-no">202</span><span id="line.202">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">203</span><span id="line.203">     * @return builder</span>
+<span class="source-line-no">204</span><span id="line.204">     */</span>
+<span class="source-line-no">205</span><span id="line.205">    public static StagedOrderAddReturnInfoActionBuilder of(final StagedOrderAddReturnInfoAction template) {</span>
+<span class="source-line-no">206</span><span id="line.206">        StagedOrderAddReturnInfoActionBuilder builder = new StagedOrderAddReturnInfoActionBuilder();</span>
+<span class="source-line-no">207</span><span id="line.207">        builder.returnTrackingId = template.getReturnTrackingId();</span>
+<span class="source-line-no">208</span><span id="line.208">        builder.items = template.getItems();</span>
+<span class="source-line-no">209</span><span id="line.209">        builder.returnDate = template.getReturnDate();</span>
+<span class="source-line-no">210</span><span id="line.210">        return builder;</span>
+<span class="source-line-no">211</span><span id="line.211">    }</span>
+<span class="source-line-no">212</span><span id="line.212"></span>
+<span class="source-line-no">213</span><span id="line.213">}</span>
 
 
 

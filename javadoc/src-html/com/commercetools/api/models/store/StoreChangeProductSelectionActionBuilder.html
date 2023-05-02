@@ -58,85 +58,98 @@
 <span class="source-line-no">045</span><span id="line.45"></span>
 <span class="source-line-no">046</span><span id="line.46">    /**</span>
 <span class="source-line-no">047</span><span id="line.47">     *  &lt;p&gt;Current Product Selection of the Store to be activated or deactivated.&lt;/p&gt;</span>
-<span class="source-line-no">048</span><span id="line.48">     * @param productSelection value to be set</span>
+<span class="source-line-no">048</span><span id="line.48">     * @param builder function to build the productSelection value</span>
 <span class="source-line-no">049</span><span id="line.49">     * @return Builder</span>
 <span class="source-line-no">050</span><span id="line.50">     */</span>
 <span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    public StoreChangeProductSelectionActionBuilder productSelection(</span>
-<span class="source-line-no">053</span><span id="line.53">            final com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection) {</span>
-<span class="source-line-no">054</span><span id="line.54">        this.productSelection = productSelection;</span>
-<span class="source-line-no">055</span><span id="line.55">        return this;</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    /**</span>
-<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;Set to &lt;code&gt;true&lt;/code&gt; if all Products assigned to the Product Selection should become part of the Store's assortment.&lt;/p&gt;</span>
-<span class="source-line-no">060</span><span id="line.60">     * @param active value to be set</span>
-<span class="source-line-no">061</span><span id="line.61">     * @return Builder</span>
-<span class="source-line-no">062</span><span id="line.62">     */</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    public StoreChangeProductSelectionActionBuilder active(@Nullable final Boolean active) {</span>
-<span class="source-line-no">065</span><span id="line.65">        this.active = active;</span>
-<span class="source-line-no">066</span><span id="line.66">        return this;</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    /**</span>
-<span class="source-line-no">070</span><span id="line.70">     *  &lt;p&gt;Current Product Selection of the Store to be activated or deactivated.&lt;/p&gt;</span>
-<span class="source-line-no">071</span><span id="line.71">     * @return productSelection</span>
-<span class="source-line-no">072</span><span id="line.72">     */</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier getProductSelection() {</span>
-<span class="source-line-no">075</span><span id="line.75">        return this.productSelection;</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    /**</span>
-<span class="source-line-no">079</span><span id="line.79">     *  &lt;p&gt;Set to &lt;code&gt;true&lt;/code&gt; if all Products assigned to the Product Selection should become part of the Store's assortment.&lt;/p&gt;</span>
-<span class="source-line-no">080</span><span id="line.80">     * @return active</span>
-<span class="source-line-no">081</span><span id="line.81">     */</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    @Nullable</span>
-<span class="source-line-no">084</span><span id="line.84">    public Boolean getActive() {</span>
-<span class="source-line-no">085</span><span id="line.85">        return this.active;</span>
-<span class="source-line-no">086</span><span id="line.86">    }</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    /**</span>
-<span class="source-line-no">089</span><span id="line.89">     * builds StoreChangeProductSelectionAction with checking for non-null required values</span>
-<span class="source-line-no">090</span><span id="line.90">     * @return StoreChangeProductSelectionAction</span>
-<span class="source-line-no">091</span><span id="line.91">     */</span>
-<span class="source-line-no">092</span><span id="line.92">    public StoreChangeProductSelectionAction build() {</span>
-<span class="source-line-no">093</span><span id="line.93">        Objects.requireNonNull(productSelection,</span>
-<span class="source-line-no">094</span><span id="line.94">            StoreChangeProductSelectionAction.class + ": productSelection is missing");</span>
-<span class="source-line-no">095</span><span id="line.95">        return new StoreChangeProductSelectionActionImpl(productSelection, active);</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    /**</span>
-<span class="source-line-no">099</span><span id="line.99">     * builds StoreChangeProductSelectionAction without checking for non-null required values</span>
-<span class="source-line-no">100</span><span id="line.100">     * @return StoreChangeProductSelectionAction</span>
-<span class="source-line-no">101</span><span id="line.101">     */</span>
-<span class="source-line-no">102</span><span id="line.102">    public StoreChangeProductSelectionAction buildUnchecked() {</span>
-<span class="source-line-no">103</span><span id="line.103">        return new StoreChangeProductSelectionActionImpl(productSelection, active);</span>
-<span class="source-line-no">104</span><span id="line.104">    }</span>
-<span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">    /**</span>
-<span class="source-line-no">107</span><span id="line.107">     * factory method for an instance of StoreChangeProductSelectionActionBuilder</span>
-<span class="source-line-no">108</span><span id="line.108">     * @return builder</span>
-<span class="source-line-no">109</span><span id="line.109">     */</span>
-<span class="source-line-no">110</span><span id="line.110">    public static StoreChangeProductSelectionActionBuilder of() {</span>
-<span class="source-line-no">111</span><span id="line.111">        return new StoreChangeProductSelectionActionBuilder();</span>
-<span class="source-line-no">112</span><span id="line.112">    }</span>
-<span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    /**</span>
-<span class="source-line-no">115</span><span id="line.115">     * create builder for StoreChangeProductSelectionAction instance</span>
-<span class="source-line-no">116</span><span id="line.116">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">117</span><span id="line.117">     * @return builder</span>
-<span class="source-line-no">118</span><span id="line.118">     */</span>
-<span class="source-line-no">119</span><span id="line.119">    public static StoreChangeProductSelectionActionBuilder of(final StoreChangeProductSelectionAction template) {</span>
-<span class="source-line-no">120</span><span id="line.120">        StoreChangeProductSelectionActionBuilder builder = new StoreChangeProductSelectionActionBuilder();</span>
-<span class="source-line-no">121</span><span id="line.121">        builder.productSelection = template.getProductSelection();</span>
-<span class="source-line-no">122</span><span id="line.122">        builder.active = template.getActive();</span>
-<span class="source-line-no">123</span><span id="line.123">        return builder;</span>
-<span class="source-line-no">124</span><span id="line.124">    }</span>
-<span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">}</span>
+<span class="source-line-no">052</span><span id="line.52">    public StoreChangeProductSelectionActionBuilder withProductSelection(</span>
+<span class="source-line-no">053</span><span id="line.53">            Function&lt;com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder, com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier&gt; builder) {</span>
+<span class="source-line-no">054</span><span id="line.54">        this.productSelection = builder</span>
+<span class="source-line-no">055</span><span id="line.55">                .apply(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of());</span>
+<span class="source-line-no">056</span><span id="line.56">        return this;</span>
+<span class="source-line-no">057</span><span id="line.57">    }</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    /**</span>
+<span class="source-line-no">060</span><span id="line.60">     *  &lt;p&gt;Current Product Selection of the Store to be activated or deactivated.&lt;/p&gt;</span>
+<span class="source-line-no">061</span><span id="line.61">     * @param productSelection value to be set</span>
+<span class="source-line-no">062</span><span id="line.62">     * @return Builder</span>
+<span class="source-line-no">063</span><span id="line.63">     */</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    public StoreChangeProductSelectionActionBuilder productSelection(</span>
+<span class="source-line-no">066</span><span id="line.66">            final com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection) {</span>
+<span class="source-line-no">067</span><span id="line.67">        this.productSelection = productSelection;</span>
+<span class="source-line-no">068</span><span id="line.68">        return this;</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    /**</span>
+<span class="source-line-no">072</span><span id="line.72">     *  &lt;p&gt;Set to &lt;code&gt;true&lt;/code&gt; if all Products assigned to the Product Selection should become part of the Store's assortment.&lt;/p&gt;</span>
+<span class="source-line-no">073</span><span id="line.73">     * @param active value to be set</span>
+<span class="source-line-no">074</span><span id="line.74">     * @return Builder</span>
+<span class="source-line-no">075</span><span id="line.75">     */</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    public StoreChangeProductSelectionActionBuilder active(@Nullable final Boolean active) {</span>
+<span class="source-line-no">078</span><span id="line.78">        this.active = active;</span>
+<span class="source-line-no">079</span><span id="line.79">        return this;</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    /**</span>
+<span class="source-line-no">083</span><span id="line.83">     *  &lt;p&gt;Current Product Selection of the Store to be activated or deactivated.&lt;/p&gt;</span>
+<span class="source-line-no">084</span><span id="line.84">     * @return productSelection</span>
+<span class="source-line-no">085</span><span id="line.85">     */</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier getProductSelection() {</span>
+<span class="source-line-no">088</span><span id="line.88">        return this.productSelection;</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    /**</span>
+<span class="source-line-no">092</span><span id="line.92">     *  &lt;p&gt;Set to &lt;code&gt;true&lt;/code&gt; if all Products assigned to the Product Selection should become part of the Store's assortment.&lt;/p&gt;</span>
+<span class="source-line-no">093</span><span id="line.93">     * @return active</span>
+<span class="source-line-no">094</span><span id="line.94">     */</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    @Nullable</span>
+<span class="source-line-no">097</span><span id="line.97">    public Boolean getActive() {</span>
+<span class="source-line-no">098</span><span id="line.98">        return this.active;</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    /**</span>
+<span class="source-line-no">102</span><span id="line.102">     * builds StoreChangeProductSelectionAction with checking for non-null required values</span>
+<span class="source-line-no">103</span><span id="line.103">     * @return StoreChangeProductSelectionAction</span>
+<span class="source-line-no">104</span><span id="line.104">     */</span>
+<span class="source-line-no">105</span><span id="line.105">    public StoreChangeProductSelectionAction build() {</span>
+<span class="source-line-no">106</span><span id="line.106">        Objects.requireNonNull(productSelection,</span>
+<span class="source-line-no">107</span><span id="line.107">            StoreChangeProductSelectionAction.class + ": productSelection is missing");</span>
+<span class="source-line-no">108</span><span id="line.108">        return new StoreChangeProductSelectionActionImpl(productSelection, active);</span>
+<span class="source-line-no">109</span><span id="line.109">    }</span>
+<span class="source-line-no">110</span><span id="line.110"></span>
+<span class="source-line-no">111</span><span id="line.111">    /**</span>
+<span class="source-line-no">112</span><span id="line.112">     * builds StoreChangeProductSelectionAction without checking for non-null required values</span>
+<span class="source-line-no">113</span><span id="line.113">     * @return StoreChangeProductSelectionAction</span>
+<span class="source-line-no">114</span><span id="line.114">     */</span>
+<span class="source-line-no">115</span><span id="line.115">    public StoreChangeProductSelectionAction buildUnchecked() {</span>
+<span class="source-line-no">116</span><span id="line.116">        return new StoreChangeProductSelectionActionImpl(productSelection, active);</span>
+<span class="source-line-no">117</span><span id="line.117">    }</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    /**</span>
+<span class="source-line-no">120</span><span id="line.120">     * factory method for an instance of StoreChangeProductSelectionActionBuilder</span>
+<span class="source-line-no">121</span><span id="line.121">     * @return builder</span>
+<span class="source-line-no">122</span><span id="line.122">     */</span>
+<span class="source-line-no">123</span><span id="line.123">    public static StoreChangeProductSelectionActionBuilder of() {</span>
+<span class="source-line-no">124</span><span id="line.124">        return new StoreChangeProductSelectionActionBuilder();</span>
+<span class="source-line-no">125</span><span id="line.125">    }</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">    /**</span>
+<span class="source-line-no">128</span><span id="line.128">     * create builder for StoreChangeProductSelectionAction instance</span>
+<span class="source-line-no">129</span><span id="line.129">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">130</span><span id="line.130">     * @return builder</span>
+<span class="source-line-no">131</span><span id="line.131">     */</span>
+<span class="source-line-no">132</span><span id="line.132">    public static StoreChangeProductSelectionActionBuilder of(final StoreChangeProductSelectionAction template) {</span>
+<span class="source-line-no">133</span><span id="line.133">        StoreChangeProductSelectionActionBuilder builder = new StoreChangeProductSelectionActionBuilder();</span>
+<span class="source-line-no">134</span><span id="line.134">        builder.productSelection = template.getProductSelection();</span>
+<span class="source-line-no">135</span><span id="line.135">        builder.active = template.getActive();</span>
+<span class="source-line-no">136</span><span id="line.136">        return builder;</span>
+<span class="source-line-no">137</span><span id="line.137">    }</span>
+<span class="source-line-no">138</span><span id="line.138"></span>
+<span class="source-line-no">139</span><span id="line.139">}</span>
 
 
 

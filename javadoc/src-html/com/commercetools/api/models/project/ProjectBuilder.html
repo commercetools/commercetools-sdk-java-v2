@@ -258,366 +258,439 @@
 <span class="source-line-no">245</span><span id="line.245"></span>
 <span class="source-line-no">246</span><span id="line.246">    /**</span>
 <span class="source-line-no">247</span><span id="line.247">     *  &lt;p&gt;Holds the configuration for the Messages Query feature.&lt;/p&gt;</span>
-<span class="source-line-no">248</span><span id="line.248">     * @param messages value to be set</span>
+<span class="source-line-no">248</span><span id="line.248">     * @param builder function to build the messages value</span>
 <span class="source-line-no">249</span><span id="line.249">     * @return Builder</span>
 <span class="source-line-no">250</span><span id="line.250">     */</span>
 <span class="source-line-no">251</span><span id="line.251"></span>
-<span class="source-line-no">252</span><span id="line.252">    public ProjectBuilder messages(final com.commercetools.api.models.message.MessagesConfiguration messages) {</span>
-<span class="source-line-no">253</span><span id="line.253">        this.messages = messages;</span>
-<span class="source-line-no">254</span><span id="line.254">        return this;</span>
-<span class="source-line-no">255</span><span id="line.255">    }</span>
-<span class="source-line-no">256</span><span id="line.256"></span>
-<span class="source-line-no">257</span><span id="line.257">    /**</span>
-<span class="source-line-no">258</span><span id="line.258">     *  &lt;p&gt;Holds the configuration for the Carts feature.&lt;/p&gt;</span>
-<span class="source-line-no">259</span><span id="line.259">     * @param builder function to build the carts value</span>
-<span class="source-line-no">260</span><span id="line.260">     * @return Builder</span>
-<span class="source-line-no">261</span><span id="line.261">     */</span>
-<span class="source-line-no">262</span><span id="line.262"></span>
-<span class="source-line-no">263</span><span id="line.263">    public ProjectBuilder carts(</span>
-<span class="source-line-no">264</span><span id="line.264">            Function&lt;com.commercetools.api.models.project.CartsConfigurationBuilder, com.commercetools.api.models.project.CartsConfigurationBuilder&gt; builder) {</span>
-<span class="source-line-no">265</span><span id="line.265">        this.carts = builder.apply(com.commercetools.api.models.project.CartsConfigurationBuilder.of()).build();</span>
+<span class="source-line-no">252</span><span id="line.252">    public ProjectBuilder withMessages(</span>
+<span class="source-line-no">253</span><span id="line.253">            Function&lt;com.commercetools.api.models.message.MessagesConfigurationBuilder, com.commercetools.api.models.message.MessagesConfiguration&gt; builder) {</span>
+<span class="source-line-no">254</span><span id="line.254">        this.messages = builder.apply(com.commercetools.api.models.message.MessagesConfigurationBuilder.of());</span>
+<span class="source-line-no">255</span><span id="line.255">        return this;</span>
+<span class="source-line-no">256</span><span id="line.256">    }</span>
+<span class="source-line-no">257</span><span id="line.257"></span>
+<span class="source-line-no">258</span><span id="line.258">    /**</span>
+<span class="source-line-no">259</span><span id="line.259">     *  &lt;p&gt;Holds the configuration for the Messages Query feature.&lt;/p&gt;</span>
+<span class="source-line-no">260</span><span id="line.260">     * @param messages value to be set</span>
+<span class="source-line-no">261</span><span id="line.261">     * @return Builder</span>
+<span class="source-line-no">262</span><span id="line.262">     */</span>
+<span class="source-line-no">263</span><span id="line.263"></span>
+<span class="source-line-no">264</span><span id="line.264">    public ProjectBuilder messages(final com.commercetools.api.models.message.MessagesConfiguration messages) {</span>
+<span class="source-line-no">265</span><span id="line.265">        this.messages = messages;</span>
 <span class="source-line-no">266</span><span id="line.266">        return this;</span>
 <span class="source-line-no">267</span><span id="line.267">    }</span>
 <span class="source-line-no">268</span><span id="line.268"></span>
 <span class="source-line-no">269</span><span id="line.269">    /**</span>
 <span class="source-line-no">270</span><span id="line.270">     *  &lt;p&gt;Holds the configuration for the Carts feature.&lt;/p&gt;</span>
-<span class="source-line-no">271</span><span id="line.271">     * @param carts value to be set</span>
+<span class="source-line-no">271</span><span id="line.271">     * @param builder function to build the carts value</span>
 <span class="source-line-no">272</span><span id="line.272">     * @return Builder</span>
 <span class="source-line-no">273</span><span id="line.273">     */</span>
 <span class="source-line-no">274</span><span id="line.274"></span>
-<span class="source-line-no">275</span><span id="line.275">    public ProjectBuilder carts(final com.commercetools.api.models.project.CartsConfiguration carts) {</span>
-<span class="source-line-no">276</span><span id="line.276">        this.carts = carts;</span>
-<span class="source-line-no">277</span><span id="line.277">        return this;</span>
-<span class="source-line-no">278</span><span id="line.278">    }</span>
-<span class="source-line-no">279</span><span id="line.279"></span>
-<span class="source-line-no">280</span><span id="line.280">    /**</span>
-<span class="source-line-no">281</span><span id="line.281">     *  &lt;p&gt;Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.&lt;/p&gt;</span>
-<span class="source-line-no">282</span><span id="line.282">     * @param builder function to build the shoppingLists value</span>
-<span class="source-line-no">283</span><span id="line.283">     * @return Builder</span>
-<span class="source-line-no">284</span><span id="line.284">     */</span>
-<span class="source-line-no">285</span><span id="line.285"></span>
-<span class="source-line-no">286</span><span id="line.286">    public ProjectBuilder shoppingLists(</span>
-<span class="source-line-no">287</span><span id="line.287">            Function&lt;com.commercetools.api.models.project.ShoppingListsConfigurationBuilder, com.commercetools.api.models.project.ShoppingListsConfigurationBuilder&gt; builder) {</span>
-<span class="source-line-no">288</span><span id="line.288">        this.shoppingLists = builder.apply(com.commercetools.api.models.project.ShoppingListsConfigurationBuilder.of())</span>
-<span class="source-line-no">289</span><span id="line.289">                .build();</span>
+<span class="source-line-no">275</span><span id="line.275">    public ProjectBuilder carts(</span>
+<span class="source-line-no">276</span><span id="line.276">            Function&lt;com.commercetools.api.models.project.CartsConfigurationBuilder, com.commercetools.api.models.project.CartsConfigurationBuilder&gt; builder) {</span>
+<span class="source-line-no">277</span><span id="line.277">        this.carts = builder.apply(com.commercetools.api.models.project.CartsConfigurationBuilder.of()).build();</span>
+<span class="source-line-no">278</span><span id="line.278">        return this;</span>
+<span class="source-line-no">279</span><span id="line.279">    }</span>
+<span class="source-line-no">280</span><span id="line.280"></span>
+<span class="source-line-no">281</span><span id="line.281">    /**</span>
+<span class="source-line-no">282</span><span id="line.282">     *  &lt;p&gt;Holds the configuration for the Carts feature.&lt;/p&gt;</span>
+<span class="source-line-no">283</span><span id="line.283">     * @param builder function to build the carts value</span>
+<span class="source-line-no">284</span><span id="line.284">     * @return Builder</span>
+<span class="source-line-no">285</span><span id="line.285">     */</span>
+<span class="source-line-no">286</span><span id="line.286"></span>
+<span class="source-line-no">287</span><span id="line.287">    public ProjectBuilder withCarts(</span>
+<span class="source-line-no">288</span><span id="line.288">            Function&lt;com.commercetools.api.models.project.CartsConfigurationBuilder, com.commercetools.api.models.project.CartsConfiguration&gt; builder) {</span>
+<span class="source-line-no">289</span><span id="line.289">        this.carts = builder.apply(com.commercetools.api.models.project.CartsConfigurationBuilder.of());</span>
 <span class="source-line-no">290</span><span id="line.290">        return this;</span>
 <span class="source-line-no">291</span><span id="line.291">    }</span>
 <span class="source-line-no">292</span><span id="line.292"></span>
 <span class="source-line-no">293</span><span id="line.293">    /**</span>
-<span class="source-line-no">294</span><span id="line.294">     *  &lt;p&gt;Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.&lt;/p&gt;</span>
-<span class="source-line-no">295</span><span id="line.295">     * @param shoppingLists value to be set</span>
+<span class="source-line-no">294</span><span id="line.294">     *  &lt;p&gt;Holds the configuration for the Carts feature.&lt;/p&gt;</span>
+<span class="source-line-no">295</span><span id="line.295">     * @param carts value to be set</span>
 <span class="source-line-no">296</span><span id="line.296">     * @return Builder</span>
 <span class="source-line-no">297</span><span id="line.297">     */</span>
 <span class="source-line-no">298</span><span id="line.298"></span>
-<span class="source-line-no">299</span><span id="line.299">    public ProjectBuilder shoppingLists(</span>
-<span class="source-line-no">300</span><span id="line.300">            @Nullable final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists) {</span>
-<span class="source-line-no">301</span><span id="line.301">        this.shoppingLists = shoppingLists;</span>
-<span class="source-line-no">302</span><span id="line.302">        return this;</span>
-<span class="source-line-no">303</span><span id="line.303">    }</span>
-<span class="source-line-no">304</span><span id="line.304"></span>
-<span class="source-line-no">305</span><span id="line.305">    /**</span>
-<span class="source-line-no">306</span><span id="line.306">     *  &lt;p&gt;Holds the configuration for the tiered shipping rates feature.&lt;/p&gt;</span>
-<span class="source-line-no">307</span><span id="line.307">     * @param shippingRateInputType value to be set</span>
-<span class="source-line-no">308</span><span id="line.308">     * @return Builder</span>
-<span class="source-line-no">309</span><span id="line.309">     */</span>
-<span class="source-line-no">310</span><span id="line.310"></span>
-<span class="source-line-no">311</span><span id="line.311">    public ProjectBuilder shippingRateInputType(</span>
-<span class="source-line-no">312</span><span id="line.312">            @Nullable final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType) {</span>
-<span class="source-line-no">313</span><span id="line.313">        this.shippingRateInputType = shippingRateInputType;</span>
+<span class="source-line-no">299</span><span id="line.299">    public ProjectBuilder carts(final com.commercetools.api.models.project.CartsConfiguration carts) {</span>
+<span class="source-line-no">300</span><span id="line.300">        this.carts = carts;</span>
+<span class="source-line-no">301</span><span id="line.301">        return this;</span>
+<span class="source-line-no">302</span><span id="line.302">    }</span>
+<span class="source-line-no">303</span><span id="line.303"></span>
+<span class="source-line-no">304</span><span id="line.304">    /**</span>
+<span class="source-line-no">305</span><span id="line.305">     *  &lt;p&gt;Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.&lt;/p&gt;</span>
+<span class="source-line-no">306</span><span id="line.306">     * @param builder function to build the shoppingLists value</span>
+<span class="source-line-no">307</span><span id="line.307">     * @return Builder</span>
+<span class="source-line-no">308</span><span id="line.308">     */</span>
+<span class="source-line-no">309</span><span id="line.309"></span>
+<span class="source-line-no">310</span><span id="line.310">    public ProjectBuilder shoppingLists(</span>
+<span class="source-line-no">311</span><span id="line.311">            Function&lt;com.commercetools.api.models.project.ShoppingListsConfigurationBuilder, com.commercetools.api.models.project.ShoppingListsConfigurationBuilder&gt; builder) {</span>
+<span class="source-line-no">312</span><span id="line.312">        this.shoppingLists = builder.apply(com.commercetools.api.models.project.ShoppingListsConfigurationBuilder.of())</span>
+<span class="source-line-no">313</span><span id="line.313">                .build();</span>
 <span class="source-line-no">314</span><span id="line.314">        return this;</span>
 <span class="source-line-no">315</span><span id="line.315">    }</span>
 <span class="source-line-no">316</span><span id="line.316"></span>
 <span class="source-line-no">317</span><span id="line.317">    /**</span>
-<span class="source-line-no">318</span><span id="line.318">     *  &lt;p&gt;Holds the configuration for the tiered shipping rates feature.&lt;/p&gt;</span>
-<span class="source-line-no">319</span><span id="line.319">     * @param builder function to build the shippingRateInputType value</span>
+<span class="source-line-no">318</span><span id="line.318">     *  &lt;p&gt;Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.&lt;/p&gt;</span>
+<span class="source-line-no">319</span><span id="line.319">     * @param builder function to build the shoppingLists value</span>
 <span class="source-line-no">320</span><span id="line.320">     * @return Builder</span>
 <span class="source-line-no">321</span><span id="line.321">     */</span>
 <span class="source-line-no">322</span><span id="line.322"></span>
-<span class="source-line-no">323</span><span id="line.323">    public ProjectBuilder shippingRateInputType(</span>
-<span class="source-line-no">324</span><span id="line.324">            Function&lt;com.commercetools.api.models.project.ShippingRateInputTypeBuilder, Builder&lt;? extends com.commercetools.api.models.project.ShippingRateInputType&gt;&gt; builder) {</span>
-<span class="source-line-no">325</span><span id="line.325">        this.shippingRateInputType = builder</span>
-<span class="source-line-no">326</span><span id="line.326">                .apply(com.commercetools.api.models.project.ShippingRateInputTypeBuilder.of())</span>
-<span class="source-line-no">327</span><span id="line.327">                .build();</span>
-<span class="source-line-no">328</span><span id="line.328">        return this;</span>
-<span class="source-line-no">329</span><span id="line.329">    }</span>
-<span class="source-line-no">330</span><span id="line.330"></span>
-<span class="source-line-no">331</span><span id="line.331">    /**</span>
-<span class="source-line-no">332</span><span id="line.332">     *  &lt;p&gt;Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.&lt;/p&gt;</span>
-<span class="source-line-no">333</span><span id="line.333">     * @param builder function to build the externalOAuth value</span>
-<span class="source-line-no">334</span><span id="line.334">     * @return Builder</span>
-<span class="source-line-no">335</span><span id="line.335">     */</span>
-<span class="source-line-no">336</span><span id="line.336"></span>
-<span class="source-line-no">337</span><span id="line.337">    public ProjectBuilder externalOAuth(</span>
-<span class="source-line-no">338</span><span id="line.338">            Function&lt;com.commercetools.api.models.project.ExternalOAuthBuilder, com.commercetools.api.models.project.ExternalOAuthBuilder&gt; builder) {</span>
-<span class="source-line-no">339</span><span id="line.339">        this.externalOAuth = builder.apply(com.commercetools.api.models.project.ExternalOAuthBuilder.of()).build();</span>
-<span class="source-line-no">340</span><span id="line.340">        return this;</span>
-<span class="source-line-no">341</span><span id="line.341">    }</span>
-<span class="source-line-no">342</span><span id="line.342"></span>
-<span class="source-line-no">343</span><span id="line.343">    /**</span>
-<span class="source-line-no">344</span><span id="line.344">     *  &lt;p&gt;Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.&lt;/p&gt;</span>
-<span class="source-line-no">345</span><span id="line.345">     * @param externalOAuth value to be set</span>
-<span class="source-line-no">346</span><span id="line.346">     * @return Builder</span>
-<span class="source-line-no">347</span><span id="line.347">     */</span>
-<span class="source-line-no">348</span><span id="line.348"></span>
-<span class="source-line-no">349</span><span id="line.349">    public ProjectBuilder externalOAuth(</span>
-<span class="source-line-no">350</span><span id="line.350">            @Nullable final com.commercetools.api.models.project.ExternalOAuth externalOAuth) {</span>
-<span class="source-line-no">351</span><span id="line.351">        this.externalOAuth = externalOAuth;</span>
-<span class="source-line-no">352</span><span id="line.352">        return this;</span>
-<span class="source-line-no">353</span><span id="line.353">    }</span>
-<span class="source-line-no">354</span><span id="line.354"></span>
-<span class="source-line-no">355</span><span id="line.355">    /**</span>
-<span class="source-line-no">356</span><span id="line.356">     *  &lt;p&gt;Controls indexing of resources to be provided on high performance read-only search endpoints.&lt;/p&gt;</span>
-<span class="source-line-no">357</span><span id="line.357">     * @param builder function to build the searchIndexing value</span>
-<span class="source-line-no">358</span><span id="line.358">     * @return Builder</span>
-<span class="source-line-no">359</span><span id="line.359">     */</span>
-<span class="source-line-no">360</span><span id="line.360"></span>
-<span class="source-line-no">361</span><span id="line.361">    public ProjectBuilder searchIndexing(</span>
-<span class="source-line-no">362</span><span id="line.362">            Function&lt;com.commercetools.api.models.project.SearchIndexingConfigurationBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationBuilder&gt; builder) {</span>
-<span class="source-line-no">363</span><span id="line.363">        this.searchIndexing = builder</span>
-<span class="source-line-no">364</span><span id="line.364">                .apply(com.commercetools.api.models.project.SearchIndexingConfigurationBuilder.of())</span>
-<span class="source-line-no">365</span><span id="line.365">                .build();</span>
-<span class="source-line-no">366</span><span id="line.366">        return this;</span>
-<span class="source-line-no">367</span><span id="line.367">    }</span>
-<span class="source-line-no">368</span><span id="line.368"></span>
-<span class="source-line-no">369</span><span id="line.369">    /**</span>
-<span class="source-line-no">370</span><span id="line.370">     *  &lt;p&gt;Controls indexing of resources to be provided on high performance read-only search endpoints.&lt;/p&gt;</span>
-<span class="source-line-no">371</span><span id="line.371">     * @param searchIndexing value to be set</span>
-<span class="source-line-no">372</span><span id="line.372">     * @return Builder</span>
-<span class="source-line-no">373</span><span id="line.373">     */</span>
-<span class="source-line-no">374</span><span id="line.374"></span>
-<span class="source-line-no">375</span><span id="line.375">    public ProjectBuilder searchIndexing(</span>
-<span class="source-line-no">376</span><span id="line.376">            @Nullable final com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing) {</span>
-<span class="source-line-no">377</span><span id="line.377">        this.searchIndexing = searchIndexing;</span>
-<span class="source-line-no">378</span><span id="line.378">        return this;</span>
-<span class="source-line-no">379</span><span id="line.379">    }</span>
-<span class="source-line-no">380</span><span id="line.380"></span>
-<span class="source-line-no">381</span><span id="line.381">    /**</span>
-<span class="source-line-no">382</span><span id="line.382">     *  &lt;p&gt;Holds configuration specific to Business Units.&lt;/p&gt;</span>
-<span class="source-line-no">383</span><span id="line.383">     * @param builder function to build the businessUnits value</span>
-<span class="source-line-no">384</span><span id="line.384">     * @return Builder</span>
-<span class="source-line-no">385</span><span id="line.385">     */</span>
-<span class="source-line-no">386</span><span id="line.386"></span>
-<span class="source-line-no">387</span><span id="line.387">    public ProjectBuilder businessUnits(</span>
-<span class="source-line-no">388</span><span id="line.388">            Function&lt;com.commercetools.api.models.project.BusinessUnitConfigurationBuilder, com.commercetools.api.models.project.BusinessUnitConfigurationBuilder&gt; builder) {</span>
-<span class="source-line-no">389</span><span id="line.389">        this.businessUnits = builder.apply(com.commercetools.api.models.project.BusinessUnitConfigurationBuilder.of())</span>
-<span class="source-line-no">390</span><span id="line.390">                .build();</span>
-<span class="source-line-no">391</span><span id="line.391">        return this;</span>
-<span class="source-line-no">392</span><span id="line.392">    }</span>
-<span class="source-line-no">393</span><span id="line.393"></span>
-<span class="source-line-no">394</span><span id="line.394">    /**</span>
-<span class="source-line-no">395</span><span id="line.395">     *  &lt;p&gt;Holds configuration specific to Business Units.&lt;/p&gt;</span>
-<span class="source-line-no">396</span><span id="line.396">     * @param businessUnits value to be set</span>
-<span class="source-line-no">397</span><span id="line.397">     * @return Builder</span>
-<span class="source-line-no">398</span><span id="line.398">     */</span>
-<span class="source-line-no">399</span><span id="line.399"></span>
-<span class="source-line-no">400</span><span id="line.400">    public ProjectBuilder businessUnits(</span>
-<span class="source-line-no">401</span><span id="line.401">            @Nullable final com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits) {</span>
-<span class="source-line-no">402</span><span id="line.402">        this.businessUnits = businessUnits;</span>
-<span class="source-line-no">403</span><span id="line.403">        return this;</span>
-<span class="source-line-no">404</span><span id="line.404">    }</span>
-<span class="source-line-no">405</span><span id="line.405"></span>
-<span class="source-line-no">406</span><span id="line.406">    /**</span>
-<span class="source-line-no">407</span><span id="line.407">     *  &lt;p&gt;Current version of the Project.&lt;/p&gt;</span>
-<span class="source-line-no">408</span><span id="line.408">     * @return version</span>
-<span class="source-line-no">409</span><span id="line.409">     */</span>
-<span class="source-line-no">410</span><span id="line.410"></span>
-<span class="source-line-no">411</span><span id="line.411">    public Long getVersion() {</span>
-<span class="source-line-no">412</span><span id="line.412">        return this.version;</span>
-<span class="source-line-no">413</span><span id="line.413">    }</span>
-<span class="source-line-no">414</span><span id="line.414"></span>
-<span class="source-line-no">415</span><span id="line.415">    /**</span>
-<span class="source-line-no">416</span><span id="line.416">     *  &lt;p&gt;User-defined unique identifier of the Project.&lt;/p&gt;</span>
-<span class="source-line-no">417</span><span id="line.417">     * @return key</span>
-<span class="source-line-no">418</span><span id="line.418">     */</span>
-<span class="source-line-no">419</span><span id="line.419"></span>
-<span class="source-line-no">420</span><span id="line.420">    public String getKey() {</span>
-<span class="source-line-no">421</span><span id="line.421">        return this.key;</span>
-<span class="source-line-no">422</span><span id="line.422">    }</span>
-<span class="source-line-no">423</span><span id="line.423"></span>
-<span class="source-line-no">424</span><span id="line.424">    /**</span>
-<span class="source-line-no">425</span><span id="line.425">     *  &lt;p&gt;Name of the Project.&lt;/p&gt;</span>
-<span class="source-line-no">426</span><span id="line.426">     * @return name</span>
-<span class="source-line-no">427</span><span id="line.427">     */</span>
-<span class="source-line-no">428</span><span id="line.428"></span>
-<span class="source-line-no">429</span><span id="line.429">    public String getName() {</span>
-<span class="source-line-no">430</span><span id="line.430">        return this.name;</span>
-<span class="source-line-no">431</span><span id="line.431">    }</span>
-<span class="source-line-no">432</span><span id="line.432"></span>
-<span class="source-line-no">433</span><span id="line.433">    /**</span>
-<span class="source-line-no">434</span><span id="line.434">     *  &lt;p&gt;Country code of the geographic location.&lt;/p&gt;</span>
-<span class="source-line-no">435</span><span id="line.435">     * @return countries</span>
-<span class="source-line-no">436</span><span id="line.436">     */</span>
-<span class="source-line-no">437</span><span id="line.437"></span>
-<span class="source-line-no">438</span><span id="line.438">    public java.util.List&lt;String&gt; getCountries() {</span>
-<span class="source-line-no">439</span><span id="line.439">        return this.countries;</span>
+<span class="source-line-no">323</span><span id="line.323">    public ProjectBuilder withShoppingLists(</span>
+<span class="source-line-no">324</span><span id="line.324">            Function&lt;com.commercetools.api.models.project.ShoppingListsConfigurationBuilder, com.commercetools.api.models.project.ShoppingListsConfiguration&gt; builder) {</span>
+<span class="source-line-no">325</span><span id="line.325">        this.shoppingLists = builder.apply(com.commercetools.api.models.project.ShoppingListsConfigurationBuilder.of());</span>
+<span class="source-line-no">326</span><span id="line.326">        return this;</span>
+<span class="source-line-no">327</span><span id="line.327">    }</span>
+<span class="source-line-no">328</span><span id="line.328"></span>
+<span class="source-line-no">329</span><span id="line.329">    /**</span>
+<span class="source-line-no">330</span><span id="line.330">     *  &lt;p&gt;Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.&lt;/p&gt;</span>
+<span class="source-line-no">331</span><span id="line.331">     * @param shoppingLists value to be set</span>
+<span class="source-line-no">332</span><span id="line.332">     * @return Builder</span>
+<span class="source-line-no">333</span><span id="line.333">     */</span>
+<span class="source-line-no">334</span><span id="line.334"></span>
+<span class="source-line-no">335</span><span id="line.335">    public ProjectBuilder shoppingLists(</span>
+<span class="source-line-no">336</span><span id="line.336">            @Nullable final com.commercetools.api.models.project.ShoppingListsConfiguration shoppingLists) {</span>
+<span class="source-line-no">337</span><span id="line.337">        this.shoppingLists = shoppingLists;</span>
+<span class="source-line-no">338</span><span id="line.338">        return this;</span>
+<span class="source-line-no">339</span><span id="line.339">    }</span>
+<span class="source-line-no">340</span><span id="line.340"></span>
+<span class="source-line-no">341</span><span id="line.341">    /**</span>
+<span class="source-line-no">342</span><span id="line.342">     *  &lt;p&gt;Holds the configuration for the tiered shipping rates feature.&lt;/p&gt;</span>
+<span class="source-line-no">343</span><span id="line.343">     * @param shippingRateInputType value to be set</span>
+<span class="source-line-no">344</span><span id="line.344">     * @return Builder</span>
+<span class="source-line-no">345</span><span id="line.345">     */</span>
+<span class="source-line-no">346</span><span id="line.346"></span>
+<span class="source-line-no">347</span><span id="line.347">    public ProjectBuilder shippingRateInputType(</span>
+<span class="source-line-no">348</span><span id="line.348">            @Nullable final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType) {</span>
+<span class="source-line-no">349</span><span id="line.349">        this.shippingRateInputType = shippingRateInputType;</span>
+<span class="source-line-no">350</span><span id="line.350">        return this;</span>
+<span class="source-line-no">351</span><span id="line.351">    }</span>
+<span class="source-line-no">352</span><span id="line.352"></span>
+<span class="source-line-no">353</span><span id="line.353">    /**</span>
+<span class="source-line-no">354</span><span id="line.354">     *  &lt;p&gt;Holds the configuration for the tiered shipping rates feature.&lt;/p&gt;</span>
+<span class="source-line-no">355</span><span id="line.355">     * @param builder function to build the shippingRateInputType value</span>
+<span class="source-line-no">356</span><span id="line.356">     * @return Builder</span>
+<span class="source-line-no">357</span><span id="line.357">     */</span>
+<span class="source-line-no">358</span><span id="line.358"></span>
+<span class="source-line-no">359</span><span id="line.359">    public ProjectBuilder shippingRateInputType(</span>
+<span class="source-line-no">360</span><span id="line.360">            Function&lt;com.commercetools.api.models.project.ShippingRateInputTypeBuilder, Builder&lt;? extends com.commercetools.api.models.project.ShippingRateInputType&gt;&gt; builder) {</span>
+<span class="source-line-no">361</span><span id="line.361">        this.shippingRateInputType = builder</span>
+<span class="source-line-no">362</span><span id="line.362">                .apply(com.commercetools.api.models.project.ShippingRateInputTypeBuilder.of())</span>
+<span class="source-line-no">363</span><span id="line.363">                .build();</span>
+<span class="source-line-no">364</span><span id="line.364">        return this;</span>
+<span class="source-line-no">365</span><span id="line.365">    }</span>
+<span class="source-line-no">366</span><span id="line.366"></span>
+<span class="source-line-no">367</span><span id="line.367">    /**</span>
+<span class="source-line-no">368</span><span id="line.368">     *  &lt;p&gt;Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.&lt;/p&gt;</span>
+<span class="source-line-no">369</span><span id="line.369">     * @param builder function to build the externalOAuth value</span>
+<span class="source-line-no">370</span><span id="line.370">     * @return Builder</span>
+<span class="source-line-no">371</span><span id="line.371">     */</span>
+<span class="source-line-no">372</span><span id="line.372"></span>
+<span class="source-line-no">373</span><span id="line.373">    public ProjectBuilder externalOAuth(</span>
+<span class="source-line-no">374</span><span id="line.374">            Function&lt;com.commercetools.api.models.project.ExternalOAuthBuilder, com.commercetools.api.models.project.ExternalOAuthBuilder&gt; builder) {</span>
+<span class="source-line-no">375</span><span id="line.375">        this.externalOAuth = builder.apply(com.commercetools.api.models.project.ExternalOAuthBuilder.of()).build();</span>
+<span class="source-line-no">376</span><span id="line.376">        return this;</span>
+<span class="source-line-no">377</span><span id="line.377">    }</span>
+<span class="source-line-no">378</span><span id="line.378"></span>
+<span class="source-line-no">379</span><span id="line.379">    /**</span>
+<span class="source-line-no">380</span><span id="line.380">     *  &lt;p&gt;Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.&lt;/p&gt;</span>
+<span class="source-line-no">381</span><span id="line.381">     * @param builder function to build the externalOAuth value</span>
+<span class="source-line-no">382</span><span id="line.382">     * @return Builder</span>
+<span class="source-line-no">383</span><span id="line.383">     */</span>
+<span class="source-line-no">384</span><span id="line.384"></span>
+<span class="source-line-no">385</span><span id="line.385">    public ProjectBuilder withExternalOAuth(</span>
+<span class="source-line-no">386</span><span id="line.386">            Function&lt;com.commercetools.api.models.project.ExternalOAuthBuilder, com.commercetools.api.models.project.ExternalOAuth&gt; builder) {</span>
+<span class="source-line-no">387</span><span id="line.387">        this.externalOAuth = builder.apply(com.commercetools.api.models.project.ExternalOAuthBuilder.of());</span>
+<span class="source-line-no">388</span><span id="line.388">        return this;</span>
+<span class="source-line-no">389</span><span id="line.389">    }</span>
+<span class="source-line-no">390</span><span id="line.390"></span>
+<span class="source-line-no">391</span><span id="line.391">    /**</span>
+<span class="source-line-no">392</span><span id="line.392">     *  &lt;p&gt;Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.&lt;/p&gt;</span>
+<span class="source-line-no">393</span><span id="line.393">     * @param externalOAuth value to be set</span>
+<span class="source-line-no">394</span><span id="line.394">     * @return Builder</span>
+<span class="source-line-no">395</span><span id="line.395">     */</span>
+<span class="source-line-no">396</span><span id="line.396"></span>
+<span class="source-line-no">397</span><span id="line.397">    public ProjectBuilder externalOAuth(</span>
+<span class="source-line-no">398</span><span id="line.398">            @Nullable final com.commercetools.api.models.project.ExternalOAuth externalOAuth) {</span>
+<span class="source-line-no">399</span><span id="line.399">        this.externalOAuth = externalOAuth;</span>
+<span class="source-line-no">400</span><span id="line.400">        return this;</span>
+<span class="source-line-no">401</span><span id="line.401">    }</span>
+<span class="source-line-no">402</span><span id="line.402"></span>
+<span class="source-line-no">403</span><span id="line.403">    /**</span>
+<span class="source-line-no">404</span><span id="line.404">     *  &lt;p&gt;Controls indexing of resources to be provided on high performance read-only search endpoints.&lt;/p&gt;</span>
+<span class="source-line-no">405</span><span id="line.405">     * @param builder function to build the searchIndexing value</span>
+<span class="source-line-no">406</span><span id="line.406">     * @return Builder</span>
+<span class="source-line-no">407</span><span id="line.407">     */</span>
+<span class="source-line-no">408</span><span id="line.408"></span>
+<span class="source-line-no">409</span><span id="line.409">    public ProjectBuilder searchIndexing(</span>
+<span class="source-line-no">410</span><span id="line.410">            Function&lt;com.commercetools.api.models.project.SearchIndexingConfigurationBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationBuilder&gt; builder) {</span>
+<span class="source-line-no">411</span><span id="line.411">        this.searchIndexing = builder</span>
+<span class="source-line-no">412</span><span id="line.412">                .apply(com.commercetools.api.models.project.SearchIndexingConfigurationBuilder.of())</span>
+<span class="source-line-no">413</span><span id="line.413">                .build();</span>
+<span class="source-line-no">414</span><span id="line.414">        return this;</span>
+<span class="source-line-no">415</span><span id="line.415">    }</span>
+<span class="source-line-no">416</span><span id="line.416"></span>
+<span class="source-line-no">417</span><span id="line.417">    /**</span>
+<span class="source-line-no">418</span><span id="line.418">     *  &lt;p&gt;Controls indexing of resources to be provided on high performance read-only search endpoints.&lt;/p&gt;</span>
+<span class="source-line-no">419</span><span id="line.419">     * @param builder function to build the searchIndexing value</span>
+<span class="source-line-no">420</span><span id="line.420">     * @return Builder</span>
+<span class="source-line-no">421</span><span id="line.421">     */</span>
+<span class="source-line-no">422</span><span id="line.422"></span>
+<span class="source-line-no">423</span><span id="line.423">    public ProjectBuilder withSearchIndexing(</span>
+<span class="source-line-no">424</span><span id="line.424">            Function&lt;com.commercetools.api.models.project.SearchIndexingConfigurationBuilder, com.commercetools.api.models.project.SearchIndexingConfiguration&gt; builder) {</span>
+<span class="source-line-no">425</span><span id="line.425">        this.searchIndexing = builder</span>
+<span class="source-line-no">426</span><span id="line.426">                .apply(com.commercetools.api.models.project.SearchIndexingConfigurationBuilder.of());</span>
+<span class="source-line-no">427</span><span id="line.427">        return this;</span>
+<span class="source-line-no">428</span><span id="line.428">    }</span>
+<span class="source-line-no">429</span><span id="line.429"></span>
+<span class="source-line-no">430</span><span id="line.430">    /**</span>
+<span class="source-line-no">431</span><span id="line.431">     *  &lt;p&gt;Controls indexing of resources to be provided on high performance read-only search endpoints.&lt;/p&gt;</span>
+<span class="source-line-no">432</span><span id="line.432">     * @param searchIndexing value to be set</span>
+<span class="source-line-no">433</span><span id="line.433">     * @return Builder</span>
+<span class="source-line-no">434</span><span id="line.434">     */</span>
+<span class="source-line-no">435</span><span id="line.435"></span>
+<span class="source-line-no">436</span><span id="line.436">    public ProjectBuilder searchIndexing(</span>
+<span class="source-line-no">437</span><span id="line.437">            @Nullable final com.commercetools.api.models.project.SearchIndexingConfiguration searchIndexing) {</span>
+<span class="source-line-no">438</span><span id="line.438">        this.searchIndexing = searchIndexing;</span>
+<span class="source-line-no">439</span><span id="line.439">        return this;</span>
 <span class="source-line-no">440</span><span id="line.440">    }</span>
 <span class="source-line-no">441</span><span id="line.441"></span>
 <span class="source-line-no">442</span><span id="line.442">    /**</span>
-<span class="source-line-no">443</span><span id="line.443">     *  &lt;p&gt;Currency code of the country. A Project must have at least one currency.&lt;/p&gt;</span>
-<span class="source-line-no">444</span><span id="line.444">     * @return currencies</span>
-<span class="source-line-no">445</span><span id="line.445">     */</span>
-<span class="source-line-no">446</span><span id="line.446"></span>
-<span class="source-line-no">447</span><span id="line.447">    public java.util.List&lt;String&gt; getCurrencies() {</span>
-<span class="source-line-no">448</span><span id="line.448">        return this.currencies;</span>
-<span class="source-line-no">449</span><span id="line.449">    }</span>
-<span class="source-line-no">450</span><span id="line.450"></span>
-<span class="source-line-no">451</span><span id="line.451">    /**</span>
-<span class="source-line-no">452</span><span id="line.452">     *  &lt;p&gt;Language of the country. A Project must have at least one language.&lt;/p&gt;</span>
-<span class="source-line-no">453</span><span id="line.453">     * @return languages</span>
-<span class="source-line-no">454</span><span id="line.454">     */</span>
-<span class="source-line-no">455</span><span id="line.455"></span>
-<span class="source-line-no">456</span><span id="line.456">    public java.util.List&lt;String&gt; getLanguages() {</span>
-<span class="source-line-no">457</span><span id="line.457">        return this.languages;</span>
-<span class="source-line-no">458</span><span id="line.458">    }</span>
-<span class="source-line-no">459</span><span id="line.459"></span>
-<span class="source-line-no">460</span><span id="line.460">    /**</span>
-<span class="source-line-no">461</span><span id="line.461">     *  &lt;p&gt;Date and time (UTC) the Project was initially created.&lt;/p&gt;</span>
-<span class="source-line-no">462</span><span id="line.462">     * @return createdAt</span>
-<span class="source-line-no">463</span><span id="line.463">     */</span>
-<span class="source-line-no">464</span><span id="line.464"></span>
-<span class="source-line-no">465</span><span id="line.465">    public java.time.ZonedDateTime getCreatedAt() {</span>
-<span class="source-line-no">466</span><span id="line.466">        return this.createdAt;</span>
-<span class="source-line-no">467</span><span id="line.467">    }</span>
-<span class="source-line-no">468</span><span id="line.468"></span>
-<span class="source-line-no">469</span><span id="line.469">    /**</span>
-<span class="source-line-no">470</span><span id="line.470">     *  &lt;p&gt;Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.&lt;/p&gt;</span>
-<span class="source-line-no">471</span><span id="line.471">     * @return trialUntil</span>
-<span class="source-line-no">472</span><span id="line.472">     */</span>
-<span class="source-line-no">473</span><span id="line.473"></span>
-<span class="source-line-no">474</span><span id="line.474">    @Nullable</span>
-<span class="source-line-no">475</span><span id="line.475">    public String getTrialUntil() {</span>
-<span class="source-line-no">476</span><span id="line.476">        return this.trialUntil;</span>
+<span class="source-line-no">443</span><span id="line.443">     *  &lt;p&gt;Holds configuration specific to Business Units.&lt;/p&gt;</span>
+<span class="source-line-no">444</span><span id="line.444">     * @param builder function to build the businessUnits value</span>
+<span class="source-line-no">445</span><span id="line.445">     * @return Builder</span>
+<span class="source-line-no">446</span><span id="line.446">     */</span>
+<span class="source-line-no">447</span><span id="line.447"></span>
+<span class="source-line-no">448</span><span id="line.448">    public ProjectBuilder businessUnits(</span>
+<span class="source-line-no">449</span><span id="line.449">            Function&lt;com.commercetools.api.models.project.BusinessUnitConfigurationBuilder, com.commercetools.api.models.project.BusinessUnitConfigurationBuilder&gt; builder) {</span>
+<span class="source-line-no">450</span><span id="line.450">        this.businessUnits = builder.apply(com.commercetools.api.models.project.BusinessUnitConfigurationBuilder.of())</span>
+<span class="source-line-no">451</span><span id="line.451">                .build();</span>
+<span class="source-line-no">452</span><span id="line.452">        return this;</span>
+<span class="source-line-no">453</span><span id="line.453">    }</span>
+<span class="source-line-no">454</span><span id="line.454"></span>
+<span class="source-line-no">455</span><span id="line.455">    /**</span>
+<span class="source-line-no">456</span><span id="line.456">     *  &lt;p&gt;Holds configuration specific to Business Units.&lt;/p&gt;</span>
+<span class="source-line-no">457</span><span id="line.457">     * @param builder function to build the businessUnits value</span>
+<span class="source-line-no">458</span><span id="line.458">     * @return Builder</span>
+<span class="source-line-no">459</span><span id="line.459">     */</span>
+<span class="source-line-no">460</span><span id="line.460"></span>
+<span class="source-line-no">461</span><span id="line.461">    public ProjectBuilder withBusinessUnits(</span>
+<span class="source-line-no">462</span><span id="line.462">            Function&lt;com.commercetools.api.models.project.BusinessUnitConfigurationBuilder, com.commercetools.api.models.project.BusinessUnitConfiguration&gt; builder) {</span>
+<span class="source-line-no">463</span><span id="line.463">        this.businessUnits = builder.apply(com.commercetools.api.models.project.BusinessUnitConfigurationBuilder.of());</span>
+<span class="source-line-no">464</span><span id="line.464">        return this;</span>
+<span class="source-line-no">465</span><span id="line.465">    }</span>
+<span class="source-line-no">466</span><span id="line.466"></span>
+<span class="source-line-no">467</span><span id="line.467">    /**</span>
+<span class="source-line-no">468</span><span id="line.468">     *  &lt;p&gt;Holds configuration specific to Business Units.&lt;/p&gt;</span>
+<span class="source-line-no">469</span><span id="line.469">     * @param businessUnits value to be set</span>
+<span class="source-line-no">470</span><span id="line.470">     * @return Builder</span>
+<span class="source-line-no">471</span><span id="line.471">     */</span>
+<span class="source-line-no">472</span><span id="line.472"></span>
+<span class="source-line-no">473</span><span id="line.473">    public ProjectBuilder businessUnits(</span>
+<span class="source-line-no">474</span><span id="line.474">            @Nullable final com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits) {</span>
+<span class="source-line-no">475</span><span id="line.475">        this.businessUnits = businessUnits;</span>
+<span class="source-line-no">476</span><span id="line.476">        return this;</span>
 <span class="source-line-no">477</span><span id="line.477">    }</span>
 <span class="source-line-no">478</span><span id="line.478"></span>
 <span class="source-line-no">479</span><span id="line.479">    /**</span>
-<span class="source-line-no">480</span><span id="line.480">     *  &lt;p&gt;Holds the configuration for the Messages Query feature.&lt;/p&gt;</span>
-<span class="source-line-no">481</span><span id="line.481">     * @return messages</span>
+<span class="source-line-no">480</span><span id="line.480">     *  &lt;p&gt;Current version of the Project.&lt;/p&gt;</span>
+<span class="source-line-no">481</span><span id="line.481">     * @return version</span>
 <span class="source-line-no">482</span><span id="line.482">     */</span>
 <span class="source-line-no">483</span><span id="line.483"></span>
-<span class="source-line-no">484</span><span id="line.484">    public com.commercetools.api.models.message.MessagesConfiguration getMessages() {</span>
-<span class="source-line-no">485</span><span id="line.485">        return this.messages;</span>
+<span class="source-line-no">484</span><span id="line.484">    public Long getVersion() {</span>
+<span class="source-line-no">485</span><span id="line.485">        return this.version;</span>
 <span class="source-line-no">486</span><span id="line.486">    }</span>
 <span class="source-line-no">487</span><span id="line.487"></span>
 <span class="source-line-no">488</span><span id="line.488">    /**</span>
-<span class="source-line-no">489</span><span id="line.489">     *  &lt;p&gt;Holds the configuration for the Carts feature.&lt;/p&gt;</span>
-<span class="source-line-no">490</span><span id="line.490">     * @return carts</span>
+<span class="source-line-no">489</span><span id="line.489">     *  &lt;p&gt;User-defined unique identifier of the Project.&lt;/p&gt;</span>
+<span class="source-line-no">490</span><span id="line.490">     * @return key</span>
 <span class="source-line-no">491</span><span id="line.491">     */</span>
 <span class="source-line-no">492</span><span id="line.492"></span>
-<span class="source-line-no">493</span><span id="line.493">    public com.commercetools.api.models.project.CartsConfiguration getCarts() {</span>
-<span class="source-line-no">494</span><span id="line.494">        return this.carts;</span>
+<span class="source-line-no">493</span><span id="line.493">    public String getKey() {</span>
+<span class="source-line-no">494</span><span id="line.494">        return this.key;</span>
 <span class="source-line-no">495</span><span id="line.495">    }</span>
 <span class="source-line-no">496</span><span id="line.496"></span>
 <span class="source-line-no">497</span><span id="line.497">    /**</span>
-<span class="source-line-no">498</span><span id="line.498">     *  &lt;p&gt;Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.&lt;/p&gt;</span>
-<span class="source-line-no">499</span><span id="line.499">     * @return shoppingLists</span>
+<span class="source-line-no">498</span><span id="line.498">     *  &lt;p&gt;Name of the Project.&lt;/p&gt;</span>
+<span class="source-line-no">499</span><span id="line.499">     * @return name</span>
 <span class="source-line-no">500</span><span id="line.500">     */</span>
 <span class="source-line-no">501</span><span id="line.501"></span>
-<span class="source-line-no">502</span><span id="line.502">    @Nullable</span>
-<span class="source-line-no">503</span><span id="line.503">    public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingLists() {</span>
-<span class="source-line-no">504</span><span id="line.504">        return this.shoppingLists;</span>
-<span class="source-line-no">505</span><span id="line.505">    }</span>
-<span class="source-line-no">506</span><span id="line.506"></span>
-<span class="source-line-no">507</span><span id="line.507">    /**</span>
-<span class="source-line-no">508</span><span id="line.508">     *  &lt;p&gt;Holds the configuration for the tiered shipping rates feature.&lt;/p&gt;</span>
-<span class="source-line-no">509</span><span id="line.509">     * @return shippingRateInputType</span>
-<span class="source-line-no">510</span><span id="line.510">     */</span>
-<span class="source-line-no">511</span><span id="line.511"></span>
-<span class="source-line-no">512</span><span id="line.512">    @Nullable</span>
-<span class="source-line-no">513</span><span id="line.513">    public com.commercetools.api.models.project.ShippingRateInputType getShippingRateInputType() {</span>
-<span class="source-line-no">514</span><span id="line.514">        return this.shippingRateInputType;</span>
-<span class="source-line-no">515</span><span id="line.515">    }</span>
-<span class="source-line-no">516</span><span id="line.516"></span>
-<span class="source-line-no">517</span><span id="line.517">    /**</span>
-<span class="source-line-no">518</span><span id="line.518">     *  &lt;p&gt;Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.&lt;/p&gt;</span>
-<span class="source-line-no">519</span><span id="line.519">     * @return externalOAuth</span>
-<span class="source-line-no">520</span><span id="line.520">     */</span>
-<span class="source-line-no">521</span><span id="line.521"></span>
-<span class="source-line-no">522</span><span id="line.522">    @Nullable</span>
-<span class="source-line-no">523</span><span id="line.523">    public com.commercetools.api.models.project.ExternalOAuth getExternalOAuth() {</span>
-<span class="source-line-no">524</span><span id="line.524">        return this.externalOAuth;</span>
-<span class="source-line-no">525</span><span id="line.525">    }</span>
-<span class="source-line-no">526</span><span id="line.526"></span>
-<span class="source-line-no">527</span><span id="line.527">    /**</span>
-<span class="source-line-no">528</span><span id="line.528">     *  &lt;p&gt;Controls indexing of resources to be provided on high performance read-only search endpoints.&lt;/p&gt;</span>
-<span class="source-line-no">529</span><span id="line.529">     * @return searchIndexing</span>
-<span class="source-line-no">530</span><span id="line.530">     */</span>
-<span class="source-line-no">531</span><span id="line.531"></span>
-<span class="source-line-no">532</span><span id="line.532">    @Nullable</span>
-<span class="source-line-no">533</span><span id="line.533">    public com.commercetools.api.models.project.SearchIndexingConfiguration getSearchIndexing() {</span>
-<span class="source-line-no">534</span><span id="line.534">        return this.searchIndexing;</span>
-<span class="source-line-no">535</span><span id="line.535">    }</span>
-<span class="source-line-no">536</span><span id="line.536"></span>
-<span class="source-line-no">537</span><span id="line.537">    /**</span>
-<span class="source-line-no">538</span><span id="line.538">     *  &lt;p&gt;Holds configuration specific to Business Units.&lt;/p&gt;</span>
-<span class="source-line-no">539</span><span id="line.539">     * @return businessUnits</span>
-<span class="source-line-no">540</span><span id="line.540">     */</span>
+<span class="source-line-no">502</span><span id="line.502">    public String getName() {</span>
+<span class="source-line-no">503</span><span id="line.503">        return this.name;</span>
+<span class="source-line-no">504</span><span id="line.504">    }</span>
+<span class="source-line-no">505</span><span id="line.505"></span>
+<span class="source-line-no">506</span><span id="line.506">    /**</span>
+<span class="source-line-no">507</span><span id="line.507">     *  &lt;p&gt;Country code of the geographic location.&lt;/p&gt;</span>
+<span class="source-line-no">508</span><span id="line.508">     * @return countries</span>
+<span class="source-line-no">509</span><span id="line.509">     */</span>
+<span class="source-line-no">510</span><span id="line.510"></span>
+<span class="source-line-no">511</span><span id="line.511">    public java.util.List&lt;String&gt; getCountries() {</span>
+<span class="source-line-no">512</span><span id="line.512">        return this.countries;</span>
+<span class="source-line-no">513</span><span id="line.513">    }</span>
+<span class="source-line-no">514</span><span id="line.514"></span>
+<span class="source-line-no">515</span><span id="line.515">    /**</span>
+<span class="source-line-no">516</span><span id="line.516">     *  &lt;p&gt;Currency code of the country. A Project must have at least one currency.&lt;/p&gt;</span>
+<span class="source-line-no">517</span><span id="line.517">     * @return currencies</span>
+<span class="source-line-no">518</span><span id="line.518">     */</span>
+<span class="source-line-no">519</span><span id="line.519"></span>
+<span class="source-line-no">520</span><span id="line.520">    public java.util.List&lt;String&gt; getCurrencies() {</span>
+<span class="source-line-no">521</span><span id="line.521">        return this.currencies;</span>
+<span class="source-line-no">522</span><span id="line.522">    }</span>
+<span class="source-line-no">523</span><span id="line.523"></span>
+<span class="source-line-no">524</span><span id="line.524">    /**</span>
+<span class="source-line-no">525</span><span id="line.525">     *  &lt;p&gt;Language of the country. A Project must have at least one language.&lt;/p&gt;</span>
+<span class="source-line-no">526</span><span id="line.526">     * @return languages</span>
+<span class="source-line-no">527</span><span id="line.527">     */</span>
+<span class="source-line-no">528</span><span id="line.528"></span>
+<span class="source-line-no">529</span><span id="line.529">    public java.util.List&lt;String&gt; getLanguages() {</span>
+<span class="source-line-no">530</span><span id="line.530">        return this.languages;</span>
+<span class="source-line-no">531</span><span id="line.531">    }</span>
+<span class="source-line-no">532</span><span id="line.532"></span>
+<span class="source-line-no">533</span><span id="line.533">    /**</span>
+<span class="source-line-no">534</span><span id="line.534">     *  &lt;p&gt;Date and time (UTC) the Project was initially created.&lt;/p&gt;</span>
+<span class="source-line-no">535</span><span id="line.535">     * @return createdAt</span>
+<span class="source-line-no">536</span><span id="line.536">     */</span>
+<span class="source-line-no">537</span><span id="line.537"></span>
+<span class="source-line-no">538</span><span id="line.538">    public java.time.ZonedDateTime getCreatedAt() {</span>
+<span class="source-line-no">539</span><span id="line.539">        return this.createdAt;</span>
+<span class="source-line-no">540</span><span id="line.540">    }</span>
 <span class="source-line-no">541</span><span id="line.541"></span>
-<span class="source-line-no">542</span><span id="line.542">    @Nullable</span>
-<span class="source-line-no">543</span><span id="line.543">    public com.commercetools.api.models.project.BusinessUnitConfiguration getBusinessUnits() {</span>
-<span class="source-line-no">544</span><span id="line.544">        return this.businessUnits;</span>
-<span class="source-line-no">545</span><span id="line.545">    }</span>
+<span class="source-line-no">542</span><span id="line.542">    /**</span>
+<span class="source-line-no">543</span><span id="line.543">     *  &lt;p&gt;Date in YYYY-MM format specifying when the trial period for the Project ends. Only present on Projects in trial period.&lt;/p&gt;</span>
+<span class="source-line-no">544</span><span id="line.544">     * @return trialUntil</span>
+<span class="source-line-no">545</span><span id="line.545">     */</span>
 <span class="source-line-no">546</span><span id="line.546"></span>
-<span class="source-line-no">547</span><span id="line.547">    /**</span>
-<span class="source-line-no">548</span><span id="line.548">     * builds Project with checking for non-null required values</span>
-<span class="source-line-no">549</span><span id="line.549">     * @return Project</span>
-<span class="source-line-no">550</span><span id="line.550">     */</span>
-<span class="source-line-no">551</span><span id="line.551">    public Project build() {</span>
-<span class="source-line-no">552</span><span id="line.552">        Objects.requireNonNull(version, Project.class + ": version is missing");</span>
-<span class="source-line-no">553</span><span id="line.553">        Objects.requireNonNull(key, Project.class + ": key is missing");</span>
-<span class="source-line-no">554</span><span id="line.554">        Objects.requireNonNull(name, Project.class + ": name is missing");</span>
-<span class="source-line-no">555</span><span id="line.555">        Objects.requireNonNull(countries, Project.class + ": countries is missing");</span>
-<span class="source-line-no">556</span><span id="line.556">        Objects.requireNonNull(currencies, Project.class + ": currencies is missing");</span>
-<span class="source-line-no">557</span><span id="line.557">        Objects.requireNonNull(languages, Project.class + ": languages is missing");</span>
-<span class="source-line-no">558</span><span id="line.558">        Objects.requireNonNull(createdAt, Project.class + ": createdAt is missing");</span>
-<span class="source-line-no">559</span><span id="line.559">        Objects.requireNonNull(messages, Project.class + ": messages is missing");</span>
-<span class="source-line-no">560</span><span id="line.560">        Objects.requireNonNull(carts, Project.class + ": carts is missing");</span>
-<span class="source-line-no">561</span><span id="line.561">        return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,</span>
-<span class="source-line-no">562</span><span id="line.562">            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing, businessUnits);</span>
-<span class="source-line-no">563</span><span id="line.563">    }</span>
-<span class="source-line-no">564</span><span id="line.564"></span>
-<span class="source-line-no">565</span><span id="line.565">    /**</span>
-<span class="source-line-no">566</span><span id="line.566">     * builds Project without checking for non-null required values</span>
-<span class="source-line-no">567</span><span id="line.567">     * @return Project</span>
-<span class="source-line-no">568</span><span id="line.568">     */</span>
-<span class="source-line-no">569</span><span id="line.569">    public Project buildUnchecked() {</span>
-<span class="source-line-no">570</span><span id="line.570">        return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,</span>
-<span class="source-line-no">571</span><span id="line.571">            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing, businessUnits);</span>
-<span class="source-line-no">572</span><span id="line.572">    }</span>
-<span class="source-line-no">573</span><span id="line.573"></span>
-<span class="source-line-no">574</span><span id="line.574">    /**</span>
-<span class="source-line-no">575</span><span id="line.575">     * factory method for an instance of ProjectBuilder</span>
-<span class="source-line-no">576</span><span id="line.576">     * @return builder</span>
-<span class="source-line-no">577</span><span id="line.577">     */</span>
-<span class="source-line-no">578</span><span id="line.578">    public static ProjectBuilder of() {</span>
-<span class="source-line-no">579</span><span id="line.579">        return new ProjectBuilder();</span>
-<span class="source-line-no">580</span><span id="line.580">    }</span>
-<span class="source-line-no">581</span><span id="line.581"></span>
-<span class="source-line-no">582</span><span id="line.582">    /**</span>
-<span class="source-line-no">583</span><span id="line.583">     * create builder for Project instance</span>
-<span class="source-line-no">584</span><span id="line.584">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">585</span><span id="line.585">     * @return builder</span>
-<span class="source-line-no">586</span><span id="line.586">     */</span>
-<span class="source-line-no">587</span><span id="line.587">    public static ProjectBuilder of(final Project template) {</span>
-<span class="source-line-no">588</span><span id="line.588">        ProjectBuilder builder = new ProjectBuilder();</span>
-<span class="source-line-no">589</span><span id="line.589">        builder.version = template.getVersion();</span>
-<span class="source-line-no">590</span><span id="line.590">        builder.key = template.getKey();</span>
-<span class="source-line-no">591</span><span id="line.591">        builder.name = template.getName();</span>
-<span class="source-line-no">592</span><span id="line.592">        builder.countries = template.getCountries();</span>
-<span class="source-line-no">593</span><span id="line.593">        builder.currencies = template.getCurrencies();</span>
-<span class="source-line-no">594</span><span id="line.594">        builder.languages = template.getLanguages();</span>
-<span class="source-line-no">595</span><span id="line.595">        builder.createdAt = template.getCreatedAt();</span>
-<span class="source-line-no">596</span><span id="line.596">        builder.trialUntil = template.getTrialUntil();</span>
-<span class="source-line-no">597</span><span id="line.597">        builder.messages = template.getMessages();</span>
-<span class="source-line-no">598</span><span id="line.598">        builder.carts = template.getCarts();</span>
-<span class="source-line-no">599</span><span id="line.599">        builder.shoppingLists = template.getShoppingLists();</span>
-<span class="source-line-no">600</span><span id="line.600">        builder.shippingRateInputType = template.getShippingRateInputType();</span>
-<span class="source-line-no">601</span><span id="line.601">        builder.externalOAuth = template.getExternalOAuth();</span>
-<span class="source-line-no">602</span><span id="line.602">        builder.searchIndexing = template.getSearchIndexing();</span>
-<span class="source-line-no">603</span><span id="line.603">        builder.businessUnits = template.getBusinessUnits();</span>
-<span class="source-line-no">604</span><span id="line.604">        return builder;</span>
-<span class="source-line-no">605</span><span id="line.605">    }</span>
-<span class="source-line-no">606</span><span id="line.606"></span>
-<span class="source-line-no">607</span><span id="line.607">}</span>
+<span class="source-line-no">547</span><span id="line.547">    @Nullable</span>
+<span class="source-line-no">548</span><span id="line.548">    public String getTrialUntil() {</span>
+<span class="source-line-no">549</span><span id="line.549">        return this.trialUntil;</span>
+<span class="source-line-no">550</span><span id="line.550">    }</span>
+<span class="source-line-no">551</span><span id="line.551"></span>
+<span class="source-line-no">552</span><span id="line.552">    /**</span>
+<span class="source-line-no">553</span><span id="line.553">     *  &lt;p&gt;Holds the configuration for the Messages Query feature.&lt;/p&gt;</span>
+<span class="source-line-no">554</span><span id="line.554">     * @return messages</span>
+<span class="source-line-no">555</span><span id="line.555">     */</span>
+<span class="source-line-no">556</span><span id="line.556"></span>
+<span class="source-line-no">557</span><span id="line.557">    public com.commercetools.api.models.message.MessagesConfiguration getMessages() {</span>
+<span class="source-line-no">558</span><span id="line.558">        return this.messages;</span>
+<span class="source-line-no">559</span><span id="line.559">    }</span>
+<span class="source-line-no">560</span><span id="line.560"></span>
+<span class="source-line-no">561</span><span id="line.561">    /**</span>
+<span class="source-line-no">562</span><span id="line.562">     *  &lt;p&gt;Holds the configuration for the Carts feature.&lt;/p&gt;</span>
+<span class="source-line-no">563</span><span id="line.563">     * @return carts</span>
+<span class="source-line-no">564</span><span id="line.564">     */</span>
+<span class="source-line-no">565</span><span id="line.565"></span>
+<span class="source-line-no">566</span><span id="line.566">    public com.commercetools.api.models.project.CartsConfiguration getCarts() {</span>
+<span class="source-line-no">567</span><span id="line.567">        return this.carts;</span>
+<span class="source-line-no">568</span><span id="line.568">    }</span>
+<span class="source-line-no">569</span><span id="line.569"></span>
+<span class="source-line-no">570</span><span id="line.570">    /**</span>
+<span class="source-line-no">571</span><span id="line.571">     *  &lt;p&gt;Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.&lt;/p&gt;</span>
+<span class="source-line-no">572</span><span id="line.572">     * @return shoppingLists</span>
+<span class="source-line-no">573</span><span id="line.573">     */</span>
+<span class="source-line-no">574</span><span id="line.574"></span>
+<span class="source-line-no">575</span><span id="line.575">    @Nullable</span>
+<span class="source-line-no">576</span><span id="line.576">    public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingLists() {</span>
+<span class="source-line-no">577</span><span id="line.577">        return this.shoppingLists;</span>
+<span class="source-line-no">578</span><span id="line.578">    }</span>
+<span class="source-line-no">579</span><span id="line.579"></span>
+<span class="source-line-no">580</span><span id="line.580">    /**</span>
+<span class="source-line-no">581</span><span id="line.581">     *  &lt;p&gt;Holds the configuration for the tiered shipping rates feature.&lt;/p&gt;</span>
+<span class="source-line-no">582</span><span id="line.582">     * @return shippingRateInputType</span>
+<span class="source-line-no">583</span><span id="line.583">     */</span>
+<span class="source-line-no">584</span><span id="line.584"></span>
+<span class="source-line-no">585</span><span id="line.585">    @Nullable</span>
+<span class="source-line-no">586</span><span id="line.586">    public com.commercetools.api.models.project.ShippingRateInputType getShippingRateInputType() {</span>
+<span class="source-line-no">587</span><span id="line.587">        return this.shippingRateInputType;</span>
+<span class="source-line-no">588</span><span id="line.588">    }</span>
+<span class="source-line-no">589</span><span id="line.589"></span>
+<span class="source-line-no">590</span><span id="line.590">    /**</span>
+<span class="source-line-no">591</span><span id="line.591">     *  &lt;p&gt;Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.&lt;/p&gt;</span>
+<span class="source-line-no">592</span><span id="line.592">     * @return externalOAuth</span>
+<span class="source-line-no">593</span><span id="line.593">     */</span>
+<span class="source-line-no">594</span><span id="line.594"></span>
+<span class="source-line-no">595</span><span id="line.595">    @Nullable</span>
+<span class="source-line-no">596</span><span id="line.596">    public com.commercetools.api.models.project.ExternalOAuth getExternalOAuth() {</span>
+<span class="source-line-no">597</span><span id="line.597">        return this.externalOAuth;</span>
+<span class="source-line-no">598</span><span id="line.598">    }</span>
+<span class="source-line-no">599</span><span id="line.599"></span>
+<span class="source-line-no">600</span><span id="line.600">    /**</span>
+<span class="source-line-no">601</span><span id="line.601">     *  &lt;p&gt;Controls indexing of resources to be provided on high performance read-only search endpoints.&lt;/p&gt;</span>
+<span class="source-line-no">602</span><span id="line.602">     * @return searchIndexing</span>
+<span class="source-line-no">603</span><span id="line.603">     */</span>
+<span class="source-line-no">604</span><span id="line.604"></span>
+<span class="source-line-no">605</span><span id="line.605">    @Nullable</span>
+<span class="source-line-no">606</span><span id="line.606">    public com.commercetools.api.models.project.SearchIndexingConfiguration getSearchIndexing() {</span>
+<span class="source-line-no">607</span><span id="line.607">        return this.searchIndexing;</span>
+<span class="source-line-no">608</span><span id="line.608">    }</span>
+<span class="source-line-no">609</span><span id="line.609"></span>
+<span class="source-line-no">610</span><span id="line.610">    /**</span>
+<span class="source-line-no">611</span><span id="line.611">     *  &lt;p&gt;Holds configuration specific to Business Units.&lt;/p&gt;</span>
+<span class="source-line-no">612</span><span id="line.612">     * @return businessUnits</span>
+<span class="source-line-no">613</span><span id="line.613">     */</span>
+<span class="source-line-no">614</span><span id="line.614"></span>
+<span class="source-line-no">615</span><span id="line.615">    @Nullable</span>
+<span class="source-line-no">616</span><span id="line.616">    public com.commercetools.api.models.project.BusinessUnitConfiguration getBusinessUnits() {</span>
+<span class="source-line-no">617</span><span id="line.617">        return this.businessUnits;</span>
+<span class="source-line-no">618</span><span id="line.618">    }</span>
+<span class="source-line-no">619</span><span id="line.619"></span>
+<span class="source-line-no">620</span><span id="line.620">    /**</span>
+<span class="source-line-no">621</span><span id="line.621">     * builds Project with checking for non-null required values</span>
+<span class="source-line-no">622</span><span id="line.622">     * @return Project</span>
+<span class="source-line-no">623</span><span id="line.623">     */</span>
+<span class="source-line-no">624</span><span id="line.624">    public Project build() {</span>
+<span class="source-line-no">625</span><span id="line.625">        Objects.requireNonNull(version, Project.class + ": version is missing");</span>
+<span class="source-line-no">626</span><span id="line.626">        Objects.requireNonNull(key, Project.class + ": key is missing");</span>
+<span class="source-line-no">627</span><span id="line.627">        Objects.requireNonNull(name, Project.class + ": name is missing");</span>
+<span class="source-line-no">628</span><span id="line.628">        Objects.requireNonNull(countries, Project.class + ": countries is missing");</span>
+<span class="source-line-no">629</span><span id="line.629">        Objects.requireNonNull(currencies, Project.class + ": currencies is missing");</span>
+<span class="source-line-no">630</span><span id="line.630">        Objects.requireNonNull(languages, Project.class + ": languages is missing");</span>
+<span class="source-line-no">631</span><span id="line.631">        Objects.requireNonNull(createdAt, Project.class + ": createdAt is missing");</span>
+<span class="source-line-no">632</span><span id="line.632">        Objects.requireNonNull(messages, Project.class + ": messages is missing");</span>
+<span class="source-line-no">633</span><span id="line.633">        Objects.requireNonNull(carts, Project.class + ": carts is missing");</span>
+<span class="source-line-no">634</span><span id="line.634">        return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,</span>
+<span class="source-line-no">635</span><span id="line.635">            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing, businessUnits);</span>
+<span class="source-line-no">636</span><span id="line.636">    }</span>
+<span class="source-line-no">637</span><span id="line.637"></span>
+<span class="source-line-no">638</span><span id="line.638">    /**</span>
+<span class="source-line-no">639</span><span id="line.639">     * builds Project without checking for non-null required values</span>
+<span class="source-line-no">640</span><span id="line.640">     * @return Project</span>
+<span class="source-line-no">641</span><span id="line.641">     */</span>
+<span class="source-line-no">642</span><span id="line.642">    public Project buildUnchecked() {</span>
+<span class="source-line-no">643</span><span id="line.643">        return new ProjectImpl(version, key, name, countries, currencies, languages, createdAt, trialUntil, messages,</span>
+<span class="source-line-no">644</span><span id="line.644">            carts, shoppingLists, shippingRateInputType, externalOAuth, searchIndexing, businessUnits);</span>
+<span class="source-line-no">645</span><span id="line.645">    }</span>
+<span class="source-line-no">646</span><span id="line.646"></span>
+<span class="source-line-no">647</span><span id="line.647">    /**</span>
+<span class="source-line-no">648</span><span id="line.648">     * factory method for an instance of ProjectBuilder</span>
+<span class="source-line-no">649</span><span id="line.649">     * @return builder</span>
+<span class="source-line-no">650</span><span id="line.650">     */</span>
+<span class="source-line-no">651</span><span id="line.651">    public static ProjectBuilder of() {</span>
+<span class="source-line-no">652</span><span id="line.652">        return new ProjectBuilder();</span>
+<span class="source-line-no">653</span><span id="line.653">    }</span>
+<span class="source-line-no">654</span><span id="line.654"></span>
+<span class="source-line-no">655</span><span id="line.655">    /**</span>
+<span class="source-line-no">656</span><span id="line.656">     * create builder for Project instance</span>
+<span class="source-line-no">657</span><span id="line.657">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">658</span><span id="line.658">     * @return builder</span>
+<span class="source-line-no">659</span><span id="line.659">     */</span>
+<span class="source-line-no">660</span><span id="line.660">    public static ProjectBuilder of(final Project template) {</span>
+<span class="source-line-no">661</span><span id="line.661">        ProjectBuilder builder = new ProjectBuilder();</span>
+<span class="source-line-no">662</span><span id="line.662">        builder.version = template.getVersion();</span>
+<span class="source-line-no">663</span><span id="line.663">        builder.key = template.getKey();</span>
+<span class="source-line-no">664</span><span id="line.664">        builder.name = template.getName();</span>
+<span class="source-line-no">665</span><span id="line.665">        builder.countries = template.getCountries();</span>
+<span class="source-line-no">666</span><span id="line.666">        builder.currencies = template.getCurrencies();</span>
+<span class="source-line-no">667</span><span id="line.667">        builder.languages = template.getLanguages();</span>
+<span class="source-line-no">668</span><span id="line.668">        builder.createdAt = template.getCreatedAt();</span>
+<span class="source-line-no">669</span><span id="line.669">        builder.trialUntil = template.getTrialUntil();</span>
+<span class="source-line-no">670</span><span id="line.670">        builder.messages = template.getMessages();</span>
+<span class="source-line-no">671</span><span id="line.671">        builder.carts = template.getCarts();</span>
+<span class="source-line-no">672</span><span id="line.672">        builder.shoppingLists = template.getShoppingLists();</span>
+<span class="source-line-no">673</span><span id="line.673">        builder.shippingRateInputType = template.getShippingRateInputType();</span>
+<span class="source-line-no">674</span><span id="line.674">        builder.externalOAuth = template.getExternalOAuth();</span>
+<span class="source-line-no">675</span><span id="line.675">        builder.searchIndexing = template.getSearchIndexing();</span>
+<span class="source-line-no">676</span><span id="line.676">        builder.businessUnits = template.getBusinessUnits();</span>
+<span class="source-line-no">677</span><span id="line.677">        return builder;</span>
+<span class="source-line-no">678</span><span id="line.678">    }</span>
+<span class="source-line-no">679</span><span id="line.679"></span>
+<span class="source-line-no">680</span><span id="line.680">}</span>
 
 
 

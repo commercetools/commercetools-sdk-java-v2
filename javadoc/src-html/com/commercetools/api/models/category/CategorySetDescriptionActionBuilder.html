@@ -53,62 +53,74 @@
 <span class="source-line-no">040</span><span id="line.40"></span>
 <span class="source-line-no">041</span><span id="line.41">    /**</span>
 <span class="source-line-no">042</span><span id="line.42">     *  &lt;p&gt;Value to set. If empty, any existing value will be removed.&lt;/p&gt;</span>
-<span class="source-line-no">043</span><span id="line.43">     * @param description value to be set</span>
+<span class="source-line-no">043</span><span id="line.43">     * @param builder function to build the description value</span>
 <span class="source-line-no">044</span><span id="line.44">     * @return Builder</span>
 <span class="source-line-no">045</span><span id="line.45">     */</span>
 <span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    public CategorySetDescriptionActionBuilder description(</span>
-<span class="source-line-no">048</span><span id="line.48">            @Nullable final com.commercetools.api.models.common.LocalizedString description) {</span>
-<span class="source-line-no">049</span><span id="line.49">        this.description = description;</span>
+<span class="source-line-no">047</span><span id="line.47">    public CategorySetDescriptionActionBuilder withDescription(</span>
+<span class="source-line-no">048</span><span id="line.48">            Function&lt;com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString&gt; builder) {</span>
+<span class="source-line-no">049</span><span id="line.49">        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());</span>
 <span class="source-line-no">050</span><span id="line.50">        return this;</span>
 <span class="source-line-no">051</span><span id="line.51">    }</span>
 <span class="source-line-no">052</span><span id="line.52"></span>
 <span class="source-line-no">053</span><span id="line.53">    /**</span>
 <span class="source-line-no">054</span><span id="line.54">     *  &lt;p&gt;Value to set. If empty, any existing value will be removed.&lt;/p&gt;</span>
-<span class="source-line-no">055</span><span id="line.55">     * @return description</span>
-<span class="source-line-no">056</span><span id="line.56">     */</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    @Nullable</span>
-<span class="source-line-no">059</span><span id="line.59">    public com.commercetools.api.models.common.LocalizedString getDescription() {</span>
-<span class="source-line-no">060</span><span id="line.60">        return this.description;</span>
-<span class="source-line-no">061</span><span id="line.61">    }</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    /**</span>
-<span class="source-line-no">064</span><span id="line.64">     * builds CategorySetDescriptionAction with checking for non-null required values</span>
-<span class="source-line-no">065</span><span id="line.65">     * @return CategorySetDescriptionAction</span>
-<span class="source-line-no">066</span><span id="line.66">     */</span>
-<span class="source-line-no">067</span><span id="line.67">    public CategorySetDescriptionAction build() {</span>
-<span class="source-line-no">068</span><span id="line.68">        return new CategorySetDescriptionActionImpl(description);</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    /**</span>
-<span class="source-line-no">072</span><span id="line.72">     * builds CategorySetDescriptionAction without checking for non-null required values</span>
-<span class="source-line-no">073</span><span id="line.73">     * @return CategorySetDescriptionAction</span>
-<span class="source-line-no">074</span><span id="line.74">     */</span>
-<span class="source-line-no">075</span><span id="line.75">    public CategorySetDescriptionAction buildUnchecked() {</span>
-<span class="source-line-no">076</span><span id="line.76">        return new CategorySetDescriptionActionImpl(description);</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    /**</span>
-<span class="source-line-no">080</span><span id="line.80">     * factory method for an instance of CategorySetDescriptionActionBuilder</span>
-<span class="source-line-no">081</span><span id="line.81">     * @return builder</span>
-<span class="source-line-no">082</span><span id="line.82">     */</span>
-<span class="source-line-no">083</span><span id="line.83">    public static CategorySetDescriptionActionBuilder of() {</span>
-<span class="source-line-no">084</span><span id="line.84">        return new CategorySetDescriptionActionBuilder();</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    /**</span>
-<span class="source-line-no">088</span><span id="line.88">     * create builder for CategorySetDescriptionAction instance</span>
-<span class="source-line-no">089</span><span id="line.89">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">090</span><span id="line.90">     * @return builder</span>
-<span class="source-line-no">091</span><span id="line.91">     */</span>
-<span class="source-line-no">092</span><span id="line.92">    public static CategorySetDescriptionActionBuilder of(final CategorySetDescriptionAction template) {</span>
-<span class="source-line-no">093</span><span id="line.93">        CategorySetDescriptionActionBuilder builder = new CategorySetDescriptionActionBuilder();</span>
-<span class="source-line-no">094</span><span id="line.94">        builder.description = template.getDescription();</span>
-<span class="source-line-no">095</span><span id="line.95">        return builder;</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">}</span>
+<span class="source-line-no">055</span><span id="line.55">     * @param description value to be set</span>
+<span class="source-line-no">056</span><span id="line.56">     * @return Builder</span>
+<span class="source-line-no">057</span><span id="line.57">     */</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    public CategorySetDescriptionActionBuilder description(</span>
+<span class="source-line-no">060</span><span id="line.60">            @Nullable final com.commercetools.api.models.common.LocalizedString description) {</span>
+<span class="source-line-no">061</span><span id="line.61">        this.description = description;</span>
+<span class="source-line-no">062</span><span id="line.62">        return this;</span>
+<span class="source-line-no">063</span><span id="line.63">    }</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    /**</span>
+<span class="source-line-no">066</span><span id="line.66">     *  &lt;p&gt;Value to set. If empty, any existing value will be removed.&lt;/p&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">     * @return description</span>
+<span class="source-line-no">068</span><span id="line.68">     */</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    @Nullable</span>
+<span class="source-line-no">071</span><span id="line.71">    public com.commercetools.api.models.common.LocalizedString getDescription() {</span>
+<span class="source-line-no">072</span><span id="line.72">        return this.description;</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    /**</span>
+<span class="source-line-no">076</span><span id="line.76">     * builds CategorySetDescriptionAction with checking for non-null required values</span>
+<span class="source-line-no">077</span><span id="line.77">     * @return CategorySetDescriptionAction</span>
+<span class="source-line-no">078</span><span id="line.78">     */</span>
+<span class="source-line-no">079</span><span id="line.79">    public CategorySetDescriptionAction build() {</span>
+<span class="source-line-no">080</span><span id="line.80">        return new CategorySetDescriptionActionImpl(description);</span>
+<span class="source-line-no">081</span><span id="line.81">    }</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    /**</span>
+<span class="source-line-no">084</span><span id="line.84">     * builds CategorySetDescriptionAction without checking for non-null required values</span>
+<span class="source-line-no">085</span><span id="line.85">     * @return CategorySetDescriptionAction</span>
+<span class="source-line-no">086</span><span id="line.86">     */</span>
+<span class="source-line-no">087</span><span id="line.87">    public CategorySetDescriptionAction buildUnchecked() {</span>
+<span class="source-line-no">088</span><span id="line.88">        return new CategorySetDescriptionActionImpl(description);</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    /**</span>
+<span class="source-line-no">092</span><span id="line.92">     * factory method for an instance of CategorySetDescriptionActionBuilder</span>
+<span class="source-line-no">093</span><span id="line.93">     * @return builder</span>
+<span class="source-line-no">094</span><span id="line.94">     */</span>
+<span class="source-line-no">095</span><span id="line.95">    public static CategorySetDescriptionActionBuilder of() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return new CategorySetDescriptionActionBuilder();</span>
+<span class="source-line-no">097</span><span id="line.97">    }</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    /**</span>
+<span class="source-line-no">100</span><span id="line.100">     * create builder for CategorySetDescriptionAction instance</span>
+<span class="source-line-no">101</span><span id="line.101">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">102</span><span id="line.102">     * @return builder</span>
+<span class="source-line-no">103</span><span id="line.103">     */</span>
+<span class="source-line-no">104</span><span id="line.104">    public static CategorySetDescriptionActionBuilder of(final CategorySetDescriptionAction template) {</span>
+<span class="source-line-no">105</span><span id="line.105">        CategorySetDescriptionActionBuilder builder = new CategorySetDescriptionActionBuilder();</span>
+<span class="source-line-no">106</span><span id="line.106">        builder.description = template.getDescription();</span>
+<span class="source-line-no">107</span><span id="line.107">        return builder;</span>
+<span class="source-line-no">108</span><span id="line.108">    }</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">}</span>
 
 
 

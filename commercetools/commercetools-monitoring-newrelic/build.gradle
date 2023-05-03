@@ -5,3 +5,28 @@ dependencies {
 
     testImplementation project(":commercetools:commercetools-sdk-java-api")
 }
+
+sourceSets {
+    main {
+        java {
+            srcDir 'build/generated/src/main/java'
+        }
+    }
+}
+
+task versionTxt()  {
+    doLast {
+        new File(projectDir, "$buildInfoPath").mkdirs()
+        new File(projectDir, "$buildInfoPath/BuildInfo.java").text = """
+package $buildInfoPackage;
+
+public class BuildInfo {
+    public static final String VERSION = "$version";
+}
+"""
+    }
+}
+
+compileJava{
+    dependsOn versionTxt
+}

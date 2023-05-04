@@ -16,9 +16,9 @@ sourceSets {
 
 task versionTxt()  {
     doLast {
-        new File(projectDir, "$buildInfoPath").mkdirs()
-        new File(projectDir, "$buildInfoPath/BuildInfo.java").text = """
-package $buildInfoPackage;
+        new File(projectDir, "$buildInfoPath/com/commercetools/monitoring/newrelic/").mkdirs()
+        new File(projectDir, "$buildInfoPath/com/commercetools/monitoring/newrelic/BuildInfo.java").text = """
+package com.commercetools.monitoring.newrelic;
 
 public class BuildInfo {
     public static final String VERSION = "$version";

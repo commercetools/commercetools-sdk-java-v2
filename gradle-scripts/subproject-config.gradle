@@ -40,7 +40,7 @@ javadoc {
 }
 
 ext {
-    buildInfoPath = "build/generated/src/main/java/io/vrap/rmf/base/client/"
+    buildInfoPath = "build/generated/src/main/java"
     buildInfoPackage = "io.vrap.rmf.base.client"
 }
 

@@ -1,7 +1,6 @@
 package com.commercetools.sdk.examples.springmvc.config;
 
 import ch.qos.logback.classic.helpers.MDCInsertingServletFilter;
-import com.newrelic.api.agent.NewRelic;
 import jakarta.servlet.*;
 import org.slf4j.MDC;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;

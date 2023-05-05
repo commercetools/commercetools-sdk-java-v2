@@ -167,6 +167,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetCategoryOrderHintChangeImpl.class, name = SetCategoryOrderHintChange.SET_CATEGORY_ORDER_HINT_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetChannelRolesChangeImpl.class, name = SetChannelRolesChange.SET_CHANNEL_ROLES_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetCompanyNameChangeImpl.class, name = SetCompanyNameChange.SET_COMPANY_NAME_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetCountriesChangeImpl.class, name = SetCountriesChange.SET_COUNTRIES_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetCountryChangeImpl.class, name = SetCountryChange.SET_COUNTRY_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetCustomFieldChangeImpl.class, name = SetCustomFieldChange.SET_CUSTOM_FIELD_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetCustomLineItemCustomFieldChangeImpl.class, name = SetCustomLineItemCustomFieldChange.SET_CUSTOM_LINE_ITEM_CUSTOM_FIELD_CHANGE),
@@ -245,6 +246,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetProductSelectionsChangeImpl.class, name = SetProductSelectionsChange.SET_PRODUCT_SELECTIONS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetProductVariantKeyChangeImpl.class, name = SetProductVariantKeyChange.SET_PRODUCT_VARIANT_KEY_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetPropertyChangeImpl.class, name = SetPropertyChange.SET_PROPERTY_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetPurchaseOrderNumberChangeImpl.class, name = SetPurchaseOrderNumberChange.SET_PURCHASE_ORDER_NUMBER_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetRatingChangeImpl.class, name = SetRatingChange.SET_RATING_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetReservationsChangeImpl.class, name = SetReservationsChange.SET_RESERVATIONS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetRestockableInDaysChangeImpl.class, name = SetRestockableInDaysChange.SET_RESTOCKABLE_IN_DAYS_CHANGE),
@@ -884,6 +886,10 @@ public interface Change {
             return com.commercetools.history.models.change.SetCompanyNameChange
                     .deepCopy((com.commercetools.history.models.change.SetCompanyNameChange) template);
         }
+        if (template instanceof com.commercetools.history.models.change.SetCountriesChange) {
+            return com.commercetools.history.models.change.SetCountriesChange
+                    .deepCopy((com.commercetools.history.models.change.SetCountriesChange) template);
+        }
         if (template instanceof com.commercetools.history.models.change.SetCountryChange) {
             return com.commercetools.history.models.change.SetCountryChange
                     .deepCopy((com.commercetools.history.models.change.SetCountryChange) template);
@@ -1195,6 +1201,10 @@ public interface Change {
         if (template instanceof com.commercetools.history.models.change.SetPropertyChange) {
             return com.commercetools.history.models.change.SetPropertyChange
                     .deepCopy((com.commercetools.history.models.change.SetPropertyChange) template);
+        }
+        if (template instanceof com.commercetools.history.models.change.SetPurchaseOrderNumberChange) {
+            return com.commercetools.history.models.change.SetPurchaseOrderNumberChange
+                    .deepCopy((com.commercetools.history.models.change.SetPurchaseOrderNumberChange) template);
         }
         if (template instanceof com.commercetools.history.models.change.SetRatingChange) {
             return com.commercetools.history.models.change.SetRatingChange
@@ -2502,6 +2512,14 @@ public interface Change {
     }
 
     /**
+     * builder for setCountriesChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetCountriesChangeBuilder setCountriesChangeBuilder() {
+        return com.commercetools.history.models.change.SetCountriesChangeBuilder.of();
+    }
+
+    /**
      * builder for setCountryChange subtype
      * @return builder
      */
@@ -3123,6 +3141,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.SetPropertyChangeBuilder setPropertyChangeBuilder() {
         return com.commercetools.history.models.change.SetPropertyChangeBuilder.of();
+    }
+
+    /**
+     * builder for setPurchaseOrderNumberChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetPurchaseOrderNumberChangeBuilder setPurchaseOrderNumberChangeBuilder() {
+        return com.commercetools.history.models.change.SetPurchaseOrderNumberChangeBuilder.of();
     }
 
     /**

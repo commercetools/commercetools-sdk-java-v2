@@ -563,6 +563,10 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.SetCompanyNameChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.SetCountriesChangeBuilder setCountriesChangeBuilder() {
+        return com.commercetools.history.models.change.SetCountriesChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.SetCountryChangeBuilder setCountryChangeBuilder() {
         return com.commercetools.history.models.change.SetCountryChangeBuilder.of();
     }
@@ -873,6 +877,10 @@ public class ChangeBuilder {
 
     public com.commercetools.history.models.change.SetPropertyChangeBuilder setPropertyChangeBuilder() {
         return com.commercetools.history.models.change.SetPropertyChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.SetPurchaseOrderNumberChangeBuilder setPurchaseOrderNumberChangeBuilder() {
+        return com.commercetools.history.models.change.SetPurchaseOrderNumberChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.SetRatingChangeBuilder setRatingChangeBuilder() {

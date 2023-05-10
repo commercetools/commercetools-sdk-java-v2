@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>When accepting, declining, or renegotiating B2B Quotes, the Customer must have the <code>AcceptMyQuotes</code>, <code>DeclineMyQuotes</code>, or <code>RenegotiateMyQuotes</code> Permission respectively.</p>
+ *  <p>When accepting, declining, or renegotiating B2B Quotes, the Customer must have the <code>AcceptMyQuotes</code>, <code>DeclineMyQuotes</code>, or <code>RenegotiateMyQuotes</code> Permission, respectively. If the required Permission is missing, an AssociateMissingPermission error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

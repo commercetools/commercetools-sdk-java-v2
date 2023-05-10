@@ -29,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorImpl.class, name = AnonymousIdAlreadyInUseError.ANONYMOUS_ID_ALREADY_IN_USE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.AssociateMissingPermissionErrorImpl.class, name = AssociateMissingPermissionError.ASSOCIATE_MISSING_PERMISSION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsErrorImpl.class, name = AttributeDefinitionAlreadyExistsError.ATTRIBUTE_DEFINITION_ALREADY_EXISTS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeDefinitionTypeConflictErrorImpl.class, name = AttributeDefinitionTypeConflictError.ATTRIBUTE_DEFINITION_TYPE_CONFLICT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeNameDoesNotExistErrorImpl.class, name = AttributeNameDoesNotExistError.ATTRIBUTE_NAME_DOES_NOT_EXIST),
@@ -156,6 +157,10 @@ public interface ErrorObject {
         if (template instanceof com.commercetools.api.models.error.AnonymousIdAlreadyInUseError) {
             return com.commercetools.api.models.error.AnonymousIdAlreadyInUseError
                     .deepCopy((com.commercetools.api.models.error.AnonymousIdAlreadyInUseError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.AssociateMissingPermissionError) {
+            return com.commercetools.api.models.error.AssociateMissingPermissionError
+                    .deepCopy((com.commercetools.api.models.error.AssociateMissingPermissionError) template);
         }
         if (template instanceof com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsError) {
             return com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsError
@@ -445,6 +450,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorBuilder anonymousIdAlreadyInUseBuilder() {
         return com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorBuilder.of();
+    }
+
+    /**
+     * builder for associateMissingPermission subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.AssociateMissingPermissionErrorBuilder associateMissingPermissionBuilder() {
+        return com.commercetools.api.models.error.AssociateMissingPermissionErrorBuilder.of();
     }
 
     /**

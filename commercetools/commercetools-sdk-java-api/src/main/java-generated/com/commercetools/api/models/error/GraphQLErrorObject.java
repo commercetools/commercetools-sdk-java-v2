@@ -27,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLAnonymousIdAlreadyInUseErrorImpl.class, name = GraphQLAnonymousIdAlreadyInUseError.ANONYMOUS_ID_ALREADY_IN_USE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLAssociateMissingPermissionErrorImpl.class, name = GraphQLAssociateMissingPermissionError.ASSOCIATE_MISSING_PERMISSION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLAttributeDefinitionAlreadyExistsErrorImpl.class, name = GraphQLAttributeDefinitionAlreadyExistsError.ATTRIBUTE_DEFINITION_ALREADY_EXISTS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLAttributeDefinitionTypeConflictErrorImpl.class, name = GraphQLAttributeDefinitionTypeConflictError.ATTRIBUTE_DEFINITION_TYPE_CONFLICT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLAttributeNameDoesNotExistErrorImpl.class, name = GraphQLAttributeNameDoesNotExistError.ATTRIBUTE_NAME_DOES_NOT_EXIST),
@@ -139,6 +140,10 @@ public interface GraphQLErrorObject {
         if (template instanceof com.commercetools.api.models.error.GraphQLAnonymousIdAlreadyInUseError) {
             return com.commercetools.api.models.error.GraphQLAnonymousIdAlreadyInUseError
                     .deepCopy((com.commercetools.api.models.error.GraphQLAnonymousIdAlreadyInUseError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLAssociateMissingPermissionError) {
+            return com.commercetools.api.models.error.GraphQLAssociateMissingPermissionError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLAssociateMissingPermissionError) template);
         }
         if (template instanceof com.commercetools.api.models.error.GraphQLAttributeDefinitionAlreadyExistsError) {
             return com.commercetools.api.models.error.GraphQLAttributeDefinitionAlreadyExistsError.deepCopy(
@@ -427,6 +432,14 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLAnonymousIdAlreadyInUseErrorBuilder anonymousIdAlreadyInUseBuilder() {
         return com.commercetools.api.models.error.GraphQLAnonymousIdAlreadyInUseErrorBuilder.of();
+    }
+
+    /**
+     * builder for associateMissingPermission subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLAssociateMissingPermissionErrorBuilder associateMissingPermissionBuilder() {
+        return com.commercetools.api.models.error.GraphQLAssociateMissingPermissionErrorBuilder.of();
     }
 
     /**

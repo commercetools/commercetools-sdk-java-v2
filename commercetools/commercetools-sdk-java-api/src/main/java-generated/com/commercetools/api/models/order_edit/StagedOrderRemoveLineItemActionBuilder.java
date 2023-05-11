@@ -61,8 +61,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -74,8 +73,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -87,8 +85,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param externalPrice value to be set
      * @return Builder
      */
@@ -197,8 +194,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @return externalPrice
      */
 

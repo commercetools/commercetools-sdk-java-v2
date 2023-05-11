@@ -47,8 +47,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     String ADD_CUSTOM_LINE_ITEM = "addCustomLineItem";
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @return money
      */
     @NotNull
@@ -117,8 +116,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public CustomLineItemPriceMode getPriceMode();
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param money value to be set
      */
 

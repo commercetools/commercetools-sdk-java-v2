@@ -57,8 +57,7 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     public Long getQuantity();
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @return externalPrice
      */
     @Valid
@@ -96,8 +95,7 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param externalPrice value to be set
      */
 

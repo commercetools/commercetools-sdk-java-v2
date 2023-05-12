@@ -72,7 +72,7 @@ public class ContainerQueryPredicate implements ContainerPredicate<QueryPredicat
         return this.parent() != null
                 ? String.format("%s(%s)", parent().render(),
                     Optional.ofNullable(inner()).map(Predicate::render).orElse(""))
-                : Optional.ofNullable(inner()).map(Predicate::render).orElse("");
+                : String.format("(%s)", Optional.ofNullable(inner()).map(Predicate::render).orElse(""));
     }
 
     public static ContainerQueryPredicate of() {

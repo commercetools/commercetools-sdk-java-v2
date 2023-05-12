@@ -24,14 +24,18 @@ public class MyBusinessUnitAssociateDraftImpl implements MyBusinessUnitAssociate
 
     private com.commercetools.api.models.me.MyCustomerDraft customer;
 
+    private java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> associateRoleAssignments;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     MyBusinessUnitAssociateDraftImpl(@JsonProperty("version") final Long version,
-            @JsonProperty("customer") final com.commercetools.api.models.me.MyCustomerDraft customer) {
+            @JsonProperty("customer") final com.commercetools.api.models.me.MyCustomerDraft customer,
+            @JsonProperty("associateRoleAssignments") final java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> associateRoleAssignments) {
         this.version = version;
         this.customer = customer;
+        this.associateRoleAssignments = associateRoleAssignments;
     }
 
     /**
@@ -56,12 +60,30 @@ public class MyBusinessUnitAssociateDraftImpl implements MyBusinessUnitAssociate
         return this.customer;
     }
 
+    /**
+     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> getAssociateRoleAssignments() {
+        return this.associateRoleAssignments;
+    }
+
     public void setVersion(final Long version) {
         this.version = version;
     }
 
     public void setCustomer(final com.commercetools.api.models.me.MyCustomerDraft customer) {
         this.customer = customer;
+    }
+
+    public void setAssociateRoleAssignments(
+            final com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft... associateRoleAssignments) {
+        this.associateRoleAssignments = new ArrayList<>(Arrays.asList(associateRoleAssignments));
+    }
+
+    public void setAssociateRoleAssignments(
+            final java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> associateRoleAssignments) {
+        this.associateRoleAssignments = associateRoleAssignments;
     }
 
     @Override
@@ -74,12 +96,18 @@ public class MyBusinessUnitAssociateDraftImpl implements MyBusinessUnitAssociate
 
         MyBusinessUnitAssociateDraftImpl that = (MyBusinessUnitAssociateDraftImpl) o;
 
-        return new EqualsBuilder().append(version, that.version).append(customer, that.customer).isEquals();
+        return new EqualsBuilder().append(version, that.version)
+                .append(customer, that.customer)
+                .append(associateRoleAssignments, that.associateRoleAssignments)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(version).append(customer).toHashCode();
+        return new HashCodeBuilder(17, 37).append(version)
+                .append(customer)
+                .append(associateRoleAssignments)
+                .toHashCode();
     }
 
 }

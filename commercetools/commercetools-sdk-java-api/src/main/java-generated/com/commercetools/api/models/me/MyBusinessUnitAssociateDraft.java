@@ -4,11 +4,13 @@ package com.commercetools.api.models.me;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -24,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyBusinessUnitAssociateDraft myBusinessUnitAssociateDraft = MyBusinessUnitAssociateDraft.builder()
  *             .version(0.3)
  *             .customer(customerBuilder -> customerBuilder)
+ *             .plusAssociateRoleAssignments(associateRoleAssignmentsBuilder -> associateRoleAssignmentsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -50,6 +53,15 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     public MyCustomerDraft getCustomer();
 
     /**
+     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     * @return associateRoleAssignments
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("associateRoleAssignments")
+    public List<AssociateRoleAssignmentDraft> getAssociateRoleAssignments();
+
+    /**
      *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @param version value to be set
      */
@@ -62,6 +74,21 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
      */
 
     public void setCustomer(final MyCustomerDraft customer);
+
+    /**
+     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     * @param associateRoleAssignments values to be set
+     */
+
+    @JsonIgnore
+    public void setAssociateRoleAssignments(final AssociateRoleAssignmentDraft... associateRoleAssignments);
+
+    /**
+     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     * @param associateRoleAssignments values to be set
+     */
+
+    public void setAssociateRoleAssignments(final List<AssociateRoleAssignmentDraft> associateRoleAssignments);
 
     /**
      * factory method
@@ -80,6 +107,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
         MyBusinessUnitAssociateDraftImpl instance = new MyBusinessUnitAssociateDraftImpl();
         instance.setVersion(template.getVersion());
         instance.setCustomer(template.getCustomer());
+        instance.setAssociateRoleAssignments(template.getAssociateRoleAssignments());
         return instance;
     }
 
@@ -96,6 +124,11 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
         MyBusinessUnitAssociateDraftImpl instance = new MyBusinessUnitAssociateDraftImpl();
         instance.setVersion(template.getVersion());
         instance.setCustomer(com.commercetools.api.models.me.MyCustomerDraft.deepCopy(template.getCustomer()));
+        instance.setAssociateRoleAssignments(Optional.ofNullable(template.getAssociateRoleAssignments())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

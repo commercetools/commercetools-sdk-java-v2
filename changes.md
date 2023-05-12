@@ -78,6 +78,7 @@
 - added property `associateMode` to type `Division`
 - added property `inheritedAssociates` to type `Division`
 - added property `associateMode` to type `DivisionDraft`
+- added property `associateRoleAssignments` to type `MyBusinessUnitAssociateDraft`
 - added property `myBusinessUnitAssociateRoleOnCreation` to type `BusinessUnitConfiguration`
 </details>
 

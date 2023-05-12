@@ -77,6 +77,8 @@ public interface ImportResourceType extends JsonEnum {
     */
     ImportResourceType STANDALONE_PRICE = ImportResourceTypeEnum.STANDALONE_PRICE;
 
+    ImportResourceType TYPE = ImportResourceTypeEnum.TYPE;
+
     /**
      * possible values of ImportResourceType
      */
@@ -139,7 +141,12 @@ public interface ImportResourceType extends JsonEnum {
         /**
          * standalone-price
          */
-        STANDALONE_PRICE("standalone-price");
+        STANDALONE_PRICE("standalone-price"),
+
+        /**
+         * type
+         */
+        TYPE("type");
         private final String jsonName;
 
         private ImportResourceTypeEnum(final String jsonName) {

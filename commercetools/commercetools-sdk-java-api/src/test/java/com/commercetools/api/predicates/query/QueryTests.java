@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.Arrays;
 
 import com.commercetools.api.predicates.query.cart.CartQueryBuilderDsl;
+import com.commercetools.api.predicates.query.channel.ChannelQueryBuilderDsl;
 import com.commercetools.api.predicates.query.customer.CustomerQueryBuilderDsl;
 import com.commercetools.api.predicates.query.tax_category.TaxRateQueryBuilderDsl;
 import com.tngtech.junit.dataprovider.DataProvider;
@@ -88,6 +89,8 @@ public class QueryTests {
                         CustomerQueryBuilderDsl.of()
                                 .dateOfBirth()
                                 .isIn(Arrays.asList(LocalDate.parse("2018-10-12"), LocalDate.parse("2018-10-13"))),
-                        "dateOfBirth in (\"2018-10-12\", \"2018-10-13\")", }, };
+                        "dateOfBirth in (\"2018-10-12\", \"2018-10-13\")", },
+                new Object[] { ChannelQueryBuilderDsl.of().geoLocation().withinCircle(13.37770, 52.51627, 1000L),
+                        "geoLocation within circle(13.3777, 52.51627, 1000)", }, };
     }
 }

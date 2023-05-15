@@ -31,4 +31,6 @@ public interface ProjectScopedApiRoot {
     ByProjectKeyStandalonePricesRequestBuilder standalonePrices();
 
     ByProjectKeyInventoriesRequestBuilder inventories();
+
+    ByProjectKeyTypesRequestBuilder types();
 }

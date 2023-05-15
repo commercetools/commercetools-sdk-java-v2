@@ -2,6 +2,7 @@
 package com.commercetools;
 
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import com.commercetools.api.models.state.State;
@@ -26,7 +27,7 @@ public class ModelBaseTest {
 
     @Test
     public void cast() {
-        Assertions.assertThat(ModelBase.reflectionString(Arrays.asList("abc", "def")))
+        Assertions.assertThat(ModelBase.reflectionString(new ArrayList<>(Arrays.asList("abc", "def"))))
                 .isEqualTo("Arrays.ArrayList[a={abc,def}]");
     }
 }

@@ -91,6 +91,8 @@ public class QueryTests {
                                 .isIn(Arrays.asList(LocalDate.parse("2018-10-12"), LocalDate.parse("2018-10-13"))),
                         "dateOfBirth in (\"2018-10-12\", \"2018-10-13\")", },
                 new Object[] { ChannelQueryBuilderDsl.of().geoLocation().withinCircle(13.37770, 52.51627, 1000L),
-                        "geoLocation within circle(13.3777, 52.51627, 1000)", }, };
+                        "geoLocation within circle(13.3777, 52.51627, 1000)", },
+                new Object[] { CartQueryBuilderDsl.of().key().isDefined(), "key is defined", },
+                new Object[] { CartQueryBuilderDsl.of().key().isNotDefined(), "key is not defined", }, };
     }
 }

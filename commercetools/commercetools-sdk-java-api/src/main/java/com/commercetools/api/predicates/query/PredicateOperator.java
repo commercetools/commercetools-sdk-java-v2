@@ -10,6 +10,8 @@ public enum PredicateOperator {
     IS_GREATER_THAN(">"),
     IS_GREATER_THAN_OR_EQUAL(">="),
     IS_IN("in"),
+
+    IS("is"),
     WITHIN("within"),;
 
     private final String operator;

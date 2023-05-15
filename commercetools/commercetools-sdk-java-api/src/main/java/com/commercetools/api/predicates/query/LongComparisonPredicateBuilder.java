@@ -7,11 +7,6 @@ public class LongComparisonPredicateBuilder<T> extends ComparablePredicateBuilde
         implements ComparisonPredicateBuilder<T, Long>, IsInPredicateBuilder<T, Long> {
     public LongComparisonPredicateBuilder(final BinaryQueryPredicate predicate,
             final Function<QueryPredicate, CombinationQueryPredicate<T>> combinationFn) {
-        super(predicate, combinationFn);
-    }
-
-    @Override
-    public ConstantQueryPredicate format(Long value) {
-        return ConstantQueryPredicate.of().constant(String.format("%d", value));
+        super(predicate, combinationFn, PredicateFormatter::format);
     }
 }

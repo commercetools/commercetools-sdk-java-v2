@@ -7,12 +7,7 @@ public class StringComparisonPredicateBuilder<T> extends ComparablePredicateBuil
         implements ComparisonPredicateBuilder<T, String>, IsInPredicateBuilder<T, String> {
     public StringComparisonPredicateBuilder(final BinaryQueryPredicate predicate,
             final Function<QueryPredicate, CombinationQueryPredicate<T>> combinationFn) {
-        super(predicate, combinationFn);
-    }
-
-    @Override
-    public ConstantQueryPredicate format(String value) {
-        return ConstantQueryPredicate.of().constant(String.format("\"%s\"", value));
+        super(predicate, combinationFn, PredicateFormatter::format);
     }
 
     @Override

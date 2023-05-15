@@ -3,7 +3,7 @@ package com.commercetools.api.predicates.query;
 
 import java.util.function.Function;
 
-public interface ComparablePredicateBuilder<T, TValue> {
+interface ComparablePredicateBuilder<T, TValue> {
     BinaryQueryPredicate predicate();
 
     Function<QueryPredicate, CombinationQueryPredicate<T>> combinationFn();

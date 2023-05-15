@@ -7,11 +7,6 @@ public class DoubleComparisonPredicateBuilder<T> extends ComparablePredicateBuil
         implements ComparisonPredicateBuilder<T, Double>, IsInPredicateBuilder<T, Double> {
     public DoubleComparisonPredicateBuilder(final BinaryQueryPredicate predicate,
             final Function<QueryPredicate, CombinationQueryPredicate<T>> combinationFn) {
-        super(predicate, combinationFn);
-    }
-
-    @Override
-    public ConstantQueryPredicate format(Double value) {
-        return new ConstantQueryPredicate(value.toString());
+        super(predicate, combinationFn, PredicateFormatter::format);
     }
 }

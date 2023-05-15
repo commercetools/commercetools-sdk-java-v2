@@ -8,10 +8,14 @@ abstract class ComparablePredicateBuilderImpl<T, TValue> implements ComparablePr
 
     private final Function<QueryPredicate, CombinationQueryPredicate<T>> combinationFn;
 
+    private final Function<TValue, ConstantQueryPredicate> formatter;
+
     public ComparablePredicateBuilderImpl(final BinaryQueryPredicate predicate,
-            final Function<QueryPredicate, CombinationQueryPredicate<T>> combinationFn) {
+            final Function<QueryPredicate, CombinationQueryPredicate<T>> combinationFn,
+            final Function<TValue, ConstantQueryPredicate> formatter) {
         this.predicate = predicate;
         this.combinationFn = combinationFn;
+        this.formatter = formatter;
     }
 
     @Override
@@ -24,4 +28,8 @@ abstract class ComparablePredicateBuilderImpl<T, TValue> implements ComparablePr
         return combinationFn;
     }
 
+    @Override
+    public ConstantQueryPredicate format(final TValue value) {
+        return formatter.apply(value);
+    }
 }

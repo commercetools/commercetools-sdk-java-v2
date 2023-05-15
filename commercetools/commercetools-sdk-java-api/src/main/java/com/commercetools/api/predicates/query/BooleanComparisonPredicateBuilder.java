@@ -7,11 +7,6 @@ public class BooleanComparisonPredicateBuilder<T> extends ComparablePredicateBui
         implements ComparisonPredicateBuilder<T, Boolean> {
     public BooleanComparisonPredicateBuilder(final BinaryQueryPredicate predicate,
             final Function<QueryPredicate, CombinationQueryPredicate<T>> combinationFn) {
-        super(predicate, combinationFn);
-    }
-
-    @Override
-    public ConstantQueryPredicate format(Boolean value) {
-        return ConstantQueryPredicate.of().constant(String.format("%b", value));
+        super(predicate, combinationFn, PredicateFormatter::format);
     }
 }

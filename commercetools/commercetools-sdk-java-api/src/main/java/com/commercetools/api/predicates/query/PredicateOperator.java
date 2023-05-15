@@ -12,6 +12,8 @@ public enum PredicateOperator {
     IS_IN("in"),
 
     IS("is"),
+
+    CONTAINS("contains"),
     WITHIN("within"),;
 
     private final String operator;

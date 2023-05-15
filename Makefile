@@ -29,7 +29,7 @@ codegen_install:
 	curl -o- -s https://raw.githubusercontent.com/commercetools/rmf-codegen/main/scripts/install.sh | bash
 
 generate_api:
-	$(MAKE) -C commercetools LIB_NAME="api" GEN_RAML_FILE=../$(API_RAML) generate_sdk
+	$(MAKE) -C commercetools LIB_NAME="api" GEN_RAML_FILE=../$(API_RAML) generate_sdk_with_predicates
 
 generate_import:
 	$(MAKE) -C commercetools LIB_NAME="importapi" GEN_RAML_FILE=../$(IMPORT_RAML) generate_sdk

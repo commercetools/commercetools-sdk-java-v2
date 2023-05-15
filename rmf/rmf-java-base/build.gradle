@@ -22,9 +22,9 @@ sourceSets {
 
 task versionTxt()  {
     doLast {
-        new File(projectDir, "$buildInfoPath").mkdirs()
-        new File(projectDir, "$buildInfoPath/BuildInfo.java").text = """
-package $buildInfoPackage;
+        new File(projectDir, "$buildInfoPath/io/vrap/rmf/base/client").mkdirs()
+        new File(projectDir, "$buildInfoPath/io/vrap/rmf/base/client/BuildInfo.java").text = """
+package io.vrap.rmf.base.client;
 
 public class BuildInfo {
     public static final String VERSION = "$version";

@@ -19,7 +19,6 @@ import io.vrap.rmf.base.client.error.HttpExceptionFactory;
 import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.*;
 
-import org.apache.commons.lang3.SystemUtils;
 import org.slf4j.event.Level;
 
 import dev.failsafe.spi.Scheduler;
@@ -1316,10 +1315,6 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return user agent string
      */
     public static String buildDefaultUserAgent() {
-        String runtimeVersion = SystemUtils.JAVA_RUNTIME_VERSION;
-        String osName = SystemUtils.OS_NAME;
-        String osArch = SystemUtils.OS_ARCH;
-        String sdkVersion = BuildInfo.VERSION;
-        return userAgent + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch + ")";
+        return UserAgentUtils.obtainUserAgent();
     }
 }

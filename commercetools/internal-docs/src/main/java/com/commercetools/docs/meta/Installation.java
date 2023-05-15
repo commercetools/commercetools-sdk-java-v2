@@ -92,7 +92,7 @@ package com.commercetools.docs.meta;
  *
  * <h4>Spring Framework</h4>
  *
- * <p>The Spring Framework has an optional dependency to OkHttp in version 3.x. To avoid problems use the <code>commercetools-okhttp-client3</code>
+ * <p>The Spring Boot Framework before version 2.7 has an optional dependency to OkHttp in version 3.x. To avoid problems use the <code>commercetools-okhttp-client3</code>
  * or <code>commercetools-apachehttp-client</code> module instead of the module <code>commercetools-http-client</code></p>
  */
 public class Installation {

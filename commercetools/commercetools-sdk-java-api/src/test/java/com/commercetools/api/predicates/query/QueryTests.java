@@ -5,11 +5,16 @@ import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Locale;
 
 import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.commercetools.api.predicates.query.cart.CartQueryBuilderDsl;
+import com.commercetools.api.predicates.query.cart_discount.CartDiscountQueryBuilderDsl;
 import com.commercetools.api.predicates.query.channel.ChannelQueryBuilderDsl;
 import com.commercetools.api.predicates.query.customer.CustomerQueryBuilderDsl;
+import com.commercetools.api.predicates.query.message.MessageQueryBuilderDsl;
+import com.commercetools.api.predicates.query.product.ProductProjectionQueryBuilderDsl;
+import com.commercetools.api.predicates.query.product.ProductQueryBuilderDsl;
 import com.commercetools.api.predicates.query.state.StateQueryBuilderDsl;
 import com.commercetools.api.predicates.query.tax_category.TaxRateQueryBuilderDsl;
 import com.commercetools.api.predicates.query.type.TypeQueryBuilderDsl;
@@ -109,6 +114,46 @@ public class QueryTests {
                         TypeQueryBuilderDsl.of()
                                 .resourceTypeIds()
                                 .containsAll(Collections.singletonList(ProductResourceIdentifier.PRODUCT)),
-                        "resourceTypeIds contains all(\"product\")", }, };
+                        "resourceTypeIds contains all(\"product\")", },
+                new Object[] {
+                        ProductQueryBuilderDsl.of()
+                                .masterData(m -> m.current(c -> c.slug(l -> l.with(Locale.ENGLISH).is("super-product"))
+                                        .and(t -> t.name(l -> l.with(Locale.ENGLISH).is("Super Product"))))),
+                        "masterData(current(slug(en = \"super-product\") and name(en = \"Super Product\")))", },
+                new Object[] {
+                        ProductProjectionQueryBuilderDsl.of()
+                                .variants(v -> v.attributes(a -> a.name().is("attribute-name")).not()),
+                        "variants(not(attributes(name = \"attribute-name\")))", },
+                new Object[] {
+                        ProductProjectionQueryBuilderDsl.of()
+                                .variants(v -> v.attributes(
+                                    a -> a.name().is("attribute-name").and(av -> av.value().is("attribute-value")))),
+                        "variants(attributes(name = \"attribute-name\" and value = \"attribute-value\"))", },
+                new Object[] {
+                        ProductProjectionQueryBuilderDsl.of()
+                                .variants(v -> v.attributes(a -> a.name()
+                                        .is("attribute-name")
+                                        .and(av -> av.value()
+                                                .isIn(Arrays.asList("attribute-value-1", "attribute-value-2"))))),
+                        "variants(attributes(name = \"attribute-name\" and value in (\"attribute-value-1\", \"attribute-value-2\")))", },
+                new Object[] {
+                        CartDiscountQueryBuilderDsl.of()
+                                .value(v -> v.asAbsolute(a -> a.money(c -> c.currencyCode().is("EUR")))),
+                        "value(money(currencyCode = \"EUR\"))", },
+                new Object[] {
+                        CartDiscountQueryBuilderDsl.of()
+                                .value(v -> v.asGiftLineItem(a -> a.product(p -> p.id().is("abc")))),
+                        "value(product(id = \"abc\"))", },
+                new Object[] {
+                        MessageQueryBuilderDsl.of()
+                                .asCustomerCreated(message -> message.customer(c -> c.key().is("foo"))),
+                        "customer(key = \"foo\")", },
+                new Object[] {
+                        CartQueryBuilderDsl.of()
+                                .lineItems(l -> l
+                                        .price(p -> p.value(t -> t.asHighPrecision(h -> h.preciseAmount().is(400L))))),
+                        "lineItems(price(value(preciseAmount = 400)))", },
+                new Object[] { CartQueryBuilderDsl.of().totalPrice(l -> l.currencyCode().is("EUR")),
+                        "totalPrice(currencyCode = \"EUR\")", }, };
     }
 }

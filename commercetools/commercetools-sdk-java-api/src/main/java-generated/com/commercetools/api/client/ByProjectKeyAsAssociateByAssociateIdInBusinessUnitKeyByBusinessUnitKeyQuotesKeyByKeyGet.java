@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>If the Quote exists in the Project but does not reference the requested BusinessUnit, this method returns a ResourceNotFound error.</p>
+ *  <p>If the Quote exists in the Project but does not reference the requested BusinessUnit, this method returns an InvalidOperation error.</p>
  *
  * <hr>
  * <div class=code-example>

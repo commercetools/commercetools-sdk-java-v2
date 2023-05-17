@@ -13,6 +13,11 @@ public class DeliveryDraftQueryBuilderDsl {
         return new DeliveryDraftQueryBuilderDsl();
     }
 
+    public StringComparisonPredicateBuilder<DeliveryDraftQueryBuilderDsl> key() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
+            p -> new CombinationQueryPredicate<>(p, DeliveryDraftQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<DeliveryDraftQueryBuilderDsl> items(
             Function<com.commercetools.api.predicates.query.order.DeliveryItemQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.DeliveryItemQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

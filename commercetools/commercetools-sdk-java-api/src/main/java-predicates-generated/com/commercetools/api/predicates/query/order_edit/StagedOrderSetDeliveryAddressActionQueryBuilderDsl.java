@@ -25,6 +25,12 @@ public class StagedOrderSetDeliveryAddressActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderSetDeliveryAddressActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderSetDeliveryAddressActionQueryBuilderDsl> deliveryKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("deliveryKey")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderSetDeliveryAddressActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<StagedOrderSetDeliveryAddressActionQueryBuilderDsl> address(
             Function<com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

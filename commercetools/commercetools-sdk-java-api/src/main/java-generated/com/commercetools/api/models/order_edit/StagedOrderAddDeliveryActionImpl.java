@@ -22,6 +22,8 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
 
     private String action;
 
+    private String deliveryKey;
+
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     private com.commercetools.api.models.common.BaseAddress address;
@@ -34,11 +36,12 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
      * create instance with all properties
      */
     @JsonCreator
-    StagedOrderAddDeliveryActionImpl(
+    StagedOrderAddDeliveryActionImpl(@JsonProperty("deliveryKey") final String deliveryKey,
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
             @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address,
             @JsonProperty("parcels") final java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.deliveryKey = deliveryKey;
         this.items = items;
         this.address = address;
         this.parcels = parcels;
@@ -59,6 +62,14 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
 
     public String getAction() {
         return this.action;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of a Delivery.</p>
+     */
+
+    public String getDeliveryKey() {
+        return this.deliveryKey;
     }
 
     /**
@@ -91,6 +102,10 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
+    }
+
+    public void setDeliveryKey(final String deliveryKey) {
+        this.deliveryKey = deliveryKey;
     }
 
     public void setItems(final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -128,6 +143,7 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
         StagedOrderAddDeliveryActionImpl that = (StagedOrderAddDeliveryActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(deliveryKey, that.deliveryKey)
                 .append(items, that.items)
                 .append(address, that.address)
                 .append(parcels, that.parcels)
@@ -138,6 +154,7 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
+                .append(deliveryKey)
                 .append(items)
                 .append(address)
                 .append(parcels)

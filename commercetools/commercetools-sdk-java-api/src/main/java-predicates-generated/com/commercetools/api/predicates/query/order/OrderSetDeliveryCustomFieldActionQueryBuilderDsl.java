@@ -23,6 +23,12 @@ public class OrderSetDeliveryCustomFieldActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderSetDeliveryCustomFieldActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<OrderSetDeliveryCustomFieldActionQueryBuilderDsl> deliveryKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("deliveryKey")),
+            p -> new CombinationQueryPredicate<>(p, OrderSetDeliveryCustomFieldActionQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<OrderSetDeliveryCustomFieldActionQueryBuilderDsl> name() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),

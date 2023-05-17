@@ -24,6 +24,8 @@ public class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderSetDeli
 
     private String deliveryId;
 
+    private String deliveryKey;
+
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
@@ -31,8 +33,10 @@ public class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderSetDeli
      */
     @JsonCreator
     StagedOrderSetDeliveryItemsActionImpl(@JsonProperty("deliveryId") final String deliveryId,
+            @JsonProperty("deliveryKey") final String deliveryKey,
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.deliveryId = deliveryId;
+        this.deliveryKey = deliveryKey;
         this.items = items;
         this.action = SET_DELIVERY_ITEMS;
     }
@@ -53,11 +57,19 @@ public class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderSetDeli
     }
 
     /**
-     *
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      */
 
     public String getDeliveryId() {
         return this.deliveryId;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     */
+
+    public String getDeliveryKey() {
+        return this.deliveryKey;
     }
 
     /**
@@ -70,6 +82,10 @@ public class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderSetDeli
 
     public void setDeliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
+    }
+
+    public void setDeliveryKey(final String deliveryKey) {
+        this.deliveryKey = deliveryKey;
     }
 
     public void setItems(final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -92,13 +108,18 @@ public class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderSetDeli
 
         return new EqualsBuilder().append(action, that.action)
                 .append(deliveryId, that.deliveryId)
+                .append(deliveryKey, that.deliveryKey)
                 .append(items, that.items)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(deliveryId).append(items).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(deliveryId)
+                .append(deliveryKey)
+                .append(items)
+                .toHashCode();
     }
 
 }

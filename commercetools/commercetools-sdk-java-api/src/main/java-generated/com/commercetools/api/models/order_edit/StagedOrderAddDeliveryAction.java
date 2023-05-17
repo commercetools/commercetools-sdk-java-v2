@@ -42,6 +42,14 @@ public interface StagedOrderAddDeliveryAction
     String ADD_DELIVERY = "addDelivery";
 
     /**
+     *  <p>User-defined unique identifier of a Delivery.</p>
+     * @return deliveryKey
+     */
+
+    @JsonProperty("deliveryKey")
+    public String getDeliveryKey();
+
+    /**
      *
      * @return items
      */
@@ -72,6 +80,13 @@ public interface StagedOrderAddDeliveryAction
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
+
+    /**
+     *  <p>User-defined unique identifier of a Delivery.</p>
+     * @param deliveryKey value to be set
+     */
+
+    public void setDeliveryKey(final String deliveryKey);
 
     /**
      * set items
@@ -132,6 +147,7 @@ public interface StagedOrderAddDeliveryAction
      */
     public static StagedOrderAddDeliveryAction of(final StagedOrderAddDeliveryAction template) {
         StagedOrderAddDeliveryActionImpl instance = new StagedOrderAddDeliveryActionImpl();
+        instance.setDeliveryKey(template.getDeliveryKey());
         instance.setItems(template.getItems());
         instance.setAddress(template.getAddress());
         instance.setParcels(template.getParcels());
@@ -150,6 +166,7 @@ public interface StagedOrderAddDeliveryAction
             return null;
         }
         StagedOrderAddDeliveryActionImpl instance = new StagedOrderAddDeliveryActionImpl();
+        instance.setDeliveryKey(template.getDeliveryKey());
         instance.setItems(Optional.ofNullable(template.getItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)

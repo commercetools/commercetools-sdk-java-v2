@@ -19,6 +19,12 @@ public class OrderAddDeliveryActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderAddDeliveryActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<OrderAddDeliveryActionQueryBuilderDsl> deliveryKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("deliveryKey")),
+            p -> new CombinationQueryPredicate<>(p, OrderAddDeliveryActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<OrderAddDeliveryActionQueryBuilderDsl> items(
             Function<com.commercetools.api.predicates.query.order.DeliveryItemQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.DeliveryItemQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

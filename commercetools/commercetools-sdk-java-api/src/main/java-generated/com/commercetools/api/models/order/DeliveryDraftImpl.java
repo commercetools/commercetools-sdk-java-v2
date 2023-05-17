@@ -20,6 +20,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
 
+    private String key;
+
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     private java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels;
@@ -32,11 +34,12 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    DeliveryDraftImpl(
+    DeliveryDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
             @JsonProperty("parcels") final java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels,
             @JsonProperty("address") final com.commercetools.api.models.common.AddressDraft address,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.key = key;
         this.items = items;
         this.parcels = parcels;
         this.address = address;
@@ -47,6 +50,14 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
      * create empty instance
      */
     public DeliveryDraftImpl() {
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Delivery.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -79,6 +90,10 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
+    }
+
+    public void setKey(final String key) {
+        this.key = key;
     }
 
     public void setItems(final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -115,7 +130,8 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
 
         DeliveryDraftImpl that = (DeliveryDraftImpl) o;
 
-        return new EqualsBuilder().append(items, that.items)
+        return new EqualsBuilder().append(key, that.key)
+                .append(items, that.items)
                 .append(parcels, that.parcels)
                 .append(address, that.address)
                 .append(custom, that.custom)
@@ -124,7 +140,12 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(items).append(parcels).append(address).append(custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(items)
+                .append(parcels)
+                .append(address)
+                .append(custom)
+                .toHashCode();
     }
 
 }

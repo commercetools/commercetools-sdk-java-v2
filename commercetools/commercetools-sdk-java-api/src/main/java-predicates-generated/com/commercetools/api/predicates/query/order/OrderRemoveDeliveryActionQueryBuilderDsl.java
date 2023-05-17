@@ -23,4 +23,10 @@ public class OrderRemoveDeliveryActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderRemoveDeliveryActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<OrderRemoveDeliveryActionQueryBuilderDsl> deliveryKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("deliveryKey")),
+            p -> new CombinationQueryPredicate<>(p, OrderRemoveDeliveryActionQueryBuilderDsl::of));
+    }
+
 }

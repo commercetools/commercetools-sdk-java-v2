@@ -25,6 +25,12 @@ public class StagedOrderAddParcelToDeliveryActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderAddParcelToDeliveryActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderAddParcelToDeliveryActionQueryBuilderDsl> deliveryKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("deliveryKey")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderAddParcelToDeliveryActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<StagedOrderAddParcelToDeliveryActionQueryBuilderDsl> measurements(
             Function<com.commercetools.api.predicates.query.order.ParcelMeasurementsQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.ParcelMeasurementsQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()

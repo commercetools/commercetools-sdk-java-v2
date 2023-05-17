@@ -25,6 +25,8 @@ public class OrderSetDeliveryAddressCustomFieldActionImpl
 
     private String deliveryId;
 
+    private String deliveryKey;
+
     private String name;
 
     private java.lang.Object value;
@@ -34,8 +36,10 @@ public class OrderSetDeliveryAddressCustomFieldActionImpl
      */
     @JsonCreator
     OrderSetDeliveryAddressCustomFieldActionImpl(@JsonProperty("deliveryId") final String deliveryId,
-            @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
+            @JsonProperty("deliveryKey") final String deliveryKey, @JsonProperty("name") final String name,
+            @JsonProperty("value") final java.lang.Object value) {
         this.deliveryId = deliveryId;
+        this.deliveryKey = deliveryKey;
         this.name = name;
         this.value = value;
         this.action = SET_DELIVERY_ADDRESS_CUSTOM_FIELD;
@@ -57,11 +61,19 @@ public class OrderSetDeliveryAddressCustomFieldActionImpl
     }
 
     /**
-     *
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      */
 
     public String getDeliveryId() {
         return this.deliveryId;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     */
+
+    public String getDeliveryKey() {
+        return this.deliveryKey;
     }
 
     /**
@@ -84,6 +96,10 @@ public class OrderSetDeliveryAddressCustomFieldActionImpl
         this.deliveryId = deliveryId;
     }
 
+    public void setDeliveryKey(final String deliveryKey) {
+        this.deliveryKey = deliveryKey;
+    }
+
     public void setName(final String name) {
         this.name = name;
     }
@@ -104,6 +120,7 @@ public class OrderSetDeliveryAddressCustomFieldActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(deliveryId, that.deliveryId)
+                .append(deliveryKey, that.deliveryKey)
                 .append(name, that.name)
                 .append(value, that.value)
                 .isEquals();
@@ -111,7 +128,12 @@ public class OrderSetDeliveryAddressCustomFieldActionImpl
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(deliveryId).append(name).append(value).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(deliveryId)
+                .append(deliveryKey)
+                .append(name)
+                .append(value)
+                .toHashCode();
     }
 
 }

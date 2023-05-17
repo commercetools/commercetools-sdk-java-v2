@@ -4,6 +4,8 @@ package com.commercetools.api.models.order;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetDeliveryItemsAction orderSetDeliveryItemsAction = OrderSetDeliveryItemsAction.builder()
- *             .deliveryId("{deliveryId}")
  *             .plusItems(itemsBuilder -> itemsBuilder)
  *             .build()
  * </code></pre>
@@ -23,18 +24,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliveryItemsAction> {
 
+    @Nullable
     private String deliveryId;
+
+    @Nullable
+    private String deliveryKey;
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
-     * set the value to the deliveryId
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
 
-    public OrderSetDeliveryItemsActionBuilder deliveryId(final String deliveryId) {
+    public OrderSetDeliveryItemsActionBuilder deliveryId(@Nullable final String deliveryId) {
         this.deliveryId = deliveryId;
+        return this;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @param deliveryKey value to be set
+     * @return Builder
+     */
+
+    public OrderSetDeliveryItemsActionBuilder deliveryKey(@Nullable final String deliveryKey) {
+        this.deliveryKey = deliveryKey;
         return this;
     }
 
@@ -127,12 +143,23 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
     }
 
     /**
-     * value of deliveryId}
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
 
+    @Nullable
     public String getDeliveryId() {
         return this.deliveryId;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @return deliveryKey
+     */
+
+    @Nullable
+    public String getDeliveryKey() {
+        return this.deliveryKey;
     }
 
     /**
@@ -149,9 +176,8 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
      * @return OrderSetDeliveryItemsAction
      */
     public OrderSetDeliveryItemsAction build() {
-        Objects.requireNonNull(deliveryId, OrderSetDeliveryItemsAction.class + ": deliveryId is missing");
         Objects.requireNonNull(items, OrderSetDeliveryItemsAction.class + ": items is missing");
-        return new OrderSetDeliveryItemsActionImpl(deliveryId, items);
+        return new OrderSetDeliveryItemsActionImpl(deliveryId, deliveryKey, items);
     }
 
     /**
@@ -159,7 +185,7 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
      * @return OrderSetDeliveryItemsAction
      */
     public OrderSetDeliveryItemsAction buildUnchecked() {
-        return new OrderSetDeliveryItemsActionImpl(deliveryId, items);
+        return new OrderSetDeliveryItemsActionImpl(deliveryId, deliveryKey, items);
     }
 
     /**
@@ -178,6 +204,7 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
     public static OrderSetDeliveryItemsActionBuilder of(final OrderSetDeliveryItemsAction template) {
         OrderSetDeliveryItemsActionBuilder builder = new OrderSetDeliveryItemsActionBuilder();
         builder.deliveryId = template.getDeliveryId();
+        builder.deliveryKey = template.getDeliveryKey();
         builder.items = template.getItems();
         return builder;
     }

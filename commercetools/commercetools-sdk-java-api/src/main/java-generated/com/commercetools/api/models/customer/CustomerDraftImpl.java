@@ -249,7 +249,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>Unique VAT ID of the Customer.</p>
+     *  <p>Individual VAT ID of the Customer.</p>
      */
 
     public String getVatId() {

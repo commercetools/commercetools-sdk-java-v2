@@ -153,7 +153,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public String getCompanyName();
 
     /**
-     *  <p>Unique VAT ID of the Customer.</p>
+     *  <p>Individual VAT ID of the Customer.</p>
      * @return vatId
      */
 
@@ -363,7 +363,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public void setCompanyName(final String companyName);
 
     /**
-     *  <p>Unique VAT ID of the Customer.</p>
+     *  <p>Individual VAT ID of the Customer.</p>
      * @param vatId value to be set
      */
 

@@ -6,8 +6,10 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.common.PriceDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -44,6 +46,30 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
     public String getPriceId();
 
     /**
+     *  <p>The <code>sku</code> of the ProductVariant the provided Price should be removed from. Either 'variantId' or 'sku' is required" when <code>priceId</code> is not provided. This field is now deprecated, use 'priceId' instead.</p>
+     * @return sku
+     */
+
+    @JsonProperty("sku")
+    public String getSku();
+
+    /**
+     *  <p>The <code>id</code> of the ProductVariant the provided Price should be removed from. Either 'variantId' or 'sku' is required" when <code>priceId</code> is not provided. This field is now deprecated, use 'priceId' instead.</p>
+     * @return variantId
+     */
+
+    @JsonProperty("variantId")
+    public Long getVariantId();
+
+    /**
+     *  <p>The Price identical to the one to be removed from the ProductVariant. This field is now deprecated, use 'priceId' instead.</p>
+     * @return price
+     */
+    @Valid
+    @JsonProperty("price")
+    public PriceDraft getPrice();
+
+    /**
      *  <p>If <code>true</code>, only the staged Embedded Price is removed. If <code>false</code>, both the current and staged Embedded Price are removed.</p>
      * @return staged
      */
@@ -57,6 +83,27 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
      */
 
     public void setPriceId(final String priceId);
+
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant the provided Price should be removed from. Either 'variantId' or 'sku' is required" when <code>priceId</code> is not provided. This field is now deprecated, use 'priceId' instead.</p>
+     * @param sku value to be set
+     */
+
+    public void setSku(final String sku);
+
+    /**
+     *  <p>The <code>id</code> of the ProductVariant the provided Price should be removed from. Either 'variantId' or 'sku' is required" when <code>priceId</code> is not provided. This field is now deprecated, use 'priceId' instead.</p>
+     * @param variantId value to be set
+     */
+
+    public void setVariantId(final Long variantId);
+
+    /**
+     *  <p>The Price identical to the one to be removed from the ProductVariant. This field is now deprecated, use 'priceId' instead.</p>
+     * @param price value to be set
+     */
+
+    public void setPrice(final PriceDraft price);
 
     /**
      *  <p>If <code>true</code>, only the staged Embedded Price is removed. If <code>false</code>, both the current and staged Embedded Price are removed.</p>
@@ -81,6 +128,9 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
     public static ProductRemovePriceAction of(final ProductRemovePriceAction template) {
         ProductRemovePriceActionImpl instance = new ProductRemovePriceActionImpl();
         instance.setPriceId(template.getPriceId());
+        instance.setSku(template.getSku());
+        instance.setVariantId(template.getVariantId());
+        instance.setPrice(template.getPrice());
         instance.setStaged(template.getStaged());
         return instance;
     }
@@ -97,6 +147,9 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
         }
         ProductRemovePriceActionImpl instance = new ProductRemovePriceActionImpl();
         instance.setPriceId(template.getPriceId());
+        instance.setSku(template.getSku());
+        instance.setVariantId(template.getVariantId());
+        instance.setPrice(com.commercetools.api.models.common.PriceDraft.deepCopy(template.getPrice()));
         instance.setStaged(template.getStaged());
         return instance;
     }

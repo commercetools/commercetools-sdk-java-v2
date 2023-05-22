@@ -3,7 +3,7 @@ package com.commercetools.api.predicates.query.product;
 
 import com.commercetools.api.predicates.query.*;
 
-public class AttributeQueryBuilderDsl {
+public class AttributeQueryBuilderDsl implements AttributeQueryBuilderMixin {
     public AttributeQueryBuilderDsl() {
     }
 

@@ -136,6 +136,10 @@ public class QueryTests {
                                         .and(av -> av.value()
                                                 .isIn(Arrays.asList("attribute-value-1", "attribute-value-2"))))),
                         "variants(attributes(name = \"attribute-name\" and value in (\"attribute-value-1\", \"attribute-value-2\")))", },
+                new Object[] { ProductProjectionQueryBuilderDsl.of()
+                        .variants(v -> v.attributes(
+                            a -> a.name().is("attribute-name").and(av -> av.plainEnum(e -> e.key().is("test"))))),
+                        "variants(attributes(name = \"attribute-name\" and value(key = \"test\")))", },
                 new Object[] {
                         CartDiscountQueryBuilderDsl.of()
                                 .value(v -> v.asAbsolute(a -> a.money(c -> c.currencyCode().is("EUR")))),

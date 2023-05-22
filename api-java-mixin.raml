@@ -5,6 +5,9 @@ annotationTypes:
   java-mixin:
     type: string
     allowedTargets: TypeDeclaration
+  java-query-implements:
+    type: string
+    allowedTargets: TypeDeclaration
   java-builder-implements:
     type: string
     allowedTargets: TypeDeclaration
@@ -428,6 +431,8 @@ types:
     (java-extends): 'com.commercetools.api.models.Customizable<Transaction>'
   TransactionDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<TransactionDraft>'
+  Attribute:
+    (java-query-implements): 'AttributeQueryBuilderMixin'
   Product:
     (java-extends): 'ProductMixin, com.commercetools.api.models.DomainResource<Product>, com.commercetools.api.models.Referencable<Product>, com.commercetools.api.models.ResourceIdentifiable<Product>, com.commercetools.api.models.WithKey'
     (java-mixin): |

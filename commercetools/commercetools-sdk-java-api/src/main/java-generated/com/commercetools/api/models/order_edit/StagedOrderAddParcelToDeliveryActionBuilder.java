@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderAddParcelToDeliveryAction stagedOrderAddParcelToDeliveryAction = StagedOrderAddParcelToDeliveryAction.builder()
- *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +23,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<StagedOrderAddParcelToDeliveryAction> {
 
+    @Nullable
     private String deliveryId;
+
+    @Nullable
+    private String deliveryKey;
 
     @Nullable
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
@@ -36,13 +39,24 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
-     * set the value to the deliveryId
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
 
-    public StagedOrderAddParcelToDeliveryActionBuilder deliveryId(final String deliveryId) {
+    public StagedOrderAddParcelToDeliveryActionBuilder deliveryId(@Nullable final String deliveryId) {
         this.deliveryId = deliveryId;
+        return this;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @param deliveryKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderAddParcelToDeliveryActionBuilder deliveryKey(@Nullable final String deliveryKey) {
+        this.deliveryKey = deliveryKey;
         return this;
     }
 
@@ -208,12 +222,23 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * value of deliveryId}
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
 
+    @Nullable
     public String getDeliveryId() {
         return this.deliveryId;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @return deliveryKey
+     */
+
+    @Nullable
+    public String getDeliveryKey() {
+        return this.deliveryKey;
     }
 
     /**
@@ -251,8 +276,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
      * @return StagedOrderAddParcelToDeliveryAction
      */
     public StagedOrderAddParcelToDeliveryAction build() {
-        Objects.requireNonNull(deliveryId, StagedOrderAddParcelToDeliveryAction.class + ": deliveryId is missing");
-        return new StagedOrderAddParcelToDeliveryActionImpl(deliveryId, measurements, trackingData, items);
+        return new StagedOrderAddParcelToDeliveryActionImpl(deliveryId, deliveryKey, measurements, trackingData, items);
     }
 
     /**
@@ -260,7 +284,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
      * @return StagedOrderAddParcelToDeliveryAction
      */
     public StagedOrderAddParcelToDeliveryAction buildUnchecked() {
-        return new StagedOrderAddParcelToDeliveryActionImpl(deliveryId, measurements, trackingData, items);
+        return new StagedOrderAddParcelToDeliveryActionImpl(deliveryId, deliveryKey, measurements, trackingData, items);
     }
 
     /**
@@ -279,6 +303,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     public static StagedOrderAddParcelToDeliveryActionBuilder of(final StagedOrderAddParcelToDeliveryAction template) {
         StagedOrderAddParcelToDeliveryActionBuilder builder = new StagedOrderAddParcelToDeliveryActionBuilder();
         builder.deliveryId = template.getDeliveryId();
+        builder.deliveryKey = template.getDeliveryKey();
         builder.measurements = template.getMeasurements();
         builder.trackingData = template.getTrackingData();
         builder.items = template.getItems();

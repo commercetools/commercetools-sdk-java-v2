@@ -35,7 +35,7 @@ public interface OrderUpdate
         extends com.commercetools.api.models.ResourceUpdate<OrderUpdate, OrderUpdateAction, OrderUpdateBuilder> {
 
     /**
-     *
+     *  <p>Expected version of the Order on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -43,7 +43,7 @@ public interface OrderUpdate
     public Long getVersion();
 
     /**
-     *
+     *  <p>Update actions to be performed on the Order.</p>
      * @return actions
      */
     @NotNull
@@ -52,14 +52,14 @@ public interface OrderUpdate
     public List<OrderUpdateAction> getActions();
 
     /**
-     * set version
+     *  <p>Expected version of the Order on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @param version value to be set
      */
 
     public void setVersion(final Long version);
 
     /**
-     * set actions
+     *  <p>Update actions to be performed on the Order.</p>
      * @param actions values to be set
      */
 
@@ -67,7 +67,7 @@ public interface OrderUpdate
     public void setActions(final OrderUpdateAction... actions);
 
     /**
-     * set actions
+     *  <p>Update actions to be performed on the Order.</p>
      * @param actions values to be set
      */
 

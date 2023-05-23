@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.associate_role.AssociateRoleKeyReference;
 import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.fasterxml.jackson.annotation.*;
@@ -22,13 +23,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     KeyReference keyReference = KeyReference.businessUnitBuilder()
+ *     KeyReference keyReference = KeyReference.associateRoleBuilder()
  *             key("{key}")
  *             .build()
  * </code></pre>
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceImpl.class, name = AssociateRoleKeyReference.ASSOCIATE_ROLE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl.class, name = BusinessUnitKeyReference.BUSINESS_UNIT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreKeyReferenceImpl.class, name = StoreKeyReference.STORE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "typeId", defaultImpl = KeyReferenceImpl.class, visible = true)
@@ -69,6 +71,10 @@ public interface KeyReference extends com.commercetools.api.models.WithKey {
         if (template == null) {
             return null;
         }
+        if (template instanceof com.commercetools.api.models.associate_role.AssociateRoleKeyReference) {
+            return com.commercetools.api.models.associate_role.AssociateRoleKeyReference
+                    .deepCopy((com.commercetools.api.models.associate_role.AssociateRoleKeyReference) template);
+        }
         if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitKeyReference) {
             return com.commercetools.api.models.business_unit.BusinessUnitKeyReference
                     .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitKeyReference) template);
@@ -80,6 +86,14 @@ public interface KeyReference extends com.commercetools.api.models.WithKey {
         KeyReferenceImpl instance = new KeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
+    }
+
+    /**
+     * builder for associateRole subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceBuilder associateRoleBuilder() {
+        return com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceBuilder.of();
     }
 
     /**

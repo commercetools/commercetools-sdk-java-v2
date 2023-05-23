@@ -22,6 +22,8 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
 
     private String action;
 
+    private String deliveryKey;
+
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     private String shippingKey;
@@ -36,12 +38,13 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
      * create instance with all properties
      */
     @JsonCreator
-    OrderAddDeliveryActionImpl(
+    OrderAddDeliveryActionImpl(@JsonProperty("deliveryKey") final String deliveryKey,
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
             @JsonProperty("shippingKey") final String shippingKey,
             @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address,
             @JsonProperty("parcels") final java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.deliveryKey = deliveryKey;
         this.items = items;
         this.shippingKey = shippingKey;
         this.address = address;
@@ -63,6 +66,14 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
 
     public String getAction() {
         return this.action;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of a Delivery.</p>
+     */
+
+    public String getDeliveryKey() {
+        return this.deliveryKey;
     }
 
     /**
@@ -105,6 +116,10 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
         return this.custom;
     }
 
+    public void setDeliveryKey(final String deliveryKey) {
+        this.deliveryKey = deliveryKey;
+    }
+
     public void setItems(final com.commercetools.api.models.order.DeliveryItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
     }
@@ -144,6 +159,7 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
         OrderAddDeliveryActionImpl that = (OrderAddDeliveryActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(deliveryKey, that.deliveryKey)
                 .append(items, that.items)
                 .append(shippingKey, that.shippingKey)
                 .append(address, that.address)
@@ -155,6 +171,7 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
+                .append(deliveryKey)
                 .append(items)
                 .append(shippingKey)
                 .append(address)

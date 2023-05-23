@@ -15,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetDeliveryAddressCustomFieldAction stagedOrderSetDeliveryAddressCustomFieldAction = StagedOrderSetDeliveryAddressCustomFieldAction.builder()
- *             .deliveryId("{deliveryId}")
  *             .name("{name}")
  *             .build()
  * </code></pre>
@@ -25,7 +24,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StagedOrderSetDeliveryAddressCustomFieldActionBuilder
         implements Builder<StagedOrderSetDeliveryAddressCustomFieldAction> {
 
+    @Nullable
     private String deliveryId;
+
+    @Nullable
+    private String deliveryKey;
 
     private String name;
 
@@ -33,13 +36,24 @@ public class StagedOrderSetDeliveryAddressCustomFieldActionBuilder
     private java.lang.Object value;
 
     /**
-     * set the value to the deliveryId
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetDeliveryAddressCustomFieldActionBuilder deliveryId(final String deliveryId) {
+    public StagedOrderSetDeliveryAddressCustomFieldActionBuilder deliveryId(@Nullable final String deliveryId) {
         this.deliveryId = deliveryId;
+        return this;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @param deliveryKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetDeliveryAddressCustomFieldActionBuilder deliveryKey(@Nullable final String deliveryKey) {
+        this.deliveryKey = deliveryKey;
         return this;
     }
 
@@ -66,12 +80,23 @@ public class StagedOrderSetDeliveryAddressCustomFieldActionBuilder
     }
 
     /**
-     * value of deliveryId}
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
 
+    @Nullable
     public String getDeliveryId() {
         return this.deliveryId;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @return deliveryKey
+     */
+
+    @Nullable
+    public String getDeliveryKey() {
+        return this.deliveryKey;
     }
 
     /**
@@ -98,10 +123,8 @@ public class StagedOrderSetDeliveryAddressCustomFieldActionBuilder
      * @return StagedOrderSetDeliveryAddressCustomFieldAction
      */
     public StagedOrderSetDeliveryAddressCustomFieldAction build() {
-        Objects.requireNonNull(deliveryId,
-            StagedOrderSetDeliveryAddressCustomFieldAction.class + ": deliveryId is missing");
         Objects.requireNonNull(name, StagedOrderSetDeliveryAddressCustomFieldAction.class + ": name is missing");
-        return new StagedOrderSetDeliveryAddressCustomFieldActionImpl(deliveryId, name, value);
+        return new StagedOrderSetDeliveryAddressCustomFieldActionImpl(deliveryId, deliveryKey, name, value);
     }
 
     /**
@@ -109,7 +132,7 @@ public class StagedOrderSetDeliveryAddressCustomFieldActionBuilder
      * @return StagedOrderSetDeliveryAddressCustomFieldAction
      */
     public StagedOrderSetDeliveryAddressCustomFieldAction buildUnchecked() {
-        return new StagedOrderSetDeliveryAddressCustomFieldActionImpl(deliveryId, name, value);
+        return new StagedOrderSetDeliveryAddressCustomFieldActionImpl(deliveryId, deliveryKey, name, value);
     }
 
     /**
@@ -129,6 +152,7 @@ public class StagedOrderSetDeliveryAddressCustomFieldActionBuilder
             final StagedOrderSetDeliveryAddressCustomFieldAction template) {
         StagedOrderSetDeliveryAddressCustomFieldActionBuilder builder = new StagedOrderSetDeliveryAddressCustomFieldActionBuilder();
         builder.deliveryId = template.getDeliveryId();
+        builder.deliveryKey = template.getDeliveryKey();
         builder.name = template.getName();
         builder.value = template.getValue();
         return builder;

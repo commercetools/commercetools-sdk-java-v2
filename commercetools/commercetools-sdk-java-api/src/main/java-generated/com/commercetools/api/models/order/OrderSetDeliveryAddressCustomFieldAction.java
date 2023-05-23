@@ -21,7 +21,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetDeliveryAddressCustomFieldAction orderSetDeliveryAddressCustomFieldAction = OrderSetDeliveryAddressCustomFieldAction.builder()
- *             .deliveryId("{deliveryId}")
  *             .name("{name}")
  *             .build()
  * </code></pre>
@@ -37,12 +36,20 @@ public interface OrderSetDeliveryAddressCustomFieldAction extends OrderUpdateAct
     String SET_DELIVERY_ADDRESS_CUSTOM_FIELD = "setDeliveryAddressCustomField";
 
     /**
-     *
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
-    @NotNull
+
     @JsonProperty("deliveryId")
     public String getDeliveryId();
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @return deliveryKey
+     */
+
+    @JsonProperty("deliveryKey")
+    public String getDeliveryKey();
 
     /**
      *  <p>Name of the Custom Field.</p>
@@ -61,11 +68,18 @@ public interface OrderSetDeliveryAddressCustomFieldAction extends OrderUpdateAct
     public Object getValue();
 
     /**
-     * set deliveryId
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @param deliveryKey value to be set
+     */
+
+    public void setDeliveryKey(final String deliveryKey);
 
     /**
      *  <p>Name of the Custom Field.</p>
@@ -97,6 +111,7 @@ public interface OrderSetDeliveryAddressCustomFieldAction extends OrderUpdateAct
     public static OrderSetDeliveryAddressCustomFieldAction of(final OrderSetDeliveryAddressCustomFieldAction template) {
         OrderSetDeliveryAddressCustomFieldActionImpl instance = new OrderSetDeliveryAddressCustomFieldActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setDeliveryKey(template.getDeliveryKey());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
@@ -115,6 +130,7 @@ public interface OrderSetDeliveryAddressCustomFieldAction extends OrderUpdateAct
         }
         OrderSetDeliveryAddressCustomFieldActionImpl instance = new OrderSetDeliveryAddressCustomFieldActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setDeliveryKey(template.getDeliveryKey());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;

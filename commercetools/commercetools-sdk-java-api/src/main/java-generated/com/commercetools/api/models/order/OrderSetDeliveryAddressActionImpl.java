@@ -24,6 +24,8 @@ public class OrderSetDeliveryAddressActionImpl implements OrderSetDeliveryAddres
 
     private String deliveryId;
 
+    private String deliveryKey;
+
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
@@ -31,8 +33,10 @@ public class OrderSetDeliveryAddressActionImpl implements OrderSetDeliveryAddres
      */
     @JsonCreator
     OrderSetDeliveryAddressActionImpl(@JsonProperty("deliveryId") final String deliveryId,
+            @JsonProperty("deliveryKey") final String deliveryKey,
             @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address) {
         this.deliveryId = deliveryId;
+        this.deliveryKey = deliveryKey;
         this.address = address;
         this.action = SET_DELIVERY_ADDRESS;
     }
@@ -53,11 +57,19 @@ public class OrderSetDeliveryAddressActionImpl implements OrderSetDeliveryAddres
     }
 
     /**
-     *
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      */
 
     public String getDeliveryId() {
         return this.deliveryId;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     */
+
+    public String getDeliveryKey() {
+        return this.deliveryKey;
     }
 
     /**
@@ -70,6 +82,10 @@ public class OrderSetDeliveryAddressActionImpl implements OrderSetDeliveryAddres
 
     public void setDeliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
+    }
+
+    public void setDeliveryKey(final String deliveryKey) {
+        this.deliveryKey = deliveryKey;
     }
 
     public void setAddress(final com.commercetools.api.models.common.BaseAddress address) {
@@ -88,13 +104,18 @@ public class OrderSetDeliveryAddressActionImpl implements OrderSetDeliveryAddres
 
         return new EqualsBuilder().append(action, that.action)
                 .append(deliveryId, that.deliveryId)
+                .append(deliveryKey, that.deliveryKey)
                 .append(address, that.address)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(deliveryId).append(address).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(deliveryId)
+                .append(deliveryKey)
+                .append(address)
+                .toHashCode();
     }
 
 }

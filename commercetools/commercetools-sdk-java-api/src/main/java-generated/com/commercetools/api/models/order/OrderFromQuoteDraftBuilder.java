@@ -116,7 +116,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     * set the value to the paymentState
+     *  <p>Payment state of the Order.</p>
      * @param paymentState value to be set
      * @return Builder
      */
@@ -128,7 +128,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     * set the value to the shipmentState
+     *  <p>Shipment state of the Order.</p>
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -152,7 +152,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     * set the value to the state using the builder function
+     *  <p>Reference to a State indicating the Order's state.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -164,7 +164,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     * set the value to the state using the builder function
+     *  <p>Reference to a State indicating the Order's state.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     * set the value to the state
+     *  <p>Reference to a State indicating the Order's state.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -226,7 +226,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     * value of paymentState}
+     *  <p>Payment state of the Order.</p>
      * @return paymentState
      */
 
@@ -236,7 +236,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     * value of shipmentState}
+     *  <p>Shipment state of the Order.</p>
      * @return shipmentState
      */
 
@@ -256,7 +256,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     * value of state}
+     *  <p>Reference to a State indicating the Order's state.</p>
      * @return state
      */
 

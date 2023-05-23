@@ -66,9 +66,9 @@ public class ByProjectKeyTest {
         return new Object[][] {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
-                        .withResourceType(com.commercetools.history.models.change_history.ChangeHistoryResourceType
-                                .findEnum("resourceType"))
-                        .createHttpRequest(), "get", "test_projectKey?resourceType=resourceType", },
+                        .withResourceTypes(com.commercetools.history.models.change_history.ChangeHistoryResourceType
+                                .findEnum("resourceTypes"))
+                        .createHttpRequest(), "get", "test_projectKey?resourceTypes=resourceTypes", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
                         .withDateFrom("date.from")
@@ -127,8 +127,8 @@ public class ByProjectKeyTest {
         return new Object[][] {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
-                        .withResourceType(com.commercetools.history.models.change_history.ChangeHistoryResourceType
-                                .findEnum("resourceType")), },
+                        .withResourceTypes(com.commercetools.history.models.change_history.ChangeHistoryResourceType
+                                .findEnum("resourceTypes")), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withDateFrom("date.from"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withDateTo("date.to"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withLimit(7), },

@@ -15,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetDeliveryAddressCustomFieldAction orderSetDeliveryAddressCustomFieldAction = OrderSetDeliveryAddressCustomFieldAction.builder()
- *             .deliveryId("{deliveryId}")
  *             .name("{name}")
  *             .build()
  * </code></pre>
@@ -25,7 +24,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class OrderSetDeliveryAddressCustomFieldActionBuilder
         implements Builder<OrderSetDeliveryAddressCustomFieldAction> {
 
+    @Nullable
     private String deliveryId;
+
+    @Nullable
+    private String deliveryKey;
 
     private String name;
 
@@ -33,13 +36,24 @@ public class OrderSetDeliveryAddressCustomFieldActionBuilder
     private java.lang.Object value;
 
     /**
-     * set the value to the deliveryId
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
 
-    public OrderSetDeliveryAddressCustomFieldActionBuilder deliveryId(final String deliveryId) {
+    public OrderSetDeliveryAddressCustomFieldActionBuilder deliveryId(@Nullable final String deliveryId) {
         this.deliveryId = deliveryId;
+        return this;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @param deliveryKey value to be set
+     * @return Builder
+     */
+
+    public OrderSetDeliveryAddressCustomFieldActionBuilder deliveryKey(@Nullable final String deliveryKey) {
+        this.deliveryKey = deliveryKey;
         return this;
     }
 
@@ -66,12 +80,23 @@ public class OrderSetDeliveryAddressCustomFieldActionBuilder
     }
 
     /**
-     * value of deliveryId}
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
 
+    @Nullable
     public String getDeliveryId() {
         return this.deliveryId;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @return deliveryKey
+     */
+
+    @Nullable
+    public String getDeliveryKey() {
+        return this.deliveryKey;
     }
 
     /**
@@ -98,9 +123,8 @@ public class OrderSetDeliveryAddressCustomFieldActionBuilder
      * @return OrderSetDeliveryAddressCustomFieldAction
      */
     public OrderSetDeliveryAddressCustomFieldAction build() {
-        Objects.requireNonNull(deliveryId, OrderSetDeliveryAddressCustomFieldAction.class + ": deliveryId is missing");
         Objects.requireNonNull(name, OrderSetDeliveryAddressCustomFieldAction.class + ": name is missing");
-        return new OrderSetDeliveryAddressCustomFieldActionImpl(deliveryId, name, value);
+        return new OrderSetDeliveryAddressCustomFieldActionImpl(deliveryId, deliveryKey, name, value);
     }
 
     /**
@@ -108,7 +132,7 @@ public class OrderSetDeliveryAddressCustomFieldActionBuilder
      * @return OrderSetDeliveryAddressCustomFieldAction
      */
     public OrderSetDeliveryAddressCustomFieldAction buildUnchecked() {
-        return new OrderSetDeliveryAddressCustomFieldActionImpl(deliveryId, name, value);
+        return new OrderSetDeliveryAddressCustomFieldActionImpl(deliveryId, deliveryKey, name, value);
     }
 
     /**
@@ -128,6 +152,7 @@ public class OrderSetDeliveryAddressCustomFieldActionBuilder
             final OrderSetDeliveryAddressCustomFieldAction template) {
         OrderSetDeliveryAddressCustomFieldActionBuilder builder = new OrderSetDeliveryAddressCustomFieldActionBuilder();
         builder.deliveryId = template.getDeliveryId();
+        builder.deliveryKey = template.getDeliveryKey();
         builder.name = template.getName();
         builder.value = template.getValue();
         return builder;

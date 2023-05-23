@@ -27,6 +27,11 @@ public interface ResourceTypeId extends JsonEnum {
     */
     ResourceTypeId ASSET = ResourceTypeIdEnum.ASSET;
     /**
+    	<p><a href="ctp:api:type:AssociateRole">AssociateRole</a></p>
+
+    */
+    ResourceTypeId ASSOCIATE_ROLE = ResourceTypeIdEnum.ASSOCIATE_ROLE;
+    /**
     	<p><a href="ctp:api:type:BusinessUnit">BusinessUnit</a></p>
 
     */
@@ -184,6 +189,11 @@ public interface ResourceTypeId extends JsonEnum {
          * asset
          */
         ASSET("asset"),
+
+        /**
+         * associate-role
+         */
+        ASSOCIATE_ROLE("associate-role"),
 
         /**
          * business-unit

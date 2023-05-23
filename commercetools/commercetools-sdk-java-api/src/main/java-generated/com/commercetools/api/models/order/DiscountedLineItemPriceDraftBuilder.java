@@ -28,8 +28,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts;
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -41,8 +40,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -54,8 +52,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -159,8 +156,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @return value
      */
 

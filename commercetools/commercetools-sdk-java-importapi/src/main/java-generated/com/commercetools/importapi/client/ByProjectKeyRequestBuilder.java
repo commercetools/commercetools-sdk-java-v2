@@ -71,4 +71,8 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyInventoriesRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyTypesRequestBuilder types() {
+        return new ByProjectKeyTypesRequestBuilder(apiHttpClient, projectKey);
+    }
+
 }

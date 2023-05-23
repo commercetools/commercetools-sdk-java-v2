@@ -48,8 +48,7 @@ public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderU
     public String getCustomLineItemId();
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @return money
      */
     @NotNull
@@ -65,8 +64,7 @@ public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderU
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param money value to be set
      */
 

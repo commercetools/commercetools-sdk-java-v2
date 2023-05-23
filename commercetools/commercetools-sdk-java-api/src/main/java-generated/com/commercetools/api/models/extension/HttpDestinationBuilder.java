@@ -30,7 +30,7 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
     private com.commercetools.api.models.extension.HttpDestinationAuthentication authentication;
 
     /**
-     *  <p>URL to the target destination.</p>
+     *  <p>URL to the target destination. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
      * @param url value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
     }
 
     /**
-     *  <p>URL to the target destination.</p>
+     *  <p>URL to the target destination. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
      * @return url
      */
 

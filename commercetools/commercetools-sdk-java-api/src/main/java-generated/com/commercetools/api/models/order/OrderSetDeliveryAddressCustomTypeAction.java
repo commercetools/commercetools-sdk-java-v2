@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
@@ -24,7 +23,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetDeliveryAddressCustomTypeAction orderSetDeliveryAddressCustomTypeAction = OrderSetDeliveryAddressCustomTypeAction.builder()
- *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -39,12 +37,20 @@ public interface OrderSetDeliveryAddressCustomTypeAction extends OrderUpdateActi
     String SET_DELIVERY_ADDRESS_CUSTOM_TYPE = "setDeliveryAddressCustomType";
 
     /**
-     *
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
-    @NotNull
+
     @JsonProperty("deliveryId")
     public String getDeliveryId();
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @return deliveryKey
+     */
+
+    @JsonProperty("deliveryKey")
+    public String getDeliveryKey();
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
@@ -63,11 +69,18 @@ public interface OrderSetDeliveryAddressCustomTypeAction extends OrderUpdateActi
     public FieldContainer getFields();
 
     /**
-     * set deliveryId
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @param deliveryKey value to be set
+     */
+
+    public void setDeliveryKey(final String deliveryKey);
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
@@ -99,6 +112,7 @@ public interface OrderSetDeliveryAddressCustomTypeAction extends OrderUpdateActi
     public static OrderSetDeliveryAddressCustomTypeAction of(final OrderSetDeliveryAddressCustomTypeAction template) {
         OrderSetDeliveryAddressCustomTypeActionImpl instance = new OrderSetDeliveryAddressCustomTypeActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setDeliveryKey(template.getDeliveryKey());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
@@ -117,6 +131,7 @@ public interface OrderSetDeliveryAddressCustomTypeAction extends OrderUpdateActi
         }
         OrderSetDeliveryAddressCustomTypeActionImpl instance = new OrderSetDeliveryAddressCustomTypeActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setDeliveryKey(template.getDeliveryKey());
         instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
         instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;

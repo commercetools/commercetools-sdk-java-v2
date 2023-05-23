@@ -4,6 +4,8 @@ package com.commercetools.api.models.order_edit;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetDeliveryItemsAction stagedOrderSetDeliveryItemsAction = StagedOrderSetDeliveryItemsAction.builder()
- *             .deliveryId("{deliveryId}")
  *             .plusItems(itemsBuilder -> itemsBuilder)
  *             .build()
  * </code></pre>
@@ -23,18 +24,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedOrderSetDeliveryItemsAction> {
 
+    @Nullable
     private String deliveryId;
+
+    @Nullable
+    private String deliveryKey;
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
-     * set the value to the deliveryId
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetDeliveryItemsActionBuilder deliveryId(final String deliveryId) {
+    public StagedOrderSetDeliveryItemsActionBuilder deliveryId(@Nullable final String deliveryId) {
         this.deliveryId = deliveryId;
+        return this;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @param deliveryKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetDeliveryItemsActionBuilder deliveryKey(@Nullable final String deliveryKey) {
+        this.deliveryKey = deliveryKey;
         return this;
     }
 
@@ -128,12 +144,23 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     * value of deliveryId}
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
 
+    @Nullable
     public String getDeliveryId() {
         return this.deliveryId;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @return deliveryKey
+     */
+
+    @Nullable
+    public String getDeliveryKey() {
+        return this.deliveryKey;
     }
 
     /**
@@ -150,9 +177,8 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
      * @return StagedOrderSetDeliveryItemsAction
      */
     public StagedOrderSetDeliveryItemsAction build() {
-        Objects.requireNonNull(deliveryId, StagedOrderSetDeliveryItemsAction.class + ": deliveryId is missing");
         Objects.requireNonNull(items, StagedOrderSetDeliveryItemsAction.class + ": items is missing");
-        return new StagedOrderSetDeliveryItemsActionImpl(deliveryId, items);
+        return new StagedOrderSetDeliveryItemsActionImpl(deliveryId, deliveryKey, items);
     }
 
     /**
@@ -160,7 +186,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
      * @return StagedOrderSetDeliveryItemsAction
      */
     public StagedOrderSetDeliveryItemsAction buildUnchecked() {
-        return new StagedOrderSetDeliveryItemsActionImpl(deliveryId, items);
+        return new StagedOrderSetDeliveryItemsActionImpl(deliveryId, deliveryKey, items);
     }
 
     /**
@@ -179,6 +205,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     public static StagedOrderSetDeliveryItemsActionBuilder of(final StagedOrderSetDeliveryItemsAction template) {
         StagedOrderSetDeliveryItemsActionBuilder builder = new StagedOrderSetDeliveryItemsActionBuilder();
         builder.deliveryId = template.getDeliveryId();
+        builder.deliveryKey = template.getDeliveryKey();
         builder.items = template.getItems();
         return builder;
     }

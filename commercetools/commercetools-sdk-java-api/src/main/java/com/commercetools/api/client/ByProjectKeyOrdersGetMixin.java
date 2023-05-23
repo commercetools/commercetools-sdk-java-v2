@@ -1,8 +1,11 @@
 
 package com.commercetools.api.client;
 
+import com.commercetools.api.predicates.query.QueryPredicateDsl;
+import com.commercetools.api.predicates.query.order.OrderQueryBuilderDsl;
+
 public interface ByProjectKeyOrdersGetMixin extends
-        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersGet, com.commercetools.api.models.order.OrderPagedQueryResponse> {
+        PagedQueryResourceRequest<ByProjectKeyOrdersGet, com.commercetools.api.models.order.OrderPagedQueryResponse, OrderQueryBuilderDsl> {
 
     default ByProjectKeyOrdersGet byCustomerId(final String customerId) {
         return withWhere("customerId = :customerId", "customerId", customerId);
@@ -10,5 +13,10 @@ public interface ByProjectKeyOrdersGetMixin extends
 
     default ByProjectKeyOrdersGet byCustomerEmail(final String customerEmail) {
         return withWhere("customerEmail = :customerEmail", "customerEmail", customerEmail);
+    }
+
+    @Override
+    default OrderQueryBuilderDsl queryDsl() {
+        return QueryPredicateDsl.order();
     }
 }

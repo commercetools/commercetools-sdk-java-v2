@@ -47,6 +47,14 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
     public String getId();
 
     /**
+     *  <p>User-defined unique identifier of the Delivery.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *
      * @return createdAt
      */
@@ -94,6 +102,13 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
      */
 
     public void setId(final String id);
+
+    /**
+     *  <p>User-defined unique identifier of the Delivery.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      * set createdAt
@@ -162,6 +177,7 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
     public static Delivery of(final Delivery template) {
         DeliveryImpl instance = new DeliveryImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setItems(template.getItems());
         instance.setParcels(template.getParcels());
@@ -182,6 +198,7 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
         }
         DeliveryImpl instance = new DeliveryImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setItems(Optional.ofNullable(template.getItems())
                 .map(t -> t.stream()

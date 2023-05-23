@@ -34,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitAddStoreActionImpl.class, name = BusinessUnitAddStoreAction.ADD_STORE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitChangeAddressActionImpl.class, name = BusinessUnitChangeAddressAction.CHANGE_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateActionImpl.class, name = BusinessUnitChangeAssociateAction.CHANGE_ASSOCIATE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateModeActionImpl.class, name = BusinessUnitChangeAssociateModeAction.CHANGE_ASSOCIATE_MODE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitChangeNameActionImpl.class, name = BusinessUnitChangeNameAction.CHANGE_NAME),
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitChangeParentUnitActionImpl.class, name = BusinessUnitChangeParentUnitAction.CHANGE_PARENT_UNIT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitChangeStatusActionImpl.class, name = BusinessUnitChangeStatusAction.CHANGE_STATUS),
@@ -103,6 +104,10 @@ public interface BusinessUnitUpdateAction
         if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateAction) {
             return com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateAction
                     .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateModeAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateModeAction.deepCopy(
+                (com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateModeAction) template);
         }
         if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitChangeNameAction) {
             return com.commercetools.api.models.business_unit.BusinessUnitChangeNameAction
@@ -234,6 +239,14 @@ public interface BusinessUnitUpdateAction
      */
     public static com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateActionBuilder changeAssociateBuilder() {
         return com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateActionBuilder.of();
+    }
+
+    /**
+     * builder for changeAssociateMode subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateModeActionBuilder changeAssociateModeBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateModeActionBuilder.of();
     }
 
     /**

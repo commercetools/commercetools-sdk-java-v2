@@ -43,7 +43,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public String getId();
 
     /**
-     *  <p>ResourceIdentifier of the Cart from which this order is created.</p>
+     *  <p>ResourceIdentifier of the Cart from which the Order is created.</p>
      * @return cart
      */
     @Valid
@@ -51,7 +51,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public CartResourceIdentifier getCart();
 
     /**
-     *
+     *  <p>Expected version of the Cart from which the Order is created. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -75,7 +75,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public String getPurchaseOrderNumber();
 
     /**
-     *
+     *  <p>Payment state for the Order.</p>
      * @return paymentState
      */
 
@@ -83,7 +83,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public PaymentState getPaymentState();
 
     /**
-     *
+     *  <p>Shipment state for the Order.</p>
      * @return shipmentState
      */
 
@@ -99,7 +99,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public OrderState getOrderState();
 
     /**
-     *
+     *  <p>Reference to a State indicating the Order's state.</p>
      * @return state
      */
     @Valid
@@ -122,14 +122,14 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public void setId(final String id);
 
     /**
-     *  <p>ResourceIdentifier of the Cart from which this order is created.</p>
+     *  <p>ResourceIdentifier of the Cart from which the Order is created.</p>
      * @param cart value to be set
      */
 
     public void setCart(final CartResourceIdentifier cart);
 
     /**
-     * set version
+     *  <p>Expected version of the Cart from which the Order is created. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @param version value to be set
      */
 
@@ -150,14 +150,14 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
     /**
-     * set paymentState
+     *  <p>Payment state for the Order.</p>
      * @param paymentState value to be set
      */
 
     public void setPaymentState(final PaymentState paymentState);
 
     /**
-     * set shipmentState
+     *  <p>Shipment state for the Order.</p>
      * @param shipmentState value to be set
      */
 
@@ -171,7 +171,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public void setOrderState(final OrderState orderState);
 
     /**
-     * set state
+     *  <p>Reference to a State indicating the Order's state.</p>
      * @param state value to be set
      */
 

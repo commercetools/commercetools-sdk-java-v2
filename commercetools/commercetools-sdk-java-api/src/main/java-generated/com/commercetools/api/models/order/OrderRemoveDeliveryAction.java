@@ -6,7 +6,6 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -21,7 +20,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderRemoveDeliveryAction orderRemoveDeliveryAction = OrderRemoveDeliveryAction.builder()
- *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -36,19 +34,34 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
     String REMOVE_DELIVERY = "removeDelivery";
 
     /**
-     *
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
-    @NotNull
+
     @JsonProperty("deliveryId")
     public String getDeliveryId();
 
     /**
-     * set deliveryId
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @return deliveryKey
+     */
+
+    @JsonProperty("deliveryKey")
+    public String getDeliveryKey();
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @param deliveryKey value to be set
+     */
+
+    public void setDeliveryKey(final String deliveryKey);
 
     /**
      * factory method
@@ -66,6 +79,7 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
     public static OrderRemoveDeliveryAction of(final OrderRemoveDeliveryAction template) {
         OrderRemoveDeliveryActionImpl instance = new OrderRemoveDeliveryActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setDeliveryKey(template.getDeliveryKey());
         return instance;
     }
 
@@ -81,6 +95,7 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
         }
         OrderRemoveDeliveryActionImpl instance = new OrderRemoveDeliveryActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setDeliveryKey(template.getDeliveryKey());
         return instance;
     }
 

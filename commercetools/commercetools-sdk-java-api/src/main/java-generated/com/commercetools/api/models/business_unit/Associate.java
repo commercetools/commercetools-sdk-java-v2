@@ -4,6 +4,7 @@ package com.commercetools.api.models.business_unit;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
@@ -23,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     Associate associate = Associate.builder()
+ *             .plusAssociateRoleAssignments(associateRoleAssignmentsBuilder -> associateRoleAssignmentsBuilder)
  *             .plusRoles(rolesBuilder -> rolesBuilder)
  *             .customer(customerBuilder -> customerBuilder)
  *             .build()
@@ -34,15 +36,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Associate {
 
     /**
-     *  <p>Roles the Associate holds within the Business Unit.</p>
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
+     * @return associateRoleAssignments
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("associateRoleAssignments")
+    public List<AssociateRoleAssignment> getAssociateRoleAssignments();
+
+    /**
+     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
      * @return roles
      */
     @NotNull
+    @Deprecated
     @JsonProperty("roles")
-    public List<AssociateRole> getRoles();
+    public List<AssociateRoleDeprecated> getRoles();
 
     /**
-     *  <p>The Customer that is part of the Business Unit.</p>
+     *  <p>The Customer that acts as an Associate in the Business Unit.</p>
      * @return customer
      */
     @NotNull
@@ -51,22 +63,37 @@ public interface Associate {
     public CustomerReference getCustomer();
 
     /**
-     *  <p>Roles the Associate holds within the Business Unit.</p>
-     * @param roles values to be set
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
+     * @param associateRoleAssignments values to be set
      */
 
     @JsonIgnore
-    public void setRoles(final AssociateRole... roles);
+    public void setAssociateRoleAssignments(final AssociateRoleAssignment... associateRoleAssignments);
 
     /**
-     *  <p>Roles the Associate holds within the Business Unit.</p>
-     * @param roles values to be set
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
+     * @param associateRoleAssignments values to be set
      */
 
-    public void setRoles(final List<AssociateRole> roles);
+    public void setAssociateRoleAssignments(final List<AssociateRoleAssignment> associateRoleAssignments);
 
     /**
-     *  <p>The Customer that is part of the Business Unit.</p>
+     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
+     * @param roles values to be set
+     */
+    @Deprecated
+    @JsonIgnore
+    public void setRoles(final AssociateRoleDeprecated... roles);
+
+    /**
+     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
+     * @param roles values to be set
+     */
+    @Deprecated
+    public void setRoles(final List<AssociateRoleDeprecated> roles);
+
+    /**
+     *  <p>The Customer that acts as an Associate in the Business Unit.</p>
      * @param customer value to be set
      */
 
@@ -87,6 +114,7 @@ public interface Associate {
      */
     public static Associate of(final Associate template) {
         AssociateImpl instance = new AssociateImpl();
+        instance.setAssociateRoleAssignments(template.getAssociateRoleAssignments());
         instance.setRoles(template.getRoles());
         instance.setCustomer(template.getCustomer());
         return instance;
@@ -103,6 +131,11 @@ public interface Associate {
             return null;
         }
         AssociateImpl instance = new AssociateImpl();
+        instance.setAssociateRoleAssignments(Optional.ofNullable(template.getAssociateRoleAssignments())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.business_unit.AssociateRoleAssignment::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
         instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
         return instance;

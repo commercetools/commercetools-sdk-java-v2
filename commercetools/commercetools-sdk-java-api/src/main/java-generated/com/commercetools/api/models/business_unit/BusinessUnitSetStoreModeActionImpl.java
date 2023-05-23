@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>If <code>storeMode</code> is changed to <code>FromParent</code>, current Stores defined for the Business Unit are removed. Only Business Units of type <code>Division</code> can be set to <code>FromParent</code>. This update action generates a BusinessUnitStoreModeChanged Message.</p>
+ *  <p>Only Business Units of type <code>Division</code> can be have a store mode of <code>FromParent</code>. Changing the <code>storeMode</code> to <code>FromParent</code> empties the <code>stores</code> array on the BusinessUnit. This update action generates a BusinessUnitStoreModeChanged Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitSetStoreModeActionImpl implements BusinessUnitSetStoreModeAction, ModelBase {

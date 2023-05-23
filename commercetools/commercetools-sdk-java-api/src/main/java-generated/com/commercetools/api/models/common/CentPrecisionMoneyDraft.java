@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CentPrecisionMoneyDraft
+ *  <p>This draft type is the alternative to Money.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

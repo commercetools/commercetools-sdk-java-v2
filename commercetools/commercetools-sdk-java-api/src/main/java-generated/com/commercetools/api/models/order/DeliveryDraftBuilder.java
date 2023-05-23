@@ -24,6 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     @Nullable
+    private String key;
+
+    @Nullable
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     @Nullable
@@ -34,6 +37,17 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    /**
+     *  <p>User-defined unique identifier of the Delivery.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public DeliveryDraftBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
@@ -280,6 +294,16 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
+     *  <p>User-defined unique identifier of the Delivery.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
      * @return items
      */
@@ -324,7 +348,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
      * @return DeliveryDraft
      */
     public DeliveryDraft build() {
-        return new DeliveryDraftImpl(items, parcels, address, custom);
+        return new DeliveryDraftImpl(key, items, parcels, address, custom);
     }
 
     /**
@@ -332,7 +356,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
      * @return DeliveryDraft
      */
     public DeliveryDraft buildUnchecked() {
-        return new DeliveryDraftImpl(items, parcels, address, custom);
+        return new DeliveryDraftImpl(key, items, parcels, address, custom);
     }
 
     /**
@@ -350,6 +374,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
      */
     public static DeliveryDraftBuilder of(final DeliveryDraft template) {
         DeliveryDraftBuilder builder = new DeliveryDraftBuilder();
+        builder.key = template.getKey();
         builder.items = template.getItems();
         builder.parcels = template.getParcels();
         builder.address = template.getAddress();

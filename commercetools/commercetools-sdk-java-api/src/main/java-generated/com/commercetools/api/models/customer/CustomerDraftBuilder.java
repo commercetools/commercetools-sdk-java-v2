@@ -287,7 +287,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Unique VAT ID of the Customer.</p>
+     *  <p>Individual VAT ID of the Customer.</p>
      * @param vatId value to be set
      * @return Builder
      */
@@ -860,7 +860,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Unique VAT ID of the Customer.</p>
+     *  <p>Individual VAT ID of the Customer.</p>
      * @return vatId
      */
 

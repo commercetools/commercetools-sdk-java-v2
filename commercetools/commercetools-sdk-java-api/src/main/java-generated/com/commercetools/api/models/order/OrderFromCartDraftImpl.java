@@ -81,7 +81,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier of the Cart from which this order is created.</p>
+     *  <p>ResourceIdentifier of the Cart from which the Order is created.</p>
      */
 
     public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {
@@ -89,7 +89,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Expected version of the Cart from which the Order is created. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      */
 
     public Long getVersion() {
@@ -113,7 +113,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Payment state for the Order.</p>
      */
 
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
@@ -121,7 +121,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Shipment state for the Order.</p>
      */
 
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
@@ -137,7 +137,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Reference to a State indicating the Order's state.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {

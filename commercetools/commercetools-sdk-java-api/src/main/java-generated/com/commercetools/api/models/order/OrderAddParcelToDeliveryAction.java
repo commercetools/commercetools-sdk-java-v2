@@ -8,7 +8,6 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -23,7 +22,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderAddParcelToDeliveryAction orderAddParcelToDeliveryAction = OrderAddParcelToDeliveryAction.builder()
- *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -38,12 +36,20 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     String ADD_PARCEL_TO_DELIVERY = "addParcelToDelivery";
 
     /**
-     *
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
-    @NotNull
+
     @JsonProperty("deliveryId")
     public String getDeliveryId();
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @return deliveryKey
+     */
+
+    @JsonProperty("deliveryKey")
+    public String getDeliveryKey();
 
     /**
      *
@@ -70,11 +76,18 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     public List<DeliveryItem> getItems();
 
     /**
-     * set deliveryId
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @param deliveryKey value to be set
+     */
+
+    public void setDeliveryKey(final String deliveryKey);
 
     /**
      * set measurements
@@ -121,6 +134,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     public static OrderAddParcelToDeliveryAction of(final OrderAddParcelToDeliveryAction template) {
         OrderAddParcelToDeliveryActionImpl instance = new OrderAddParcelToDeliveryActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setDeliveryKey(template.getDeliveryKey());
         instance.setMeasurements(template.getMeasurements());
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
@@ -139,6 +153,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
         }
         OrderAddParcelToDeliveryActionImpl instance = new OrderAddParcelToDeliveryActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setDeliveryKey(template.getDeliveryKey());
         instance.setMeasurements(
             com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
         instance.setTrackingData(com.commercetools.api.models.order.TrackingData.deepCopy(template.getTrackingData()));

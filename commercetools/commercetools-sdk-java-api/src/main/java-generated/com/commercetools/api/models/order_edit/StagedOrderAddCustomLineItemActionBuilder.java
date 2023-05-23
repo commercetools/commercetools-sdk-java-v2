@@ -48,8 +48,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -61,8 +60,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -74,8 +72,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -271,8 +268,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @return money
      */
 

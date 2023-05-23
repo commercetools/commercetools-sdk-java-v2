@@ -22,7 +22,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetDeliveryCustomFieldAction stagedOrderSetDeliveryCustomFieldAction = StagedOrderSetDeliveryCustomFieldAction.builder()
- *             .deliveryId("{deliveryId}")
  *             .name("{name}")
  *             .build()
  * </code></pre>
@@ -38,12 +37,20 @@ public interface StagedOrderSetDeliveryCustomFieldAction extends StagedOrderUpda
     String SET_DELIVERY_CUSTOM_FIELD = "setDeliveryCustomField";
 
     /**
-     *
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
-    @NotNull
+
     @JsonProperty("deliveryId")
     public String getDeliveryId();
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @return deliveryKey
+     */
+
+    @JsonProperty("deliveryKey")
+    public String getDeliveryKey();
 
     /**
      *  <p>Name of the Custom Field.</p>
@@ -62,11 +69,18 @@ public interface StagedOrderSetDeliveryCustomFieldAction extends StagedOrderUpda
     public Object getValue();
 
     /**
-     * set deliveryId
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @param deliveryKey value to be set
+     */
+
+    public void setDeliveryKey(final String deliveryKey);
 
     /**
      *  <p>Name of the Custom Field.</p>
@@ -98,6 +112,7 @@ public interface StagedOrderSetDeliveryCustomFieldAction extends StagedOrderUpda
     public static StagedOrderSetDeliveryCustomFieldAction of(final StagedOrderSetDeliveryCustomFieldAction template) {
         StagedOrderSetDeliveryCustomFieldActionImpl instance = new StagedOrderSetDeliveryCustomFieldActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setDeliveryKey(template.getDeliveryKey());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
@@ -116,6 +131,7 @@ public interface StagedOrderSetDeliveryCustomFieldAction extends StagedOrderUpda
         }
         StagedOrderSetDeliveryCustomFieldActionImpl instance = new StagedOrderSetDeliveryCustomFieldActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setDeliveryKey(template.getDeliveryKey());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;

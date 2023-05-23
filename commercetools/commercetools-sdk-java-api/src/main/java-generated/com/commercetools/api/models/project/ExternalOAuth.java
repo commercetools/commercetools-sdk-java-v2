@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExternalOAuth {
 
     /**
-     *  <p>URL with authorization header.</p>
+     *  <p>URL with authorization header. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
      * @return url
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface ExternalOAuth {
     public String getAuthorizationHeader();
 
     /**
-     *  <p>URL with authorization header.</p>
+     *  <p>URL with authorization header. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
      * @param url value to be set
      */
 

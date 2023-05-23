@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Changing the parent of a Business Unit generates a BusinessUnitParentUnitChanged Message. The user must be an Associate with the <code>Admin</code> role in the new parent unit.</p>
+ *  <p>Changing the parent of a Business Unit generates a BusinessUnitParentUnitChanged Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

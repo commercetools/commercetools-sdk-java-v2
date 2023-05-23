@@ -34,8 +34,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyTaxCategoriesGet extends
         ApiMethod<ByProjectKeyTaxCategoriesGet, com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse>
-        implements
-        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyTaxCategoriesGet, com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse>,
+        implements ByProjectKeyTaxCategoriesGetMixin,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyTaxCategoriesGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyTaxCategoriesGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyTaxCategoriesGet>,

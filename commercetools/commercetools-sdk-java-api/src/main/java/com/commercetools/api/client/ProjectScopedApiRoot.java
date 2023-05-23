@@ -90,5 +90,9 @@ public interface ProjectScopedApiRoot {
 
     ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyRequestBuilder inBusinessUnit(String businessUnitKey);
 
+    ByProjectKeyAsAssociateRequestBuilder asAssociate();
+
+    ByProjectKeyAssociateRolesRequestBuilder associateRoles();
+
     <R> R with(Function<ProjectApiRoot, R> op);
 }

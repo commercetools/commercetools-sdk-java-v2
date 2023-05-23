@@ -34,6 +34,14 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
         io.vrap.rmf.base.client.Draft<DeliveryDraft> {
 
     /**
+     *  <p>User-defined unique identifier of the Delivery.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
      * @return items
      */
@@ -64,6 +72,13 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
+
+    /**
+     *  <p>User-defined unique identifier of the Delivery.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
@@ -124,6 +139,7 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
      */
     public static DeliveryDraft of(final DeliveryDraft template) {
         DeliveryDraftImpl instance = new DeliveryDraftImpl();
+        instance.setKey(template.getKey());
         instance.setItems(template.getItems());
         instance.setParcels(template.getParcels());
         instance.setAddress(template.getAddress());
@@ -142,6 +158,7 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
             return null;
         }
         DeliveryDraftImpl instance = new DeliveryDraftImpl();
+        instance.setKey(template.getKey());
         instance.setItems(Optional.ofNullable(template.getItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)

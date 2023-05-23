@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier;
 import com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier;
 import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.commercetools.api.models.cart.CartResourceIdentifier;
@@ -49,12 +50,13 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ResourceIdentifier resourceIdentifier = ResourceIdentifier.attributeGroupBuilder()
+ *     ResourceIdentifier resourceIdentifier = ResourceIdentifier.associateRoleBuilder()
  *             .build()
  * </code></pre>
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifierImpl.class, name = AssociateRoleResourceIdentifier.ASSOCIATE_ROLE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifierImpl.class, name = AttributeGroupResourceIdentifier.ATTRIBUTE_GROUP),
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierImpl.class, name = BusinessUnitResourceIdentifier.BUSINESS_UNIT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierImpl.class, name = CartDiscountResourceIdentifier.CART_DISCOUNT),
@@ -136,6 +138,10 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
     public static ResourceIdentifier deepCopy(@Nullable final ResourceIdentifier template) {
         if (template == null) {
             return null;
+        }
+        if (template instanceof com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier) {
+            return com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifier) template);
         }
         if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier) {
             return com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier
@@ -257,6 +263,14 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
+    }
+
+    /**
+     * builder for associateRole subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifierBuilder associateRoleBuilder() {
+        return com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifierBuilder.of();
     }
 
     /**

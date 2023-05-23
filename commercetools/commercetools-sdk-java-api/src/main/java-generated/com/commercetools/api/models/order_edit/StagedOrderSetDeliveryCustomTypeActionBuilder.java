@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetDeliveryCustomTypeAction stagedOrderSetDeliveryCustomTypeAction = StagedOrderSetDeliveryCustomTypeAction.builder()
- *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +23,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<StagedOrderSetDeliveryCustomTypeAction> {
 
+    @Nullable
     private String deliveryId;
+
+    @Nullable
+    private String deliveryKey;
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -33,13 +36,24 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     * set the value to the deliveryId
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetDeliveryCustomTypeActionBuilder deliveryId(final String deliveryId) {
+    public StagedOrderSetDeliveryCustomTypeActionBuilder deliveryId(@Nullable final String deliveryId) {
         this.deliveryId = deliveryId;
+        return this;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @param deliveryKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetDeliveryCustomTypeActionBuilder deliveryKey(@Nullable final String deliveryKey) {
+        this.deliveryKey = deliveryKey;
         return this;
     }
 
@@ -116,12 +130,23 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     * value of deliveryId}
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
 
+    @Nullable
     public String getDeliveryId() {
         return this.deliveryId;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @return deliveryKey
+     */
+
+    @Nullable
+    public String getDeliveryKey() {
+        return this.deliveryKey;
     }
 
     /**
@@ -149,8 +174,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
      * @return StagedOrderSetDeliveryCustomTypeAction
      */
     public StagedOrderSetDeliveryCustomTypeAction build() {
-        Objects.requireNonNull(deliveryId, StagedOrderSetDeliveryCustomTypeAction.class + ": deliveryId is missing");
-        return new StagedOrderSetDeliveryCustomTypeActionImpl(deliveryId, type, fields);
+        return new StagedOrderSetDeliveryCustomTypeActionImpl(deliveryId, deliveryKey, type, fields);
     }
 
     /**
@@ -158,7 +182,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
      * @return StagedOrderSetDeliveryCustomTypeAction
      */
     public StagedOrderSetDeliveryCustomTypeAction buildUnchecked() {
-        return new StagedOrderSetDeliveryCustomTypeActionImpl(deliveryId, type, fields);
+        return new StagedOrderSetDeliveryCustomTypeActionImpl(deliveryId, deliveryKey, type, fields);
     }
 
     /**
@@ -178,6 +202,7 @@ public class StagedOrderSetDeliveryCustomTypeActionBuilder implements Builder<St
             final StagedOrderSetDeliveryCustomTypeAction template) {
         StagedOrderSetDeliveryCustomTypeActionBuilder builder = new StagedOrderSetDeliveryCustomTypeActionBuilder();
         builder.deliveryId = template.getDeliveryId();
+        builder.deliveryKey = template.getDeliveryKey();
         builder.type = template.getType();
         builder.fields = template.getFields();
         return builder;

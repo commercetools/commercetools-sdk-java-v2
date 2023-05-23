@@ -41,7 +41,7 @@ public class OrderUpdateImpl implements OrderUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Expected version of the Order on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      */
 
     public Long getVersion() {
@@ -49,7 +49,7 @@ public class OrderUpdateImpl implements OrderUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.OrderUpdateAction> getActions() {

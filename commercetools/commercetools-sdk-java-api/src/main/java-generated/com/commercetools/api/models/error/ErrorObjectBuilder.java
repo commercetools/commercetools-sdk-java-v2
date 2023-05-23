@@ -15,6 +15,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.AnonymousIdAlreadyInUseErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.AssociateMissingPermissionErrorBuilder associateMissingPermissionBuilder() {
+        return com.commercetools.api.models.error.AssociateMissingPermissionErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsErrorBuilder attributeDefinitionAlreadyExistsBuilder() {
         return com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsErrorBuilder.of();
     }

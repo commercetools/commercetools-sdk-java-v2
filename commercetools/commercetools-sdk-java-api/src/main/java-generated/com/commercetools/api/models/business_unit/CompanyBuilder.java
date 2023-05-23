@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             .name("{name}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
+ *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
  *             .build()
@@ -79,7 +80,12 @@ public class CompanyBuilder implements Builder<Company> {
     @Nullable
     private String defaultBillingAddressId;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode;
+
     private java.util.List<com.commercetools.api.models.business_unit.Associate> associates;
+
+    @Nullable
+    private java.util.List<com.commercetools.api.models.business_unit.InheritedAssociate> inheritedAssociates;
 
     @Nullable
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference parentUnit;
@@ -325,7 +331,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company does not have a parent Business Unit the Stores can be inherited from.</p>
+     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
      * @param storeMode value to be set
      * @return Builder
      */
@@ -573,7 +579,19 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Members that are part of the Business Unit in specific roles.</p>
+     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
+     * @param associateMode value to be set
+     * @return Builder
+     */
+
+    public CompanyBuilder associateMode(
+            final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode) {
+        this.associateMode = associateMode;
+        return this;
+    }
+
+    /**
+     *  <p>Associates that are part of the Business Unit in specific roles.</p>
      * @param associates value to be set
      * @return Builder
      */
@@ -584,7 +602,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Members that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific roles.</p>
      * @param associates value to be set
      * @return Builder
      */
@@ -596,7 +614,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Members that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific roles.</p>
      * @param associates value to be set
      * @return Builder
      */
@@ -610,7 +628,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Members that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific roles.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
@@ -625,7 +643,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Members that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific roles.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
@@ -638,7 +656,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Members that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific roles.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
@@ -649,7 +667,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Members that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific roles.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
@@ -657,6 +675,99 @@ public class CompanyBuilder implements Builder<Company> {
     public CompanyBuilder setAssociates(
             Function<com.commercetools.api.models.business_unit.AssociateBuilder, com.commercetools.api.models.business_unit.Associate> builder) {
         return associates(builder.apply(com.commercetools.api.models.business_unit.AssociateBuilder.of()));
+    }
+
+    /**
+     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     * @param inheritedAssociates value to be set
+     * @return Builder
+     */
+
+    public CompanyBuilder inheritedAssociates(
+            @Nullable final com.commercetools.api.models.business_unit.InheritedAssociate... inheritedAssociates) {
+        this.inheritedAssociates = new ArrayList<>(Arrays.asList(inheritedAssociates));
+        return this;
+    }
+
+    /**
+     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     * @param inheritedAssociates value to be set
+     * @return Builder
+     */
+
+    public CompanyBuilder inheritedAssociates(
+            @Nullable final java.util.List<com.commercetools.api.models.business_unit.InheritedAssociate> inheritedAssociates) {
+        this.inheritedAssociates = inheritedAssociates;
+        return this;
+    }
+
+    /**
+     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     * @param inheritedAssociates value to be set
+     * @return Builder
+     */
+
+    public CompanyBuilder plusInheritedAssociates(
+            @Nullable final com.commercetools.api.models.business_unit.InheritedAssociate... inheritedAssociates) {
+        if (this.inheritedAssociates == null) {
+            this.inheritedAssociates = new ArrayList<>();
+        }
+        this.inheritedAssociates.addAll(Arrays.asList(inheritedAssociates));
+        return this;
+    }
+
+    /**
+     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     * @param builder function to build the inheritedAssociates value
+     * @return Builder
+     */
+
+    public CompanyBuilder plusInheritedAssociates(
+            Function<com.commercetools.api.models.business_unit.InheritedAssociateBuilder, com.commercetools.api.models.business_unit.InheritedAssociateBuilder> builder) {
+        if (this.inheritedAssociates == null) {
+            this.inheritedAssociates = new ArrayList<>();
+        }
+        this.inheritedAssociates
+                .add(builder.apply(com.commercetools.api.models.business_unit.InheritedAssociateBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     * @param builder function to build the inheritedAssociates value
+     * @return Builder
+     */
+
+    public CompanyBuilder withInheritedAssociates(
+            Function<com.commercetools.api.models.business_unit.InheritedAssociateBuilder, com.commercetools.api.models.business_unit.InheritedAssociateBuilder> builder) {
+        this.inheritedAssociates = new ArrayList<>();
+        this.inheritedAssociates
+                .add(builder.apply(com.commercetools.api.models.business_unit.InheritedAssociateBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     * @param builder function to build the inheritedAssociates value
+     * @return Builder
+     */
+
+    public CompanyBuilder addInheritedAssociates(
+            Function<com.commercetools.api.models.business_unit.InheritedAssociateBuilder, com.commercetools.api.models.business_unit.InheritedAssociate> builder) {
+        return plusInheritedAssociates(
+            builder.apply(com.commercetools.api.models.business_unit.InheritedAssociateBuilder.of()));
+    }
+
+    /**
+     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     * @param builder function to build the inheritedAssociates value
+     * @return Builder
+     */
+
+    public CompanyBuilder setInheritedAssociates(
+            Function<com.commercetools.api.models.business_unit.InheritedAssociateBuilder, com.commercetools.api.models.business_unit.InheritedAssociate> builder) {
+        return inheritedAssociates(
+            builder.apply(com.commercetools.api.models.business_unit.InheritedAssociateBuilder.of()));
     }
 
     /**
@@ -823,7 +934,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company does not have a parent Business Unit the Stores can be inherited from.</p>
+     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
      * @return storeMode
      */
 
@@ -910,12 +1021,31 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Members that are part of the Business Unit in specific roles.</p>
+     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
+     * @return associateMode
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitAssociateMode getAssociateMode() {
+        return this.associateMode;
+    }
+
+    /**
+     *  <p>Associates that are part of the Business Unit in specific roles.</p>
      * @return associates
      */
 
     public java.util.List<com.commercetools.api.models.business_unit.Associate> getAssociates() {
         return this.associates;
+    }
+
+    /**
+     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     * @return inheritedAssociates
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.business_unit.InheritedAssociate> getInheritedAssociates() {
+        return this.inheritedAssociates;
     }
 
     /**
@@ -951,11 +1081,13 @@ public class CompanyBuilder implements Builder<Company> {
         Objects.requireNonNull(storeMode, Company.class + ": storeMode is missing");
         Objects.requireNonNull(name, Company.class + ": name is missing");
         Objects.requireNonNull(addresses, Company.class + ": addresses is missing");
+        Objects.requireNonNull(associateMode, Company.class + ": associateMode is missing");
         Objects.requireNonNull(associates, Company.class + ": associates is missing");
         Objects.requireNonNull(topLevelUnit, Company.class + ": topLevelUnit is missing");
         return new CompanyImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
             storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,
-            billingAddressIds, defaultBillingAddressId, associates, parentUnit, topLevelUnit);
+            billingAddressIds, defaultBillingAddressId, associateMode, associates, inheritedAssociates, parentUnit,
+            topLevelUnit);
     }
 
     /**
@@ -965,7 +1097,8 @@ public class CompanyBuilder implements Builder<Company> {
     public Company buildUnchecked() {
         return new CompanyImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
             storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,
-            billingAddressIds, defaultBillingAddressId, associates, parentUnit, topLevelUnit);
+            billingAddressIds, defaultBillingAddressId, associateMode, associates, inheritedAssociates, parentUnit,
+            topLevelUnit);
     }
 
     /**
@@ -1001,7 +1134,9 @@ public class CompanyBuilder implements Builder<Company> {
         builder.defaultShippingAddressId = template.getDefaultShippingAddressId();
         builder.billingAddressIds = template.getBillingAddressIds();
         builder.defaultBillingAddressId = template.getDefaultBillingAddressId();
+        builder.associateMode = template.getAssociateMode();
         builder.associates = template.getAssociates();
+        builder.inheritedAssociates = template.getInheritedAssociates();
         builder.parentUnit = template.getParentUnit();
         builder.topLevelUnit = template.getTopLevelUnit();
         return builder;

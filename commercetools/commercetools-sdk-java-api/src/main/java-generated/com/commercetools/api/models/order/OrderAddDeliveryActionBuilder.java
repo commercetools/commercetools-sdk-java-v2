@@ -24,6 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAction> {
 
     @Nullable
+    private String deliveryKey;
+
+    @Nullable
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     @Nullable
@@ -37,6 +40,17 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    /**
+     *  <p>User-defined unique identifier of a Delivery.</p>
+     * @param deliveryKey value to be set
+     * @return Builder
+     */
+
+    public OrderAddDeliveryActionBuilder deliveryKey(@Nullable final String deliveryKey) {
+        this.deliveryKey = deliveryKey;
+        return this;
+    }
 
     /**
      * set values to the items
@@ -300,6 +314,16 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
+     *  <p>User-defined unique identifier of a Delivery.</p>
+     * @return deliveryKey
+     */
+
+    @Nullable
+    public String getDeliveryKey() {
+        return this.deliveryKey;
+    }
+
+    /**
      * value of items}
      * @return items
      */
@@ -354,7 +378,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
      * @return OrderAddDeliveryAction
      */
     public OrderAddDeliveryAction build() {
-        return new OrderAddDeliveryActionImpl(items, shippingKey, address, parcels, custom);
+        return new OrderAddDeliveryActionImpl(deliveryKey, items, shippingKey, address, parcels, custom);
     }
 
     /**
@@ -362,7 +386,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
      * @return OrderAddDeliveryAction
      */
     public OrderAddDeliveryAction buildUnchecked() {
-        return new OrderAddDeliveryActionImpl(items, shippingKey, address, parcels, custom);
+        return new OrderAddDeliveryActionImpl(deliveryKey, items, shippingKey, address, parcels, custom);
     }
 
     /**
@@ -380,6 +404,7 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
      */
     public static OrderAddDeliveryActionBuilder of(final OrderAddDeliveryAction template) {
         OrderAddDeliveryActionBuilder builder = new OrderAddDeliveryActionBuilder();
+        builder.deliveryKey = template.getDeliveryKey();
         builder.items = template.getItems();
         builder.shippingKey = template.getShippingKey();
         builder.address = template.getAddress();

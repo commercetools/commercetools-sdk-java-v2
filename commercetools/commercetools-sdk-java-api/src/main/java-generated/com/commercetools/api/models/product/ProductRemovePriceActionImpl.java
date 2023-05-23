@@ -24,15 +24,26 @@ public class ProductRemovePriceActionImpl implements ProductRemovePriceAction, M
 
     private String priceId;
 
+    private String sku;
+
+    private Long variantId;
+
+    private com.commercetools.api.models.common.PriceDraft price;
+
     private Boolean staged;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ProductRemovePriceActionImpl(@JsonProperty("priceId") final String priceId,
+    ProductRemovePriceActionImpl(@JsonProperty("priceId") final String priceId, @JsonProperty("sku") final String sku,
+            @JsonProperty("variantId") final Long variantId,
+            @JsonProperty("price") final com.commercetools.api.models.common.PriceDraft price,
             @JsonProperty("staged") final Boolean staged) {
         this.priceId = priceId;
+        this.sku = sku;
+        this.variantId = variantId;
+        this.price = price;
         this.staged = staged;
         this.action = REMOVE_PRICE;
     }
@@ -61,6 +72,30 @@ public class ProductRemovePriceActionImpl implements ProductRemovePriceAction, M
     }
 
     /**
+     *  <p>The <code>sku</code> of the ProductVariant the provided Price should be removed from. Either 'variantId' or 'sku' is required" when <code>priceId</code> is not provided. This field is now deprecated, use 'priceId' instead.</p>
+     */
+
+    public String getSku() {
+        return this.sku;
+    }
+
+    /**
+     *  <p>The <code>id</code> of the ProductVariant the provided Price should be removed from. Either 'variantId' or 'sku' is required" when <code>priceId</code> is not provided. This field is now deprecated, use 'priceId' instead.</p>
+     */
+
+    public Long getVariantId() {
+        return this.variantId;
+    }
+
+    /**
+     *  <p>The Price identical to the one to be removed from the ProductVariant. This field is now deprecated, use 'priceId' instead.</p>
+     */
+
+    public com.commercetools.api.models.common.PriceDraft getPrice() {
+        return this.price;
+    }
+
+    /**
      *  <p>If <code>true</code>, only the staged Embedded Price is removed. If <code>false</code>, both the current and staged Embedded Price are removed.</p>
      */
 
@@ -70,6 +105,18 @@ public class ProductRemovePriceActionImpl implements ProductRemovePriceAction, M
 
     public void setPriceId(final String priceId) {
         this.priceId = priceId;
+    }
+
+    public void setSku(final String sku) {
+        this.sku = sku;
+    }
+
+    public void setVariantId(final Long variantId) {
+        this.variantId = variantId;
+    }
+
+    public void setPrice(final com.commercetools.api.models.common.PriceDraft price) {
+        this.price = price;
     }
 
     public void setStaged(final Boolean staged) {
@@ -88,13 +135,22 @@ public class ProductRemovePriceActionImpl implements ProductRemovePriceAction, M
 
         return new EqualsBuilder().append(action, that.action)
                 .append(priceId, that.priceId)
+                .append(sku, that.sku)
+                .append(variantId, that.variantId)
+                .append(price, that.price)
                 .append(staged, that.staged)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(priceId).append(staged).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(priceId)
+                .append(sku)
+                .append(variantId)
+                .append(price)
+                .append(staged)
+                .toHashCode();
     }
 
 }

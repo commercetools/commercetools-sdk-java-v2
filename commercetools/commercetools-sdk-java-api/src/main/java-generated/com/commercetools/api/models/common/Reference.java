@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.associate_role.AssociateRoleReference;
 import com.commercetools.api.models.attribute_group.AttributeGroupReference;
 import com.commercetools.api.models.business_unit.BusinessUnitReference;
 import com.commercetools.api.models.cart.CartReference;
@@ -51,13 +52,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     Reference reference = Reference.attributeGroupBuilder()
+ *     Reference reference = Reference.associateRoleBuilder()
  *             id("{id}")
  *             .build()
  * </code></pre>
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.api.models.associate_role.AssociateRoleReferenceImpl.class, name = AssociateRoleReference.ASSOCIATE_ROLE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.attribute_group.AttributeGroupReferenceImpl.class, name = AttributeGroupReference.ATTRIBUTE_GROUP),
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitReferenceImpl.class, name = BusinessUnitReference.BUSINESS_UNIT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountReferenceImpl.class, name = CartDiscountReference.CART_DISCOUNT),
@@ -126,6 +128,10 @@ public interface Reference extends ReferenceMixin {
     public static Reference deepCopy(@Nullable final Reference template) {
         if (template == null) {
             return null;
+        }
+        if (template instanceof com.commercetools.api.models.associate_role.AssociateRoleReference) {
+            return com.commercetools.api.models.associate_role.AssociateRoleReference
+                    .deepCopy((com.commercetools.api.models.associate_role.AssociateRoleReference) template);
         }
         if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupReference) {
             return com.commercetools.api.models.attribute_group.AttributeGroupReference
@@ -254,6 +260,14 @@ public interface Reference extends ReferenceMixin {
         ReferenceImpl instance = new ReferenceImpl();
         instance.setId(template.getId());
         return instance;
+    }
+
+    /**
+     * builder for associateRole subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.associate_role.AssociateRoleReferenceBuilder associateRoleBuilder() {
+        return com.commercetools.api.models.associate_role.AssociateRoleReferenceBuilder.of();
     }
 
     /**

@@ -16,6 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyBusinessUnitAssociateDraft myBusinessUnitAssociateDraft = MyBusinessUnitAssociateDraft.builder()
  *             .version(0.3)
  *             .customer(customerBuilder -> customerBuilder)
+ *             .plusAssociateRoleAssignments(associateRoleAssignmentsBuilder -> associateRoleAssignmentsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -26,6 +27,8 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     private Long version;
 
     private com.commercetools.api.models.me.MyCustomerDraft customer;
+
+    private java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> associateRoleAssignments;
 
     /**
      *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
@@ -75,6 +78,99 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     }
 
     /**
+     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     * @param associateRoleAssignments value to be set
+     * @return Builder
+     */
+
+    public MyBusinessUnitAssociateDraftBuilder associateRoleAssignments(
+            final com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft... associateRoleAssignments) {
+        this.associateRoleAssignments = new ArrayList<>(Arrays.asList(associateRoleAssignments));
+        return this;
+    }
+
+    /**
+     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     * @param associateRoleAssignments value to be set
+     * @return Builder
+     */
+
+    public MyBusinessUnitAssociateDraftBuilder associateRoleAssignments(
+            final java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> associateRoleAssignments) {
+        this.associateRoleAssignments = associateRoleAssignments;
+        return this;
+    }
+
+    /**
+     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     * @param associateRoleAssignments value to be set
+     * @return Builder
+     */
+
+    public MyBusinessUnitAssociateDraftBuilder plusAssociateRoleAssignments(
+            final com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft... associateRoleAssignments) {
+        if (this.associateRoleAssignments == null) {
+            this.associateRoleAssignments = new ArrayList<>();
+        }
+        this.associateRoleAssignments.addAll(Arrays.asList(associateRoleAssignments));
+        return this;
+    }
+
+    /**
+     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     * @param builder function to build the associateRoleAssignments value
+     * @return Builder
+     */
+
+    public MyBusinessUnitAssociateDraftBuilder plusAssociateRoleAssignments(
+            Function<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder, com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder> builder) {
+        if (this.associateRoleAssignments == null) {
+            this.associateRoleAssignments = new ArrayList<>();
+        }
+        this.associateRoleAssignments.add(
+            builder.apply(com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     * @param builder function to build the associateRoleAssignments value
+     * @return Builder
+     */
+
+    public MyBusinessUnitAssociateDraftBuilder withAssociateRoleAssignments(
+            Function<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder, com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder> builder) {
+        this.associateRoleAssignments = new ArrayList<>();
+        this.associateRoleAssignments.add(
+            builder.apply(com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     * @param builder function to build the associateRoleAssignments value
+     * @return Builder
+     */
+
+    public MyBusinessUnitAssociateDraftBuilder addAssociateRoleAssignments(
+            Function<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder, com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> builder) {
+        return plusAssociateRoleAssignments(
+            builder.apply(com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     * @param builder function to build the associateRoleAssignments value
+     * @return Builder
+     */
+
+    public MyBusinessUnitAssociateDraftBuilder setAssociateRoleAssignments(
+            Function<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder, com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> builder) {
+        return associateRoleAssignments(
+            builder.apply(com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @return version
      */
@@ -93,13 +189,24 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
     }
 
     /**
+     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     * @return associateRoleAssignments
+     */
+
+    public java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> getAssociateRoleAssignments() {
+        return this.associateRoleAssignments;
+    }
+
+    /**
      * builds MyBusinessUnitAssociateDraft with checking for non-null required values
      * @return MyBusinessUnitAssociateDraft
      */
     public MyBusinessUnitAssociateDraft build() {
         Objects.requireNonNull(version, MyBusinessUnitAssociateDraft.class + ": version is missing");
         Objects.requireNonNull(customer, MyBusinessUnitAssociateDraft.class + ": customer is missing");
-        return new MyBusinessUnitAssociateDraftImpl(version, customer);
+        Objects.requireNonNull(associateRoleAssignments,
+            MyBusinessUnitAssociateDraft.class + ": associateRoleAssignments is missing");
+        return new MyBusinessUnitAssociateDraftImpl(version, customer, associateRoleAssignments);
     }
 
     /**
@@ -107,7 +214,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
      * @return MyBusinessUnitAssociateDraft
      */
     public MyBusinessUnitAssociateDraft buildUnchecked() {
-        return new MyBusinessUnitAssociateDraftImpl(version, customer);
+        return new MyBusinessUnitAssociateDraftImpl(version, customer, associateRoleAssignments);
     }
 
     /**
@@ -127,6 +234,7 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
         MyBusinessUnitAssociateDraftBuilder builder = new MyBusinessUnitAssociateDraftBuilder();
         builder.version = template.getVersion();
         builder.customer = template.getCustomer();
+        builder.associateRoleAssignments = template.getAssociateRoleAssignments();
         return builder;
     }
 

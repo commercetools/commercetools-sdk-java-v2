@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetDeliveryAddressAction stagedOrderSetDeliveryAddressAction = StagedOrderSetDeliveryAddressAction.builder()
- *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,19 +23,34 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetDeliveryAddressActionBuilder implements Builder<StagedOrderSetDeliveryAddressAction> {
 
+    @Nullable
     private String deliveryId;
+
+    @Nullable
+    private String deliveryKey;
 
     @Nullable
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     * set the value to the deliveryId
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetDeliveryAddressActionBuilder deliveryId(final String deliveryId) {
+    public StagedOrderSetDeliveryAddressActionBuilder deliveryId(@Nullable final String deliveryId) {
         this.deliveryId = deliveryId;
+        return this;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @param deliveryKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetDeliveryAddressActionBuilder deliveryKey(@Nullable final String deliveryKey) {
+        this.deliveryKey = deliveryKey;
         return this;
     }
 
@@ -77,12 +91,23 @@ public class StagedOrderSetDeliveryAddressActionBuilder implements Builder<Stage
     }
 
     /**
-     * value of deliveryId}
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
 
+    @Nullable
     public String getDeliveryId() {
         return this.deliveryId;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @return deliveryKey
+     */
+
+    @Nullable
+    public String getDeliveryKey() {
+        return this.deliveryKey;
     }
 
     /**
@@ -100,8 +125,7 @@ public class StagedOrderSetDeliveryAddressActionBuilder implements Builder<Stage
      * @return StagedOrderSetDeliveryAddressAction
      */
     public StagedOrderSetDeliveryAddressAction build() {
-        Objects.requireNonNull(deliveryId, StagedOrderSetDeliveryAddressAction.class + ": deliveryId is missing");
-        return new StagedOrderSetDeliveryAddressActionImpl(deliveryId, address);
+        return new StagedOrderSetDeliveryAddressActionImpl(deliveryId, deliveryKey, address);
     }
 
     /**
@@ -109,7 +133,7 @@ public class StagedOrderSetDeliveryAddressActionBuilder implements Builder<Stage
      * @return StagedOrderSetDeliveryAddressAction
      */
     public StagedOrderSetDeliveryAddressAction buildUnchecked() {
-        return new StagedOrderSetDeliveryAddressActionImpl(deliveryId, address);
+        return new StagedOrderSetDeliveryAddressActionImpl(deliveryId, deliveryKey, address);
     }
 
     /**
@@ -128,6 +152,7 @@ public class StagedOrderSetDeliveryAddressActionBuilder implements Builder<Stage
     public static StagedOrderSetDeliveryAddressActionBuilder of(final StagedOrderSetDeliveryAddressAction template) {
         StagedOrderSetDeliveryAddressActionBuilder builder = new StagedOrderSetDeliveryAddressActionBuilder();
         builder.deliveryId = template.getDeliveryId();
+        builder.deliveryKey = template.getDeliveryKey();
         builder.address = template.getAddress();
         return builder;
     }

@@ -34,8 +34,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyCartDiscountsGet extends
         ApiMethod<ByProjectKeyCartDiscountsGet, com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse>
-        implements
-        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCartDiscountsGet, com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse>,
+        implements ByProjectKeyCartDiscountsGetMixin,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCartDiscountsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyCartDiscountsGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyCartDiscountsGet>,

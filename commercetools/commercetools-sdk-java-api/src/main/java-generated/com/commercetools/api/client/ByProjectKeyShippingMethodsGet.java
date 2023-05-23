@@ -34,8 +34,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyShippingMethodsGet extends
         ApiMethod<ByProjectKeyShippingMethodsGet, com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>
-        implements
-        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyShippingMethodsGet, com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>,
+        implements ByProjectKeyShippingMethodsGetMixin,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyShippingMethodsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyShippingMethodsGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyShippingMethodsGet>,

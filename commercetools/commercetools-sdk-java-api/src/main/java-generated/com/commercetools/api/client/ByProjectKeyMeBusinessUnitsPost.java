@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Automatically assigns the authenticated user to the Business Unit in the Associate Roles of <code>Admin</code> as well as <code>Buyer</code>.</p>
+ *  <p>Automatically assigns the Associate to the Business Unit in the default Associate Role defined in BusinessUnitConfiguration. If there is no default Associate Role configured, this request fails with an InvalidOperation error. When creating a Division, the Associate must have the <code>AddChildUnits</code> Permission in the parent unit. If the required Permission is missing, an AssociateMissingPermission error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

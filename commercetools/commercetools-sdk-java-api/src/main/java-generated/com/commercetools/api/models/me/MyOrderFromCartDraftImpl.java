@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyOrderFromCartDraft
+ *  <p>When creating B2B Orders, the Customer must have the <code>MyOrderFromCartDraft</code> Permission.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyOrderFromCartDraftImpl implements MyOrderFromCartDraft, ModelBase {

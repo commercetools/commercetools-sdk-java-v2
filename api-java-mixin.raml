@@ -5,6 +5,9 @@ annotationTypes:
   java-mixin:
     type: string
     allowedTargets: TypeDeclaration
+  java-query-implements:
+    type: string
+    allowedTargets: TypeDeclaration
   java-builder-implements:
     type: string
     allowedTargets: TypeDeclaration
@@ -79,7 +82,7 @@ types:
           return com.commercetools.api.models.common.ReferenceTypeId.KEY_VALUE_DOCUMENT;
       }
   CustomObjectPagedQueryResponse:
-    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<CustomObject>'
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueQryResponse<CustomObject>'
   CustomObjectReference:
     (java-extends): 'com.commercetools.api.models.Identifiable<CustomObject>'
   Customer:
@@ -428,6 +431,8 @@ types:
     (java-extends): 'com.commercetools.api.models.Customizable<Transaction>'
   TransactionDraft:
     (java-extends): 'com.commercetools.api.models.CustomizableDraft<TransactionDraft>'
+  Attribute:
+    (java-query-implements): 'AttributeQueryBuilderMixin'
   Product:
     (java-extends): 'ProductMixin, com.commercetools.api.models.DomainResource<Product>, com.commercetools.api.models.Referencable<Product>, com.commercetools.api.models.ResourceIdentifiable<Product>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -1362,9 +1367,7 @@ types:
   /categories:
     (java-implements): 'ByProjectKeyCategoriesRequestBuilderMixin'
     get:
-      (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCategoriesGet,
-        com.commercetools.api.models.category.CategoryPagedQueryResponse>'
+      (java-implements): 'ByProjectKeyCategoriesGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1376,9 +1379,7 @@ types:
   /carts:
     (java-implements): 'ByProjectKeyCartsRequestBuilderMixin'
     get:
-      (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCartsGet,
-        com.commercetools.api.models.cart.CartPagedQueryResponse>'
+      (java-implements): 'ByProjectKeyCartsGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1391,9 +1392,7 @@ types:
   /cart-discounts:
     (java-implements): 'ByProjectKeyCartDiscountsRequestBuilderMixin'
     get:
-      (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCartDiscountsGet,
-        com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse>'
+      (java-implements): 'ByProjectKeyCartDiscountsGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1406,9 +1405,7 @@ types:
   /channels:
     (java-implements): 'ByProjectKeyChannelsRequestBuilderMixin'
     get:
-      (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyChannelsGet,
-        com.commercetools.api.models.channel.ChannelPagedQueryResponse>'
+      (java-implements): 'ByProjectKeyChannelsGetMixin'
     /{ID}:
       delete:
         (java-implements):
@@ -1418,8 +1415,7 @@ types:
     (java-implements): 'ByProjectKeyCustomersRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCustomersGet,
-        com.commercetools.api.models.customer.CustomerPagedQueryResponse>'
+        'ByProjectKeyCustomersGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1432,18 +1428,16 @@ types:
   /custom-objects:
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCustomObjectsGet,
-        com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>'
+        'ByProjectKeyCustomObjectsGetMixin'
     /{container}:
       get:
         (java-implements):
-          'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCustomObjectsByContainerGet, com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>'
+          'ByProjectKeyCustomObjectsByContainerGetMixin'
   /customer-groups:
     (java-implements): 'ByProjectKeyCustomerGroupsRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCustomerGroupsGet,
-        com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponse>'
+        'ByProjectKeyCustomerGroupsGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1457,8 +1451,7 @@ types:
     (java-implements): 'ByProjectKeyDiscountCodesRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyDiscountCodesGet,
-        com.commercetools.api.models.discount_code.DiscountCodePagedQueryResponse>'
+        'ByProjectKeyDiscountCodesGetMixin'
     /{ID}:
       delete:
         (java-implements):
@@ -1469,14 +1462,12 @@ types:
       /shopping-lists:
         get:
           (java-implements):
-            'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet,
-            com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse>'
+            'ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGetMixin'
     /shopping-lists:
       (java-implements): 'ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestMixin'
       get:
         (java-implements):
-          'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet,
-          com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse>'
+          'ByProjectKeyInStoreKeyByStoreKeyShoppingListsGetMixin'
     /carts:
       (java-implements): 'ByProjectKeyInStoreKeyByStoreKeyCartsRequestMixin'
     /customers:
@@ -1487,8 +1478,7 @@ types:
     (java-implements): 'ByProjectKeyInventoryRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyInventoryGet,
-        com.commercetools.api.models.inventory.InventoryPagedQueryResponse>'
+        'ByProjectKeyInventoryGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1501,20 +1491,15 @@ types:
   /messages:
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyMessagesGet,
-        com.commercetools.api.models.message.MessagePagedQueryResponse>'
+        'ByProjectKeyMessagesGetMixin'
   /orders:
     (java-implements): 'ByProjectKeyOrdersRequestBuilderMixin'
     /edits:
       get:
         (java-implements):
-          'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersEditsGet,
-          com.commercetools.api.models.order_edit.OrderEditPagedQueryResponse>'
+          'ByProjectKeyOrdersEditsGetMixin'
     get:
-      (java-implements):
-        'ByProjectKeyOrdersGetMixin,
-        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersGet,
-        com.commercetools.api.models.order.OrderPagedQueryResponse>'
+      (java-implements): 'ByProjectKeyOrdersGetMixin'
     /{ID}:
       delete:
         (java-implements):
@@ -1524,8 +1509,7 @@ types:
     (java-implements): 'ByProjectKeyPaymentsRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyPaymentsGet,
-        com.commercetools.api.models.payment.PaymentPagedQueryResponse>'
+        'ByProjectKeyPaymentsGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1539,8 +1523,7 @@ types:
     (java-implements): 'ByProjectKeyProductsRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyProductsGet,
-        com.commercetools.api.models.product.ProductPagedQueryResponse>'
+        'ByProjectKeyProductsGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1554,8 +1537,7 @@ types:
     (java-implements): 'ByProjectKeyProductDiscountsRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyProductDiscountsGet,
-        com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse>'
+        'ByProjectKeyProductDiscountsGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1568,8 +1550,7 @@ types:
   /product-projections:
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyProductProjectionsGet,
-        com.commercetools.api.models.product.ProductProjectionPagedQueryResponse>'
+        'ByProjectKeyProductProjectionsGetMixin'
     /search:
       post:
         (java-implements): 'ByProjectKeyProductProjectionsSearchPostMixin'
@@ -1577,8 +1558,7 @@ types:
     (java-implements): 'ByProjectKeyProductSelectionsRequestMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyProductSelectionsGet,
-        com.commercetools.api.models.product_selection.ProductSelectionPagedQueryResponse>'
+        'ByProjectKeyProductSelectionsGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1591,8 +1571,7 @@ types:
     (java-implements): 'ByProjectKeyProductTypesRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyProductTypesGet,
-        com.commercetools.api.models.product_type.ProductTypePagedQueryResponse>'
+        'ByProjectKeyProductTypesGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1638,8 +1617,7 @@ types:
     (java-implements): 'ByProjectKeyReviewsRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyReviewsGet,
-        com.commercetools.api.models.review.ReviewPagedQueryResponse>'
+        'ByProjectKeyReviewsGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1653,8 +1631,7 @@ types:
     (java-implements): 'ByProjectKeyShippingMethodsRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyShippingMethodsGet,
-        com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>'
+        'ByProjectKeyShippingMethodsGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1668,8 +1645,7 @@ types:
     (java-implements): 'ByProjectKeyShoppingListsRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyShoppingListsGet,
-        com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse>'
+        'ByProjectKeyShoppingListsGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1683,8 +1659,7 @@ types:
     (java-implements): 'ByProjectKeyStatesRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyStatesGet,
-        com.commercetools.api.models.state.StatePagedQueryResponse>'
+        'ByProjectKeyStatesGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1698,8 +1673,7 @@ types:
     (java-implements): 'ByProjectKeySubscriptionsRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeySubscriptionsGet,
-        com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse>'
+        'ByProjectKeySubscriptionsGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1713,8 +1687,7 @@ types:
     (java-implements): 'ByProjectKeyTaxCategoriesRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyTaxCategoriesGet,
-        com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse>'
+        'ByProjectKeyTaxCategoriesGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1728,8 +1701,7 @@ types:
     (java-implements): 'ByProjectKeyTypesRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyTypesGet,
-        com.commercetools.api.models.type.TypePagedQueryResponse>'
+        'ByProjectKeyTypesGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1743,8 +1715,7 @@ types:
     (java-implements): 'ByProjectKeyZonesRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyZonesGet,
-        com.commercetools.api.models.zone.ZonePagedQueryResponse>'
+        'ByProjectKeyZonesGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1758,8 +1729,7 @@ types:
     (java-implements): 'ByProjectKeyExtensionsRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyExtensionsGet,
-        com.commercetools.api.models.extension.ExtensionPagedQueryResponse>'
+        'ByProjectKeyExtensionsGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1773,8 +1743,7 @@ types:
     (java-implements): 'ByProjectKeyStoresRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyStoresGet,
-        com.commercetools.api.models.store.StorePagedQueryResponse>'
+        'ByProjectKeyStoresGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1788,8 +1757,7 @@ types:
     (java-implements): 'ByProjectKeyStandalonePricesRequestBuilderMixin'
     get:
       (java-implements):
-        'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyStandalonePricesGet,
-        com.commercetools.api.models.standalone_price.StandalonePricePagedQueryResponse>'
+        'ByProjectKeyStandalonePricesGetMixin'
     /key={key}:
       delete:
         (java-implements):

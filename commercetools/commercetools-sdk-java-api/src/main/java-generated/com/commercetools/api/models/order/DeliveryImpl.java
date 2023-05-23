@@ -22,6 +22,8 @@ public class DeliveryImpl implements Delivery, ModelBase {
 
     private String id;
 
+    private String key;
+
     private java.time.ZonedDateTime createdAt;
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
@@ -36,13 +38,14 @@ public class DeliveryImpl implements Delivery, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    DeliveryImpl(@JsonProperty("id") final String id,
+    DeliveryImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
             @JsonProperty("parcels") final java.util.List<com.commercetools.api.models.order.Parcel> parcels,
             @JsonProperty("address") final com.commercetools.api.models.common.Address address,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
+        this.key = key;
         this.createdAt = createdAt;
         this.items = items;
         this.parcels = parcels;
@@ -62,6 +65,14 @@ public class DeliveryImpl implements Delivery, ModelBase {
 
     public String getId() {
         return this.id;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Delivery.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -108,6 +119,10 @@ public class DeliveryImpl implements Delivery, ModelBase {
         this.id = id;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
     }
@@ -147,6 +162,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
         DeliveryImpl that = (DeliveryImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
                 .append(createdAt, that.createdAt)
                 .append(items, that.items)
                 .append(parcels, that.parcels)
@@ -158,6 +174,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id)
+                .append(key)
                 .append(createdAt)
                 .append(items)
                 .append(parcels)

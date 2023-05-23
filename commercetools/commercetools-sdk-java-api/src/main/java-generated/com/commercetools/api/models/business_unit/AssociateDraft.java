@@ -4,6 +4,7 @@ package com.commercetools.api.models.business_unit;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
@@ -33,12 +34,20 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateDraft> {
 
     /**
-     *  <p>Roles the Associate should hold within the Business Unit.</p>
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
+     * @return associateRoleAssignments
+     */
+    @Valid
+    @JsonProperty("associateRoleAssignments")
+    public List<AssociateRoleAssignmentDraft> getAssociateRoleAssignments();
+
+    /**
+     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
      * @return roles
      */
-
+    @Deprecated
     @JsonProperty("roles")
-    public List<AssociateRole> getRoles();
+    public List<AssociateRoleDeprecated> getRoles();
 
     /**
      *  <p>The Customer to be part of the Business Unit.</p>
@@ -50,19 +59,34 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
     public CustomerResourceIdentifier getCustomer();
 
     /**
-     *  <p>Roles the Associate should hold within the Business Unit.</p>
-     * @param roles values to be set
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
+     * @param associateRoleAssignments values to be set
      */
 
     @JsonIgnore
-    public void setRoles(final AssociateRole... roles);
+    public void setAssociateRoleAssignments(final AssociateRoleAssignmentDraft... associateRoleAssignments);
 
     /**
-     *  <p>Roles the Associate should hold within the Business Unit.</p>
-     * @param roles values to be set
+     *  <p>Roles assigned to the Associate within a Business Unit.</p>
+     * @param associateRoleAssignments values to be set
      */
 
-    public void setRoles(final List<AssociateRole> roles);
+    public void setAssociateRoleAssignments(final List<AssociateRoleAssignmentDraft> associateRoleAssignments);
+
+    /**
+     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
+     * @param roles values to be set
+     */
+    @Deprecated
+    @JsonIgnore
+    public void setRoles(final AssociateRoleDeprecated... roles);
+
+    /**
+     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
+     * @param roles values to be set
+     */
+    @Deprecated
+    public void setRoles(final List<AssociateRoleDeprecated> roles);
 
     /**
      *  <p>The Customer to be part of the Business Unit.</p>
@@ -86,6 +110,7 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
      */
     public static AssociateDraft of(final AssociateDraft template) {
         AssociateDraftImpl instance = new AssociateDraftImpl();
+        instance.setAssociateRoleAssignments(template.getAssociateRoleAssignments());
         instance.setRoles(template.getRoles());
         instance.setCustomer(template.getCustomer());
         return instance;
@@ -102,6 +127,11 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
             return null;
         }
         AssociateDraftImpl instance = new AssociateDraftImpl();
+        instance.setAssociateRoleAssignments(Optional.ofNullable(template.getAssociateRoleAssignments())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
         instance.setCustomer(
             com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));

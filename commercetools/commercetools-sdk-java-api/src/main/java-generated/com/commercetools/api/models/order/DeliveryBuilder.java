@@ -29,6 +29,9 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     private String id;
 
+    @Nullable
+    private String key;
+
     private java.time.ZonedDateTime createdAt;
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
@@ -49,6 +52,17 @@ public class DeliveryBuilder implements Builder<Delivery> {
 
     public DeliveryBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Delivery.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public DeliveryBuilder key(@Nullable final String key) {
+        this.key = key;
         return this;
     }
 
@@ -315,6 +329,16 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
+     *  <p>User-defined unique identifier of the Delivery.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      * value of createdAt}
      * @return createdAt
      */
@@ -370,7 +394,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
         Objects.requireNonNull(createdAt, Delivery.class + ": createdAt is missing");
         Objects.requireNonNull(items, Delivery.class + ": items is missing");
         Objects.requireNonNull(parcels, Delivery.class + ": parcels is missing");
-        return new DeliveryImpl(id, createdAt, items, parcels, address, custom);
+        return new DeliveryImpl(id, key, createdAt, items, parcels, address, custom);
     }
 
     /**
@@ -378,7 +402,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
      * @return Delivery
      */
     public Delivery buildUnchecked() {
-        return new DeliveryImpl(id, createdAt, items, parcels, address, custom);
+        return new DeliveryImpl(id, key, createdAt, items, parcels, address, custom);
     }
 
     /**
@@ -397,6 +421,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     public static DeliveryBuilder of(final Delivery template) {
         DeliveryBuilder builder = new DeliveryBuilder();
         builder.id = template.getId();
+        builder.key = template.getKey();
         builder.createdAt = template.getCreatedAt();
         builder.items = template.getItems();
         builder.parcels = template.getParcels();

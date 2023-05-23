@@ -24,12 +24,16 @@ public class StagedOrderRemoveDeliveryActionImpl implements StagedOrderRemoveDel
 
     private String deliveryId;
 
+    private String deliveryKey;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
-    StagedOrderRemoveDeliveryActionImpl(@JsonProperty("deliveryId") final String deliveryId) {
+    StagedOrderRemoveDeliveryActionImpl(@JsonProperty("deliveryId") final String deliveryId,
+            @JsonProperty("deliveryKey") final String deliveryKey) {
         this.deliveryId = deliveryId;
+        this.deliveryKey = deliveryKey;
         this.action = REMOVE_DELIVERY;
     }
 
@@ -49,15 +53,27 @@ public class StagedOrderRemoveDeliveryActionImpl implements StagedOrderRemoveDel
     }
 
     /**
-     *
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      */
 
     public String getDeliveryId() {
         return this.deliveryId;
     }
 
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     */
+
+    public String getDeliveryKey() {
+        return this.deliveryKey;
+    }
+
     public void setDeliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
+    }
+
+    public void setDeliveryKey(final String deliveryKey) {
+        this.deliveryKey = deliveryKey;
     }
 
     @Override
@@ -70,12 +86,15 @@ public class StagedOrderRemoveDeliveryActionImpl implements StagedOrderRemoveDel
 
         StagedOrderRemoveDeliveryActionImpl that = (StagedOrderRemoveDeliveryActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(deliveryId, that.deliveryId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(deliveryId, that.deliveryId)
+                .append(deliveryKey, that.deliveryKey)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(deliveryId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(deliveryId).append(deliveryKey).toHashCode();
     }
 
 }

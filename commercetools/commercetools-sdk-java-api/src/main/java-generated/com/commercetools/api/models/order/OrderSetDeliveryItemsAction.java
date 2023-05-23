@@ -23,7 +23,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetDeliveryItemsAction orderSetDeliveryItemsAction = OrderSetDeliveryItemsAction.builder()
- *             .deliveryId("{deliveryId}")
  *             .plusItems(itemsBuilder -> itemsBuilder)
  *             .build()
  * </code></pre>
@@ -39,12 +38,20 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     String SET_DELIVERY_ITEMS = "setDeliveryItems";
 
     /**
-     *
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
-    @NotNull
+
     @JsonProperty("deliveryId")
     public String getDeliveryId();
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @return deliveryKey
+     */
+
+    @JsonProperty("deliveryKey")
+    public String getDeliveryKey();
 
     /**
      *
@@ -56,11 +63,18 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     public List<DeliveryItem> getItems();
 
     /**
-     * set deliveryId
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @param deliveryKey value to be set
+     */
+
+    public void setDeliveryKey(final String deliveryKey);
 
     /**
      * set items
@@ -93,6 +107,7 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     public static OrderSetDeliveryItemsAction of(final OrderSetDeliveryItemsAction template) {
         OrderSetDeliveryItemsActionImpl instance = new OrderSetDeliveryItemsActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setDeliveryKey(template.getDeliveryKey());
         instance.setItems(template.getItems());
         return instance;
     }
@@ -109,6 +124,7 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
         }
         OrderSetDeliveryItemsActionImpl instance = new OrderSetDeliveryItemsActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setDeliveryKey(template.getDeliveryKey());
         instance.setItems(Optional.ofNullable(template.getItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)

@@ -189,7 +189,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public String getCompanyName();
 
     /**
-     *  <p>Unique VAT ID of the Customer.</p>
+     *  <p>Individual VAT ID of the Customer.</p>
      * @return vatId
      */
 
@@ -418,7 +418,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public void setCompanyName(final String companyName);
 
     /**
-     *  <p>Unique VAT ID of the Customer.</p>
+     *  <p>Individual VAT ID of the Customer.</p>
      * @param vatId value to be set
      */
 

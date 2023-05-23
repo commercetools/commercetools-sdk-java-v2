@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Draft type to model divisions that are part of a Company or a higher order Division. Contains the fields and values of the generic BusinessUnitDraft that are used specifically for creating a Division.</p>
+ *  <p>Draft type to model divisions that are part of a Company or a higher-order Division. Contains the fields and values of the generic BusinessUnitDraft that are used specifically for creating a Division.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,12 +49,20 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
     public BusinessUnitResourceIdentifier getParentUnit();
 
     /**
-     *  <p>If not set, the Division inherits the Stores from its <code>parentUnit</code>. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
+     *  <p>If not set, the Division inherits the Stores from a parent unit. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
      * @return storeMode
      */
 
     @JsonProperty("storeMode")
     public BusinessUnitStoreMode getStoreMode();
+
+    /**
+     *  <p>Determines whether the Division can inherit Associates from a parent.</p>
+     * @return associateMode
+     */
+
+    @JsonProperty("associateMode")
+    public BusinessUnitAssociateMode getAssociateMode();
 
     /**
      *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
@@ -64,11 +72,18 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
     public void setParentUnit(final BusinessUnitResourceIdentifier parentUnit);
 
     /**
-     *  <p>If not set, the Division inherits the Stores from its <code>parentUnit</code>. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
+     *  <p>If not set, the Division inherits the Stores from a parent unit. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
      * @param storeMode value to be set
      */
 
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
+
+    /**
+     *  <p>Determines whether the Division can inherit Associates from a parent.</p>
+     * @param associateMode value to be set
+     */
+
+    public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
 
     /**
      * factory method
@@ -91,6 +106,7 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
         instance.setStoreMode(template.getStoreMode());
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
+        instance.setAssociateMode(template.getAssociateMode());
         instance.setAssociates(template.getAssociates());
         instance.setAddresses(template.getAddresses());
         instance.setShippingAddresses(template.getShippingAddresses());
@@ -123,6 +139,7 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
         instance.setStoreMode(template.getStoreMode());
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
+        instance.setAssociateMode(template.getAssociateMode());
         instance.setAssociates(Optional.ofNullable(template.getAssociates())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.business_unit.AssociateDraft::deepCopy)

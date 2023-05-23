@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>The My Business Unit endpoint does not support assigning existing Customers to a Business Unit. Use this endpoint to create a new Customer and associate it with the Business Unit. The user must have the <code>Admin</code> role within the Business Unit to perform this request. The new Customer is created with an empty set of roles.</p>
+ *  <p>The My Business Unit endpoint does not support assigning existing Customers to a Business Unit. Associates with the <code>UpdateAssociates</code> Permission can use this endpoint to create a new Customer and associate it with the Business Unit. If the required Permission is missing, an AssociateMissingPermission error is returned. The new Associate is created with an empty set of roles.</p>
  *
  * <hr>
  * <div class=code-example>

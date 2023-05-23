@@ -36,8 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Draft<DiscountedLineItemPriceDraft> {
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @return value
      */
     @NotNull
@@ -55,8 +54,7 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
     public List<DiscountedLineItemPortion> getIncludedDiscounts();
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      * @param value value to be set
      */
 

@@ -39,6 +39,14 @@ public interface OrderAddDeliveryAction
     String ADD_DELIVERY = "addDelivery";
 
     /**
+     *  <p>User-defined unique identifier of a Delivery.</p>
+     * @return deliveryKey
+     */
+
+    @JsonProperty("deliveryKey")
+    public String getDeliveryKey();
+
+    /**
      *
      * @return items
      */
@@ -77,6 +85,13 @@ public interface OrderAddDeliveryAction
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
+
+    /**
+     *  <p>User-defined unique identifier of a Delivery.</p>
+     * @param deliveryKey value to be set
+     */
+
+    public void setDeliveryKey(final String deliveryKey);
 
     /**
      * set items
@@ -144,6 +159,7 @@ public interface OrderAddDeliveryAction
      */
     public static OrderAddDeliveryAction of(final OrderAddDeliveryAction template) {
         OrderAddDeliveryActionImpl instance = new OrderAddDeliveryActionImpl();
+        instance.setDeliveryKey(template.getDeliveryKey());
         instance.setItems(template.getItems());
         instance.setShippingKey(template.getShippingKey());
         instance.setAddress(template.getAddress());
@@ -163,6 +179,7 @@ public interface OrderAddDeliveryAction
             return null;
         }
         OrderAddDeliveryActionImpl instance = new OrderAddDeliveryActionImpl();
+        instance.setDeliveryKey(template.getDeliveryKey());
         instance.setItems(Optional.ofNullable(template.getItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)

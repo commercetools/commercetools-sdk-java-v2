@@ -43,6 +43,9 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     private String contactEmail;
 
     @Nullable
+    private com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode;
+
+    @Nullable
     private java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates;
 
     @Nullable
@@ -192,7 +195,7 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     }
 
     /**
-     *  <p>If not set, the Division inherits the Stores from its <code>parentUnit</code>. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
+     *  <p>If not set, the Division inherits the Stores from a parent unit. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
      * @param storeMode value to be set
      * @return Builder
      */
@@ -222,6 +225,18 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     public DivisionDraftBuilder contactEmail(@Nullable final String contactEmail) {
         this.contactEmail = contactEmail;
+        return this;
+    }
+
+    /**
+     *  <p>Determines whether the Division can inherit Associates from a parent.</p>
+     * @param associateMode value to be set
+     * @return Builder
+     */
+
+    public DivisionDraftBuilder associateMode(
+            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode) {
+        this.associateMode = associateMode;
         return this;
     }
 
@@ -605,7 +620,7 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     }
 
     /**
-     *  <p>If not set, the Division inherits the Stores from its <code>parentUnit</code>. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
+     *  <p>If not set, the Division inherits the Stores from a parent unit. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
      * @return storeMode
      */
 
@@ -631,6 +646,16 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     @Nullable
     public String getContactEmail() {
         return this.contactEmail;
+    }
+
+    /**
+     *  <p>Determines whether the Division can inherit Associates from a parent.</p>
+     * @return associateMode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.business_unit.BusinessUnitAssociateMode getAssociateMode() {
+        return this.associateMode;
     }
 
     /**
@@ -720,8 +745,9 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
         Objects.requireNonNull(key, DivisionDraft.class + ": key is missing");
         Objects.requireNonNull(name, DivisionDraft.class + ": name is missing");
         Objects.requireNonNull(parentUnit, DivisionDraft.class + ": parentUnit is missing");
-        return new DivisionDraftImpl(key, status, stores, storeMode, name, contactEmail, associates, addresses,
-            shippingAddresses, defaultShippingAddress, billingAddresses, defaultBillingAddress, custom, parentUnit);
+        return new DivisionDraftImpl(key, status, stores, storeMode, name, contactEmail, associateMode, associates,
+            addresses, shippingAddresses, defaultShippingAddress, billingAddresses, defaultBillingAddress, custom,
+            parentUnit);
     }
 
     /**
@@ -729,8 +755,9 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
      * @return DivisionDraft
      */
     public DivisionDraft buildUnchecked() {
-        return new DivisionDraftImpl(key, status, stores, storeMode, name, contactEmail, associates, addresses,
-            shippingAddresses, defaultShippingAddress, billingAddresses, defaultBillingAddress, custom, parentUnit);
+        return new DivisionDraftImpl(key, status, stores, storeMode, name, contactEmail, associateMode, associates,
+            addresses, shippingAddresses, defaultShippingAddress, billingAddresses, defaultBillingAddress, custom,
+            parentUnit);
     }
 
     /**
@@ -754,6 +781,7 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
         builder.storeMode = template.getStoreMode();
         builder.name = template.getName();
         builder.contactEmail = template.getContactEmail();
+        builder.associateMode = template.getAssociateMode();
         builder.associates = template.getAssociates();
         builder.addresses = template.getAddresses();
         builder.shippingAddresses = template.getShippingAddresses();

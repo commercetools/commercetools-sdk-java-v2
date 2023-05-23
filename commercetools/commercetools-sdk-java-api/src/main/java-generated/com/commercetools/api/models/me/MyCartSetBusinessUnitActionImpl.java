@@ -50,7 +50,7 @@ public class MyCartSetBusinessUnitActionImpl implements MyCartSetBusinessUnitAct
     }
 
     /**
-     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must have Buyer access to the Business Unit.</p>
+     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must be an Associate in the Business Unit.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {

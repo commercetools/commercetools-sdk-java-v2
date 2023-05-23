@@ -77,8 +77,7 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
     }
 
     /**
-     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
-     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {

@@ -15,6 +15,10 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLAnonymousIdAlreadyInUseErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLAssociateMissingPermissionErrorBuilder associateMissingPermissionBuilder() {
+        return com.commercetools.api.models.error.GraphQLAssociateMissingPermissionErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLAttributeDefinitionAlreadyExistsErrorBuilder attributeDefinitionAlreadyExistsBuilder() {
         return com.commercetools.api.models.error.GraphQLAttributeDefinitionAlreadyExistsErrorBuilder.of();
     }

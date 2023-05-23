@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Renames an AttributeDefinition and also renames all corresponding Attributes on all Products with this ProductType. The renaming of the Attributes is eventually consistent.</p>
- *  <p>If the AttributeDefinition name to be changed does not exist, a AttributeNameDoesNotExist error is returned.</p>
+ *  <p>If the AttributeDefinition name to be changed does not exist, an AttributeNameDoesNotExist error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeChangeAttributeNameActionImpl implements ProductTypeChangeAttributeNameAction, ModelBase {

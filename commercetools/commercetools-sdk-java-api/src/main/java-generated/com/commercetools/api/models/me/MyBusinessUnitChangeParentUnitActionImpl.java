@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Changing the parent of a Business Unit generates a BusinessUnitParentUnitChanged Message. The user must be an Associate with the <code>Admin</code> role in the new parent unit.</p>
+ *  <p>Changing the parent of a Business Unit generates a BusinessUnitParentUnitChanged Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyBusinessUnitChangeParentUnitActionImpl implements MyBusinessUnitChangeParentUnitAction, ModelBase {

@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetDeliveryAddressCustomTypeAction stagedOrderSetDeliveryAddressCustomTypeAction = StagedOrderSetDeliveryAddressCustomTypeAction.builder()
- *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -25,7 +24,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
         implements Builder<StagedOrderSetDeliveryAddressCustomTypeAction> {
 
+    @Nullable
     private String deliveryId;
+
+    @Nullable
+    private String deliveryKey;
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -34,13 +37,24 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     * set the value to the deliveryId
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetDeliveryAddressCustomTypeActionBuilder deliveryId(final String deliveryId) {
+    public StagedOrderSetDeliveryAddressCustomTypeActionBuilder deliveryId(@Nullable final String deliveryId) {
         this.deliveryId = deliveryId;
+        return this;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @param deliveryKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetDeliveryAddressCustomTypeActionBuilder deliveryKey(@Nullable final String deliveryKey) {
+        this.deliveryKey = deliveryKey;
         return this;
     }
 
@@ -117,12 +131,23 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     /**
-     * value of deliveryId}
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
 
+    @Nullable
     public String getDeliveryId() {
         return this.deliveryId;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @return deliveryKey
+     */
+
+    @Nullable
+    public String getDeliveryKey() {
+        return this.deliveryKey;
     }
 
     /**
@@ -150,9 +175,7 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
      * @return StagedOrderSetDeliveryAddressCustomTypeAction
      */
     public StagedOrderSetDeliveryAddressCustomTypeAction build() {
-        Objects.requireNonNull(deliveryId,
-            StagedOrderSetDeliveryAddressCustomTypeAction.class + ": deliveryId is missing");
-        return new StagedOrderSetDeliveryAddressCustomTypeActionImpl(deliveryId, type, fields);
+        return new StagedOrderSetDeliveryAddressCustomTypeActionImpl(deliveryId, deliveryKey, type, fields);
     }
 
     /**
@@ -160,7 +183,7 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
      * @return StagedOrderSetDeliveryAddressCustomTypeAction
      */
     public StagedOrderSetDeliveryAddressCustomTypeAction buildUnchecked() {
-        return new StagedOrderSetDeliveryAddressCustomTypeActionImpl(deliveryId, type, fields);
+        return new StagedOrderSetDeliveryAddressCustomTypeActionImpl(deliveryId, deliveryKey, type, fields);
     }
 
     /**
@@ -180,6 +203,7 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionBuilder
             final StagedOrderSetDeliveryAddressCustomTypeAction template) {
         StagedOrderSetDeliveryAddressCustomTypeActionBuilder builder = new StagedOrderSetDeliveryAddressCustomTypeActionBuilder();
         builder.deliveryId = template.getDeliveryId();
+        builder.deliveryKey = template.getDeliveryKey();
         builder.type = template.getType();
         builder.fields = template.getFields();
         return builder;

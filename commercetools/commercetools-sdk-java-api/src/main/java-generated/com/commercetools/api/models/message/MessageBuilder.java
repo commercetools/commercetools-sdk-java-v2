@@ -11,6 +11,34 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MessageBuilder {
 
+    public com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessageBuilder associateRoleBuyerAssignableChangedBuilder() {
+        return com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.AssociateRoleCreatedMessageBuilder associateRoleCreatedBuilder() {
+        return com.commercetools.api.models.message.AssociateRoleCreatedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.AssociateRoleDeletedMessageBuilder associateRoleDeletedBuilder() {
+        return com.commercetools.api.models.message.AssociateRoleDeletedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.AssociateRoleNameChangedMessageBuilder associateRoleNameSetBuilder() {
+        return com.commercetools.api.models.message.AssociateRoleNameChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.AssociateRolePermissionAddedMessageBuilder associateRolePermissionAddedBuilder() {
+        return com.commercetools.api.models.message.AssociateRolePermissionAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.AssociateRolePermissionRemovedMessageBuilder associateRolePermissionRemovedBuilder() {
+        return com.commercetools.api.models.message.AssociateRolePermissionRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.AssociateRolePermissionsSetMessageBuilder associateRolePermissionsSetBuilder() {
+        return com.commercetools.api.models.message.AssociateRolePermissionsSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.BusinessUnitAddressAddedMessageBuilder businessUnitAddressAddedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitAddressAddedMessageBuilder.of();
     }
@@ -29,6 +57,10 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.BusinessUnitAssociateChangedMessageBuilder businessUnitAssociateChangedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitAssociateChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitAssociateModeChangedMessageBuilder businessUnitAssociateModeChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAssociateModeChangedMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.BusinessUnitAssociateRemovedMessageBuilder businessUnitAssociateRemovedBuilder() {

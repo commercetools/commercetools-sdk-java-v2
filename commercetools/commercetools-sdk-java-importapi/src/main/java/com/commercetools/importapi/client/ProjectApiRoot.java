@@ -103,6 +103,11 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
     }
 
     @Override
+    public ByProjectKeyTypesRequestBuilder types() {
+        return with().types();
+    }
+
+    @Override
     public void close() {
         if (apiHttpClient == null) {
             return;

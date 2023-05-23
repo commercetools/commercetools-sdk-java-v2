@@ -9,10 +9,12 @@ import io.vrap.rmf.base.client.ApiMethod;
 import io.vrap.rmf.base.client.ClientRequestCommand;
 import io.vrap.rmf.base.client.RequestCommand;
 
+@Deprecated
 /**
  * Interface with common methods for query endpoints
  * @param <T> the type of the underlying request
  * @param <TResult> the type of the underlying result model, like category or product.
+ * @deprecated use com.commercetools.api.client.PagedQueryResourceRequest instead
  */
 public interface PagedQueryResourceRequest<T extends PagedQueryResourceRequest<T, TResult>, TResult>
         extends RequestCommand<TResult>, ClientRequestCommand<TResult> {

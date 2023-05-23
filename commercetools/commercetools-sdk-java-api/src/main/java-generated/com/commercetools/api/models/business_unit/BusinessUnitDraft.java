@@ -99,6 +99,14 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public String getContactEmail();
 
     /**
+     *  <p>Determines whether the Business Unit can inherit Associates from a parent. Always <code>Explicit</code> for Companies and defaults to <code>ExplicitAndFromParent</code> for Divisions.</p>
+     * @return associateMode
+     */
+
+    @JsonProperty("associateMode")
+    public BusinessUnitAssociateMode getAssociateMode();
+
+    /**
      *  <p>List of members that are part of the Business Unit in specific roles.</p>
      * @return associates
      */
@@ -207,6 +215,13 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
      */
 
     public void setContactEmail(final String contactEmail);
+
+    /**
+     *  <p>Determines whether the Business Unit can inherit Associates from a parent. Always <code>Explicit</code> for Companies and defaults to <code>ExplicitAndFromParent</code> for Divisions.</p>
+     * @param associateMode value to be set
+     */
+
+    public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
 
     /**
      *  <p>List of members that are part of the Business Unit in specific roles.</p>
@@ -318,6 +333,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
         instance.setStoreMode(template.getStoreMode());
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
+        instance.setAssociateMode(template.getAssociateMode());
         instance.setAssociates(Optional.ofNullable(template.getAssociates())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.business_unit.AssociateDraft::deepCopy)

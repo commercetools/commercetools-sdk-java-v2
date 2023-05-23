@@ -110,6 +110,10 @@ public interface ImportResource {
             return com.commercetools.importapi.models.standalone_prices.StandalonePriceImport
                     .deepCopy((com.commercetools.importapi.models.standalone_prices.StandalonePriceImport) template);
         }
+        if (template instanceof com.commercetools.importapi.models.types.TypeImport) {
+            return com.commercetools.importapi.models.types.TypeImport
+                    .deepCopy((com.commercetools.importapi.models.types.TypeImport) template);
+        }
         ImportResourceImpl instance = new ImportResourceImpl();
         instance.setKey(template.getKey());
         return instance;

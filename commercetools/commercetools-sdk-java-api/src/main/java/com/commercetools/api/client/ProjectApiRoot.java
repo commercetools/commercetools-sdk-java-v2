@@ -289,6 +289,16 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
     }
 
     @Override
+    public ByProjectKeyAsAssociateRequestBuilder asAssociate() {
+        return with().asAssociate();
+    }
+
+    @Override
+    public ByProjectKeyAssociateRolesRequestBuilder associateRoles() {
+        return with().associateRoles();
+    }
+
+    @Override
     public <R> R with(Function<ProjectApiRoot, R> op) {
         return op.apply(this);
     }

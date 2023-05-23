@@ -28,7 +28,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     private java.util.List<com.commercetools.api.models.order.OrderUpdateAction> actions;
 
     /**
-     * set the value to the version
+     *  <p>Expected version of the Order on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     * set values to the actions
+     *  <p>Update actions to be performed on the Order.</p>
      * @param actions value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     * set value to the actions
+     *  <p>Update actions to be performed on the Order.</p>
      * @param actions value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     * add values to the actions
+     *  <p>Update actions to be performed on the Order.</p>
      * @param actions value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     * add a value to the actions using the builder function
+     *  <p>Update actions to be performed on the Order.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     * set the value to the actions using the builder function
+     *  <p>Update actions to be performed on the Order.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     * value of version}
+     *  <p>Expected version of the Order on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @return version
      */
 
@@ -113,7 +113,7 @@ public class OrderUpdateBuilder implements Builder<OrderUpdate> {
     }
 
     /**
-     * value of actions}
+     *  <p>Update actions to be performed on the Order.</p>
      * @return actions
      */
 

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Renames an AttributeDefinition and also renames all corresponding Attributes on all Products with this ProductType. The renaming of the Attributes is eventually consistent.</p>
- *  <p>If the AttributeDefinition name to be changed does not exist, a AttributeNameDoesNotExist error is returned.</p>
+ *  <p>If the AttributeDefinition name to be changed does not exist, an AttributeNameDoesNotExist error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

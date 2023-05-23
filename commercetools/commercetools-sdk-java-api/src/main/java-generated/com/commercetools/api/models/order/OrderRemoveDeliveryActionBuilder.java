@@ -3,6 +3,8 @@ package com.commercetools.api.models.order;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderRemoveDeliveryAction orderRemoveDeliveryAction = OrderRemoveDeliveryAction.builder()
- *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -21,26 +22,52 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderRemoveDeliveryActionBuilder implements Builder<OrderRemoveDeliveryAction> {
 
+    @Nullable
     private String deliveryId;
 
+    @Nullable
+    private String deliveryKey;
+
     /**
-     * set the value to the deliveryId
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
 
-    public OrderRemoveDeliveryActionBuilder deliveryId(final String deliveryId) {
+    public OrderRemoveDeliveryActionBuilder deliveryId(@Nullable final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
 
     /**
-     * value of deliveryId}
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @param deliveryKey value to be set
+     * @return Builder
+     */
+
+    public OrderRemoveDeliveryActionBuilder deliveryKey(@Nullable final String deliveryKey) {
+        this.deliveryKey = deliveryKey;
+        return this;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
      * @return deliveryId
      */
 
+    @Nullable
     public String getDeliveryId() {
         return this.deliveryId;
+    }
+
+    /**
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     * @return deliveryKey
+     */
+
+    @Nullable
+    public String getDeliveryKey() {
+        return this.deliveryKey;
     }
 
     /**
@@ -48,8 +75,7 @@ public class OrderRemoveDeliveryActionBuilder implements Builder<OrderRemoveDeli
      * @return OrderRemoveDeliveryAction
      */
     public OrderRemoveDeliveryAction build() {
-        Objects.requireNonNull(deliveryId, OrderRemoveDeliveryAction.class + ": deliveryId is missing");
-        return new OrderRemoveDeliveryActionImpl(deliveryId);
+        return new OrderRemoveDeliveryActionImpl(deliveryId, deliveryKey);
     }
 
     /**
@@ -57,7 +83,7 @@ public class OrderRemoveDeliveryActionBuilder implements Builder<OrderRemoveDeli
      * @return OrderRemoveDeliveryAction
      */
     public OrderRemoveDeliveryAction buildUnchecked() {
-        return new OrderRemoveDeliveryActionImpl(deliveryId);
+        return new OrderRemoveDeliveryActionImpl(deliveryId, deliveryKey);
     }
 
     /**
@@ -76,6 +102,7 @@ public class OrderRemoveDeliveryActionBuilder implements Builder<OrderRemoveDeli
     public static OrderRemoveDeliveryActionBuilder of(final OrderRemoveDeliveryAction template) {
         OrderRemoveDeliveryActionBuilder builder = new OrderRemoveDeliveryActionBuilder();
         builder.deliveryId = template.getDeliveryId();
+        builder.deliveryKey = template.getDeliveryKey();
         return builder;
     }
 

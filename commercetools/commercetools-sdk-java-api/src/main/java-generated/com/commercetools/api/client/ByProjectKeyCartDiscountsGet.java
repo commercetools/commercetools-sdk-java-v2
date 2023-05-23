@@ -11,8 +11,6 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import com.commercetools.api.predicates.query.cart_discount.CartDiscountQueryBuilderDsl;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -37,7 +35,6 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeyCartDiscountsGet extends
         ApiMethod<ByProjectKeyCartDiscountsGet, com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse>
         implements ByProjectKeyCartDiscountsGetMixin,
-        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCartDiscountsGet, com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse, CartDiscountQueryBuilderDsl>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCartDiscountsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyCartDiscountsGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyCartDiscountsGet>,

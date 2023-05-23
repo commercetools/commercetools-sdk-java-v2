@@ -1,7 +1,6 @@
 
 package com.commercetools.api.client;
 
-import com.commercetools.api.models.PagedQueryResourceRequest;
 import com.commercetools.api.models.product_type.ProductTypePagedQueryResponse;
 import com.commercetools.api.predicates.query.QueryPredicateDsl;
 import com.commercetools.api.predicates.query.product_type.ProductTypeQueryBuilderDsl;

@@ -1,7 +1,6 @@
 
 package com.commercetools.api.client;
 
-import com.commercetools.api.models.PagedQueryResourceRequest;
 import com.commercetools.api.models.standalone_price.StandalonePricePagedQueryResponse;
 import com.commercetools.api.predicates.query.QueryPredicateDsl;
 import com.commercetools.api.predicates.query.standalone_price.StandalonePriceQueryBuilderDsl;

@@ -1,7 +1,6 @@
 
 package com.commercetools.api.client;
 
-import com.commercetools.api.models.PagedQueryResourceRequest;
 import com.commercetools.api.models.zone.ZonePagedQueryResponse;
 import com.commercetools.api.predicates.query.QueryPredicateDsl;
 import com.commercetools.api.predicates.query.zone.ZoneQueryBuilderDsl;

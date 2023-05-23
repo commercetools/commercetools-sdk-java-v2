@@ -50,9 +50,9 @@ public class QueryBuilder {
         return new QueryBuilder(apiRoot);
     }
 
-    public static <T extends PagedQueryResourceRequest<T, TResult, TQueryDsl>, TQueryDsl, TResult, TQuery extends MetaModelQueryDsl<?, ?, ?, ?>> T query(
+    public static <T extends PagedQueryResourceRequest<T, TResult>, TResult, TQuery extends MetaModelQueryDsl<?, ?, ?, ?>> T query(
             final T request, final TQuery queryDsl) {
-        PagedQueryResourceRequest<T, TResult, TQueryDsl> updatedRequest = queryDsl.limit() != null
+        PagedQueryResourceRequest<T, TResult> updatedRequest = queryDsl.limit() != null
                 ? request.withLimit(queryDsl.limit())
                 : request;
         updatedRequest = queryDsl.offset() != null ? updatedRequest.withOffset(queryDsl.offset()) : updatedRequest;
@@ -70,13 +70,13 @@ public class QueryBuilder {
         return updatedRequest.asPagedQueryResourceRequestToBaseType();
     }
 
-    public static <T extends PagedQueryResourceRequest<T, TResult, TQueryDsl>, TResult, TQueryDsl, TQuery extends MetaModelQueryDsl<?, ?, ?, ?>> T query(
+    public static <T extends PagedQueryResourceRequest<T, TResult>, TResult, TQuery extends MetaModelQueryDsl<?, ?, ?, ?>> T query(
             final T request, final Supplier<TQuery> createQueryDsl, final Function<TQuery, TQuery> queryDsl) {
         MetaModelQueryDsl<?, ?, ?, ?> query = queryDsl.apply(createQueryDsl.get());
         return query(request, query);
     }
 
-    public <T extends PagedQueryResourceRequest<T, TResult, TQueryDsl>, TResult, TQueryDsl, TQuery extends MetaModelQueryDsl<?, ?, ?, ?>> T with(
+    public <T extends PagedQueryResourceRequest<T, TResult>, TResult, TQuery extends MetaModelQueryDsl<?, ?, ?, ?>> T with(
             final Function<ProjectApiRoot, T> request, final Supplier<TQuery> createQueryDsl,
             final Function<TQuery, TQuery> queryDsl) {
         MetaModelQueryDsl<?, ?, ?, ?> query = queryDsl.apply(createQueryDsl.get());

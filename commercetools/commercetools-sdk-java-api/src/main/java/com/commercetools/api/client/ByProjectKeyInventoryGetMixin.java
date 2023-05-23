@@ -1,7 +1,6 @@
 
 package com.commercetools.api.client;
 
-import com.commercetools.api.models.PagedQueryResourceRequest;
 import com.commercetools.api.models.inventory.InventoryPagedQueryResponse;
 import com.commercetools.api.predicates.query.QueryPredicateDsl;
 import com.commercetools.api.predicates.query.inventory.InventoryEntryQueryBuilderDsl;

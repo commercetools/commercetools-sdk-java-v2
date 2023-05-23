@@ -80,8 +80,8 @@ public class DeleteEverythingIntegrationTest {
         }
     }
 
-    private <TMethod extends PagedQueryResourceRequest<TMethod, TResult, TQuery>, TQuery, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>> void deleteAllResources(
-            PagedQueryResourceRequest<TMethod, TResult, TQuery> request, Consumer<TElement> deleteFn) {
+    private <TMethod extends PagedQueryResourceRequest<TMethod, TResult>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>> void deleteAllResources(
+            PagedQueryResourceRequest<TMethod, TResult> request, Consumer<TElement> deleteFn) {
 
         QueryUtils.queryAll(request, list -> {
             list.forEach(deleteFn);

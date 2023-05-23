@@ -5,7 +5,7 @@ import com.commercetools.api.predicates.query.QueryPredicateDsl;
 import com.commercetools.api.predicates.query.order.OrderQueryBuilderDsl;
 
 public interface ByProjectKeyOrdersGetMixin extends
-        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersGet, com.commercetools.api.models.order.OrderPagedQueryResponse, OrderQueryBuilderDsl> {
+        PagedQueryResourceRequest<ByProjectKeyOrdersGet, com.commercetools.api.models.order.OrderPagedQueryResponse, OrderQueryBuilderDsl> {
 
     default ByProjectKeyOrdersGet byCustomerId(final String customerId) {
         return withWhere("customerId = :customerId", "customerId", customerId);

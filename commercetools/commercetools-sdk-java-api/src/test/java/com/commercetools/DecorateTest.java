@@ -20,7 +20,7 @@ public class DecorateTest {
     }
 
     @SuppressWarnings("unchecked")
-    public static <T extends PagedQueryResourceRequest<T, TResult, TQuery>, TResult, TQuery> T addIdSort(T method) {
+    public static <T extends PagedQueryResourceRequest<T, TResult>, TResult> T addIdSort(T method) {
         return (T) method.addSort("id asc");
     }
 }

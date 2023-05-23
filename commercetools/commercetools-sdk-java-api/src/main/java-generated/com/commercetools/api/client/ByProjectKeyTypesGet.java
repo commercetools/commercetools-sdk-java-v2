@@ -33,9 +33,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyTypesGet
-        extends ApiMethod<ByProjectKeyTypesGet, com.commercetools.api.models.type.TypePagedQueryResponse> implements
-        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyTypesGet, com.commercetools.api.models.type.TypePagedQueryResponse>,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyTypesGet>,
+        extends ApiMethod<ByProjectKeyTypesGet, com.commercetools.api.models.type.TypePagedQueryResponse>
+        implements ByProjectKeyTypesGetMixin, com.commercetools.api.client.ExpandableTrait<ByProjectKeyTypesGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyTypesGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyTypesGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyTypesGet>,

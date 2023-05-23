@@ -32,10 +32,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyReviewsGet extends
-        ApiMethod<ByProjectKeyReviewsGet, com.commercetools.api.models.review.ReviewPagedQueryResponse> implements
-        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyReviewsGet, com.commercetools.api.models.review.ReviewPagedQueryResponse>,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyReviewsGet>,
+public class ByProjectKeyReviewsGet
+        extends ApiMethod<ByProjectKeyReviewsGet, com.commercetools.api.models.review.ReviewPagedQueryResponse>
+        implements ByProjectKeyReviewsGetMixin, com.commercetools.api.client.ExpandableTrait<ByProjectKeyReviewsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyReviewsGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyReviewsGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyReviewsGet>,

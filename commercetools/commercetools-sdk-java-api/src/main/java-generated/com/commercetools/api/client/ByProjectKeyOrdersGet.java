@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.commercetools.api.predicates.query.order.OrderQueryBuilderDsl;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -35,7 +37,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeyOrdersGet
         extends ApiMethod<ByProjectKeyOrdersGet, com.commercetools.api.models.order.OrderPagedQueryResponse>
         implements ByProjectKeyOrdersGetMixin,
-        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersGet, com.commercetools.api.models.order.OrderPagedQueryResponse>,
+        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyOrdersGet, com.commercetools.api.models.order.OrderPagedQueryResponse, OrderQueryBuilderDsl>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyOrdersGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyOrdersGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyOrdersGet>,

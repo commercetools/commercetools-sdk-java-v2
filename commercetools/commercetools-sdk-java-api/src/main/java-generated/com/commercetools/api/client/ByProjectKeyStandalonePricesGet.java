@@ -34,8 +34,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyStandalonePricesGet extends
         ApiMethod<ByProjectKeyStandalonePricesGet, com.commercetools.api.models.standalone_price.StandalonePricePagedQueryResponse>
-        implements
-        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyStandalonePricesGet, com.commercetools.api.models.standalone_price.StandalonePricePagedQueryResponse>,
+        implements ByProjectKeyStandalonePricesGetMixin,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyStandalonePricesGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyStandalonePricesGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyStandalonePricesGet>,

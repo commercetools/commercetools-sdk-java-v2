@@ -35,8 +35,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Deprecated
 public class ByProjectKeyCustomObjectsGet extends
         ApiMethod<ByProjectKeyCustomObjectsGet, com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>
-        implements
-        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCustomObjectsGet, com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>,
+        implements ByProjectKeyCustomObjectsGetMixin,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomObjectsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyCustomObjectsGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyCustomObjectsGet>,

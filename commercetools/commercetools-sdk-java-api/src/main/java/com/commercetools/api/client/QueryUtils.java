@@ -30,14 +30,15 @@ public class QueryUtils {
      * @param query query containing predicates and expansion paths
      * @param pageMapper callback function that is called on every page queried
      * @param <TElement> type of one query result element
+     * @param <TQuery> type of the query builder DSL
      * @param <TMethod> type of the query
      * @param <TResult> type of the result
      * @param <S> type of the returned result of the callback function on every page.
      * @return a completion stage containing a list of mapped pages as a result.
      */
     @Nonnull
-    public static <TMethod extends PagedQueryResourceRequest<TMethod, TResult>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>, S> CompletionStage<List<S>> queryAll(
-            @Nonnull final PagedQueryResourceRequest<TMethod, TResult> query,
+    public static <TMethod extends PagedQueryResourceRequest<TMethod, TResult, TQuery>, TResult extends ResourcePagedQueryResponse<TElement>, TQuery, TElement extends DomainResource<TElement>, S> CompletionStage<List<S>> queryAll(
+            @Nonnull final PagedQueryResourceRequest<TMethod, TResult, TQuery> query,
             @Nonnull final Function<List<TElement>, S> pageMapper) {
         return queryAll(query, pageMapper, DEFAULT_PAGE_SIZE);
     }
@@ -56,14 +57,15 @@ public class QueryUtils {
      * @param query query containing predicates and expansion paths
      * @param pageConsumer consumer applied on every page queried
      * @param <TElement> type of one query result element
+     * @param <TQuery> type of the query builder DSL
      * @param <TMethod> type of the query
      * @param <TResult> type of the result
      * @return a completion stage containing void as a result after the consumer was applied on all
      *     pages.
      */
     @Nonnull
-    public static <TMethod extends PagedQueryResourceRequest<TMethod, TResult>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>> CompletionStage<Void> queryAll(
-            @Nonnull final PagedQueryResourceRequest<TMethod, TResult> query,
+    public static <TMethod extends PagedQueryResourceRequest<TMethod, TResult, TQuery>, TResult extends ResourcePagedQueryResponse<TElement>, TQuery, TElement extends DomainResource<TElement>> CompletionStage<Void> queryAll(
+            @Nonnull final PagedQueryResourceRequest<TMethod, TResult, TQuery> query,
             @Nonnull final Consumer<List<TElement>> pageConsumer) {
         return queryAll(query, pageConsumer, DEFAULT_PAGE_SIZE);
     }
@@ -84,6 +86,7 @@ public class QueryUtils {
      * @param query query containing predicates and expansion paths
      * @param pageMapper callback function that is called on every page queried
      * @param <TElement> type of one query result element
+     * @param <TQuery> type of the query builder DSL
      * @param <TMethod> type of the query
      * @param <TResult> type of the result
      * @param <S> type of the returned result of the callback function on every page.
@@ -91,10 +94,10 @@ public class QueryUtils {
      * @return a completion stage containing a list of mapped pages as a result.
      */
     @Nonnull
-    public static <TMethod extends PagedQueryResourceRequest<TMethod, TResult>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>, S> CompletionStage<List<S>> queryAll(
-            @Nonnull final PagedQueryResourceRequest<TMethod, TResult> query,
+    public static <TMethod extends PagedQueryResourceRequest<TMethod, TResult, TQuery>, TResult extends ResourcePagedQueryResponse<TElement>, TQuery, TElement extends DomainResource<TElement>, S> CompletionStage<List<S>> queryAll(
+            @Nonnull final PagedQueryResourceRequest<TMethod, TResult, TQuery> query,
             @Nonnull final Function<List<TElement>, S> pageMapper, final int pageSize) {
-        final QueryAll<TMethod, TResult, TElement, S> queryAll = QueryAll.of(query, pageSize);
+        final QueryAll<TMethod, TQuery, TResult, TElement, S> queryAll = QueryAll.of(query, pageSize);
         return queryAll.run(pageMapper);
     }
 
@@ -111,6 +114,7 @@ public class QueryUtils {
      * @param query query containing predicates and expansion paths
      * @param pageConsumer consumer applied on every page queried
      * @param <TElement> type of one query result element
+     * @param <TQuery> type of the query builder DSL
      * @param <TMethod> type of the query
      * @param <TResult> type of the result
      * @param pageSize the page size
@@ -118,10 +122,10 @@ public class QueryUtils {
      *     pages.
      */
     @Nonnull
-    public static <TMethod extends PagedQueryResourceRequest<TMethod, TResult>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>> CompletionStage<Void> queryAll(
-            @Nonnull final PagedQueryResourceRequest<TMethod, TResult> query,
+    public static <TMethod extends PagedQueryResourceRequest<TMethod, TResult, TQuery>, TResult extends ResourcePagedQueryResponse<TElement>, TQuery, TElement extends DomainResource<TElement>> CompletionStage<Void> queryAll(
+            @Nonnull final PagedQueryResourceRequest<TMethod, TResult, TQuery> query,
             @Nonnull final Consumer<List<TElement>> pageConsumer, final int pageSize) {
-        final QueryAll<TMethod, TResult, TElement, Void> queryAll = QueryAll.of(query, pageSize);
+        final QueryAll<TMethod, TQuery, TResult, TElement, Void> queryAll = QueryAll.of(query, pageSize);
         return queryAll.run(pageConsumer);
     }
 }

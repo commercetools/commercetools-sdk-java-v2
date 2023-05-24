@@ -70,12 +70,12 @@ public interface PagedQueryResourceRequest<T extends PagedQueryResourceRequest<T
 
     @SuppressWarnings("unchecked")
     default T withQuery(Function<TQuery, QueryPredicate> fn) {
-        return (T) withWhere(fn.apply(queryDsl()));
+        return (T) withWhere(fn.apply(queryDsl()).render());
     }
 
     @SuppressWarnings("unchecked")
     default T addQuery(Function<TQuery, QueryPredicate> fn) {
-        return (T) withWhere(fn.apply(queryDsl()));
+        return (T) withWhere(fn.apply(queryDsl()).render());
     }
 
     @SuppressWarnings("unchecked")

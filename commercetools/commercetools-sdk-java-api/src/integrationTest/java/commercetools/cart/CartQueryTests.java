@@ -69,6 +69,16 @@ public class CartQueryTests {
                     .getResults()
                     .get(0);
             Assertions.assertThat(queriedCart2.getId()).isEqualTo(cart.getId());
+
+            Cart queriedCart3 = CommercetoolsTestUtils.getProjectApiRoot()
+                    .carts()
+                    .get()
+                    .withQuery(c -> c.customerId().is(customer.getId()).and(cs -> cs.cartState().is("Active")))
+                    .executeBlocking()
+                    .getBody()
+                    .getResults()
+                    .get(0);
+            Assertions.assertThat(queriedCart3.getId()).isEqualTo(cart.getId());
         });
     }
 

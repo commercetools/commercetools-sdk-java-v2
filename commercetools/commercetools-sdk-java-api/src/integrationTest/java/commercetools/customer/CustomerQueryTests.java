@@ -59,4 +59,21 @@ public class CustomerQueryTests {
             Assertions.assertThat(queriedCustomer.getCustomerGroup().getObj()).isInstanceOf(CustomerGroupImpl.class);
         });
     }
+
+    @Test
+    public void queryWithCustomerGroupExpandWithQueryModel() {
+        withCustomer(customer -> {
+            final CustomerPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
+                    .customers()
+                    .get()
+                    .withExpand("customerGroup")
+                    .withQuery(c -> c.id().isVar("customerId"), "customerId", customer.getId())
+                    .executeBlocking()
+                    .getBody();
+
+            final Customer queriedCustomer = response.getResults().get(0);
+            Assertions.assertThat(queriedCustomer.getId()).isEqualTo(customer.getId());
+            Assertions.assertThat(queriedCustomer.getCustomerGroup().getObj()).isInstanceOf(CustomerGroupImpl.class);
+        });
+    }
 }

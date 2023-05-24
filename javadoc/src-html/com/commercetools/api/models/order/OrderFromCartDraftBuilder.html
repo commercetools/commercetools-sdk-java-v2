@@ -79,7 +79,7 @@
 <span class="source-line-no">066</span><span id="line.66">    }</span>
 <span class="source-line-no">067</span><span id="line.67"></span>
 <span class="source-line-no">068</span><span id="line.68">    /**</span>
-<span class="source-line-no">069</span><span id="line.69">     *  &lt;p&gt;ResourceIdentifier of the Cart from which this order is created.&lt;/p&gt;</span>
+<span class="source-line-no">069</span><span id="line.69">     *  &lt;p&gt;ResourceIdentifier of the Cart from which the Order is created.&lt;/p&gt;</span>
 <span class="source-line-no">070</span><span id="line.70">     * @param builder function to build the cart value</span>
 <span class="source-line-no">071</span><span id="line.71">     * @return Builder</span>
 <span class="source-line-no">072</span><span id="line.72">     */</span>
@@ -91,7 +91,7 @@
 <span class="source-line-no">078</span><span id="line.78">    }</span>
 <span class="source-line-no">079</span><span id="line.79"></span>
 <span class="source-line-no">080</span><span id="line.80">    /**</span>
-<span class="source-line-no">081</span><span id="line.81">     *  &lt;p&gt;ResourceIdentifier of the Cart from which this order is created.&lt;/p&gt;</span>
+<span class="source-line-no">081</span><span id="line.81">     *  &lt;p&gt;ResourceIdentifier of the Cart from which the Order is created.&lt;/p&gt;</span>
 <span class="source-line-no">082</span><span id="line.82">     * @param builder function to build the cart value</span>
 <span class="source-line-no">083</span><span id="line.83">     * @return Builder</span>
 <span class="source-line-no">084</span><span id="line.84">     */</span>
@@ -103,7 +103,7 @@
 <span class="source-line-no">090</span><span id="line.90">    }</span>
 <span class="source-line-no">091</span><span id="line.91"></span>
 <span class="source-line-no">092</span><span id="line.92">    /**</span>
-<span class="source-line-no">093</span><span id="line.93">     *  &lt;p&gt;ResourceIdentifier of the Cart from which this order is created.&lt;/p&gt;</span>
+<span class="source-line-no">093</span><span id="line.93">     *  &lt;p&gt;ResourceIdentifier of the Cart from which the Order is created.&lt;/p&gt;</span>
 <span class="source-line-no">094</span><span id="line.94">     * @param cart value to be set</span>
 <span class="source-line-no">095</span><span id="line.95">     * @return Builder</span>
 <span class="source-line-no">096</span><span id="line.96">     */</span>
@@ -115,7 +115,7 @@
 <span class="source-line-no">102</span><span id="line.102">    }</span>
 <span class="source-line-no">103</span><span id="line.103"></span>
 <span class="source-line-no">104</span><span id="line.104">    /**</span>
-<span class="source-line-no">105</span><span id="line.105">     * set the value to the version</span>
+<span class="source-line-no">105</span><span id="line.105">     *  &lt;p&gt;Expected version of the Cart from which the Order is created. If the expected version does not match the actual version, a 409 Conflict error will be returned.&lt;/p&gt;</span>
 <span class="source-line-no">106</span><span id="line.106">     * @param version value to be set</span>
 <span class="source-line-no">107</span><span id="line.107">     * @return Builder</span>
 <span class="source-line-no">108</span><span id="line.108">     */</span>
@@ -148,7 +148,7 @@
 <span class="source-line-no">135</span><span id="line.135">    }</span>
 <span class="source-line-no">136</span><span id="line.136"></span>
 <span class="source-line-no">137</span><span id="line.137">    /**</span>
-<span class="source-line-no">138</span><span id="line.138">     * set the value to the paymentState</span>
+<span class="source-line-no">138</span><span id="line.138">     *  &lt;p&gt;Payment state for the Order.&lt;/p&gt;</span>
 <span class="source-line-no">139</span><span id="line.139">     * @param paymentState value to be set</span>
 <span class="source-line-no">140</span><span id="line.140">     * @return Builder</span>
 <span class="source-line-no">141</span><span id="line.141">     */</span>
@@ -160,7 +160,7 @@
 <span class="source-line-no">147</span><span id="line.147">    }</span>
 <span class="source-line-no">148</span><span id="line.148"></span>
 <span class="source-line-no">149</span><span id="line.149">    /**</span>
-<span class="source-line-no">150</span><span id="line.150">     * set the value to the shipmentState</span>
+<span class="source-line-no">150</span><span id="line.150">     *  &lt;p&gt;Shipment state for the Order.&lt;/p&gt;</span>
 <span class="source-line-no">151</span><span id="line.151">     * @param shipmentState value to be set</span>
 <span class="source-line-no">152</span><span id="line.152">     * @return Builder</span>
 <span class="source-line-no">153</span><span id="line.153">     */</span>
@@ -184,7 +184,7 @@
 <span class="source-line-no">171</span><span id="line.171">    }</span>
 <span class="source-line-no">172</span><span id="line.172"></span>
 <span class="source-line-no">173</span><span id="line.173">    /**</span>
-<span class="source-line-no">174</span><span id="line.174">     * set the value to the state using the builder function</span>
+<span class="source-line-no">174</span><span id="line.174">     *  &lt;p&gt;Reference to a State indicating the Order's state.&lt;/p&gt;</span>
 <span class="source-line-no">175</span><span id="line.175">     * @param builder function to build the state value</span>
 <span class="source-line-no">176</span><span id="line.176">     * @return Builder</span>
 <span class="source-line-no">177</span><span id="line.177">     */</span>
@@ -196,7 +196,7 @@
 <span class="source-line-no">183</span><span id="line.183">    }</span>
 <span class="source-line-no">184</span><span id="line.184"></span>
 <span class="source-line-no">185</span><span id="line.185">    /**</span>
-<span class="source-line-no">186</span><span id="line.186">     * set the value to the state using the builder function</span>
+<span class="source-line-no">186</span><span id="line.186">     *  &lt;p&gt;Reference to a State indicating the Order's state.&lt;/p&gt;</span>
 <span class="source-line-no">187</span><span id="line.187">     * @param builder function to build the state value</span>
 <span class="source-line-no">188</span><span id="line.188">     * @return Builder</span>
 <span class="source-line-no">189</span><span id="line.189">     */</span>
@@ -208,7 +208,7 @@
 <span class="source-line-no">195</span><span id="line.195">    }</span>
 <span class="source-line-no">196</span><span id="line.196"></span>
 <span class="source-line-no">197</span><span id="line.197">    /**</span>
-<span class="source-line-no">198</span><span id="line.198">     * set the value to the state</span>
+<span class="source-line-no">198</span><span id="line.198">     *  &lt;p&gt;Reference to a State indicating the Order's state.&lt;/p&gt;</span>
 <span class="source-line-no">199</span><span id="line.199">     * @param state value to be set</span>
 <span class="source-line-no">200</span><span id="line.200">     * @return Builder</span>
 <span class="source-line-no">201</span><span id="line.201">     */</span>
@@ -266,7 +266,7 @@
 <span class="source-line-no">253</span><span id="line.253">    }</span>
 <span class="source-line-no">254</span><span id="line.254"></span>
 <span class="source-line-no">255</span><span id="line.255">    /**</span>
-<span class="source-line-no">256</span><span id="line.256">     *  &lt;p&gt;ResourceIdentifier of the Cart from which this order is created.&lt;/p&gt;</span>
+<span class="source-line-no">256</span><span id="line.256">     *  &lt;p&gt;ResourceIdentifier of the Cart from which the Order is created.&lt;/p&gt;</span>
 <span class="source-line-no">257</span><span id="line.257">     * @return cart</span>
 <span class="source-line-no">258</span><span id="line.258">     */</span>
 <span class="source-line-no">259</span><span id="line.259"></span>
@@ -276,7 +276,7 @@
 <span class="source-line-no">263</span><span id="line.263">    }</span>
 <span class="source-line-no">264</span><span id="line.264"></span>
 <span class="source-line-no">265</span><span id="line.265">    /**</span>
-<span class="source-line-no">266</span><span id="line.266">     * value of version}</span>
+<span class="source-line-no">266</span><span id="line.266">     *  &lt;p&gt;Expected version of the Cart from which the Order is created. If the expected version does not match the actual version, a 409 Conflict error will be returned.&lt;/p&gt;</span>
 <span class="source-line-no">267</span><span id="line.267">     * @return version</span>
 <span class="source-line-no">268</span><span id="line.268">     */</span>
 <span class="source-line-no">269</span><span id="line.269"></span>
@@ -305,7 +305,7 @@
 <span class="source-line-no">292</span><span id="line.292">    }</span>
 <span class="source-line-no">293</span><span id="line.293"></span>
 <span class="source-line-no">294</span><span id="line.294">    /**</span>
-<span class="source-line-no">295</span><span id="line.295">     * value of paymentState}</span>
+<span class="source-line-no">295</span><span id="line.295">     *  &lt;p&gt;Payment state for the Order.&lt;/p&gt;</span>
 <span class="source-line-no">296</span><span id="line.296">     * @return paymentState</span>
 <span class="source-line-no">297</span><span id="line.297">     */</span>
 <span class="source-line-no">298</span><span id="line.298"></span>
@@ -315,7 +315,7 @@
 <span class="source-line-no">302</span><span id="line.302">    }</span>
 <span class="source-line-no">303</span><span id="line.303"></span>
 <span class="source-line-no">304</span><span id="line.304">    /**</span>
-<span class="source-line-no">305</span><span id="line.305">     * value of shipmentState}</span>
+<span class="source-line-no">305</span><span id="line.305">     *  &lt;p&gt;Shipment state for the Order.&lt;/p&gt;</span>
 <span class="source-line-no">306</span><span id="line.306">     * @return shipmentState</span>
 <span class="source-line-no">307</span><span id="line.307">     */</span>
 <span class="source-line-no">308</span><span id="line.308"></span>
@@ -335,7 +335,7 @@
 <span class="source-line-no">322</span><span id="line.322">    }</span>
 <span class="source-line-no">323</span><span id="line.323"></span>
 <span class="source-line-no">324</span><span id="line.324">    /**</span>
-<span class="source-line-no">325</span><span id="line.325">     * value of state}</span>
+<span class="source-line-no">325</span><span id="line.325">     *  &lt;p&gt;Reference to a State indicating the Order's state.&lt;/p&gt;</span>
 <span class="source-line-no">326</span><span id="line.326">     * @return state</span>
 <span class="source-line-no">327</span><span id="line.327">     */</span>
 <span class="source-line-no">328</span><span id="line.328"></span>

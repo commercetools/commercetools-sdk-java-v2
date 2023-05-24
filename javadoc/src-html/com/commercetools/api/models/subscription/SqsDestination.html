@@ -27,187 +27,188 @@
 <span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">/**</span>
-<span class="source-line-no">017</span><span id="line.17"> *  &lt;p&gt;AWS SQS is a pull-queue on AWS. The queue must be a Standard queue type with a &lt;code&gt;MaximumMessageSize&lt;/code&gt; of &lt;code&gt;256 KB&lt;/code&gt;. We recommend setting &lt;code&gt;authenticationMode&lt;/code&gt; to &lt;code&gt;IAM&lt;/code&gt;, to avoid unnecessary key management. For IAM authentication, give permissions to user &lt;code&gt;arn:aws:iam::362576667341:user/subscriptions&lt;/code&gt; to send messages to the queue before creating the Subscription. Otherwise, a test message will not be sent.&lt;/p&gt;</span>
-<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;If you prefer to use &lt;code&gt;Credentials&lt;/code&gt; for authentication, we recommend creating an IAM user with an &lt;code&gt;accessKey&lt;/code&gt; and &lt;code&gt;accessSecret&lt;/code&gt; pair specifically for each Subscription.&lt;/p&gt;</span>
-<span class="source-line-no">019</span><span id="line.19"> *  &lt;p&gt;The IAM user should only have the &lt;code&gt;sqs:SendMessage&lt;/code&gt; permission on this queue.&lt;/p&gt;</span>
-<span class="source-line-no">020</span><span id="line.20"> *</span>
-<span class="source-line-no">021</span><span id="line.21"> * &lt;hr&gt;</span>
-<span class="source-line-no">022</span><span id="line.22"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">023</span><span id="line.23"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">024</span><span id="line.24"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">025</span><span id="line.25"> *     SqsDestination sqsDestination = SqsDestination.builder()</span>
-<span class="source-line-no">026</span><span id="line.26"> *             .queueUrl("{queueUrl}")</span>
-<span class="source-line-no">027</span><span id="line.27"> *             .region("{region}")</span>
-<span class="source-line-no">028</span><span id="line.28"> *             .build()</span>
-<span class="source-line-no">029</span><span id="line.29"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">030</span><span id="line.30"> * &lt;/div&gt;</span>
-<span class="source-line-no">031</span><span id="line.31"> */</span>
-<span class="source-line-no">032</span><span id="line.32">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">033</span><span id="line.33">@JsonDeserialize(as = SqsDestinationImpl.class)</span>
-<span class="source-line-no">034</span><span id="line.34">public interface SqsDestination extends Destination {</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    /**</span>
-<span class="source-line-no">037</span><span id="line.37">     * discriminator value for SqsDestination</span>
-<span class="source-line-no">038</span><span id="line.38">     */</span>
-<span class="source-line-no">039</span><span id="line.39">    String SQS = "SQS";</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    /**</span>
-<span class="source-line-no">042</span><span id="line.42">     *  &lt;p&gt;Only present if &lt;code&gt;authenticationMode&lt;/code&gt; is set to &lt;code&gt;Credentials&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">043</span><span id="line.43">     * @return accessKey</span>
-<span class="source-line-no">044</span><span id="line.44">     */</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    @JsonProperty("accessKey")</span>
-<span class="source-line-no">047</span><span id="line.47">    public String getAccessKey();</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    /**</span>
-<span class="source-line-no">050</span><span id="line.50">     *  &lt;p&gt;Only present if &lt;code&gt;authenticationMode&lt;/code&gt; is set to &lt;code&gt;Credentials&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">051</span><span id="line.51">     * @return accessSecret</span>
-<span class="source-line-no">052</span><span id="line.52">     */</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    @JsonProperty("accessSecret")</span>
-<span class="source-line-no">055</span><span id="line.55">    public String getAccessSecret();</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;URL of the Amazon SQS queue.&lt;/p&gt;</span>
-<span class="source-line-no">059</span><span id="line.59">     * @return queueUrl</span>
-<span class="source-line-no">060</span><span id="line.60">     */</span>
-<span class="source-line-no">061</span><span id="line.61">    @NotNull</span>
-<span class="source-line-no">062</span><span id="line.62">    @JsonProperty("queueUrl")</span>
-<span class="source-line-no">063</span><span id="line.63">    public String getQueueUrl();</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    /**</span>
-<span class="source-line-no">066</span><span id="line.66">     *  &lt;p&gt;AWS Region the message queue is located in.&lt;/p&gt;</span>
-<span class="source-line-no">067</span><span id="line.67">     * @return region</span>
-<span class="source-line-no">068</span><span id="line.68">     */</span>
-<span class="source-line-no">069</span><span id="line.69">    @NotNull</span>
-<span class="source-line-no">070</span><span id="line.70">    @JsonProperty("region")</span>
-<span class="source-line-no">071</span><span id="line.71">    public String getRegion();</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    /**</span>
-<span class="source-line-no">074</span><span id="line.74">     *  &lt;p&gt;Defines the method of authentication for the SQS queue.&lt;/p&gt;</span>
-<span class="source-line-no">075</span><span id="line.75">     * @return authenticationMode</span>
-<span class="source-line-no">076</span><span id="line.76">     */</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    @JsonProperty("authenticationMode")</span>
-<span class="source-line-no">079</span><span id="line.79">    public AwsAuthenticationMode getAuthenticationMode();</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    /**</span>
-<span class="source-line-no">082</span><span id="line.82">     *  &lt;p&gt;Only present if &lt;code&gt;authenticationMode&lt;/code&gt; is set to &lt;code&gt;Credentials&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">083</span><span id="line.83">     * @param accessKey value to be set</span>
-<span class="source-line-no">084</span><span id="line.84">     */</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    public void setAccessKey(final String accessKey);</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    /**</span>
-<span class="source-line-no">089</span><span id="line.89">     *  &lt;p&gt;Only present if &lt;code&gt;authenticationMode&lt;/code&gt; is set to &lt;code&gt;Credentials&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">090</span><span id="line.90">     * @param accessSecret value to be set</span>
-<span class="source-line-no">091</span><span id="line.91">     */</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public void setAccessSecret(final String accessSecret);</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    /**</span>
-<span class="source-line-no">096</span><span id="line.96">     *  &lt;p&gt;URL of the Amazon SQS queue.&lt;/p&gt;</span>
-<span class="source-line-no">097</span><span id="line.97">     * @param queueUrl value to be set</span>
-<span class="source-line-no">098</span><span id="line.98">     */</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    public void setQueueUrl(final String queueUrl);</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    /**</span>
-<span class="source-line-no">103</span><span id="line.103">     *  &lt;p&gt;AWS Region the message queue is located in.&lt;/p&gt;</span>
-<span class="source-line-no">104</span><span id="line.104">     * @param region value to be set</span>
-<span class="source-line-no">105</span><span id="line.105">     */</span>
-<span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    public void setRegion(final String region);</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    /**</span>
-<span class="source-line-no">110</span><span id="line.110">     *  &lt;p&gt;Defines the method of authentication for the SQS queue.&lt;/p&gt;</span>
-<span class="source-line-no">111</span><span id="line.111">     * @param authenticationMode value to be set</span>
-<span class="source-line-no">112</span><span id="line.112">     */</span>
-<span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    public void setAuthenticationMode(final AwsAuthenticationMode authenticationMode);</span>
-<span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    /**</span>
-<span class="source-line-no">117</span><span id="line.117">     * factory method</span>
-<span class="source-line-no">118</span><span id="line.118">     * @return instance of SqsDestination</span>
-<span class="source-line-no">119</span><span id="line.119">     */</span>
-<span class="source-line-no">120</span><span id="line.120">    public static SqsDestination of() {</span>
-<span class="source-line-no">121</span><span id="line.121">        return new SqsDestinationImpl();</span>
-<span class="source-line-no">122</span><span id="line.122">    }</span>
-<span class="source-line-no">123</span><span id="line.123"></span>
-<span class="source-line-no">124</span><span id="line.124">    /**</span>
-<span class="source-line-no">125</span><span id="line.125">     * factory method to create a shallow copy SqsDestination</span>
-<span class="source-line-no">126</span><span id="line.126">     * @param template instance to be copied</span>
-<span class="source-line-no">127</span><span id="line.127">     * @return copy instance</span>
-<span class="source-line-no">128</span><span id="line.128">     */</span>
-<span class="source-line-no">129</span><span id="line.129">    public static SqsDestination of(final SqsDestination template) {</span>
-<span class="source-line-no">130</span><span id="line.130">        SqsDestinationImpl instance = new SqsDestinationImpl();</span>
-<span class="source-line-no">131</span><span id="line.131">        instance.setAccessKey(template.getAccessKey());</span>
-<span class="source-line-no">132</span><span id="line.132">        instance.setAccessSecret(template.getAccessSecret());</span>
-<span class="source-line-no">133</span><span id="line.133">        instance.setQueueUrl(template.getQueueUrl());</span>
-<span class="source-line-no">134</span><span id="line.134">        instance.setRegion(template.getRegion());</span>
-<span class="source-line-no">135</span><span id="line.135">        instance.setAuthenticationMode(template.getAuthenticationMode());</span>
-<span class="source-line-no">136</span><span id="line.136">        return instance;</span>
-<span class="source-line-no">137</span><span id="line.137">    }</span>
-<span class="source-line-no">138</span><span id="line.138"></span>
-<span class="source-line-no">139</span><span id="line.139">    /**</span>
-<span class="source-line-no">140</span><span id="line.140">     * factory method to create a deep copy of SqsDestination</span>
-<span class="source-line-no">141</span><span id="line.141">     * @param template instance to be copied</span>
-<span class="source-line-no">142</span><span id="line.142">     * @return copy instance</span>
-<span class="source-line-no">143</span><span id="line.143">     */</span>
-<span class="source-line-no">144</span><span id="line.144">    @Nullable</span>
-<span class="source-line-no">145</span><span id="line.145">    public static SqsDestination deepCopy(@Nullable final SqsDestination template) {</span>
-<span class="source-line-no">146</span><span id="line.146">        if (template == null) {</span>
-<span class="source-line-no">147</span><span id="line.147">            return null;</span>
-<span class="source-line-no">148</span><span id="line.148">        }</span>
-<span class="source-line-no">149</span><span id="line.149">        SqsDestinationImpl instance = new SqsDestinationImpl();</span>
-<span class="source-line-no">150</span><span id="line.150">        instance.setAccessKey(template.getAccessKey());</span>
-<span class="source-line-no">151</span><span id="line.151">        instance.setAccessSecret(template.getAccessSecret());</span>
-<span class="source-line-no">152</span><span id="line.152">        instance.setQueueUrl(template.getQueueUrl());</span>
-<span class="source-line-no">153</span><span id="line.153">        instance.setRegion(template.getRegion());</span>
-<span class="source-line-no">154</span><span id="line.154">        instance.setAuthenticationMode(template.getAuthenticationMode());</span>
-<span class="source-line-no">155</span><span id="line.155">        return instance;</span>
-<span class="source-line-no">156</span><span id="line.156">    }</span>
-<span class="source-line-no">157</span><span id="line.157"></span>
-<span class="source-line-no">158</span><span id="line.158">    /**</span>
-<span class="source-line-no">159</span><span id="line.159">     * builder factory method for SqsDestination</span>
-<span class="source-line-no">160</span><span id="line.160">     * @return builder</span>
-<span class="source-line-no">161</span><span id="line.161">     */</span>
-<span class="source-line-no">162</span><span id="line.162">    public static SqsDestinationBuilder builder() {</span>
-<span class="source-line-no">163</span><span id="line.163">        return SqsDestinationBuilder.of();</span>
-<span class="source-line-no">164</span><span id="line.164">    }</span>
-<span class="source-line-no">165</span><span id="line.165"></span>
-<span class="source-line-no">166</span><span id="line.166">    /**</span>
-<span class="source-line-no">167</span><span id="line.167">     * create builder for SqsDestination instance</span>
-<span class="source-line-no">168</span><span id="line.168">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">169</span><span id="line.169">     * @return builder</span>
-<span class="source-line-no">170</span><span id="line.170">     */</span>
-<span class="source-line-no">171</span><span id="line.171">    public static SqsDestinationBuilder builder(final SqsDestination template) {</span>
-<span class="source-line-no">172</span><span id="line.172">        return SqsDestinationBuilder.of(template);</span>
-<span class="source-line-no">173</span><span id="line.173">    }</span>
-<span class="source-line-no">174</span><span id="line.174"></span>
-<span class="source-line-no">175</span><span id="line.175">    /**</span>
-<span class="source-line-no">176</span><span id="line.176">     * accessor map function</span>
-<span class="source-line-no">177</span><span id="line.177">     * @param &lt;T&gt; mapped type</span>
-<span class="source-line-no">178</span><span id="line.178">     * @param helper function to map the object</span>
-<span class="source-line-no">179</span><span id="line.179">     * @return mapped value</span>
-<span class="source-line-no">180</span><span id="line.180">     */</span>
-<span class="source-line-no">181</span><span id="line.181">    default &lt;T&gt; T withSqsDestination(Function&lt;SqsDestination, T&gt; helper) {</span>
-<span class="source-line-no">182</span><span id="line.182">        return helper.apply(this);</span>
-<span class="source-line-no">183</span><span id="line.183">    }</span>
-<span class="source-line-no">184</span><span id="line.184"></span>
-<span class="source-line-no">185</span><span id="line.185">    /**</span>
-<span class="source-line-no">186</span><span id="line.186">     * gives a TypeReference for usage with Jackson DataBind</span>
-<span class="source-line-no">187</span><span id="line.187">     * @return TypeReference</span>
-<span class="source-line-no">188</span><span id="line.188">     */</span>
-<span class="source-line-no">189</span><span id="line.189">    public static com.fasterxml.jackson.core.type.TypeReference&lt;SqsDestination&gt; typeReference() {</span>
-<span class="source-line-no">190</span><span id="line.190">        return new com.fasterxml.jackson.core.type.TypeReference&lt;SqsDestination&gt;() {</span>
-<span class="source-line-no">191</span><span id="line.191">            @Override</span>
-<span class="source-line-no">192</span><span id="line.192">            public String toString() {</span>
-<span class="source-line-no">193</span><span id="line.193">                return "TypeReference&lt;SqsDestination&gt;";</span>
-<span class="source-line-no">194</span><span id="line.194">            }</span>
-<span class="source-line-no">195</span><span id="line.195">        };</span>
-<span class="source-line-no">196</span><span id="line.196">    }</span>
-<span class="source-line-no">197</span><span id="line.197">}</span>
+<span class="source-line-no">017</span><span id="line.17"> *  &lt;p&gt;AWS SQS is a pull-queue on AWS. The queue must be a Standard queue type with a &lt;code&gt;MaximumMessageSize&lt;/code&gt; of &lt;code&gt;256 KB&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;We recommend setting &lt;code&gt;authenticationMode&lt;/code&gt; to &lt;code&gt;IAM&lt;/code&gt;, to avoid unnecessary key management. For IAM authentication and before creating the Subscription, give permissions to the following user account: &lt;code&gt;arn:aws-cn:iam::417094354346:user/subscriptions&lt;/code&gt; if the Project is hosted in the China (AWS, Ningxia) Region; &lt;code&gt;arn:aws:iam::362576667341:user/subscriptions&lt;/code&gt; for all other Regions. Otherwise, a test message will not be sent.&lt;/p&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> *  &lt;p&gt;If you prefer to use &lt;code&gt;Credentials&lt;/code&gt; for authentication, we recommend creating an IAM user with an &lt;code&gt;accessKey&lt;/code&gt; and &lt;code&gt;accessSecret&lt;/code&gt; pair specifically for each Subscription.&lt;/p&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> *  &lt;p&gt;The IAM user should only have the &lt;code&gt;sqs:SendMessage&lt;/code&gt; permission on this queue.&lt;/p&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> *</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;hr&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">024</span><span id="line.24"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">025</span><span id="line.25"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">026</span><span id="line.26"> *     SqsDestination sqsDestination = SqsDestination.builder()</span>
+<span class="source-line-no">027</span><span id="line.27"> *             .queueUrl("{queueUrl}")</span>
+<span class="source-line-no">028</span><span id="line.28"> *             .region("{region}")</span>
+<span class="source-line-no">029</span><span id="line.29"> *             .build()</span>
+<span class="source-line-no">030</span><span id="line.30"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">031</span><span id="line.31"> * &lt;/div&gt;</span>
+<span class="source-line-no">032</span><span id="line.32"> */</span>
+<span class="source-line-no">033</span><span id="line.33">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">034</span><span id="line.34">@JsonDeserialize(as = SqsDestinationImpl.class)</span>
+<span class="source-line-no">035</span><span id="line.35">public interface SqsDestination extends Destination {</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    /**</span>
+<span class="source-line-no">038</span><span id="line.38">     * discriminator value for SqsDestination</span>
+<span class="source-line-no">039</span><span id="line.39">     */</span>
+<span class="source-line-no">040</span><span id="line.40">    String SQS = "SQS";</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    /**</span>
+<span class="source-line-no">043</span><span id="line.43">     *  &lt;p&gt;Only present if &lt;code&gt;authenticationMode&lt;/code&gt; is set to &lt;code&gt;Credentials&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">044</span><span id="line.44">     * @return accessKey</span>
+<span class="source-line-no">045</span><span id="line.45">     */</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    @JsonProperty("accessKey")</span>
+<span class="source-line-no">048</span><span id="line.48">    public String getAccessKey();</span>
+<span class="source-line-no">049</span><span id="line.49"></span>
+<span class="source-line-no">050</span><span id="line.50">    /**</span>
+<span class="source-line-no">051</span><span id="line.51">     *  &lt;p&gt;Only present if &lt;code&gt;authenticationMode&lt;/code&gt; is set to &lt;code&gt;Credentials&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">052</span><span id="line.52">     * @return accessSecret</span>
+<span class="source-line-no">053</span><span id="line.53">     */</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    @JsonProperty("accessSecret")</span>
+<span class="source-line-no">056</span><span id="line.56">    public String getAccessSecret();</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    /**</span>
+<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;URL of the Amazon SQS queue.&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">     * @return queueUrl</span>
+<span class="source-line-no">061</span><span id="line.61">     */</span>
+<span class="source-line-no">062</span><span id="line.62">    @NotNull</span>
+<span class="source-line-no">063</span><span id="line.63">    @JsonProperty("queueUrl")</span>
+<span class="source-line-no">064</span><span id="line.64">    public String getQueueUrl();</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    /**</span>
+<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;AWS Region the message queue is located in.&lt;/p&gt;</span>
+<span class="source-line-no">068</span><span id="line.68">     * @return region</span>
+<span class="source-line-no">069</span><span id="line.69">     */</span>
+<span class="source-line-no">070</span><span id="line.70">    @NotNull</span>
+<span class="source-line-no">071</span><span id="line.71">    @JsonProperty("region")</span>
+<span class="source-line-no">072</span><span id="line.72">    public String getRegion();</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    /**</span>
+<span class="source-line-no">075</span><span id="line.75">     *  &lt;p&gt;Defines the method of authentication for the SQS queue.&lt;/p&gt;</span>
+<span class="source-line-no">076</span><span id="line.76">     * @return authenticationMode</span>
+<span class="source-line-no">077</span><span id="line.77">     */</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    @JsonProperty("authenticationMode")</span>
+<span class="source-line-no">080</span><span id="line.80">    public AwsAuthenticationMode getAuthenticationMode();</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    /**</span>
+<span class="source-line-no">083</span><span id="line.83">     *  &lt;p&gt;Only present if &lt;code&gt;authenticationMode&lt;/code&gt; is set to &lt;code&gt;Credentials&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">084</span><span id="line.84">     * @param accessKey value to be set</span>
+<span class="source-line-no">085</span><span id="line.85">     */</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    public void setAccessKey(final String accessKey);</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    /**</span>
+<span class="source-line-no">090</span><span id="line.90">     *  &lt;p&gt;Only present if &lt;code&gt;authenticationMode&lt;/code&gt; is set to &lt;code&gt;Credentials&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">091</span><span id="line.91">     * @param accessSecret value to be set</span>
+<span class="source-line-no">092</span><span id="line.92">     */</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    public void setAccessSecret(final String accessSecret);</span>
+<span class="source-line-no">095</span><span id="line.95"></span>
+<span class="source-line-no">096</span><span id="line.96">    /**</span>
+<span class="source-line-no">097</span><span id="line.97">     *  &lt;p&gt;URL of the Amazon SQS queue.&lt;/p&gt;</span>
+<span class="source-line-no">098</span><span id="line.98">     * @param queueUrl value to be set</span>
+<span class="source-line-no">099</span><span id="line.99">     */</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    public void setQueueUrl(final String queueUrl);</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    /**</span>
+<span class="source-line-no">104</span><span id="line.104">     *  &lt;p&gt;AWS Region the message queue is located in.&lt;/p&gt;</span>
+<span class="source-line-no">105</span><span id="line.105">     * @param region value to be set</span>
+<span class="source-line-no">106</span><span id="line.106">     */</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    public void setRegion(final String region);</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    /**</span>
+<span class="source-line-no">111</span><span id="line.111">     *  &lt;p&gt;Defines the method of authentication for the SQS queue.&lt;/p&gt;</span>
+<span class="source-line-no">112</span><span id="line.112">     * @param authenticationMode value to be set</span>
+<span class="source-line-no">113</span><span id="line.113">     */</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    public void setAuthenticationMode(final AwsAuthenticationMode authenticationMode);</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">    /**</span>
+<span class="source-line-no">118</span><span id="line.118">     * factory method</span>
+<span class="source-line-no">119</span><span id="line.119">     * @return instance of SqsDestination</span>
+<span class="source-line-no">120</span><span id="line.120">     */</span>
+<span class="source-line-no">121</span><span id="line.121">    public static SqsDestination of() {</span>
+<span class="source-line-no">122</span><span id="line.122">        return new SqsDestinationImpl();</span>
+<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">    /**</span>
+<span class="source-line-no">126</span><span id="line.126">     * factory method to create a shallow copy SqsDestination</span>
+<span class="source-line-no">127</span><span id="line.127">     * @param template instance to be copied</span>
+<span class="source-line-no">128</span><span id="line.128">     * @return copy instance</span>
+<span class="source-line-no">129</span><span id="line.129">     */</span>
+<span class="source-line-no">130</span><span id="line.130">    public static SqsDestination of(final SqsDestination template) {</span>
+<span class="source-line-no">131</span><span id="line.131">        SqsDestinationImpl instance = new SqsDestinationImpl();</span>
+<span class="source-line-no">132</span><span id="line.132">        instance.setAccessKey(template.getAccessKey());</span>
+<span class="source-line-no">133</span><span id="line.133">        instance.setAccessSecret(template.getAccessSecret());</span>
+<span class="source-line-no">134</span><span id="line.134">        instance.setQueueUrl(template.getQueueUrl());</span>
+<span class="source-line-no">135</span><span id="line.135">        instance.setRegion(template.getRegion());</span>
+<span class="source-line-no">136</span><span id="line.136">        instance.setAuthenticationMode(template.getAuthenticationMode());</span>
+<span class="source-line-no">137</span><span id="line.137">        return instance;</span>
+<span class="source-line-no">138</span><span id="line.138">    }</span>
+<span class="source-line-no">139</span><span id="line.139"></span>
+<span class="source-line-no">140</span><span id="line.140">    /**</span>
+<span class="source-line-no">141</span><span id="line.141">     * factory method to create a deep copy of SqsDestination</span>
+<span class="source-line-no">142</span><span id="line.142">     * @param template instance to be copied</span>
+<span class="source-line-no">143</span><span id="line.143">     * @return copy instance</span>
+<span class="source-line-no">144</span><span id="line.144">     */</span>
+<span class="source-line-no">145</span><span id="line.145">    @Nullable</span>
+<span class="source-line-no">146</span><span id="line.146">    public static SqsDestination deepCopy(@Nullable final SqsDestination template) {</span>
+<span class="source-line-no">147</span><span id="line.147">        if (template == null) {</span>
+<span class="source-line-no">148</span><span id="line.148">            return null;</span>
+<span class="source-line-no">149</span><span id="line.149">        }</span>
+<span class="source-line-no">150</span><span id="line.150">        SqsDestinationImpl instance = new SqsDestinationImpl();</span>
+<span class="source-line-no">151</span><span id="line.151">        instance.setAccessKey(template.getAccessKey());</span>
+<span class="source-line-no">152</span><span id="line.152">        instance.setAccessSecret(template.getAccessSecret());</span>
+<span class="source-line-no">153</span><span id="line.153">        instance.setQueueUrl(template.getQueueUrl());</span>
+<span class="source-line-no">154</span><span id="line.154">        instance.setRegion(template.getRegion());</span>
+<span class="source-line-no">155</span><span id="line.155">        instance.setAuthenticationMode(template.getAuthenticationMode());</span>
+<span class="source-line-no">156</span><span id="line.156">        return instance;</span>
+<span class="source-line-no">157</span><span id="line.157">    }</span>
+<span class="source-line-no">158</span><span id="line.158"></span>
+<span class="source-line-no">159</span><span id="line.159">    /**</span>
+<span class="source-line-no">160</span><span id="line.160">     * builder factory method for SqsDestination</span>
+<span class="source-line-no">161</span><span id="line.161">     * @return builder</span>
+<span class="source-line-no">162</span><span id="line.162">     */</span>
+<span class="source-line-no">163</span><span id="line.163">    public static SqsDestinationBuilder builder() {</span>
+<span class="source-line-no">164</span><span id="line.164">        return SqsDestinationBuilder.of();</span>
+<span class="source-line-no">165</span><span id="line.165">    }</span>
+<span class="source-line-no">166</span><span id="line.166"></span>
+<span class="source-line-no">167</span><span id="line.167">    /**</span>
+<span class="source-line-no">168</span><span id="line.168">     * create builder for SqsDestination instance</span>
+<span class="source-line-no">169</span><span id="line.169">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">170</span><span id="line.170">     * @return builder</span>
+<span class="source-line-no">171</span><span id="line.171">     */</span>
+<span class="source-line-no">172</span><span id="line.172">    public static SqsDestinationBuilder builder(final SqsDestination template) {</span>
+<span class="source-line-no">173</span><span id="line.173">        return SqsDestinationBuilder.of(template);</span>
+<span class="source-line-no">174</span><span id="line.174">    }</span>
+<span class="source-line-no">175</span><span id="line.175"></span>
+<span class="source-line-no">176</span><span id="line.176">    /**</span>
+<span class="source-line-no">177</span><span id="line.177">     * accessor map function</span>
+<span class="source-line-no">178</span><span id="line.178">     * @param &lt;T&gt; mapped type</span>
+<span class="source-line-no">179</span><span id="line.179">     * @param helper function to map the object</span>
+<span class="source-line-no">180</span><span id="line.180">     * @return mapped value</span>
+<span class="source-line-no">181</span><span id="line.181">     */</span>
+<span class="source-line-no">182</span><span id="line.182">    default &lt;T&gt; T withSqsDestination(Function&lt;SqsDestination, T&gt; helper) {</span>
+<span class="source-line-no">183</span><span id="line.183">        return helper.apply(this);</span>
+<span class="source-line-no">184</span><span id="line.184">    }</span>
+<span class="source-line-no">185</span><span id="line.185"></span>
+<span class="source-line-no">186</span><span id="line.186">    /**</span>
+<span class="source-line-no">187</span><span id="line.187">     * gives a TypeReference for usage with Jackson DataBind</span>
+<span class="source-line-no">188</span><span id="line.188">     * @return TypeReference</span>
+<span class="source-line-no">189</span><span id="line.189">     */</span>
+<span class="source-line-no">190</span><span id="line.190">    public static com.fasterxml.jackson.core.type.TypeReference&lt;SqsDestination&gt; typeReference() {</span>
+<span class="source-line-no">191</span><span id="line.191">        return new com.fasterxml.jackson.core.type.TypeReference&lt;SqsDestination&gt;() {</span>
+<span class="source-line-no">192</span><span id="line.192">            @Override</span>
+<span class="source-line-no">193</span><span id="line.193">            public String toString() {</span>
+<span class="source-line-no">194</span><span id="line.194">                return "TypeReference&lt;SqsDestination&gt;";</span>
+<span class="source-line-no">195</span><span id="line.195">            }</span>
+<span class="source-line-no">196</span><span id="line.196">        };</span>
+<span class="source-line-no">197</span><span id="line.197">    }</span>
+<span class="source-line-no">198</span><span id="line.198">}</span>
 
 
 

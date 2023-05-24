@@ -70,97 +70,99 @@
 <span class="source-line-no">057</span><span id="line.57">        instance.setStoreMode(template.getStoreMode());</span>
 <span class="source-line-no">058</span><span id="line.58">        instance.setName(template.getName());</span>
 <span class="source-line-no">059</span><span id="line.59">        instance.setContactEmail(template.getContactEmail());</span>
-<span class="source-line-no">060</span><span id="line.60">        instance.setAssociates(template.getAssociates());</span>
-<span class="source-line-no">061</span><span id="line.61">        instance.setAddresses(template.getAddresses());</span>
-<span class="source-line-no">062</span><span id="line.62">        instance.setShippingAddresses(template.getShippingAddresses());</span>
-<span class="source-line-no">063</span><span id="line.63">        instance.setDefaultShippingAddress(template.getDefaultShippingAddress());</span>
-<span class="source-line-no">064</span><span id="line.64">        instance.setBillingAddresses(template.getBillingAddresses());</span>
-<span class="source-line-no">065</span><span id="line.65">        instance.setDefaultBillingAddress(template.getDefaultBillingAddress());</span>
-<span class="source-line-no">066</span><span id="line.66">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">067</span><span id="line.67">        return instance;</span>
-<span class="source-line-no">068</span><span id="line.68">    }</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    /**</span>
-<span class="source-line-no">071</span><span id="line.71">     * factory method to create a deep copy of CompanyDraft</span>
-<span class="source-line-no">072</span><span id="line.72">     * @param template instance to be copied</span>
-<span class="source-line-no">073</span><span id="line.73">     * @return copy instance</span>
-<span class="source-line-no">074</span><span id="line.74">     */</span>
-<span class="source-line-no">075</span><span id="line.75">    @Nullable</span>
-<span class="source-line-no">076</span><span id="line.76">    public static CompanyDraft deepCopy(@Nullable final CompanyDraft template) {</span>
-<span class="source-line-no">077</span><span id="line.77">        if (template == null) {</span>
-<span class="source-line-no">078</span><span id="line.78">            return null;</span>
-<span class="source-line-no">079</span><span id="line.79">        }</span>
-<span class="source-line-no">080</span><span id="line.80">        CompanyDraftImpl instance = new CompanyDraftImpl();</span>
-<span class="source-line-no">081</span><span id="line.81">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">082</span><span id="line.82">        instance.setStatus(template.getStatus());</span>
-<span class="source-line-no">083</span><span id="line.83">        instance.setStores(Optional.ofNullable(template.getStores())</span>
-<span class="source-line-no">084</span><span id="line.84">                .map(t -&gt; t.stream()</span>
-<span class="source-line-no">085</span><span id="line.85">                        .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)</span>
-<span class="source-line-no">086</span><span id="line.86">                        .collect(Collectors.toList()))</span>
-<span class="source-line-no">087</span><span id="line.87">                .orElse(null));</span>
-<span class="source-line-no">088</span><span id="line.88">        instance.setStoreMode(template.getStoreMode());</span>
-<span class="source-line-no">089</span><span id="line.89">        instance.setName(template.getName());</span>
-<span class="source-line-no">090</span><span id="line.90">        instance.setContactEmail(template.getContactEmail());</span>
-<span class="source-line-no">091</span><span id="line.91">        instance.setAssociates(Optional.ofNullable(template.getAssociates())</span>
-<span class="source-line-no">092</span><span id="line.92">                .map(t -&gt; t.stream()</span>
-<span class="source-line-no">093</span><span id="line.93">                        .map(com.commercetools.api.models.business_unit.AssociateDraft::deepCopy)</span>
-<span class="source-line-no">094</span><span id="line.94">                        .collect(Collectors.toList()))</span>
-<span class="source-line-no">095</span><span id="line.95">                .orElse(null));</span>
-<span class="source-line-no">096</span><span id="line.96">        instance.setAddresses(Optional.ofNullable(template.getAddresses())</span>
-<span class="source-line-no">097</span><span id="line.97">                .map(t -&gt; t.stream()</span>
-<span class="source-line-no">098</span><span id="line.98">                        .map(com.commercetools.api.models.common.BaseAddress::deepCopy)</span>
-<span class="source-line-no">099</span><span id="line.99">                        .collect(Collectors.toList()))</span>
-<span class="source-line-no">100</span><span id="line.100">                .orElse(null));</span>
-<span class="source-line-no">101</span><span id="line.101">        instance.setShippingAddresses(</span>
-<span class="source-line-no">102</span><span id="line.102">            Optional.ofNullable(template.getShippingAddresses()).map(ArrayList::new).orElse(null));</span>
-<span class="source-line-no">103</span><span id="line.103">        instance.setDefaultShippingAddress(template.getDefaultShippingAddress());</span>
-<span class="source-line-no">104</span><span id="line.104">        instance.setBillingAddresses(</span>
-<span class="source-line-no">105</span><span id="line.105">            Optional.ofNullable(template.getBillingAddresses()).map(ArrayList::new).orElse(null));</span>
-<span class="source-line-no">106</span><span id="line.106">        instance.setDefaultBillingAddress(template.getDefaultBillingAddress());</span>
-<span class="source-line-no">107</span><span id="line.107">        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));</span>
-<span class="source-line-no">108</span><span id="line.108">        return instance;</span>
-<span class="source-line-no">109</span><span id="line.109">    }</span>
-<span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    /**</span>
-<span class="source-line-no">112</span><span id="line.112">     * builder factory method for CompanyDraft</span>
-<span class="source-line-no">113</span><span id="line.113">     * @return builder</span>
-<span class="source-line-no">114</span><span id="line.114">     */</span>
-<span class="source-line-no">115</span><span id="line.115">    public static CompanyDraftBuilder builder() {</span>
-<span class="source-line-no">116</span><span id="line.116">        return CompanyDraftBuilder.of();</span>
-<span class="source-line-no">117</span><span id="line.117">    }</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    /**</span>
-<span class="source-line-no">120</span><span id="line.120">     * create builder for CompanyDraft instance</span>
-<span class="source-line-no">121</span><span id="line.121">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">122</span><span id="line.122">     * @return builder</span>
-<span class="source-line-no">123</span><span id="line.123">     */</span>
-<span class="source-line-no">124</span><span id="line.124">    public static CompanyDraftBuilder builder(final CompanyDraft template) {</span>
-<span class="source-line-no">125</span><span id="line.125">        return CompanyDraftBuilder.of(template);</span>
-<span class="source-line-no">126</span><span id="line.126">    }</span>
-<span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    /**</span>
-<span class="source-line-no">129</span><span id="line.129">     * accessor map function</span>
-<span class="source-line-no">130</span><span id="line.130">     * @param &lt;T&gt; mapped type</span>
-<span class="source-line-no">131</span><span id="line.131">     * @param helper function to map the object</span>
-<span class="source-line-no">132</span><span id="line.132">     * @return mapped value</span>
-<span class="source-line-no">133</span><span id="line.133">     */</span>
-<span class="source-line-no">134</span><span id="line.134">    default &lt;T&gt; T withCompanyDraft(Function&lt;CompanyDraft, T&gt; helper) {</span>
-<span class="source-line-no">135</span><span id="line.135">        return helper.apply(this);</span>
-<span class="source-line-no">136</span><span id="line.136">    }</span>
-<span class="source-line-no">137</span><span id="line.137"></span>
-<span class="source-line-no">138</span><span id="line.138">    /**</span>
-<span class="source-line-no">139</span><span id="line.139">     * gives a TypeReference for usage with Jackson DataBind</span>
-<span class="source-line-no">140</span><span id="line.140">     * @return TypeReference</span>
-<span class="source-line-no">141</span><span id="line.141">     */</span>
-<span class="source-line-no">142</span><span id="line.142">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CompanyDraft&gt; typeReference() {</span>
-<span class="source-line-no">143</span><span id="line.143">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CompanyDraft&gt;() {</span>
-<span class="source-line-no">144</span><span id="line.144">            @Override</span>
-<span class="source-line-no">145</span><span id="line.145">            public String toString() {</span>
-<span class="source-line-no">146</span><span id="line.146">                return "TypeReference&lt;CompanyDraft&gt;";</span>
-<span class="source-line-no">147</span><span id="line.147">            }</span>
-<span class="source-line-no">148</span><span id="line.148">        };</span>
-<span class="source-line-no">149</span><span id="line.149">    }</span>
-<span class="source-line-no">150</span><span id="line.150">}</span>
+<span class="source-line-no">060</span><span id="line.60">        instance.setAssociateMode(template.getAssociateMode());</span>
+<span class="source-line-no">061</span><span id="line.61">        instance.setAssociates(template.getAssociates());</span>
+<span class="source-line-no">062</span><span id="line.62">        instance.setAddresses(template.getAddresses());</span>
+<span class="source-line-no">063</span><span id="line.63">        instance.setShippingAddresses(template.getShippingAddresses());</span>
+<span class="source-line-no">064</span><span id="line.64">        instance.setDefaultShippingAddress(template.getDefaultShippingAddress());</span>
+<span class="source-line-no">065</span><span id="line.65">        instance.setBillingAddresses(template.getBillingAddresses());</span>
+<span class="source-line-no">066</span><span id="line.66">        instance.setDefaultBillingAddress(template.getDefaultBillingAddress());</span>
+<span class="source-line-no">067</span><span id="line.67">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">068</span><span id="line.68">        return instance;</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    /**</span>
+<span class="source-line-no">072</span><span id="line.72">     * factory method to create a deep copy of CompanyDraft</span>
+<span class="source-line-no">073</span><span id="line.73">     * @param template instance to be copied</span>
+<span class="source-line-no">074</span><span id="line.74">     * @return copy instance</span>
+<span class="source-line-no">075</span><span id="line.75">     */</span>
+<span class="source-line-no">076</span><span id="line.76">    @Nullable</span>
+<span class="source-line-no">077</span><span id="line.77">    public static CompanyDraft deepCopy(@Nullable final CompanyDraft template) {</span>
+<span class="source-line-no">078</span><span id="line.78">        if (template == null) {</span>
+<span class="source-line-no">079</span><span id="line.79">            return null;</span>
+<span class="source-line-no">080</span><span id="line.80">        }</span>
+<span class="source-line-no">081</span><span id="line.81">        CompanyDraftImpl instance = new CompanyDraftImpl();</span>
+<span class="source-line-no">082</span><span id="line.82">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">083</span><span id="line.83">        instance.setStatus(template.getStatus());</span>
+<span class="source-line-no">084</span><span id="line.84">        instance.setStores(Optional.ofNullable(template.getStores())</span>
+<span class="source-line-no">085</span><span id="line.85">                .map(t -&gt; t.stream()</span>
+<span class="source-line-no">086</span><span id="line.86">                        .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)</span>
+<span class="source-line-no">087</span><span id="line.87">                        .collect(Collectors.toList()))</span>
+<span class="source-line-no">088</span><span id="line.88">                .orElse(null));</span>
+<span class="source-line-no">089</span><span id="line.89">        instance.setStoreMode(template.getStoreMode());</span>
+<span class="source-line-no">090</span><span id="line.90">        instance.setName(template.getName());</span>
+<span class="source-line-no">091</span><span id="line.91">        instance.setContactEmail(template.getContactEmail());</span>
+<span class="source-line-no">092</span><span id="line.92">        instance.setAssociateMode(template.getAssociateMode());</span>
+<span class="source-line-no">093</span><span id="line.93">        instance.setAssociates(Optional.ofNullable(template.getAssociates())</span>
+<span class="source-line-no">094</span><span id="line.94">                .map(t -&gt; t.stream()</span>
+<span class="source-line-no">095</span><span id="line.95">                        .map(com.commercetools.api.models.business_unit.AssociateDraft::deepCopy)</span>
+<span class="source-line-no">096</span><span id="line.96">                        .collect(Collectors.toList()))</span>
+<span class="source-line-no">097</span><span id="line.97">                .orElse(null));</span>
+<span class="source-line-no">098</span><span id="line.98">        instance.setAddresses(Optional.ofNullable(template.getAddresses())</span>
+<span class="source-line-no">099</span><span id="line.99">                .map(t -&gt; t.stream()</span>
+<span class="source-line-no">100</span><span id="line.100">                        .map(com.commercetools.api.models.common.BaseAddress::deepCopy)</span>
+<span class="source-line-no">101</span><span id="line.101">                        .collect(Collectors.toList()))</span>
+<span class="source-line-no">102</span><span id="line.102">                .orElse(null));</span>
+<span class="source-line-no">103</span><span id="line.103">        instance.setShippingAddresses(</span>
+<span class="source-line-no">104</span><span id="line.104">            Optional.ofNullable(template.getShippingAddresses()).map(ArrayList::new).orElse(null));</span>
+<span class="source-line-no">105</span><span id="line.105">        instance.setDefaultShippingAddress(template.getDefaultShippingAddress());</span>
+<span class="source-line-no">106</span><span id="line.106">        instance.setBillingAddresses(</span>
+<span class="source-line-no">107</span><span id="line.107">            Optional.ofNullable(template.getBillingAddresses()).map(ArrayList::new).orElse(null));</span>
+<span class="source-line-no">108</span><span id="line.108">        instance.setDefaultBillingAddress(template.getDefaultBillingAddress());</span>
+<span class="source-line-no">109</span><span id="line.109">        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));</span>
+<span class="source-line-no">110</span><span id="line.110">        return instance;</span>
+<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    /**</span>
+<span class="source-line-no">114</span><span id="line.114">     * builder factory method for CompanyDraft</span>
+<span class="source-line-no">115</span><span id="line.115">     * @return builder</span>
+<span class="source-line-no">116</span><span id="line.116">     */</span>
+<span class="source-line-no">117</span><span id="line.117">    public static CompanyDraftBuilder builder() {</span>
+<span class="source-line-no">118</span><span id="line.118">        return CompanyDraftBuilder.of();</span>
+<span class="source-line-no">119</span><span id="line.119">    }</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    /**</span>
+<span class="source-line-no">122</span><span id="line.122">     * create builder for CompanyDraft instance</span>
+<span class="source-line-no">123</span><span id="line.123">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">124</span><span id="line.124">     * @return builder</span>
+<span class="source-line-no">125</span><span id="line.125">     */</span>
+<span class="source-line-no">126</span><span id="line.126">    public static CompanyDraftBuilder builder(final CompanyDraft template) {</span>
+<span class="source-line-no">127</span><span id="line.127">        return CompanyDraftBuilder.of(template);</span>
+<span class="source-line-no">128</span><span id="line.128">    }</span>
+<span class="source-line-no">129</span><span id="line.129"></span>
+<span class="source-line-no">130</span><span id="line.130">    /**</span>
+<span class="source-line-no">131</span><span id="line.131">     * accessor map function</span>
+<span class="source-line-no">132</span><span id="line.132">     * @param &lt;T&gt; mapped type</span>
+<span class="source-line-no">133</span><span id="line.133">     * @param helper function to map the object</span>
+<span class="source-line-no">134</span><span id="line.134">     * @return mapped value</span>
+<span class="source-line-no">135</span><span id="line.135">     */</span>
+<span class="source-line-no">136</span><span id="line.136">    default &lt;T&gt; T withCompanyDraft(Function&lt;CompanyDraft, T&gt; helper) {</span>
+<span class="source-line-no">137</span><span id="line.137">        return helper.apply(this);</span>
+<span class="source-line-no">138</span><span id="line.138">    }</span>
+<span class="source-line-no">139</span><span id="line.139"></span>
+<span class="source-line-no">140</span><span id="line.140">    /**</span>
+<span class="source-line-no">141</span><span id="line.141">     * gives a TypeReference for usage with Jackson DataBind</span>
+<span class="source-line-no">142</span><span id="line.142">     * @return TypeReference</span>
+<span class="source-line-no">143</span><span id="line.143">     */</span>
+<span class="source-line-no">144</span><span id="line.144">    public static com.fasterxml.jackson.core.type.TypeReference&lt;CompanyDraft&gt; typeReference() {</span>
+<span class="source-line-no">145</span><span id="line.145">        return new com.fasterxml.jackson.core.type.TypeReference&lt;CompanyDraft&gt;() {</span>
+<span class="source-line-no">146</span><span id="line.146">            @Override</span>
+<span class="source-line-no">147</span><span id="line.147">            public String toString() {</span>
+<span class="source-line-no">148</span><span id="line.148">                return "TypeReference&lt;CompanyDraft&gt;";</span>
+<span class="source-line-no">149</span><span id="line.149">            }</span>
+<span class="source-line-no">150</span><span id="line.150">        };</span>
+<span class="source-line-no">151</span><span id="line.151">    }</span>
+<span class="source-line-no">152</span><span id="line.152">}</span>
 
 
 

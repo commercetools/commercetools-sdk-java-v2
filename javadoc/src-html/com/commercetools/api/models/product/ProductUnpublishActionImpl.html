@@ -27,7 +27,7 @@
 <span class="source-line-no">014</span><span id="line.14">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">015</span><span id="line.15"></span>
 <span class="source-line-no">016</span><span id="line.16">/**</span>
-<span class="source-line-no">017</span><span id="line.17"> *  &lt;p&gt;Removes the current projection of the Product. The staged projection is unaffected. Unpublished Products only appear in query/search results with &lt;code&gt;staged=false&lt;/code&gt;. Produces the ProductUnpublished Message.&lt;/p&gt;</span>
+<span class="source-line-no">017</span><span id="line.17"> *  &lt;p&gt;Removes the current projection of the Product. The staged projection is unaffected. To retrieve unpublished Products, the &lt;code&gt;staged&lt;/code&gt; parameter must be set to &lt;code&gt;false&lt;/code&gt; when querying/searching Product Projections. Produces the ProductUnpublished Message.&lt;/p&gt;</span>
 <span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Unpublished Products cannot be added to a Cart. However, if a Cart contains Line Items for Products that were added before the Product was unpublished, the Cart is unaffected and can still be used to create an Order. To prevent this, in addition to unpublishing the Product you should remove the Prices from the Product using Remove Price for Embedded Prices or Delete StandalonePrice for Standalone Prices.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> */</span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>

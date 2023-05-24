@@ -29,7 +29,7 @@
 <span class="source-line-no">016</span><span id="line.16">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">017</span><span id="line.17"></span>
 <span class="source-line-no">018</span><span id="line.18">/**</span>
-<span class="source-line-no">019</span><span id="line.19"> *  &lt;p&gt;Removes a Store from the Business Unit. Newly created Carts and Orders can no longer reference the removed Store for the Business Unit. We recommend cleaning up unordered Carts that still have the Store assigned after calling this update action since those cannot be converted to Orders. Orders created prior to when the Store was removed remain unchanged. Generates a BusinessUnitStoreRemoved Message. Only applicable when &lt;code&gt;storeMode&lt;/code&gt; is &lt;code&gt;Explicit&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> *  &lt;p&gt;Removes a Store from the Business Unit. Newly created Carts and Orders can no longer reference the removed Store for the Business Unit. We recommend cleaning up unordered Carts that still have the Store assigned after calling this update action since those cannot be converted to Orders. Orders created before the Store was removed remain unchanged. Generates a BusinessUnitStoreRemoved Message. Only applicable when &lt;code&gt;storeMode&lt;/code&gt; is &lt;code&gt;Explicit&lt;/code&gt;.&lt;/p&gt;</span>
 <span class="source-line-no">020</span><span id="line.20"> *</span>
 <span class="source-line-no">021</span><span id="line.21"> * &lt;hr&gt;</span>
 <span class="source-line-no">022</span><span id="line.22"> * Example to create an instance using the builder pattern</span>

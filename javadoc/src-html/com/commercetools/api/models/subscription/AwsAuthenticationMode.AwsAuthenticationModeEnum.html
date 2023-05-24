@@ -35,7 +35,7 @@
 <span class="source-line-no">022</span><span id="line.22">    */</span>
 <span class="source-line-no">023</span><span id="line.23">    AwsAuthenticationMode CREDENTIALS = AwsAuthenticationModeEnum.CREDENTIALS;</span>
 <span class="source-line-no">024</span><span id="line.24">    /**</span>
-<span class="source-line-no">025</span><span id="line.25">        &lt;p&gt;Subscriptions with &lt;code&gt;IAM&lt;/code&gt; authentication mode are authenticated using Identity and Access Management (IAM). In this case, the user &lt;code&gt;arn:aws:iam::362576667341:user/subscriptions&lt;/code&gt; requires permissions to send messages to the queue or publish to the topic. This is the recommended authentication mode, as it doesn't require additional key management.&lt;/p&gt;</span>
+<span class="source-line-no">025</span><span id="line.25">        &lt;p&gt;Subscriptions with &lt;code&gt;IAM&lt;/code&gt; authentication mode are authenticated using Identity and Access Management (IAM). For this authentication mode, the following user requires permissions to send messages to the queue or publish to the topic: &lt;code&gt;arn:aws-cn:iam::417094354346:user/subscriptions&lt;/code&gt; if the Project is hosted in the China (AWS, Ningxia) Region; &lt;code&gt;arn:aws:iam::362576667341:user/subscriptions&lt;/code&gt; for all other &lt;a href="/../api/general-concepts#regions"&gt;Regions&lt;/a&gt;. This is the recommended authentication mode, as it doesn't require additional key management.&lt;/p&gt;</span>
 <span class="source-line-no">026</span><span id="line.26"></span>
 <span class="source-line-no">027</span><span id="line.27">    */</span>
 <span class="source-line-no">028</span><span id="line.28">    AwsAuthenticationMode IAM = AwsAuthenticationModeEnum.IAM;</span>

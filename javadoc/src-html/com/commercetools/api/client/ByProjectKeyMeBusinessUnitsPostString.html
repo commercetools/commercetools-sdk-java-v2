@@ -32,7 +32,7 @@
 <span class="source-line-no">019</span><span id="line.19">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">020</span><span id="line.20"></span>
 <span class="source-line-no">021</span><span id="line.21">/**</span>
-<span class="source-line-no">022</span><span id="line.22"> *  &lt;p&gt;Automatically assigns the authenticated user to the Business Unit in the Associate Roles of &lt;code&gt;Admin&lt;/code&gt; as well as &lt;code&gt;Buyer&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> *  &lt;p&gt;Automatically assigns the Associate to the Business Unit in the default Associate Role defined in BusinessUnitConfiguration. If there is no default Associate Role configured, this request fails with an InvalidOperation error. When creating a Division, the Associate must have the &lt;code&gt;AddChildUnits&lt;/code&gt; Permission in the parent unit. If the required Permission is missing, an AssociateMissingPermission error is returned.&lt;/p&gt;</span>
 <span class="source-line-no">023</span><span id="line.23"> *</span>
 <span class="source-line-no">024</span><span id="line.24"> * &lt;hr&gt;</span>
 <span class="source-line-no">025</span><span id="line.25"> * &lt;div class=code-example&gt;</span>

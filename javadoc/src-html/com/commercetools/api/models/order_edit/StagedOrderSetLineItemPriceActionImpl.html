@@ -74,44 +74,43 @@
 <span class="source-line-no">061</span><span id="line.61">    }</span>
 <span class="source-line-no">062</span><span id="line.62"></span>
 <span class="source-line-no">063</span><span id="line.63">    /**</span>
-<span class="source-line-no">064</span><span id="line.64">     *  &lt;p&gt;Draft type that stores amounts in cent precision for the specified currency.&lt;/p&gt;</span>
-<span class="source-line-no">065</span><span id="line.65">     *  &lt;p&gt;For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.&lt;/p&gt;</span>
-<span class="source-line-no">066</span><span id="line.66">     */</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    public com.commercetools.api.models.common.Money getExternalPrice() {</span>
-<span class="source-line-no">069</span><span id="line.69">        return this.externalPrice;</span>
-<span class="source-line-no">070</span><span id="line.70">    }</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    public void setLineItemId(final String lineItemId) {</span>
-<span class="source-line-no">073</span><span id="line.73">        this.lineItemId = lineItemId;</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice) {</span>
-<span class="source-line-no">077</span><span id="line.77">        this.externalPrice = externalPrice;</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    @Override</span>
-<span class="source-line-no">081</span><span id="line.81">    public boolean equals(Object o) {</span>
-<span class="source-line-no">082</span><span id="line.82">        if (this == o)</span>
-<span class="source-line-no">083</span><span id="line.83">            return true;</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">086</span><span id="line.86">            return false;</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">        StagedOrderSetLineItemPriceActionImpl that = (StagedOrderSetLineItemPriceActionImpl) o;</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">        return new EqualsBuilder().append(action, that.action)</span>
-<span class="source-line-no">091</span><span id="line.91">                .append(lineItemId, that.lineItemId)</span>
-<span class="source-line-no">092</span><span id="line.92">                .append(externalPrice, that.externalPrice)</span>
-<span class="source-line-no">093</span><span id="line.93">                .isEquals();</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    @Override</span>
-<span class="source-line-no">097</span><span id="line.97">    public int hashCode() {</span>
-<span class="source-line-no">098</span><span id="line.98">        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(externalPrice).toHashCode();</span>
-<span class="source-line-no">099</span><span id="line.99">    }</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">}</span>
+<span class="source-line-no">064</span><span id="line.64">     *  &lt;p&gt;Draft type that stores amounts only in cent precision for the specified currency.&lt;/p&gt;</span>
+<span class="source-line-no">065</span><span id="line.65">     */</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    public com.commercetools.api.models.common.Money getExternalPrice() {</span>
+<span class="source-line-no">068</span><span id="line.68">        return this.externalPrice;</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public void setLineItemId(final String lineItemId) {</span>
+<span class="source-line-no">072</span><span id="line.72">        this.lineItemId = lineItemId;</span>
+<span class="source-line-no">073</span><span id="line.73">    }</span>
+<span class="source-line-no">074</span><span id="line.74"></span>
+<span class="source-line-no">075</span><span id="line.75">    public void setExternalPrice(final com.commercetools.api.models.common.Money externalPrice) {</span>
+<span class="source-line-no">076</span><span id="line.76">        this.externalPrice = externalPrice;</span>
+<span class="source-line-no">077</span><span id="line.77">    }</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    @Override</span>
+<span class="source-line-no">080</span><span id="line.80">    public boolean equals(Object o) {</span>
+<span class="source-line-no">081</span><span id="line.81">        if (this == o)</span>
+<span class="source-line-no">082</span><span id="line.82">            return true;</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">085</span><span id="line.85">            return false;</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">        StagedOrderSetLineItemPriceActionImpl that = (StagedOrderSetLineItemPriceActionImpl) o;</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">        return new EqualsBuilder().append(action, that.action)</span>
+<span class="source-line-no">090</span><span id="line.90">                .append(lineItemId, that.lineItemId)</span>
+<span class="source-line-no">091</span><span id="line.91">                .append(externalPrice, that.externalPrice)</span>
+<span class="source-line-no">092</span><span id="line.92">                .isEquals();</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    @Override</span>
+<span class="source-line-no">096</span><span id="line.96">    public int hashCode() {</span>
+<span class="source-line-no">097</span><span id="line.97">        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(externalPrice).toHashCode();</span>
+<span class="source-line-no">098</span><span id="line.98">    }</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">}</span>
 
 
 

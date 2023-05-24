@@ -13,4 +13,8 @@ interface ComparablePredicateBuilder<T, TValue> {
     default CombinationQueryPredicate<T> is(final PredicateOperator operator, final TValue value) {
         return combinationFn().apply(predicate().operator(operator.toString()).right(format(value)));
     }
+
+    default CombinationQueryPredicate<T> is(final PredicateOperator operator, final VariableQueryPredicate value) {
+        return combinationFn().apply(predicate().operator(operator.toString()).right(value));
+    }
 }

@@ -191,6 +191,18 @@ public class QueryTests {
                         "lineItems(price(value(preciseAmount = 400)))", },
                 new Object[] { CartQueryBuilderDsl.of().totalPrice(l -> l.currencyCode().is("EUR")),
                         "totalPrice(currencyCode = \"EUR\")", },
-                new Object[] { CartQueryBuilderDsl.of().id().is("ab\"c"), "id = \"ab\\\"c\"", }, };
+                new Object[] { CartQueryBuilderDsl.of().id().is("ab\"c"), "id = \"ab\\\"c\"", },
+                new Object[] { TaxRateQueryBuilderDsl.of().amount().isVar("foo"), "amount = :foo", },
+                new Object[] { TaxRateQueryBuilderDsl.of().amount().isLessThanVar("foo"), "amount < :foo", },
+                new Object[] { TaxRateQueryBuilderDsl.of().amount().isGreaterThanVar("foo"), "amount > :foo", },
+                new Object[] { TaxRateQueryBuilderDsl.of().amount().isLessThanOrEqualVar("foo"), "amount <= :foo", },
+                new Object[] { TaxRateQueryBuilderDsl.of().amount().isGreaterThanOrEqualVar("foo"), "amount >= :foo", },
+                new Object[] { CartQueryBuilderDsl.of().key().isInVar("foo"), "key in :foo" },
+                new Object[] { TypeQueryBuilderDsl.of().resourceTypeIds().containsAnyVar("foo"),
+                        "resourceTypeIds contains any :foo", },
+                new Object[] { TypeQueryBuilderDsl.of().resourceTypeIds().containsAllVar("foo"),
+                        "resourceTypeIds contains all :foo", },
+
+        };
     }
 }

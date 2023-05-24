@@ -34,11 +34,20 @@ public class PredicateFormatter {
     }
 
     public static ConstantQueryPredicate format(String value) {
-        return ConstantQueryPredicate.of().constant(String.format("\"%s\"", value));
+        return ConstantQueryPredicate.of().constant(String.format("\"%s\"", escape(value)));
     }
 
     public static ConstantQueryPredicate format(LocalTime value) {
         return ConstantQueryPredicate.of()
                 .constant(String.format("\"%s\"", value.format(DateTimeFormatter.ISO_LOCAL_TIME)));
+    }
+
+    /**
+     * Internal: Escapes Strings like that (Scala notation) """query by name " test name"""
+     * @param s the unescaped String
+     * @return the escaped string
+     */
+    static String escape(final String s) {
+        return s.replace("\"", "\\\"");
     }
 }

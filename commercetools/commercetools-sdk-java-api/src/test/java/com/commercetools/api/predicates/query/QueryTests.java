@@ -190,6 +190,7 @@ public class QueryTests {
                                         .price(p -> p.value(t -> t.asHighPrecision(h -> h.preciseAmount().is(400L))))),
                         "lineItems(price(value(preciseAmount = 400)))", },
                 new Object[] { CartQueryBuilderDsl.of().totalPrice(l -> l.currencyCode().is("EUR")),
-                        "totalPrice(currencyCode = \"EUR\")", }, };
+                        "totalPrice(currencyCode = \"EUR\")", },
+                new Object[] { CartQueryBuilderDsl.of().id().is("ab\"c"), "id = \"ab\\\"c\"", }, };
     }
 }

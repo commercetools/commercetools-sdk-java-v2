@@ -75,7 +75,46 @@ public interface PagedQueryResourceRequest<T extends PagedQueryResourceRequest<T
 
     @SuppressWarnings("unchecked")
     default T addQuery(Function<TQuery, QueryPredicate> fn) {
-        return (T) withWhere(fn.apply(queryDsl()).render());
+        return (T) addWhere(fn.apply(queryDsl()).render());
+    }
+
+    @SuppressWarnings("unchecked")
+    default T withQuery(Function<TQuery, QueryPredicate> fn, final String predicateVar,
+            final String predicateVarValue) {
+        return (T) withWhere(fn.apply(queryDsl()).render()).withPredicateVar(predicateVar, predicateVarValue);
+    }
+
+    @SuppressWarnings("unchecked")
+    default T addQuery(Function<TQuery, QueryPredicate> fn, final String predicateVar, final String predicateVarValue) {
+        return (T) addWhere(fn.apply(queryDsl()).render()).withPredicateVar(predicateVar, predicateVarValue);
+    }
+
+    @SuppressWarnings("unchecked")
+    default T withQuery(Function<TQuery, QueryPredicate> fn, final Map<String, Collection<String>> predicateVar) {
+        PagedQueryResourceRequest<T, TResult, TQuery> request = withWhere(fn.apply(queryDsl()).render());
+        predicateVar.forEach(request::withPredicateVar);
+        return (T) request;
+    }
+
+    @SuppressWarnings("unchecked")
+    default T addQuery(Function<TQuery, QueryPredicate> fn, final Map<String, Collection<String>> predicateVar) {
+        PagedQueryResourceRequest<T, TResult, TQuery> request = addWhere(fn.apply(queryDsl()).render());
+        predicateVar.forEach(request::withPredicateVar);
+        return (T) request;
+    }
+
+    @SuppressWarnings("unchecked")
+    default T withQuery(Function<TQuery, QueryPredicate> fn, Collection<Map.Entry<String, String>> predicateVar) {
+        PagedQueryResourceRequest<T, TResult, TQuery> request = withWhere(fn.apply(queryDsl()).render());
+        predicateVar.forEach(pair -> request.withPredicateVar(pair.getKey(), pair.getValue()));
+        return (T) request;
+    }
+
+    @SuppressWarnings("unchecked")
+    default T addQuery(Function<TQuery, QueryPredicate> fn, Collection<Map.Entry<String, String>> predicateVar) {
+        PagedQueryResourceRequest<T, TResult, TQuery> request = addWhere(fn.apply(queryDsl()).render());
+        predicateVar.forEach(pair -> request.withPredicateVar(pair.getKey(), pair.getValue()));
+        return (T) request;
     }
 
     @SuppressWarnings("unchecked")

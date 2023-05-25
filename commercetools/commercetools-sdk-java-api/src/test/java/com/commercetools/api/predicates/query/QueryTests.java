@@ -50,6 +50,9 @@ public class QueryTests {
                         CartQueryBuilderDsl.of().id().is("abc").and(p -> p.id().is("def")).or(p -> p.id().is("ghi")),
                         "id = \"abc\" and id = \"def\" or id = \"ghi\"", },
                 new Object[] {
+                        CartQueryBuilderDsl.of().id().is("abc").and(p -> p.id().is("def").or(p.id().is("ghi")).group()),
+                        "id = \"abc\" and (id = \"def\" or id = \"ghi\")", },
+                new Object[] {
                         CartQueryBuilderDsl.of()
                                 .lineItems(p -> p.id().is("abc"))
                                 .and(p -> p.id().is("def"))

@@ -38,6 +38,10 @@ public class CombinationQueryPredicate<T> implements QueryPredicate, Builder<Que
             modelSupplier);
     }
 
+    public CombinationQueryPredicate<T> group() {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of().inner(predicate), modelSupplier);
+    }
+
     public CombinationQueryPredicate<T> not() {
         return new CombinationQueryPredicate<>(
             ContainerQueryPredicate.of().parent(ConstantQueryPredicate.of().constant("not")).inner(predicate),

@@ -173,6 +173,49 @@ public class QueryTests {
                                     a -> a.name().is("attribute-name").and(av -> av.doubleNumber().is(999.0)))),
                         "variants(attributes(name = \"attribute-name\" and value = 999.0))", },
                 new Object[] {
+                        ProductProjectionQueryBuilderDsl.of()
+                                .variants(v -> v.attributes(
+                                    a -> a.name().is("attribute-name").and(a.value().is("attribute-value")))),
+                        "variants(attributes(name = \"attribute-name\" and value = \"attribute-value\"))", },
+                new Object[] {
+                        ProductProjectionQueryBuilderDsl.of()
+                                .variants(v -> v.attributes(a -> a.name()
+                                        .is("attribute-name")
+                                        .and(a.value().isIn(Arrays.asList("attribute-value-1", "attribute-value-2"))))),
+                        "variants(attributes(name = \"attribute-name\" and value in (\"attribute-value-1\", \"attribute-value-2\")))", },
+                new Object[] {
+                        ProductProjectionQueryBuilderDsl.of()
+                                .variants(v -> v.attributes(
+                                    a -> a.name().is("attribute-name").and(a.plainEnum(e -> e.key().is("test"))))),
+                        "variants(attributes(name = \"attribute-name\" and value(key = \"test\")))", },
+                new Object[] {
+                        ProductProjectionQueryBuilderDsl.of()
+                                .variants(v -> v.attributes(a -> a.name()
+                                        .is("attribute-name")
+                                        .and(a.localizedEnum(e -> e.label(l -> l.with(Locale.ENGLISH).is("test")))))),
+                        "variants(attributes(name = \"attribute-name\" and value(label(en = \"test\"))))", },
+                new Object[] {
+                        ProductProjectionQueryBuilderDsl.of()
+                                .variants(v -> v.attributes(a -> a.name()
+                                        .is("attribute-name")
+                                        .and(a.money(
+                                            m -> m.centAmount().is(1000L).and(mc -> mc.currencyCode().is("EUR")))))),
+                        "variants(attributes(name = \"attribute-name\" and value(centAmount = 1000 and currencyCode = \"EUR\")))", },
+                new Object[] {
+                        ProductProjectionQueryBuilderDsl.of()
+                                .variants(v -> v.attributes(a -> a.name()
+                                        .is("attribute-name")
+                                        .and(a.reference(m -> m.typeId().is(ReferenceTypeId.CART.getJsonName()))))),
+                        "variants(attributes(name = \"attribute-name\" and value(typeId = \"cart\")))", },
+                new Object[] { ProductProjectionQueryBuilderDsl.of()
+                        .variants(v -> v.attributes(a -> a.name().is("attribute-name").and(a.longNumber().is(999L)))),
+                        "variants(attributes(name = \"attribute-name\" and value = 999))", },
+                new Object[] {
+                        ProductProjectionQueryBuilderDsl.of()
+                                .variants(v -> v.attributes(
+                                    a -> a.name().is("attribute-name").and(a.doubleNumber().is(999.0)))),
+                        "variants(attributes(name = \"attribute-name\" and value = 999.0))", },
+                new Object[] {
                         CartDiscountQueryBuilderDsl.of()
                                 .value(v -> v.asAbsolute(a -> a.money(c -> c.currencyCode().is("EUR")))),
                         "value(money(currencyCode = \"EUR\"))", },

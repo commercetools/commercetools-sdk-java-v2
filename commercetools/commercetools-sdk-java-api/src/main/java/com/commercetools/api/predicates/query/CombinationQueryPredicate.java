@@ -22,9 +22,19 @@ public class CombinationQueryPredicate<T> implements QueryPredicate, Builder<Que
             modelSupplier);
     }
 
+    public CombinationQueryPredicate<T> and(final CombinationQueryPredicate<T> second) {
+        return new CombinationQueryPredicate<>(BinaryQueryPredicate.of().left(predicate).right(second).operator("and"),
+            modelSupplier);
+    }
+
     public CombinationQueryPredicate<T> or(final Function<T, CombinationQueryPredicate<T>> fn) {
         return new CombinationQueryPredicate<>(
             BinaryQueryPredicate.of().left(predicate).right(fn.apply(modelSupplier.get())).operator("or"),
+            modelSupplier);
+    }
+
+    public CombinationQueryPredicate<T> or(final CombinationQueryPredicate<T> second) {
+        return new CombinationQueryPredicate<>(BinaryQueryPredicate.of().left(predicate).right(second).operator("or"),
             modelSupplier);
     }
 

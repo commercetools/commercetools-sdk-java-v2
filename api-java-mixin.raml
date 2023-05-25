@@ -1773,6 +1773,8 @@ types:
 
   /attribute-groups:
     (java-implements): 'ByProjectKeyAttributeGroupsRequestBuilderMixin'
+    get:
+      (java-implements): 'ByProjectKeyAttributeGroupsGetMixin'
     /key={key}:
       delete:
         (java-implements):
@@ -1784,3 +1786,20 @@ types:
 
   /api-clients:
     (java-implements): 'ByProjectKeyApiClientsRequestBuilderMixin'
+    get:
+      (java-implements):
+        'ByProjectKeyStandalonePricesGetMixin'
+  /as-associate:
+    /{associateId}:
+      /business-units:
+        get:
+          (java-implements):
+            'ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGetMixin'
+  /associate-roles:
+    get:
+      (java-implements):
+        'ByProjectKeyAssociateRolesGetMixin'
+  /business-units:
+    get:
+      (java-implements):
+        'ByProjectKeyBusinessUnitsGetMixin'

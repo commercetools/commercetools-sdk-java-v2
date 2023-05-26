@@ -9,8 +9,7 @@ dependencies {
 
 generateJava {
     schemaPaths = ["${projectDir}/src/main/resources/graphql"] // List of directories containing schema files
-    packageName = 'com.commercetools.graphql' // The package name to use to generate sources
-    maxProjectionDepth = 8
+    packageName = 'com.commercetools.graphql.api' // The package name to use to generate sources
     generateBoxedTypes = true
     generateClientv2 = true
     shortProjectionNames = true

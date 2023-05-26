@@ -1,19 +1,19 @@
 
-package com.commercetools.graphql;
+package com.commercetools.graphql.api;
 
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
-import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.api.client.ProjectScopedApiRoot;
 import com.commercetools.api.models.graph_ql.GraphQLRequest;
-import com.commercetools.graphql.client.CategoriesGraphQLQuery;
-import com.commercetools.graphql.client.CategoriesProjectionRoot;
-import com.commercetools.graphql.client.ProductsGraphQLQuery;
-import com.commercetools.graphql.client.ProductsProjectionRoot;
-import com.commercetools.graphql.types.CategoryQueryResult;
-import com.commercetools.graphql.types.ProductQueryResult;
+import com.commercetools.graphql.api.client.CategoriesGraphQLQuery;
+import com.commercetools.graphql.api.client.CategoriesProjectionRoot;
+import com.commercetools.graphql.api.client.ProductsGraphQLQuery;
+import com.commercetools.graphql.api.client.ProductsProjectionRoot;
+import com.commercetools.graphql.api.types.CategoryQueryResult;
+import com.commercetools.graphql.api.types.ProductQueryResult;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.netflix.graphql.dgs.client.codegen.BaseProjectionNode;
@@ -25,21 +25,21 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 public class GraphQL {
 
-    private final ProjectApiRoot apiRoot;
+    private final ProjectScopedApiRoot apiRoot;
 
     private final Duration timeout;
 
-    public GraphQL(ProjectApiRoot apiRoot) {
+    public GraphQL(ProjectScopedApiRoot apiRoot) {
         this.apiRoot = apiRoot;
         this.timeout = Duration.ofSeconds(10);
     }
 
-    public GraphQL(ProjectApiRoot apiRoot, Duration timeout) {
+    public GraphQL(ProjectScopedApiRoot apiRoot, Duration timeout) {
         this.apiRoot = apiRoot;
         this.timeout = timeout;
     }
 
-    public static GraphQL of(ProjectApiRoot apiRoot) {
+    public static GraphQL of(ProjectScopedApiRoot apiRoot) {
         return new GraphQL(apiRoot);
     }
 
@@ -54,7 +54,11 @@ public class GraphQL {
     }
 
     public <T> T queryBlocking(GraphQLQueryRequest request, TypeReference<T> typeReference) {
-        return ClientUtils.blockingWait(query(request, typeReference), timeout);
+        return queryBlocking(query(request, typeReference));
+    }
+
+    public <T> T queryBlocking(CompletableFuture<T> future) {
+        return ClientUtils.blockingWait(future, timeout);
     }
 
     public CompletableFuture<ProductQueryResult> queryProducts(UnaryOperator<ProductsGraphQLQuery.Builder> query,
@@ -66,7 +70,7 @@ public class GraphQL {
 
     public ProductQueryResult queryProductsBlocking(UnaryOperator<ProductsGraphQLQuery.Builder> query,
             Function<ProductsProjectionRoot<?, ?>, BaseProjectionNode> request) {
-        return ClientUtils.blockingWait(queryProducts(query, request), timeout);
+        return queryBlocking(queryProducts(query, request));
     }
 
     public CompletableFuture<CategoryQueryResult> queryCategories(UnaryOperator<CategoriesGraphQLQuery.Builder> query,
@@ -78,6 +82,6 @@ public class GraphQL {
 
     public CategoryQueryResult queryCategoriesBlocking(UnaryOperator<CategoriesGraphQLQuery.Builder> query,
             Function<CategoriesProjectionRoot<?, ?>, BaseProjectionNode> request) {
-        return ClientUtils.blockingWait(queryCategories(query, request), timeout);
+        return queryBlocking(queryCategories(query, request));
     }
 }

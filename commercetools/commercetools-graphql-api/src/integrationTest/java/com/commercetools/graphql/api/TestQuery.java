@@ -1,11 +1,12 @@
 
-package com.commercetools.graphql;
+package com.commercetools.graphql.api;
 
 import java.util.Collections;
 
 import com.commercetools.api.client.ProjectApiRoot;
-import com.commercetools.graphql.types.CategoryQueryResult;
-import com.commercetools.graphql.types.ProductQueryResult;
+import com.commercetools.graphql.CommercetoolsTestUtils;
+import com.commercetools.graphql.api.types.CategoryQueryResult;
+import com.commercetools.graphql.api.types.ProductQueryResult;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;

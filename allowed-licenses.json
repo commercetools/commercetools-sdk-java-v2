@@ -18,6 +18,14 @@
             "moduleName": "com.squareup.okio:okio"
         },
         {
+            "moduleLicense": null,
+            "moduleName": "com.netflix.graphql.dgs:graphql-dgs-platform"
+        },
+        {
+            "moduleLicense": null,
+            "moduleName": "com.netflix.graphql.dgs:graphql-dgs-platform-dependencies"
+        },
+        {
             "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
             "moduleName": "javax.annotation:javax.annotation-api"
         },

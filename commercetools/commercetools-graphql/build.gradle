@@ -1,0 +1,29 @@
+plugins {
+    id "com.netflix.dgs.codegen" version "5.10.0"
+}
+
+dependencies {
+    implementation project(':commercetools:commercetools-sdk-java-api')
+    implementation project(':commercetools:commercetools-http-client')
+}
+
+generateJava {
+    schemaPaths = ["${projectDir}/src/main/resources/graphql"] // List of directories containing schema files
+    packageName = 'com.commercetools.graphql' // The package name to use to generate sources
+    maxProjectionDepth = 8
+    generateBoxedTypes = true
+    generateClientv2 = true
+    shortProjectionNames = true
+
+    typeMapping = [
+            "Country": "String",
+            "Locale": "String",
+            "Long": "Long",
+            "Json": "com.fasterxml.jackson.databind.JsonNode",
+            "KeyReferenceInput": "String",
+            "Set": "Object",
+            "Time": "String",
+            "BigDecimal": "Double",
+            "YearMonth": "String",
+    ]
+}

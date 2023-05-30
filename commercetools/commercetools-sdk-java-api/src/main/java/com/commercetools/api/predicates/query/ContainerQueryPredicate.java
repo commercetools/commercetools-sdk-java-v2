@@ -65,7 +65,7 @@ public class ContainerQueryPredicate implements ContainerPredicate<QueryPredicat
     public String render() {
         if (this.renderInnerWithOutParentheses()) {
             return this.parent() != null
-                    ? String.format("%s%s", parent().render(),
+                    ? String.format("%s %s", parent().render(),
                         Optional.ofNullable(inner()).map(Predicate::render).orElse(""))
                     : Optional.ofNullable(inner()).map(Predicate::render).orElse("");
         }

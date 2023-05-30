@@ -58,4 +58,22 @@ public class PaymentQueryTests {
             Assertions.assertThat(queriedPayments.get(0)).isEqualTo(payment);
         });
     }
+
+    @Test
+    public void queryByInterfaceIdAndPaymentMethodWithQueryModel() {
+        withPayment(payment -> {
+            final List<Payment> queriedPayments = CommercetoolsTestUtils.getProjectApiRoot()
+                    .payments()
+                    .get()
+                    .withQuery(p -> p.interfaceId().isVar("interfaceId"), "interfaceId", payment.getInterfaceId())
+                    .addQuery(p -> p.paymentMethodInfo(m -> m.method().isVar("paymentMethod")), "paymentMethod",
+                        payment.getPaymentMethodInfo().getMethod())
+                    .executeBlocking()
+                    .getBody()
+                    .getResults();
+
+            Assertions.assertThat(queriedPayments).hasSize(1);
+            Assertions.assertThat(queriedPayments.get(0)).isEqualTo(payment);
+        });
+    }
 }

@@ -186,6 +186,26 @@ public class ExamplesTest {
                 .withPredicateVar("lastName", "Doe");
     }
 
+    public void queryPredicateVariableWithQuery() {
+        ProjectApiRoot apiRoot = createProjectClient();
+        apiRoot.customers()
+                .get()
+                .withQuery(c -> c.firstName().isVar("firstName").and(cn -> cn.lastName().isVar("lastName")),
+                    Arrays.asList(Pair.of("firstName", "John"), Pair.of("lastName", "Doe")));
+
+        apiRoot.customers()
+                .get()
+                .withQuery(c -> c.firstName().isVar("firstName"), "firstName", "John")
+                .addQuery(c -> c.lastName().isVar("lastName"), "lastName", "John");
+
+        apiRoot.customers()
+                .get()
+                .withQuery(c -> c.firstName().isVar("firstName"))
+                .addQuery(c -> c.lastName().isVar("lastName"))
+                .withPredicateVar("firstName", "John")
+                .withPredicateVar("lastName", "Doe");
+    }
+
     public void simpleSort() {
         ProjectApiRoot apiRoot = createProjectClient();
         apiRoot.products().get().withSort("masterData.current.name.en asc");
@@ -229,6 +249,30 @@ public class ExamplesTest {
         apiRoot.productProjections()
                 .get()
                 .withWhere("masterVariant(sku in :skus)")
+                .withPredicateVar("skus", "abc")
+                .addPredicateVar("skus", "def");
+    }
+
+    public void queryPredicateVariableArrayWithQuery() {
+        ProjectApiRoot apiRoot = createProjectClient();
+        apiRoot.productProjections()
+                .get()
+                .withQuery(p -> p.masterVariant(v -> v.sku().isInVar("skus")),
+                    Collections.singletonMap("skus", Arrays.asList("abc", "def")));
+
+        apiRoot.productProjections()
+                .get()
+                .withQuery(p -> p.masterVariant(v -> v.sku().isInVar("skus")),
+                    Arrays.asList(Pair.of("skus", "abc"), Pair.of("skus", "def")));
+
+        apiRoot.productProjections()
+                .get()
+                .withQuery(p -> p.masterVariant(v -> v.sku().isInVar("skus")))
+                .withPredicateVar("skus", Arrays.asList("abc", "def"));
+
+        apiRoot.productProjections()
+                .get()
+                .withQuery(p -> p.masterVariant(v -> v.sku().isInVar("skus")))
                 .withPredicateVar("skus", "abc")
                 .addPredicateVar("skus", "def");
     }

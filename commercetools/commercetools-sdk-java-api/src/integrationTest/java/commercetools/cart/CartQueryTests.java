@@ -73,7 +73,7 @@ public class CartQueryTests {
             Cart queriedCart3 = CommercetoolsTestUtils.getProjectApiRoot()
                     .carts()
                     .get()
-                    .withQuery(c -> c.customerId().is(customer.getId()).and(cs -> cs.cartState().is("Active")))
+                    .withQuery(c -> c.customerId().is(customer.getId()).and(c.cartState().is("Active")))
                     .executeBlocking()
                     .getBody()
                     .getResults()

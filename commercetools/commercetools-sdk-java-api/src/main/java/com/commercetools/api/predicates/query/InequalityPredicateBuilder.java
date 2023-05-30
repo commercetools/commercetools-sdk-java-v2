@@ -17,4 +17,20 @@ public interface InequalityPredicateBuilder<T, TValue> extends ComparablePredica
     default CombinationQueryPredicate<T> isGreaterThanOrEqual(final TValue value) {
         return is(PredicateOperator.IS_GREATER_THAN_OR_EQUAL, value);
     }
+
+    default CombinationQueryPredicate<T> isLessThanVar(final String variable) {
+        return is(PredicateOperator.IS_LESS_THAN, VariableQueryPredicate.of().constant(variable));
+    }
+
+    default CombinationQueryPredicate<T> isGreaterThanVar(final String variable) {
+        return is(PredicateOperator.IS_GREATER_THAN, VariableQueryPredicate.of().constant(variable));
+    }
+
+    default CombinationQueryPredicate<T> isLessThanOrEqualVar(final String variable) {
+        return is(PredicateOperator.IS_LESS_THAN_OR_EQUAL, VariableQueryPredicate.of().constant(variable));
+    }
+
+    default CombinationQueryPredicate<T> isGreaterThanOrEqualVar(final String variable) {
+        return is(PredicateOperator.IS_GREATER_THAN_OR_EQUAL, VariableQueryPredicate.of().constant(variable));
+    }
 }

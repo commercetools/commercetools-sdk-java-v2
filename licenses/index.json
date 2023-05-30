@@ -132,6 +132,32 @@
             ]
         },
         {
+            "moduleName": "com.graphql-java:graphql-java",
+            "moduleVersion": "19.2",
+            "moduleUrls": [
+                "https://github.com/graphql-java/graphql-java"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "MIT License",
+                    "moduleLicenseUrl": "https://opensource.org/licenses/MIT"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.graphql-java:java-dataloader",
+            "moduleVersion": "3.2.0",
+            "moduleUrls": [
+                "https://github.com/graphql-java/java-dataloader"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "com.neovisionaries:nv-i18n",
             "moduleVersion": "1.28",
             "moduleUrls": [
@@ -143,6 +169,27 @@
                     "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
                 }
             ]
+        },
+        {
+            "moduleName": "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core",
+            "moduleVersion": "5.10.0",
+            "moduleUrls": [
+                "https://github.com/Netflix/dgs-codegen"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.netflix.graphql.dgs:graphql-dgs-platform",
+            "moduleVersion": "5.5.1"
+        },
+        {
+            "moduleName": "com.netflix.graphql.dgs:graphql-dgs-platform-dependencies",
+            "moduleVersion": "5.5.1"
         },
         {
             "moduleName": "com.newrelic.agent.java:newrelic-api",
@@ -183,6 +230,19 @@
         {
             "moduleName": "com.squareup.okhttp3:okhttp",
             "moduleVersion": "4.10.0",
+            "moduleUrls": [
+                "https://square.github.io/okhttp/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.squareup.okhttp3:okhttp",
+            "moduleVersion": "4.9.3",
             "moduleUrls": [
                 "https://square.github.io/okhttp/"
             ],
@@ -907,6 +967,19 @@
             "moduleVersion": "1.4.2",
             "moduleUrls": [
                 "http://javamoney.org"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.jetbrains.kotlin:kotlin-reflect",
+            "moduleVersion": "1.7.0",
+            "moduleUrls": [
+                "https://kotlinlang.org/"
             ],
             "moduleLicenses": [
                 {

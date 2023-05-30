@@ -1,10 +1,21 @@
+import com.commercetools.sdk.plugins.GraphQLPlugin
+
 plugins {
     id "com.netflix.dgs.codegen" version "5.10.0"
 }
 
+apply plugin:'com.netflix.dgs.codegen'
+apply plugin: GraphQLPlugin
+
 dependencies {
-    implementation project(':commercetools:commercetools-sdk-java-api')
-    implementation project(':commercetools:commercetools-http-client')
+    api project(':commercetools:commercetools-sdk-java-api')
+    testImplementation project(':commercetools:commercetools-http-client')
+    implementation google.findbugs
+    implementation javax.validation
+}
+
+generateGraphQLRoots {
+    dependsOn "generateJava"
 }
 
 generateJava {

@@ -9,21 +9,19 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import io.vrap.rmf.base.client.Builder;
-import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * GraphQLResponseBuilder
+ * GraphQLDataResponseBuilder
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     GraphQLResponse graphQLResponse = GraphQLResponse.builder()
+ *     GraphQLDataResponse graphQLResponse = GraphQLDataResponseBuilder.builder()
  *             .build()
  * </code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
+public class GraphQLDataResponseBuilder implements Builder<GraphQLDataResponse> {
 
     @Nullable
     private GraphQLData data;
@@ -37,7 +35,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
      * @return Builder
      */
 
-    public GraphQLResponseBuilder data(@Nullable final GraphQLData data) {
+    public GraphQLDataResponseBuilder data(@Nullable final GraphQLData data) {
         this.data = data;
         return this;
     }
@@ -48,7 +46,8 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
      * @return Builder
      */
 
-    public GraphQLResponseBuilder errors(@Nullable final com.commercetools.api.models.graph_ql.GraphQLError... errors) {
+    public GraphQLDataResponseBuilder errors(
+            @Nullable final com.commercetools.api.models.graph_ql.GraphQLError... errors) {
         this.errors = new ArrayList<>(Arrays.asList(errors));
         return this;
     }
@@ -59,7 +58,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
      * @return Builder
      */
 
-    public GraphQLResponseBuilder errors(
+    public GraphQLDataResponseBuilder errors(
             @Nullable final List<com.commercetools.api.models.graph_ql.GraphQLError> errors) {
         this.errors = errors;
         return this;
@@ -71,7 +70,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
      * @return Builder
      */
 
-    public GraphQLResponseBuilder plusErrors(
+    public GraphQLDataResponseBuilder plusErrors(
             @Nullable final com.commercetools.api.models.graph_ql.GraphQLError... errors) {
         if (this.errors == null) {
             this.errors = new ArrayList<>();
@@ -86,7 +85,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
      * @return Builder
      */
 
-    public GraphQLResponseBuilder plusErrors(
+    public GraphQLDataResponseBuilder plusErrors(
             Function<com.commercetools.api.models.graph_ql.GraphQLErrorBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorBuilder> builder) {
         if (this.errors == null) {
             this.errors = new ArrayList<>();
@@ -101,7 +100,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
      * @return Builder
      */
 
-    public GraphQLResponseBuilder withErrors(
+    public GraphQLDataResponseBuilder withErrors(
             Function<com.commercetools.api.models.graph_ql.GraphQLErrorBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorBuilder> builder) {
         this.errors = new ArrayList<>();
         this.errors.add(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorBuilder.of()).build());
@@ -114,7 +113,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
      * @return Builder
      */
 
-    public GraphQLResponseBuilder addErrors(
+    public GraphQLDataResponseBuilder addErrors(
             Function<com.commercetools.api.models.graph_ql.GraphQLErrorBuilder, com.commercetools.api.models.graph_ql.GraphQLError> builder) {
         return plusErrors(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorBuilder.of()));
     }
@@ -125,7 +124,7 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
      * @return Builder
      */
 
-    public GraphQLResponseBuilder setErrors(
+    public GraphQLDataResponseBuilder setErrors(
             Function<com.commercetools.api.models.graph_ql.GraphQLErrorBuilder, com.commercetools.api.models.graph_ql.GraphQLError> builder) {
         return errors(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorBuilder.of()));
     }
@@ -154,24 +153,24 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
      * builds GraphQLResponse with checking for non-null required values
      * @return GraphQLResponse
      */
-    public GraphQLResponse build() {
-        return new GraphQLResponseImpl(data, errors);
+    public GraphQLDataResponse build() {
+        return new GraphQLDataResponseImpl(data, errors);
     }
 
     /**
      * builds GraphQLResponse without checking for non-null required values
      * @return GraphQLResponse
      */
-    public GraphQLResponse buildUnchecked() {
-        return new GraphQLResponseImpl(data, errors);
+    public GraphQLDataResponse buildUnchecked() {
+        return new GraphQLDataResponseImpl(data, errors);
     }
 
     /**
      * factory method for an instance of GraphQLResponseBuilder
      * @return builder
      */
-    public static GraphQLResponseBuilder of() {
-        return new GraphQLResponseBuilder();
+    public static GraphQLDataResponseBuilder of() {
+        return new GraphQLDataResponseBuilder();
     }
 
     /**
@@ -179,8 +178,8 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLResponseBuilder of(final GraphQLResponse template) {
-        GraphQLResponseBuilder builder = new GraphQLResponseBuilder();
+    public static GraphQLDataResponseBuilder of(final GraphQLDataResponse template) {
+        GraphQLDataResponseBuilder builder = new GraphQLDataResponseBuilder();
         builder.data = template.getData();
         builder.errors = template.getErrors();
         return builder;

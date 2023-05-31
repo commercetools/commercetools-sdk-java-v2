@@ -14,8 +14,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import io.vrap.rmf.base.client.utils.Generated;
-
 /**
  * GraphQLResponse
  *
@@ -23,14 +21,13 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     GraphQLResponse graphQLResponse = GraphQLResponse.builder()
+ *     GraphQLDataResponse graphQLResponse = GraphQLDataResponse.builder()
  *             .build()
  * </code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@JsonDeserialize(as = GraphQLResponseImpl.class)
-public interface GraphQLResponse {
+@JsonDeserialize(as = GraphQLDataResponseImpl.class)
+public interface GraphQLDataResponse {
 
     /**
      *
@@ -78,8 +75,8 @@ public interface GraphQLResponse {
      * factory method
      * @return instance of GraphQLResponse
      */
-    public static GraphQLResponse of() {
-        return new GraphQLResponseImpl();
+    public static GraphQLDataResponse of() {
+        return new GraphQLDataResponseImpl();
     }
 
     /**
@@ -87,8 +84,8 @@ public interface GraphQLResponse {
      * @param template instance to be copied
      * @return copy instance
      */
-    public static GraphQLResponse of(final GraphQLResponse template) {
-        GraphQLResponseImpl instance = new GraphQLResponseImpl();
+    public static GraphQLDataResponse of(final GraphQLDataResponse template) {
+        GraphQLDataResponseImpl instance = new GraphQLDataResponseImpl();
         instance.setData(template.getData());
         instance.setErrors(template.getErrors());
         return instance;
@@ -100,11 +97,11 @@ public interface GraphQLResponse {
      * @return copy instance
      */
     @Nullable
-    public static GraphQLResponse deepCopy(@Nullable final GraphQLResponse template) {
+    public static GraphQLDataResponse deepCopy(@Nullable final GraphQLDataResponse template) {
         if (template == null) {
             return null;
         }
-        GraphQLResponseImpl instance = new GraphQLResponseImpl();
+        GraphQLDataResponseImpl instance = new GraphQLDataResponseImpl();
         instance.setData(template.getData());
         instance.setErrors(Optional.ofNullable(template.getErrors())
                 .map(t -> t.stream().map(GraphQLError::deepCopy).collect(Collectors.toList()))
@@ -116,8 +113,8 @@ public interface GraphQLResponse {
      * builder factory method for GraphQLResponse
      * @return builder
      */
-    public static GraphQLResponseBuilder builder() {
-        return GraphQLResponseBuilder.of();
+    public static GraphQLDataResponseBuilder builder() {
+        return GraphQLDataResponseBuilder.of();
     }
 
     /**
@@ -125,8 +122,8 @@ public interface GraphQLResponse {
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static GraphQLResponseBuilder builder(final GraphQLResponse template) {
-        return GraphQLResponseBuilder.of(template);
+    public static GraphQLDataResponseBuilder builder(final GraphQLDataResponse template) {
+        return GraphQLDataResponseBuilder.of(template);
     }
 
     /**
@@ -135,7 +132,7 @@ public interface GraphQLResponse {
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withGraphQLResponse(Function<GraphQLResponse, T> helper) {
+    default <T> T withGraphQLDataResponse(Function<GraphQLDataResponse, T> helper) {
         return helper.apply(this);
     }
 
@@ -143,11 +140,11 @@ public interface GraphQLResponse {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLResponse> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLResponse>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<GraphQLDataResponse> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<GraphQLDataResponse>() {
             @Override
             public String toString() {
-                return "TypeReference<GraphQLResponse>";
+                return "TypeReference<GraphQLDataResponse>";
             }
         };
     }

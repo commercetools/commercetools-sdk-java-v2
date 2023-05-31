@@ -9,16 +9,14 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.vrap.rmf.base.client.ModelBase;
-import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * GraphQLResponse
+ * GraphQLDataResponse
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
+public class GraphQLDataResponseImpl implements GraphQLDataResponse, ModelBase {
 
     private GraphQLData data;
 
@@ -28,7 +26,7 @@ public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLResponseImpl(@JsonProperty("data") final GraphQLData data,
+    GraphQLDataResponseImpl(@JsonProperty("data") final GraphQLData data,
             @JsonProperty("errors") final List<com.commercetools.api.models.graph_ql.GraphQLError> errors) {
         this.data = data;
         this.errors = errors;
@@ -37,7 +35,7 @@ public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
     /**
      * create empty instance
      */
-    public GraphQLResponseImpl() {
+    public GraphQLDataResponseImpl() {
     }
 
     /**
@@ -76,7 +74,7 @@ public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
         if (o == null || getClass() != o.getClass())
             return false;
 
-        GraphQLResponseImpl that = (GraphQLResponseImpl) o;
+        GraphQLDataResponseImpl that = (GraphQLDataResponseImpl) o;
 
         return new EqualsBuilder().append(data, that.data).append(errors, that.errors).isEquals();
     }

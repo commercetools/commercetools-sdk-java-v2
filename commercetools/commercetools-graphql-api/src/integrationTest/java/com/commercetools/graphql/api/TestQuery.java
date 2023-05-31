@@ -22,9 +22,9 @@ public class TestQuery {
                 .products(query -> query.localeProjection(Collections.singletonList("en")))
                 .projection(root -> root.results().id().key().productType().key().getParent().createdAt().key());
 
-        final ApiHttpResponse<GraphQLResponse> response = projectRoot.graphql()
+        final ApiHttpResponse<GraphQLDataResponse> response = projectRoot.graphql()
                 .post(productQuery)
-                .executeBlocking(GraphQLResponse.class);
+                .executeBlocking(GraphQLDataResponse.class);
 
         Assertions.assertThat(response.getBody()).isNotNull();
         Assertions.assertThat(response.getBody().getData().getProducts()).isNotNull();

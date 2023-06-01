@@ -1,0 +1,40 @@
+import com.commercetools.sdk.plugins.GraphQLPlugin
+
+plugins {
+    id "com.netflix.dgs.codegen" version "5.10.0"
+}
+
+apply plugin:'com.netflix.dgs.codegen'
+apply plugin: GraphQLPlugin
+
+dependencies {
+    api project(':commercetools:commercetools-sdk-java-api')
+    testImplementation project(':commercetools:commercetools-http-client')
+    implementation google.findbugs
+    implementation javax.validation
+    api 'com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:5.10.0'
+}
+
+generateGraphQLRoots {
+    dependsOn "generateJava"
+}
+
+generateJava {
+    schemaPaths = ["${projectDir}/src/main/resources/graphql"] // List of directories containing schema files
+    packageName = 'com.commercetools.graphql.api' // The package name to use to generate sources
+    generateBoxedTypes = true
+    generateClientv2 = true
+    shortProjectionNames = true
+
+    typeMapping = [
+            "Country": "String",
+            "Locale": "String",
+            "Long": "Long",
+            "Json": "com.fasterxml.jackson.databind.JsonNode",
+            "KeyReferenceInput": "String",
+            "Set": "Object",
+            "Time": "String",
+            "BigDecimal": "Double",
+            "YearMonth": "String",
+    ]
+}

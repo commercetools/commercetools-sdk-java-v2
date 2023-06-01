@@ -14,7 +14,7 @@ sourceSets {
     }
 }
 
-task versionTxt()  {
+tasks.register('versionTxt') {
     doLast {
         new File(projectDir, "$buildInfoPath/com/commercetools/monitoring/newrelic/").mkdirs()
         new File(projectDir, "$buildInfoPath/com/commercetools/monitoring/newrelic/BuildInfo.java").text = """
@@ -27,6 +27,6 @@ public class BuildInfo {
     }
 }
 
-compileJava{
+compileJava {
     dependsOn versionTxt
 }

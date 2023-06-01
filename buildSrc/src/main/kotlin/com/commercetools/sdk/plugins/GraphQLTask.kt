@@ -53,6 +53,18 @@ open class GraphQLTask: DefaultTask() {
                 .addAnnotation(AnnotationSpec.builder(ClassName.get("com.fasterxml.jackson.databind.annotation", "JsonDeserialize"))
                         .addMember("as", "GraphQLDataImpl.class")
                         .build())
+                .addMethod(MethodSpec.methodBuilder("get")
+                        .addModifiers(Modifier.PUBLIC, Modifier.DEFAULT)
+                        .addParameter(ParameterSpec.builder(
+                                ParameterizedTypeName.get(
+                                        ClassName.get(packageName, "GraphQLRequest"),
+                                        TypeVariableName.get("T")
+                                ),
+                                "request").build())
+                        .returns(TypeVariableName.get("T"))
+                        .addTypeVariable(TypeVariableName.get("T"))
+                        .addCode("return request.getDataMapper().apply(this);")
+                        .build())
         val graphQLDataImpl = TypeSpec.classBuilder("GraphQLDataImpl")
                 .addSuperinterface(ClassName.get(packageName, "GraphQLData"))
                 .addModifiers(Modifier.PUBLIC)

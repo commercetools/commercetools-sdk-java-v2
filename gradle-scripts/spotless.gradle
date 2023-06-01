@@ -12,6 +12,7 @@ allprojects {
             removeUnusedImports()
             trimTrailingWhitespace()
             endWithNewline()
+            toggleOffOn()
         }
     }
 }

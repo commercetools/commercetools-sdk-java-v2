@@ -4,6 +4,7 @@ package com.commercetools.graphql.api;
 import java.util.Collections;
 
 import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.api.models.graph_ql.GraphQLResponse;
 import com.commercetools.graphql.CommercetoolsTestUtils;
 import com.commercetools.graphql.api.types.ProductQueryResult;
 
@@ -31,5 +32,24 @@ public class TestQuery {
 
         final ProductQueryResult data = response.getBody().getData(productQuery);
         Assertions.assertThat(data.getResults()).isNotNull();
+    }
+
+    @Test
+    public void graphQLJacksonModule() {
+        final ProjectApiRoot projectRoot = CommercetoolsTestUtils.getProjectApiRoot();
+
+        final GraphQLRequest<ProductQueryResult> productQuery = GraphQL
+                .products(query -> query.localeProjection(Collections.singletonList("en")))
+                .projection(root -> root.results().id().key().productType().key().getParent().createdAt().key());
+
+        final ApiHttpResponse<GraphQLResponse> response = projectRoot.graphql().post(productQuery).executeBlocking();
+
+        Assertions.assertThat(response.getBody()).isNotNull();
+        Assertions.assertThat(response.getBody().getData()).isInstanceOf(GraphQLData.class);
+        GraphQLData data = (GraphQLData) response.getBody().getData();
+        Assertions.assertThat(data.getProducts()).isNotNull();
+
+        final ProductQueryResult products = data.get(productQuery);
+        Assertions.assertThat(products.getResults()).isNotNull();
     }
 }

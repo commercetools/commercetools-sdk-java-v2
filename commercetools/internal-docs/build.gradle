@@ -6,6 +6,8 @@ dependencies {
     implementation project(":commercetools:commercetools-http-client")
     implementation project(":commercetools:commercetools-apachehttp-client")
     implementation project(":commercetools:commercetools-sdk-compat-v1")
+    implementation project(":commercetools:commercetools-graphql-api")
+    implementation project(":commercetools:commercetools-monitoring-newrelic")
 
     testImplementation ctsdkv1.client version ctsdkv1.version
     implementation ctsdkv1.models version ctsdkv1.version

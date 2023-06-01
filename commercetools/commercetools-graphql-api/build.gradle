@@ -12,6 +12,7 @@ dependencies {
     testImplementation project(':commercetools:commercetools-http-client')
     implementation google.findbugs
     implementation javax.validation
+    api 'com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:5.10.0'
 }
 
 generateGraphQLRoots {

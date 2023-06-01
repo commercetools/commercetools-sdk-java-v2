@@ -6,7 +6,7 @@ allprojects {
         def javaFormatterConfigFile = rootProject.file("src/eclipse/eclipse-formatter-settings.xml")
 
         java {
-            target 'src/*/java/**/*.java'
+            target 'src/**/*.java'
             importOrderFile(importOrderConfigFile)
             eclipse().configFile(javaFormatterConfigFile)
             removeUnusedImports()

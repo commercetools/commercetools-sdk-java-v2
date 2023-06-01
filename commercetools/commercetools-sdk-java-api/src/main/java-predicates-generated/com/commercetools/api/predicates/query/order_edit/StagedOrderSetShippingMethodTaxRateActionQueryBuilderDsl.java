@@ -19,6 +19,12 @@ public class StagedOrderSetShippingMethodTaxRateActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderSetShippingMethodTaxRateActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderSetShippingMethodTaxRateActionQueryBuilderDsl> shippingKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("shippingKey")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderSetShippingMethodTaxRateActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<StagedOrderSetShippingMethodTaxRateActionQueryBuilderDsl> externalTaxRate(
             Function<com.commercetools.api.predicates.query.cart.ExternalTaxRateDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.ExternalTaxRateDraftQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()

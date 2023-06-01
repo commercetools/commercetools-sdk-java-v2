@@ -24,7 +24,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class CartSetShippingMethodTaxRateActionBuilder implements Builder<CartSetShippingMethodTaxRateAction> {
 
     @Nullable
+    private String shippingKey;
+
+    @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
+
+    /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     * @return Builder
+     */
+
+    public CartSetShippingMethodTaxRateActionBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
@@ -64,6 +78,16 @@ public class CartSetShippingMethodTaxRateActionBuilder implements Builder<CartSe
     }
 
     /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return externalTaxRate
      */
@@ -78,7 +102,7 @@ public class CartSetShippingMethodTaxRateActionBuilder implements Builder<CartSe
      * @return CartSetShippingMethodTaxRateAction
      */
     public CartSetShippingMethodTaxRateAction build() {
-        return new CartSetShippingMethodTaxRateActionImpl(externalTaxRate);
+        return new CartSetShippingMethodTaxRateActionImpl(shippingKey, externalTaxRate);
     }
 
     /**
@@ -86,7 +110,7 @@ public class CartSetShippingMethodTaxRateActionBuilder implements Builder<CartSe
      * @return CartSetShippingMethodTaxRateAction
      */
     public CartSetShippingMethodTaxRateAction buildUnchecked() {
-        return new CartSetShippingMethodTaxRateActionImpl(externalTaxRate);
+        return new CartSetShippingMethodTaxRateActionImpl(shippingKey, externalTaxRate);
     }
 
     /**
@@ -104,6 +128,7 @@ public class CartSetShippingMethodTaxRateActionBuilder implements Builder<CartSe
      */
     public static CartSetShippingMethodTaxRateActionBuilder of(final CartSetShippingMethodTaxRateAction template) {
         CartSetShippingMethodTaxRateActionBuilder builder = new CartSetShippingMethodTaxRateActionBuilder();
+        builder.shippingKey = template.getShippingKey();
         builder.externalTaxRate = template.getExternalTaxRate();
         return builder;
     }

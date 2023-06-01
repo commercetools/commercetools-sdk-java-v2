@@ -9,7 +9,6 @@ import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.WithKey;
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -32,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeLocalizedEnumValueImpl.class)
-public interface AttributeLocalizedEnumValue extends WithKey {
+public interface AttributeLocalizedEnumValue extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Key of the value used as a programmatic identifier, for example in facets &amp; filters.</p>

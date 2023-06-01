@@ -25,7 +25,21 @@ public class StagedOrderSetShippingMethodTaxRateActionBuilder
         implements Builder<StagedOrderSetShippingMethodTaxRateAction> {
 
     @Nullable
+    private String shippingKey;
+
+    @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
+
+    /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Orders with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetShippingMethodTaxRateActionBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
@@ -65,6 +79,16 @@ public class StagedOrderSetShippingMethodTaxRateActionBuilder
     }
 
     /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Orders with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      * @return externalTaxRate
      */
@@ -79,7 +103,7 @@ public class StagedOrderSetShippingMethodTaxRateActionBuilder
      * @return StagedOrderSetShippingMethodTaxRateAction
      */
     public StagedOrderSetShippingMethodTaxRateAction build() {
-        return new StagedOrderSetShippingMethodTaxRateActionImpl(externalTaxRate);
+        return new StagedOrderSetShippingMethodTaxRateActionImpl(shippingKey, externalTaxRate);
     }
 
     /**
@@ -87,7 +111,7 @@ public class StagedOrderSetShippingMethodTaxRateActionBuilder
      * @return StagedOrderSetShippingMethodTaxRateAction
      */
     public StagedOrderSetShippingMethodTaxRateAction buildUnchecked() {
-        return new StagedOrderSetShippingMethodTaxRateActionImpl(externalTaxRate);
+        return new StagedOrderSetShippingMethodTaxRateActionImpl(shippingKey, externalTaxRate);
     }
 
     /**
@@ -106,6 +130,7 @@ public class StagedOrderSetShippingMethodTaxRateActionBuilder
     public static StagedOrderSetShippingMethodTaxRateActionBuilder of(
             final StagedOrderSetShippingMethodTaxRateAction template) {
         StagedOrderSetShippingMethodTaxRateActionBuilder builder = new StagedOrderSetShippingMethodTaxRateActionBuilder();
+        builder.shippingKey = template.getShippingKey();
         builder.externalTaxRate = template.getExternalTaxRate();
         return builder;
     }

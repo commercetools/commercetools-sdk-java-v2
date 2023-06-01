@@ -72,6 +72,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLMaxResourceLimitExceededErrorImpl.class, name = GraphQLMaxResourceLimitExceededError.MAX_RESOURCE_LIMIT_EXCEEDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLMissingRoleOnChannelErrorImpl.class, name = GraphQLMissingRoleOnChannelError.MISSING_ROLE_ON_CHANNEL),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLMissingTaxRateForCountryErrorImpl.class, name = GraphQLMissingTaxRateForCountryError.MISSING_TAX_RATE_FOR_COUNTRY),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLMoneyOverflowErrorImpl.class, name = GraphQLMoneyOverflowError.MONEY_OVERFLOW),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLNoMatchingProductDiscountFoundErrorImpl.class, name = GraphQLNoMatchingProductDiscountFoundError.NO_MATCHING_PRODUCT_DISCOUNT_FOUND),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLNotEnabledErrorImpl.class, name = GraphQLNotEnabledError.NOT_ENABLED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLObjectNotFoundErrorImpl.class, name = GraphQLObjectNotFoundError.OBJECT_NOT_FOUND),
@@ -320,6 +321,10 @@ public interface GraphQLErrorObject {
         if (template instanceof com.commercetools.api.models.error.GraphQLMissingTaxRateForCountryError) {
             return com.commercetools.api.models.error.GraphQLMissingTaxRateForCountryError
                     .deepCopy((com.commercetools.api.models.error.GraphQLMissingTaxRateForCountryError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLMoneyOverflowError) {
+            return com.commercetools.api.models.error.GraphQLMoneyOverflowError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLMoneyOverflowError) template);
         }
         if (template instanceof com.commercetools.api.models.error.GraphQLNoMatchingProductDiscountFoundError) {
             return com.commercetools.api.models.error.GraphQLNoMatchingProductDiscountFoundError
@@ -792,6 +797,14 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLMissingTaxRateForCountryErrorBuilder missingTaxRateForCountryBuilder() {
         return com.commercetools.api.models.error.GraphQLMissingTaxRateForCountryErrorBuilder.of();
+    }
+
+    /**
+     * builder for moneyOverflow subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLMoneyOverflowErrorBuilder moneyOverflowBuilder() {
+        return com.commercetools.api.models.error.GraphQLMoneyOverflowErrorBuilder.of();
     }
 
     /**

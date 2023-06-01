@@ -100,7 +100,7 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
     }
 
     /**
-     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {

@@ -139,7 +139,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
     public String getComment();
 
     /**
-     *  <p>The Buyer who raised the request.</p>
+     *  <p>The Buyer who owns the request.</p>
      * @return customer
      */
     @NotNull
@@ -148,7 +148,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
     public CustomerReference getCustomer();
 
     /**
-     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
+     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Not updated if Customer is changed after Quote Request creation. Used for Product Variant price selection.</p>
      * @return customerGroup
      */
     @Valid
@@ -390,14 +390,14 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
     public void setComment(final String comment);
 
     /**
-     *  <p>The Buyer who raised the request.</p>
+     *  <p>The Buyer who owns the request.</p>
      * @param customer value to be set
      */
 
     public void setCustomer(final CustomerReference customer);
 
     /**
-     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
+     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Not updated if Customer is changed after Quote Request creation. Used for Product Variant price selection.</p>
      * @param customerGroup value to be set
      */
 

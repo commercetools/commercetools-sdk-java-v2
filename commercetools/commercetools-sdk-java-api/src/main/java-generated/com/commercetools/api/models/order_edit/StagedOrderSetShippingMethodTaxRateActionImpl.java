@@ -23,14 +23,17 @@ public class StagedOrderSetShippingMethodTaxRateActionImpl
 
     private String action;
 
+    private String shippingKey;
+
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    StagedOrderSetShippingMethodTaxRateActionImpl(
+    StagedOrderSetShippingMethodTaxRateActionImpl(@JsonProperty("shippingKey") final String shippingKey,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+        this.shippingKey = shippingKey;
         this.externalTaxRate = externalTaxRate;
         this.action = SET_SHIPPING_METHOD_TAX_RATE;
     }
@@ -51,11 +54,23 @@ public class StagedOrderSetShippingMethodTaxRateActionImpl
     }
 
     /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Orders with <code>Multiple</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
@@ -72,12 +87,15 @@ public class StagedOrderSetShippingMethodTaxRateActionImpl
 
         StagedOrderSetShippingMethodTaxRateActionImpl that = (StagedOrderSetShippingMethodTaxRateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(externalTaxRate, that.externalTaxRate).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(shippingKey, that.shippingKey)
+                .append(externalTaxRate, that.externalTaxRate)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(externalTaxRate).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(shippingKey).append(externalTaxRate).toHashCode();
     }
 
 }

@@ -11,6 +11,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QuoteUpdateActionBuilder {
 
+    public com.commercetools.api.models.quote.QuoteChangeCustomerActionBuilder changeCustomerBuilder() {
+        return com.commercetools.api.models.quote.QuoteChangeCustomerActionBuilder.of();
+    }
+
     public com.commercetools.api.models.quote.QuoteChangeQuoteStateActionBuilder changeQuoteStateBuilder() {
         return com.commercetools.api.models.quote.QuoteChangeQuoteStateActionBuilder.of();
     }

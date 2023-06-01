@@ -24,7 +24,21 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class CartSetShippingMethodTaxAmountActionBuilder implements Builder<CartSetShippingMethodTaxAmountAction> {
 
     @Nullable
+    private String shippingKey;
+
+    @Nullable
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
+
+    /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     * @return Builder
+     */
+
+    public CartSetShippingMethodTaxAmountActionBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
@@ -64,6 +78,16 @@ public class CartSetShippingMethodTaxAmountActionBuilder implements Builder<Cart
     }
 
     /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return externalTaxAmount
      */
@@ -78,7 +102,7 @@ public class CartSetShippingMethodTaxAmountActionBuilder implements Builder<Cart
      * @return CartSetShippingMethodTaxAmountAction
      */
     public CartSetShippingMethodTaxAmountAction build() {
-        return new CartSetShippingMethodTaxAmountActionImpl(externalTaxAmount);
+        return new CartSetShippingMethodTaxAmountActionImpl(shippingKey, externalTaxAmount);
     }
 
     /**
@@ -86,7 +110,7 @@ public class CartSetShippingMethodTaxAmountActionBuilder implements Builder<Cart
      * @return CartSetShippingMethodTaxAmountAction
      */
     public CartSetShippingMethodTaxAmountAction buildUnchecked() {
-        return new CartSetShippingMethodTaxAmountActionImpl(externalTaxAmount);
+        return new CartSetShippingMethodTaxAmountActionImpl(shippingKey, externalTaxAmount);
     }
 
     /**
@@ -104,6 +128,7 @@ public class CartSetShippingMethodTaxAmountActionBuilder implements Builder<Cart
      */
     public static CartSetShippingMethodTaxAmountActionBuilder of(final CartSetShippingMethodTaxAmountAction template) {
         CartSetShippingMethodTaxAmountActionBuilder builder = new CartSetShippingMethodTaxAmountActionBuilder();
+        builder.shippingKey = template.getShippingKey();
         builder.externalTaxAmount = template.getExternalTaxAmount();
         return builder;
     }

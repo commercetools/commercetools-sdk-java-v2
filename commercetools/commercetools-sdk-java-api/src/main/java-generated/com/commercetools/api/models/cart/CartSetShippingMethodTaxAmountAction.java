@@ -35,12 +35,27 @@ public interface CartSetShippingMethodTaxAmountAction extends CartUpdateAction {
     String SET_SHIPPING_METHOD_TAX_AMOUNT = "setShippingMethodTaxAmount";
 
     /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
+    /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return externalTaxAmount
      */
     @Valid
     @JsonProperty("externalTaxAmount")
     public ExternalTaxAmountDraft getExternalTaxAmount();
+
+    /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
+
+    public void setShippingKey(final String shippingKey);
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
@@ -64,6 +79,7 @@ public interface CartSetShippingMethodTaxAmountAction extends CartUpdateAction {
      */
     public static CartSetShippingMethodTaxAmountAction of(final CartSetShippingMethodTaxAmountAction template) {
         CartSetShippingMethodTaxAmountActionImpl instance = new CartSetShippingMethodTaxAmountActionImpl();
+        instance.setShippingKey(template.getShippingKey());
         instance.setExternalTaxAmount(template.getExternalTaxAmount());
         return instance;
     }
@@ -80,6 +96,7 @@ public interface CartSetShippingMethodTaxAmountAction extends CartUpdateAction {
             return null;
         }
         CartSetShippingMethodTaxAmountActionImpl instance = new CartSetShippingMethodTaxAmountActionImpl();
+        instance.setShippingKey(template.getShippingKey());
         instance.setExternalTaxAmount(
             com.commercetools.api.models.cart.ExternalTaxAmountDraft.deepCopy(template.getExternalTaxAmount()));
         return instance;

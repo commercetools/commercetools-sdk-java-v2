@@ -37,6 +37,14 @@ public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrder
     String SET_SHIPPING_METHOD_TAX_AMOUNT = "setShippingMethodTaxAmount";
 
     /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Orders with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
+    /**
      *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
      *  <p>Can only be set by these update actions:</p>
      *  <ul>
@@ -48,6 +56,13 @@ public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrder
     @Valid
     @JsonProperty("externalTaxAmount")
     public ExternalTaxAmountDraft getExternalTaxAmount();
+
+    /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Orders with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
+
+    public void setShippingKey(final String shippingKey);
 
     /**
      *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
@@ -77,6 +92,7 @@ public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrder
     public static StagedOrderSetShippingMethodTaxAmountAction of(
             final StagedOrderSetShippingMethodTaxAmountAction template) {
         StagedOrderSetShippingMethodTaxAmountActionImpl instance = new StagedOrderSetShippingMethodTaxAmountActionImpl();
+        instance.setShippingKey(template.getShippingKey());
         instance.setExternalTaxAmount(template.getExternalTaxAmount());
         return instance;
     }
@@ -93,6 +109,7 @@ public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrder
             return null;
         }
         StagedOrderSetShippingMethodTaxAmountActionImpl instance = new StagedOrderSetShippingMethodTaxAmountActionImpl();
+        instance.setShippingKey(template.getShippingKey());
         instance.setExternalTaxAmount(
             com.commercetools.api.models.cart.ExternalTaxAmountDraft.deepCopy(template.getExternalTaxAmount()));
         return instance;

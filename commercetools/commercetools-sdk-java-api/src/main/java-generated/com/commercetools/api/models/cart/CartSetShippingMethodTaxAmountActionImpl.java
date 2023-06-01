@@ -22,14 +22,17 @@ public class CartSetShippingMethodTaxAmountActionImpl implements CartSetShipping
 
     private String action;
 
+    private String shippingKey;
+
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CartSetShippingMethodTaxAmountActionImpl(
+    CartSetShippingMethodTaxAmountActionImpl(@JsonProperty("shippingKey") final String shippingKey,
             @JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
+        this.shippingKey = shippingKey;
         this.externalTaxAmount = externalTaxAmount;
         this.action = SET_SHIPPING_METHOD_TAX_AMOUNT;
     }
@@ -50,11 +53,23 @@ public class CartSetShippingMethodTaxAmountActionImpl implements CartSetShipping
     }
 
     /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {
         return this.externalTaxAmount;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     public void setExternalTaxAmount(final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
@@ -72,13 +87,14 @@ public class CartSetShippingMethodTaxAmountActionImpl implements CartSetShipping
         CartSetShippingMethodTaxAmountActionImpl that = (CartSetShippingMethodTaxAmountActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(shippingKey, that.shippingKey)
                 .append(externalTaxAmount, that.externalTaxAmount)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(externalTaxAmount).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(shippingKey).append(externalTaxAmount).toHashCode();
     }
 
 }

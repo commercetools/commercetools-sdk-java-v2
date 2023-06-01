@@ -25,7 +25,21 @@ public class StagedOrderSetShippingMethodTaxAmountActionBuilder
         implements Builder<StagedOrderSetShippingMethodTaxAmountAction> {
 
     @Nullable
+    private String shippingKey;
+
+    @Nullable
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
+
+    /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Orders with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetShippingMethodTaxAmountActionBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
 
     /**
      *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
@@ -80,6 +94,16 @@ public class StagedOrderSetShippingMethodTaxAmountActionBuilder
     }
 
     /**
+     *  <p><code>key</code> of the ShippingMethod to update. This is required for Orders with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
      *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
      *  <p>Can only be set by these update actions:</p>
      *  <ul>
@@ -99,7 +123,7 @@ public class StagedOrderSetShippingMethodTaxAmountActionBuilder
      * @return StagedOrderSetShippingMethodTaxAmountAction
      */
     public StagedOrderSetShippingMethodTaxAmountAction build() {
-        return new StagedOrderSetShippingMethodTaxAmountActionImpl(externalTaxAmount);
+        return new StagedOrderSetShippingMethodTaxAmountActionImpl(shippingKey, externalTaxAmount);
     }
 
     /**
@@ -107,7 +131,7 @@ public class StagedOrderSetShippingMethodTaxAmountActionBuilder
      * @return StagedOrderSetShippingMethodTaxAmountAction
      */
     public StagedOrderSetShippingMethodTaxAmountAction buildUnchecked() {
-        return new StagedOrderSetShippingMethodTaxAmountActionImpl(externalTaxAmount);
+        return new StagedOrderSetShippingMethodTaxAmountActionImpl(shippingKey, externalTaxAmount);
     }
 
     /**
@@ -126,6 +150,7 @@ public class StagedOrderSetShippingMethodTaxAmountActionBuilder
     public static StagedOrderSetShippingMethodTaxAmountActionBuilder of(
             final StagedOrderSetShippingMethodTaxAmountAction template) {
         StagedOrderSetShippingMethodTaxAmountActionBuilder builder = new StagedOrderSetShippingMethodTaxAmountActionBuilder();
+        builder.shippingKey = template.getShippingKey();
         builder.externalTaxAmount = template.getExternalTaxAmount();
         return builder;
     }

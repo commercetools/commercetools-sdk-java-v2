@@ -20,13 +20,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     QuoteRequestUpdateAction quoteRequestUpdateAction = QuoteRequestUpdateAction.changeQuoteRequestStateBuilder()
- *             quoteRequestState(QuoteRequestState.SUBMITTED)
+ *     QuoteRequestUpdateAction quoteRequestUpdateAction = QuoteRequestUpdateAction.changeCustomerBuilder()
+ *             customer(customerBuilder -> customerBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.api.models.quote_request.QuoteRequestChangeCustomerActionImpl.class, name = QuoteRequestChangeCustomerAction.CHANGE_CUSTOMER),
         @JsonSubTypes.Type(value = com.commercetools.api.models.quote_request.QuoteRequestChangeQuoteRequestStateActionImpl.class, name = QuoteRequestChangeQuoteRequestStateAction.CHANGE_QUOTE_REQUEST_STATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.quote_request.QuoteRequestSetCustomFieldActionImpl.class, name = QuoteRequestSetCustomFieldAction.SET_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.quote_request.QuoteRequestSetCustomTypeActionImpl.class, name = QuoteRequestSetCustomTypeAction.SET_CUSTOM_TYPE),
@@ -55,6 +56,10 @@ public interface QuoteRequestUpdateAction
         if (template == null) {
             return null;
         }
+        if (template instanceof com.commercetools.api.models.quote_request.QuoteRequestChangeCustomerAction) {
+            return com.commercetools.api.models.quote_request.QuoteRequestChangeCustomerAction
+                    .deepCopy((com.commercetools.api.models.quote_request.QuoteRequestChangeCustomerAction) template);
+        }
         if (template instanceof com.commercetools.api.models.quote_request.QuoteRequestChangeQuoteRequestStateAction) {
             return com.commercetools.api.models.quote_request.QuoteRequestChangeQuoteRequestStateAction.deepCopy(
                 (com.commercetools.api.models.quote_request.QuoteRequestChangeQuoteRequestStateAction) template);
@@ -73,6 +78,14 @@ public interface QuoteRequestUpdateAction
         }
         QuoteRequestUpdateActionImpl instance = new QuoteRequestUpdateActionImpl();
         return instance;
+    }
+
+    /**
+     * builder for changeCustomer subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.quote_request.QuoteRequestChangeCustomerActionBuilder changeCustomerBuilder() {
+        return com.commercetools.api.models.quote_request.QuoteRequestChangeCustomerActionBuilder.of();
     }
 
     /**
